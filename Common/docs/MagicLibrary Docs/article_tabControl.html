@@ -1,0 +1,816 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#top">top</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#creatingobjects">creating</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#tabpagecollection">collection</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#appearance">appearance</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#notifications">notifications</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#events">events</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="top">Class TabControl</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+		    The <i>TabControl</i> is used to manage a collection of <i>TabPage</i> instances 
+		    which themselves are used to describe an individual page. Only a single page can be
+		    displayed at any time and a row of tabs are shown to allow the user to select between
+		    the available pages.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="creatingobjects">Creating objects</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>Creating tab pages in Visual Studio .NET</h2>
+                                    <p />
+            You can use the designer to modify a <i>TabControl</i> instance along with 
+            its <i>TabPage</i> instances. First you will need to add the control to the 
+            toolbox by right-clicking the toolbox window and selecting the customize option. 
+            Navigate to the appropriate directory and select the Magic Library DLL. 
+            The toolbox will now list the extra controls that are exposed by the library 
+            including the <i>TabControl</i>. Drag and drop a new instance onto your <i>Form</i> 
+            and select the <i>TabPages</i> property.<p />
+            This will cause a dialog to appear that allows the creation and removal of pages 
+            to the control instance. It also allows you to modify the properties for each 
+            page added. Dismiss this dialog and you can now click on the control tabs in order 
+            to select the page you want to configure. As the <i>TabPage</i> class is derived 
+            from the <i>Panel</i> class you can now drag and drop other controls onto the page 
+            as desired. The designer will automatically generate the code needed to cause this 
+            configuration to be persisted as code in your <i>Form</i>.<p /><h2>Creating your TabControl manually</h2><p />
+            If you prefer to create your <i>TabControl</i> manually then use the following simple example.
+
+<pre>
+
+   Crownwood.Magic.Controls.TabControl tab1 = 
+        new Crownwood.Magic.Controls.TabControl();
+
+</pre>
+            Because the control class name is called <i>TabControl</i> and this is the same 
+            name as an existing control in the <i>System.Windows.Forms</i> namespace, you will 
+            need to fully qualify the name of the class to be created. Otherwise the compiler 
+            will not be able to choose between the two available classes with the same names.
+            This is also true of the <i>TabPage</i> as shown above, hence the use of fully 
+            qualified names in all the example code.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="tabpagecollection">TabPage collection</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            The <i>TabControl</i> exposes a property called <i>TabPages</i> that allows the 
+            developer to add, remove and modify pages displayed by the control. Use the standard 
+            methods to modify this collection as you would with any of the framework collections. <p />
+            Here is an example that shows the collection being manipulated: -
+<pre>
+
+   Crownwood.Magic.Controls.TabControl tab = 
+        new Crownwood.Magic.Controls.TabControl();
+
+   Crownwood.Magic.Controls.TabPage tabPage1 = 
+        new Crownwood.Magic.Controls.TabPage();
+   Crownwood.Magic.Controls.TabPage tabPage2 = 
+        new Crownwood.Magic.Controls.TabPage();
+
+   // Add a range of pages to the collection
+   tab.TabPages.AddRange(new TabPage[] pages{tabPage1, tabPage2});
+
+   // Remove all the contents
+   tab.TabPages.Clear();
+
+   // Add a single entry
+   tab.TabPages.Add(tabPage1);
+
+   // Insert a single entry at a given position
+   tab.TabPages.Insert(0, tabPage2);
+
+   // Use index accessor for retrieving a page reference
+   Console.WriteLine("TabPages[0] name = {0}", 
+        tab.TabPages[0].Text);
+
+   // Test if the collection contains an entry
+   Console.WriteLine("Contains tabPage1 = {0}", 
+        tab.TabPages.Contains(tabPage1));
+
+   // Gain access to a Page by its Title
+   Console.WriteLine("Contains a named page? {0}", 
+        tab.TabPages["Page1"] != null);
+
+   // Remove by object reference
+   tab.TabPages.Remove(tabPage1);
+
+   // Remove by index
+   tab.TabPages.RemoveAt(0);
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="appearance">Appearance</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            The first property you should modify is the <i>Appearance</i> which, 
+            as the name suggests, is used to define the appearance of the control. 
+            When the value of this property is changed it will automatically alter 
+            the values of other properties to the defaults for the defined appearance.  
+            Therefore this is the first property to be set otherwise previous changes 
+            to other properties will be overwritten once this is set.<p />
+            The three possible values for the property are <i>VisualAppearance.MultiDocument</i>, 
+            <i>VisualAppearance.MultiForm</i> and <i>VisualAppearance.MultiBox</i>. The
+            first of these will place the page tabs at the top of the control and show 
+            both arrow and close buttons. An example use of this would be to control 
+            which of a group of documents is displayed. For example, use this appearance 
+            to achieve the same effect as the Visual Studio .NET control that contains the 
+            open documents. <p />
+            The second appearance <i>VisualAppearance.MultiForm</i> places the page tabs 
+            at the bottom of the control and does not show any buttons. Instead all the 
+            tabs are sized to fit within whatever width the control is defined as. Use this 
+            appearance to mimic the style of tab control seen in Visual Studio .NET inside 
+            docking windows.<p />
+            Use the third appearance <i>VisualAppearance.MultiBox</i> to create the high 
+            contrast appearance you get when editing an HTML document in Visual Studio .NET, 
+            where the document has two options at the bottom of the window.<p />
+            Once the appearance has been set the developer can still modify the other 
+            properties to alter the exact look and feel wanted.  For example, the 
+            <i>PositionTop</i> property could be used to shift the default position of the 
+            tabs for the <i>MultiForm</i> appearance from the bottom of the control to the 
+            top. Use the <i>SampleTabControl</i> project included in the library to experiment 
+            and achieve the look required.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="notifications">Notifications</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            There are several possible events that can be generated by the 
+            <i>TabControl</i> but only two are of interest to most developers.
+            These are the <i>ClosePressed</i> event that gets fired when the user 
+            presses the close button, and <i>SelectionChanged</i> which notifies a 
+            change in the current selection.<p />
+            To see how to hook into these events see the following code: -
+
+<pre>
+
+   public void SomeMethod()
+   {
+      Crownwood.Magic.Controls.TabControl tab = 
+            new Crownwood.Magic.Controls.TabControl();
+
+      tab.ClosePressed += new EventHandler(OnClosePressed);
+      tab.SelectionChanged += new EventHandler(OnSelectionChanged);
+
+	  ...
+   }
+
+   protected void OnClosePressed(object sender, EventArgs e)
+   {
+      Console.WriteLine("OnClosePressed");
+   }
+
+   protected void OnSelectionChanged(object sender, EventArgs e)
+   {
+      Crownwood.Magic.Controls.TabControl tab = 
+        (Crownwood.Magic.Controls.TabControl)sender;
+  
+      Console.WriteLine("New selection = {0}", tab.SelectedIndex);
+   }
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public void MakePageVisible(TabPage page)</code>
+                                    <br />
+            Use this method to bring the specified <i>TabPage</i> into view.<p /><code>public void MakePageVisible(int index)</code><br />
+            As above method but takes an index rather than <i>TabPage</i> reference.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public virtual VisualAppearance Appearance</code>
+                                    <br />
+            Has three possible values.
+            <UL><LI><i>VisualAppearance.MultiDocument</i> shows tabs at top with scrolling/close buttons</LI><LI><i>VisualAppearance.MultiForm</i> shows tabs at bottom without buttons and shrinks tabs to fit space</LI><LI><i>VisualAppearance.MultiBox</i> shows tabs at bottom in high contrast colors</LI></UL>
+            Default: <i>VisualAppearance.MultiForm</i><p /><code>public virtual TabPagesCollection TabPages</code><br />
+            Provides access to the list of tab pages.<p /><code>public virtual VisualStyle Style</code><br />
+            Has two possible values.
+            <UL><LI><i>VisualStyle.IDE</i> shows in Visual Studio .NET style</LI><LI><i>VisualStyle.Plain</i> shows in a simpler Visual C++ v6 style</LI></UL>
+            Default: <i>VisualStyle.IDE</i><p /><code>public virtual bool Multiline</code>
+            When there are too many tabs to fit on a single line, should multiple lines be shown.<br />
+            Default: <i>False</i><p /><code>public virtual bool MultilineFullWidth</code>
+            Should all lines stretch to fit whole line length, or just those lines that are full.<br />
+            Default: <i>False</i><p /><code>public override Font Font</code><br />
+            Defines the <i>Font</i> used for drawing the tab page text.<br />
+            Default: <i>SystemInformation.MenuFont</i><p /><code>public override Color BackColor</code><br />
+            Defines the <i>Color</i> used for drawing background areas in the control.<br />
+            Default: <i>SystemColors.Control</i><p /><code>public override Color ForeColor</code><br />
+            Defines the <i>Color</i> used for drawing foreground areas in the control<br />
+            Default: <i>base.DefaultForeColor</i><p /><code>public virtual Color ButtonActiveColor</code><br />
+            Defines the <i>Color</i> used for drawing arrows/close buttons when they are active.<br />
+            Default: <i>Color.FromArgb(128, this.ForeColor)</i><p /><code>public virtual Color ButtonInactiveColor</code><br />
+            Defines the <i>Color</i> used for drawing arrows/close buttons when they are inactive.<br />
+            Default: <i>Color.FromArgb(128, this.ForeColor)</i><p /><code>public virtual bool HotTrack</code><br />
+            When defined the text of the page under the mouse will be highlighted in <i>HotTextColor</i>.<br />
+            Default: <i>false</i><p /><code>public virtual Color HotTextColor</code><br />
+            Color is used to highlight text when the page is under the mouse and the <i>HotTrack</i> property set.<br />
+            Default: <i>SystemColors.ActiveCaption</i><p /><code>public virtual Color TextColor</code><br />
+            Color for drawing the text of tab pages.<br />
+            Default: <i>this.DefaultForeColor</i><p /><code>public virtual Color TextInactiveColor</code><br />
+            Color for drawing the text of tab pages.<br />
+            Default: <i>Color.FromArgb(128, this.DefaultForeColor)</i><p /><code>public virtual PopupMenu ContextPopupMenu</code>
+            Instance of a <i>PopupMenu</i> to the shown when right-click occurs in tabs area.<br />
+            Default: <i>null</i><p /><code>public virtual ImageList ImageList</code><br />
+            Used when a <i>TabPage</i> has <i>ImageIndex</i> defined but not <i>ImageList</i>.<br />
+            Default: <i>null</i><p /><code>public virtual bool PositionTop</code><br />
+            When defined this will show the tab pages at the top of the control, otherwise at the bottom.<br />
+            Default: <i>false</i><p /><code>public virtual bool ShrinkPagesToFit</code><br />
+            When defined will reduce the size of the tab page so that all tabs fit inside control width.<br />
+            Default: <i>false</i><p /><code>public virtual bool BoldSelectedPage</code><br />
+            Should the text for the selected page be drawn in bold.<br />
+            Default: <i>true</i><p /><code>public virtual nt SelectedIndex</code><br />
+            Returns the index into the <i>TabPages</i> collection of the currently selected page.<br />
+            Set this value to change the current selection.<br />
+            Default: <i>-1</i><p /><code>public virtual TabPage SelectedTab</code><br />
+            Returns the <i>TabPage</i> from the <i>TabPages</i> collection of the currently selected page.<br />
+            Set this value to change the current selection.<br />
+            Default: <i>null</i><p /><code>public virtual bool ShowClose</code><br />
+            When defined the close button will appear on far right of the control.<br />
+            Default: <i>false</i><p /><code>public virtual bool ShowArrows</code><br />
+            When defined the left and right arrows will appear on far right of the control.<br />
+            Default: <i>false</i><p /><code>public virtual bool InsetPlain</code><br />
+            When the <i>VisualStyle.Plain</i> style is defined this determines if the control area is flat or bumped.<br />
+            Default: <i>true</i><p /><code>public virtual bool SelectedTextOnly</code><br />
+            When defined only the selected tab has its text drawn.<br />
+            Default: <i>false</i><p /><code>public virtual HideTabsModes HideTabsMode</code><br />
+            Determines when the tabs area should be made visible. Has four values.<br /><UL><LI><i>HideTabsModes.ShowAlways</i> show tabs area all the time</LI><LI><i>HideTabsModes.HideAlways</i> hides tabs area all the time</LI><LI><i>HideTabsModes.HideUsingLogic</i> hides unless two or more pages exist</LI><LI><i>HideTabsModes.HideWithoutMouse</i> hides unless mouse is over control</LI></UL>
+            Default: <i>HideTabsModes.ShowAlways</i><p /><code>public virtual int LeaveTimeout</code><br />
+            Delay when mouse leaves tab control before tabs area is shown again. 
+            Use when then <i>HideTabsMode</i> is defined to be <i>HideWithoutMouse</i>.<br />
+            Default: <i>200ms</i><p /><code>public virtual bool DragFromControl</code><br />
+            Generates page dragging events when the user drags a page outside of the control area. When this 
+            property is set to <i>False</i> then it generates the event sequence when the page is dragged 
+            outside the double-click box from the mouse down position.<br />
+            Default: <i>True</i><p /><code>public virtual bool HoverSelect</code><br />
+            When defined the selected tab will change whenever the mouse moves over a new tab.<br />
+            Default: <i>false</i><p /><code>public virtual int ControlLeftOffset</code><br />
+            Defines how far from the Left edge the tab controls should be indented.<br />
+            Default: <i>0</i><p /><code>public virtual int ControlTopOffset</code><br />
+            Defines how far from the Top edge the tab controls should be indented.<br />
+            Default: <i>0</i><p /><code>public virtual int ControlRightOffset</code><br />
+            Defines how far from the Right edge the tab controls should be indented.<br />
+            Default: <i>0</i><p /><code>public virtual int ControlBottomOffset</code><br />
+            Defines how far from the Bottom edge the tab controls should be indented.<br />
+            Default: <i>0</i><p /><code>public virtual bool InsetBorderPagesOnly</code><br />
+            When in <i>Plain</i> style it will only show the inset border nearest the tabs and not all four borders.<br />
+            Default: <i>False</i><p /><code>public virtual bool RecordFocus</code><br />
+            Remembers which <i>Control</i> had focus when a different page is selected and restores it when page is reselected.<br />
+            Default: <i>True</i><p /><code>public virtual bool IDEPixelBorder</code><br />
+            When the IDE visual style is selected this places a single pixel border around the entire control.<br />
+            Default: <i>False</i><p /><code>public virtual bool IDEPixelArea</code><br />
+            When the IDE visual style is selected this places a single pixel border on outside edge of tabs area.<br />
+            Default: <i>False</i><p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="events">Events</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public event EventHandler ClosePressed</code>
+                                    <br />
+            Fired whenever the close button is pressed.<p /><code>public event EventHandler SelectionChanging</code><br />
+            Fired whenever a change in tab selection is about to occur.<p /><code>public event EventHandler SelectionChanged</code><br />
+            Fired whenever a change in tab selection occurs.<p /><code>public event EventHandler PageGotFocus</code><br />
+            Fired whenever focus arrives on a tab page control.<p /><code>public event EventHandler PageLostFocus</code><br />
+            Fired whenever focus leaves a tab page control.<p /><code>public event MouseEventHandler PageDragStart</code><br />
+            Fired when the user drags a page tab using the mouse outside the client area.<p /><code>public event MouseEventHandler PageDragMove</code><br />
+            Fired when the mouse moves and currently in page dragging mode.<p /><code>public event MouseEventHandler PageDragEnd</code><br />
+            Fired when the mouse is released when in page dragging mode.<p /><code>public event DoubleClickTabHandler DoubleClickTab</code><br />
+            Fired whenever a mouse double click occurs on a page tab.<p /><h2>Delegate Signatures</h2><pre>
+
+    void DoubleClickTabHandler(TabControl sender, TabPage page);
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

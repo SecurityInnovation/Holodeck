@@ -1,0 +1,527 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#class">class</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#constructors">constructors</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#samplecode">sample code</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="class">Class Content</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+			Each <i>Content</i> instance represents a single dockable unit within the 
+			docking window framework. You will need to understand how to create and 
+			configure these objects in order to successfully achieve the correct 
+			operation of docking windows.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="constructors">Constructors</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            It is recommended that every instance you create be given a unique title and an 
+            appropriate image. Remember that the docking environment is capable of placing 
+            more than one <i>Content</i> inside the same docking window. When this happens 
+            a tabbed appearance is shown and any specified image is drawn alongside the 
+			<i>Content</i> title.
+<pre>
+
+public Content(DockingManager manager)
+public Content(DockingManager manager, Control control)
+public Content(DockingManager manager, Control control, string title)
+
+public Content(DockingManager manager, Control control, string title, 
+               ImageList imageList, int imageIndex)
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public void BringToFront()</code>
+                                    <br />
+            Use this to ensure that the <i>Content</i> instance is in the foreground of the 
+            docking window it is inside. When a docking window has more than one <i>Content</i>
+            a tabbed appearance occurs and this method allows programmatic control over 
+            which instance is the currently selected one. If this <i>Content</i> is the 
+            only one inside a docking window then the method has no effect.<p /><code>public void OnPropertyChanging(Property prop)</code><br />
+            Raises a property changing event for the specified property.<p /><code>public void OnPropertyChanged(Property prop)</code><br />
+            Raises a property changed event for the specified property.<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public DockingManager DockingManager</code>
+                                    <br />
+            Access to the manager that is responsible for this object.<p /><code>public Control Control</code><br />
+            Used to modify the <i>Control</i> derived object that should be displayed to represent this <i>Content</i>. 
+            This could be a <i>Panel</i>, <i>Form</i> or <i>UserControl</i> derived object as desired. 
+            Note that this property can be changed on the fly to modify the displayed control.<br />
+            Default: <i>null</i><p /><code>public string Title</code><br />
+            Text used to describe this object in any tab header.<br />
+            Default: <i>""</i><p /><code>public string FullTitle</code><br />
+            Text used to describe this object in the caption bar.<br />
+            Default: <i>""</i><p /><code>public int ImageIndex</code><br />
+            Index of the image to be shown for this object.<br />
+            Default: <i>-1</i><p /><code>public ImageList ImageList</code><br />
+            Images the <i>Content.ImageIndex</i> indexes.<br />
+            Default: <i>null</i><p /><code>public Icon Icon</code><br />
+            Icon is drawn in priority to an specified image.<br />
+            Default: <i>null</i><p /><code>public bool CaptionBar</code><br />
+            Determines if the caption bar should be shown when this item is selected.<br />
+            Default: <i>true</i><p /><code>public bool CloseButton</code><br />
+            Determines if the close button should be shown on the visible caption bar.<br />
+            Default: <i>true</i><p /><code>public bool AutoHideButton</code><br />
+            Determines if the AutoHide button should be shown on the visible caption bar.<br />
+            Default: <i>true</i><p /><code>public Size DisplaySize</code><br />
+            Default size used when the object is displayed.<br /> 
+            This is updated to reflect the current size during the lifetime of the instance.<br />
+            Default: <i>Size(150,150)</i><p /><code>public Size AutoHideSize</code><br />
+            Default size used when the object is becomes AutoHidden.<br /> 
+            This is updated to reflect the current size when AutoHidden during the lifetime of the instance.<br />
+            Default: <i>Size(150,150)</i><p /><code>public Point DisplayLocation</code><br />
+            Define the floating form location for when the object is displayed.
+            This is updated to reflect the current size during the lifetime of the instance.<br />
+            Default: <i>Point(150,150)</i><p /><code>public Size FloatingSize</code><br />
+            Default size used when the object is floated.<br /> 
+            This is updated to reflect the current size during the lifetime of the instance.<br />
+            Default: <i>Size(150,150)</i><p /><code>public CloseOnHide</code><br />
+            Defines if the <i>Content</i> instance is removed from docking manager when hidden by user.<br />
+            Default: <i>false</i><p /><code>public int Order</code><br />
+            This contains a unique number that is allocated at construction and incremented each time a new instance is created.
+            When showing a context menu the <i>Content.Order</i> value is used to determine the order in which objects appear in the menu.<p /><code>public bool Visible</code><br />
+            Use to discover if the instance is currently visible to the user.<p /><code>public object Tag</code><br />
+            User data can be associated with the control but is not persisted.<p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="samplecode">Sample code</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>C#</code>
+                                    <pre>
+
+   Content newContent = new Content(_dockingManager);
+   
+   newContent.Title = "Notepad";
+   newContent.Control = new RichTextBox();
+   newContent.ImageList = _internalImages;
+   newContent.ImageIndex = _imageIndex;
+
+   // alternatively...
+
+   Content newContent = new Content(_dockingManager, 
+                                    new RichTextBox(),
+                                    "Notepad",
+                                    _internalImages
+                                    _imageIndex);
+
+</pre>
+                                    <code>VB.NET</code>
+                                    <pre>
+
+   Dim newContent As New Content(_dockingManager)
+   
+   newContent.Title = "Notepad"
+   newContent.Control = new RichTextBox()
+   newContent.ImageList = _internalImages
+   newContent.ImageIndex = _imageIndex
+
+   ' alternatively...
+
+   Dim newContent As New Content(_dockingManager, _
+                                 New RichTextBox(), _
+                                 "Notepad", _
+                                 _internalImages _
+                                 _imageIndex)
+
+</pre>
+                                  </content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,622 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#flicker">flicker</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#embedding">resources</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#collections">collections</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#systemcolors">system colors</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="flicker">Flicker free drawing in Controls</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            You have just spent several days writing a beautiful looking custom control but 
+            are faced with one last problem that is spoiling the whole effect. Whenever the 
+            control is redrawn it flickers. This is most obvious when the control is being 
+            resized and so redrawn many times in succession.<p />
+            Solving this problem is very easy with the .NET Framework. If you come from a 
+            C++ and GDI background then the solution was to create a memory based bitmap, 
+            draw the control onto the bitmap and then blit this to the screen (otherwise 
+            known as double buffering). This is such a common requirement that the 
+            <i>UserControl</i> class actually implements this functionality for you. All you 
+            need to do is include the following two lines of code into your class constructor.
+<pre>
+
+   SetStyle(ControlStyles.DoubleBuffer, true);
+   SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+
+</pre>
+            The first line will request that double buffering be used whenever the 
+            <i>OnBackground</i> or <i>OnPaint</i> methods are called. This will reduce the 
+            amount of flicker but may not remove it completely as painting the whole control 
+            still results in two separate blitting operations.<p />
+            The second line of code above is used to ensure that only a single blitting 
+            operation occurs when drawing. This occurs when the underlying windows <i>WM_PAINT</i>
+            message is processed. When this happens it will create the memory bitmap, call 
+            the <i>OnBackground</i> method, call the <i>OnPaint</i> method and then finally blit 
+            the result to the screen.<p />
+            The only drawback to this technique is the greater use of resources. However, 
+            most controls are relatively small in screen size and so this is unlikely to be 
+            an issue.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="embedding">Embedding resources</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Usually a bitmap will be embedded into your assembly automatically, just by 
+            being associated with a property of a <i>Form</i> using the designer. But 
+            there are many circumstances where you may want to embed a bitmap (or other 
+            resource) without associating it with any particular <i>Form</i>.<p />
+            You can do this in Visual Studio .NET by right clicking the project of interest 
+            and selecting the 'Add Existing Item' option. Navigate to your bitmap and 
+            selecting it will make it appear in your project details. Now select the bitmap 
+            and modify the 'Build' property to become 'Embed as resource'. Rebuild your 
+            project and then use the <i>ILDAsm.exe</i> utility to examine the manifest for 
+            your built assembly. You will now see that the bitmap has been added as a resource.<p />
+            To extract this resource at runtime is not obvious but only involves three 
+            steps: -<p /><pre>
+
+   // Get the assembly we are built into
+   Assembly myAssembly = 
+        Assembly.GetAssembly(Type.GetType("MyNamespace.ThisClass"));
+ 
+   // Get the resource stream containing the embedded resource
+   Stream imageStream = 
+        myAssembly.GetManifestResourceStream("Example.bmp");
+
+   // Load the bitmap from the stream
+   Bitmap pics = new Bitmap(imageStream);
+
+</pre>
+            The first line of code is used to get a reference to the assembly this code is 
+            built into. In your own code you should substitute the 'MyNamespace.ThisClass' 
+            string for the fully qualified name of the class the code is inside.<p />
+            The second line requests from the assembly a stream that contains the contents 
+            of the named resource. This name will need to match the name that appears when 
+            using the <i>ILDAsm.exe</i> utility. Visual Studio will create this name as the 
+            default namespace appended with the name of the file. If your code generates an 
+            exception at this point then double check the name you provide exactly matches 
+            that inside the manifest.<p />
+            The last line of code is obvious and simply uses the <i>Bitmap</i> constructor 
+            that takes as input a <i>Stream</i>.<p />
+            If you prefer to build your projects manually without Visual Studio then you 
+            can still use the same technique. Just use the <i>/resource:Example.bmp</i>
+            option in your <i>csc</i> command to cause the bitmap to be embedded. In which 
+            case the name in the manifest will exactly match the resource filename rather than 
+            be modified by Visual Studio.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="collections">Type safe collections the easy way</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Often when writing your own class you need to expose a collection of items to 
+            the caller. Usually the caller will also need to modify that collection at 
+            runtime. For example, a <i>TabControl</i> has a collection of <i>TabPage</i>
+            objects that the caller can modify to add and remove pages.<p />
+            Although creating a collection class is not difficult it can be time consuming. 
+            Rather than begin from scratch it is much easier to derive from the framework 
+            class <i>CollectionBase</i>. This class will handle the management of the 
+            collection for us by using an <i>ArrayList</i> instance internally.<p />
+            Two tasks however remain. First we need to generate events when the contents of 
+            the collection change, so that our class can perform appropriate actions. For 
+            example, when a new <i>TabPage</i> is added to a pages collection the <i>TabControl</i>
+            would need to be notified of this so it can change the appearance appropriately. 
+            To achieve this we define a new class called <i>CollectionWithEvents</i> as shown 
+            below: -<p /><pre>
+
+public class CollectionWithEvents : CollectionBase
+{
+   // Declare the event signatures
+   public delegate void CollectionClear();
+   public delegate void CollectionChange(int index, object value);
+
+   // Collection change events
+   public event CollectionClear Clearing;
+   public event CollectionClear Cleared;
+   public event CollectionChange Inserting;
+   public event CollectionChange Inserted;
+   public event CollectionChange Removing;
+   public event CollectionChange Removed;
+
+   // Overrides for generating events
+   protected override void OnClear() 
+   { 
+      if (Clearing != null) Clearing(); 
+   }		
+	
+   protected override void OnClearComplete() 
+   { 
+      if (Cleared != null) Cleared(); 
+   }	
+
+   protected override void OnInsert(int index, object value) 
+   {
+      if (Inserting != null) Inserting(index, value);
+   }
+
+   protected override void OnInsertComplete(int index, object value)
+   {
+      if (Inserted != null) Inserted(index, value);
+   }
+
+   protected override void OnRemove(int index, object value)
+   {
+      if (Removing != null) Removing(index, value);
+   }
+
+   protected override void OnRemoveComplete(int index, object value)
+   {
+      if (Removed != null) Removed(index, value);
+   }
+}
+
+</pre>
+            Our second task is to ensure that the collection class is type specific. 
+            So we derive a type specific class from the <i>CollectionWithEvents</i> 
+            base class and expose the set of methods the caller needs to manipulate it. 
+            For example, a collection to manipulate objects of type <i>MyType</i> would 
+            look like the following: -<p /><pre>
+
+public class MyTypeCollection : CollectionWithEvents
+{
+   public int Add(MyType value)
+   {
+      return base.List.Add(value as object);
+   }
+
+   public void Remove(MyType value)
+   {
+      base.List.Remove(value as object);
+   }
+
+   public void Insert(int index, MyType value)
+   {
+      base.List.Insert(index, value as object);
+   }
+
+   public bool Contains(MyType value)
+   {
+      return base.List.Contains(value as object);
+   }
+
+   public MyType this[int index]
+   {
+      get { return (base.List[index] as MyType); }
+   }
+}
+
+</pre>
+            The advantage of this design is that any additional collections we need, involve 
+            creating just a single class identical to the one above but with the <i>MyType</i>
+            replaced with whichever new type we desire.<p />
+            Using the collection is very simple. Here is an example class that creates and 
+            exposes a collection for manipulation by the caller. The constructor hooks into 
+            some of the events it exposes in order to perform whatever implementation 
+            actions it needs.<p /><pre>
+
+class Example
+{
+   protected MyTypeCollection _collection;
+
+   class Example()
+   {
+      // Create the new but empty collection
+      _collection = new MyTypeCollection();
+
+      // Hookup to whichever events are of interest
+      _tabPages.Cleared += 
+            new CollectionWithEvents.CollectionClear(OnClearedPages);
+      _tabPages.Inserted += 
+            new CollectionWithEvents.CollectionChange(OnInsertedPage);
+      _tabPages.Removed += 
+            new CollectionWithEvents.CollectionChange(OnRemovedPage);
+   }
+
+   public MyTypeCollection MyTypes
+   {
+      get { return _collection; }
+   }
+
+   public MyType this[int index]
+   {
+      get { return _collection[index]; }
+   }
+
+   protected void OnClearedPages()
+   {
+      // TODO...your actions
+   }
+
+   protected void OnInsertedPage(int index, object value)
+   {	
+      MyType obj = value as MyType;
+      // TODO...your actions
+   }
+
+   protected void OnRemovedPage(int index, object value)
+   {
+      MyType obj = value as MyType;
+      // TODO...your actions
+   }
+}
+
+</pre>
+            The above example only hooks into the events that occur after the collection 
+            has been altered. In practice you will probably also want to hook into those 
+            that occur before the collection is modified.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="systemcolors">System color changes</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Having written a new <i>Control</i> you now want it to be drawn in the 
+            correct colors depending on the current display settings. You can easily get 
+            hold of colors using the <i>SystemColors</i> class and other display 
+            values using <i>SystemInformation</i>. But you also need to be notified 
+            when these values change because the user has selected a different scheme or 
+            theme. Using the following code to hook into the event generated when this 
+            change occurs: -
+<pre>
+
+   public MyConstructor()
+   {
+      // Hook into system event for users preferences changes
+      Microsoft.Win32.SystemEvents.UserPreferenceChanged += 
+               new UserPreferenceChangedEventHandler(OnPreferenceChanged);
+   }
+
+   protected void OnPreferenceChanged(object sender, 
+                                      UserPreferenceChangedEventArgs e)
+   {
+      switch(e.Category)
+      {
+         case UserPreferenceCategory.Color:
+            // Update my colors, brushes, pens etc...
+            break
+      }      
+   }
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

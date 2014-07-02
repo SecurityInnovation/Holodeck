@@ -1,0 +1,383 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#top">top</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="top">Class WizardDialog</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            The <i>WizardDialog</i> should be used when you need to create a wizard that appears
+            as a modal dialog <i>Form</i>. To do this yourself simply create a new <i>Form</i> and fill 
+            the entire client area with an instance of the <a href="article_wizardControl.html">WizardControl</a>.
+            To save you time, this has already been done and added to the library. You can use visual inheritance
+            to derive from and customize it.
+            
+            <h2>Visual Inheritance</h2>
+            Use the <i>Add New Item</i> option from your project and select the <i>Inherited Form</i>
+            selection. If your project already has a reference to the <i>Magic Library</i> then it will
+            present a list of the forms you can inherit from. Otherwise use the <i>Browse</i> button
+            and navigate to the <i>MagicLibrary.dll</i> assembly. From the list of forms availble for
+            inheritance double click <i>WizardDialog</i> a new <i>Class</i> will be added to your project.
+            
+            <h2>Configuring</h2>
+            Double click your new source file and the designer will show your <i>Form</i> with the 
+            <i>WizardControl</i> already apparent. Click on the header portion and then navigate to the 
+            <i>Properties</i> window to start configuring the wizard setup. At a minimum you should examine 
+            and modify the <i>Profile</i> and <i>Title</i>.<p />
+            
+            Click the elipses button for the <i>WizardPages</i> property to add and configure the individual
+            pages you need. To design each page you should modify the <i>SelectedIndex</i> property to the page
+            index of interest. When a valid page index is defined you will notice a grid appear on the page
+            portion of the control which indicates that design surface available for dragging and dropping
+            controls from the toolbox.<p /><h2>Caption bar text</h2>
+            You can adjust the static text in the caption bar by using the <i>Text</i> property of your derived 
+            <i>Form</i> instance. You can use the <i>TitleMode</i> property to determine if any extra text should
+            be appended dynamically depending on the currently selected page. By default the <i>WizardPage.CaptionTitle</i> 
+            property for the currently selected page is used. If you prefer to have to no extra text appended then
+            simply set the <i>TitleMode</i> property to <i>TitleModes.None</i>. Note that this property is implemented
+            on the <i>WizardDialog</i> class and so you need to select the whole <i>Form</i> before it will become
+            available. You will not see it listed when the <i>WizardControl</i> instance inside the <i>Form</i> is
+            selected in the properties window.
+                        
+            <h2>Wizard Events</h2>
+            All the <i>WizardControl</i> events have attached handlers that are declared as virtual so that you
+            can override them as appropriate in your derived <i>Form</i> class. By default the <i>OnCloseClick</i>
+            and <i>OnFinishClick</i> will set the dialog result code to <i>DialogResult.OK</i> and close the 
+            <i>Form</i>. The <i>OnCancelClick</i> handler sets the result code to <i>DialogResult.Cancel</i> and
+            also closes the <i>Form</i>. All the other handlers have no default implementation.<p />
+            
+            An example of customization might be overriding the <i>OnCancelClick</i> virtual method. Your derived
+            method could display a message box asking the user if they want to abort the wizard and exit. If they
+            answer in the affirmative then you call the base implementation that closes down the <i>Form</i>. 
+            Otherwise you do not call the base method and so prevent the close operation from occuring.
+            
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public TitleModes TitleMode</code>
+            Has five possible values.
+            <UL><LI><i>TitleModes.None</i> Uses the <i>Form.Text</i> value only</LI><LI><i>TitleModes.WizardPageTitle</i> Appends the <i>WizardPage.Title</i> value</LI><LI><i>TitleModes.WizardPageSubTitle</i> Appends the <i>WizardPage.SubTitle</i> value</LI><LI><i>TitleModes.WizardPageCaptionTitle</i> Appends the <i>WizardPage.CaptionTitle</i> value</LI><LI><i>TitleModes.Steps</i> Appends 'Step 1 of 5' style description</LI></UL>
+            Default: <i>TitleModes.WizardPageCaptionTitle</i><p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public void ResetTitleMode()</code>
+            Used to redefine the <i>TitelMode</i> to the default value<p /><p /><code>protected virtual void ApplyTitleMode()</code>
+            Implements calculation of caption text to match current <i>TitleMode</i> setting.
+            Override this method to implement customization of title text.<p /><p /><code>protected virtual void OnPagesCleared()</code>
+            Will update the caption bar text to reflect the new collection size<p /><p /><code>protected virtual void OnPagesChanged()</code>
+            Will update the caption bar text to reflect the new collection size<p /><p /><code>protected virtual void OnCloseClick(object sender, EventArgs e)</code><br />
+            By default will close the <i>Form</i> with result of <i>DialogResult.OK</i><p /><code>protected virtual void OnFinishClick(object sender, EventArgs e)</code><br />
+            By default will close the <i>Form</i> with result of <i>DialogResult.OK</i><p /><code>protected virtual void OnCancelClick(object sender, EventArgs e)</code><br />
+            By default will close the <i>Form</i> with result of <i>DialogResult.Cancel</i><p /><code>protected virtual void OnNextClick(object sender, CancelEventArgs e)</code><br />
+            By default does nothing, override to add your own functionality<p /><p /><code>protected virtual void OnBackClick(object sender, CancelEventArgs e)</code><br />
+            By default does nothing, override to add your own functionality<p /><p /><code>protected virtual void OnUpdateClick(object sender, EventArgs e)</code><br />
+            By default does nothing, override to add your own functionality<p /><p /><code>protected virtual void OnHelpClick(object sender, EventArgs e)</code><br />
+            By default does nothing, override to add your own functionality<p /><p /><code>protected virtual void OnSelectionChanged(object sender, EventArgs e)</code><br />
+            Will update the caption bar text to reflect the new page selection<p /><p /><code>protected virtual void OnWizardEnterPage(WizardPage wp, WizardControl wc)</code><br />
+            By default does nothing, override to add your own functionality<p /><p /><code>protected virtual void OnWizardEnterLeave(WizardPage wp, WizardControl wc)</code><br />
+            By default does nothing, override to add your own functionality<p /><p /><code>protected virtual void OnWizardCaptionTitleChanged(object sender, EventArgs e)</code><br />
+            Will update the caption bar text to reflect the new value<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

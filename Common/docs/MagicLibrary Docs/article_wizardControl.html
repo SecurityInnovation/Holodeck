@@ -1,0 +1,684 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#top">top</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#wizardpages">wizard pages</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#notifications">notifications</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#events">events</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="top">Class WizardControl</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            The <i>WizardControl</i> should be used when you need to guide the user through
+            a series of steps. Simple examples include creating an installation program or 
+            allowing the creation a new items by answering a series of questions. In most
+            situations you will want to use a modal dialog to host an instance of the 
+            <i>WizardControl</i>. Rather than create your own <i>Form</i> the library already 
+            includes a <i>Form</i> called <i>WizardDialog</i>.<p />
+            
+            Please read the documentation article for the <a href="article_wizardDialog.html">WizardDialog</a> 
+            for more details on how to use it. You should also run and examine the source code for 
+            the <i>SampleWizard</i> which gives a detailed example of how to create a installation style 
+            wizard.<p /><h2>Profiles</h2>
+            The <i>Profile</i> property of the control is used to configure the appearance and
+            operation of the wizard. The three available options are: -<p /><b>Install</b><br /><br />
+            As the name implies, this profile should be used to create a series of steps that
+            perform an installation process. In this scenario the ordering of the wizard pages 
+            is very important and the control will make assumptions about the purpose of pages.<p />
+            
+            The last page is always used to report the end result of the install attempt. Therefore 
+            the last page will by default only display the <i>Close</i> button as that is the only 
+            possible action. It makes no difference if your page is reporting a success or failure
+            result the only possible action is to close down the installation process.<p />
+            
+            The second to last page is used to perform the actual install action and so the only 
+            available button will be <i>Cancel</i>. Once the install attempt has begun it makes no
+            sense allowing the user to move <i>Back</i> to previous pages or to move past the current
+            page. When the install action has completed you should manually move the wizard onto the
+            last page useing the <i>SelectedIndex</i> property in order to report the outcome.<p />
+            
+            All the preceding pages are assumed to be used in gathering information from the user and
+            so the <i>Next</i> and <i>Back</i> buttons will be shown depending on the appropriate
+            availability. The <i>Cancel</i> button is always shown so that the user can exit the 
+            wizard at this time.<p /><b>Configure</b><br /><br />
+            Use this profile to gather information needed to perform a custom action that is conducted
+            once the user clicks the <i>Finish</i> button. A good example would be adding a new item to
+            your project. Every page has the <i>Cancel</i>, <i>Next</i>, <i>Back</i> and <i>Finish</i>
+            buttons displayed with the <i>Next</i> and <i>Back</i> only enabled when appropriate for the 
+            selected page. The user can use the <i>Finish</i> button at any time to accept all the default 
+            values and have the custom action performed immediately. Alternatively they can move through 
+            the series of pages and customize the values.<p />
+            
+            If you need to enfore some mandatory fields before the <i>Finish</i> button is enabled then
+            change the <i>EnableFinishButton</i> property to <i>Status.No</i> when the control is created.
+            Once you notice that all mandatory fields have been supplied change the property to 
+            <i>Status.Yes</i> to allow the user to select the <i>Finish</i> button.<p /><b>Controller</b><br /><br />
+            Unlike the previous profiles this one does not show the heading portion at the top of the control
+            and does show the individual tab headers. This allows the user to click between pages in a random
+            order to select and modify the contents as required. There are only two buttons presented by
+            default, <i>Update</i> and <i>Cancel</i>. Use this profile when the user needs to see and
+            modify a group of related settings. They can use the <i>Update</i> button to apply the changes
+            in an appropriate way or use the <i>Cancel</i> button to discard any changes made.<p /><h2>Customization</h2>
+            If none of the above profiles does exactly what you need then you have scope to customize the
+            the profile that comes closest. Each button has a set of three properties used to control when the 
+            button is displayed, when the button is enabled and the text shown on the button. For example, the 
+            properties for the <i>Update</i> button are called <i>ShowUpdateButton</i>, <i>EnableUpdateButton</i> and
+            <i>ButtonUpdateText</i> respectively.<p />
+            
+            Imagine you are using the <i>Controller</i> profile to present a dialog box of project settings to
+            the user. The user can move between pages and change the settings as desired. When they press the
+            <i>Update</i> button you apply those changes immediately. However, you might prefer to have the 
+            button called <i>Apply</i> rather than <i>Update</i>. Simply set the <i>ButtonUpdateText</i> 
+            property to the required string to change the button text. But you must remember that the event generated 
+            when the button is pressed is still called <i>UpdateClick</i>.<p />
+            
+            In another situation you might have a <i>Cofigure</i> profile used to setup a new item within your
+            project. But you do not want the <i>Cancel</i> button availale to the user, instead you want to force
+            your user to move through the whole process and use the <i>Finish</i> button. In this case you would
+            set the <i>ShowFinishButton</i> property to <i>Status.No</i> which prevents the button from being
+            displayed on any page. If you need a button displayed all the time then assign the <i>Status.Yes</i>
+            value to the appropriate button show property. By default each buttons show and enable properties has the
+            <i>Status.Default</i> value that indicates the control should calculate the correct state depending
+            on the currently seleted <i>Profile</i> and page index.<p />
+            
+            Often you will want to change the displayed/enabled state of buttons on a per-page basis. In this
+            case you need to hook into the <i>WizardPageEnter</i> and <i>WizardPageLeave</i>events and set the 
+            appropriate values depending on the page selected.
+            
+            <h2>Default Buttons</h2>
+            By default the <i>AssignDefaultButton</i> property is defined as <i>False</i> and so the control will
+            not make any attempt to assign a default button for the <i>Form</i> the control is contained inside. If 
+            you decide to enable this property the following logic is used to determine which button should become
+            the default.<p /><b>Install Profile</b><br />
+            On the last page the only button displayed by default is <i>Close</i> and so this will be used as the
+            default. On the second to last page the only button is <i>Cancel</i> which is therefore the default. All
+            other pages assign the <i>Next</i> button as the default.<p /><b>Configure Profile</b><br />
+            The last page will use the <i>Finish</i> button as the default and all other pages the <i>Next</i> button.<p /><b>Controller Profile</b><br />
+            The <i>Update</i> button is always designated the default in this profile.
+            
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="wizardpages">Wizard Pages</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>
+                                    </h2>
+            The <i>WizardPage</i> class derives from the <i>TabPage</i> class and so exposes all the same properties
+            along with two additional ones specific to the <i>WizardPage</i>. The extra propeties are: - <p /><code>public string SubTile</code><br />
+            Define the sub-title for display when this page is selected.<br />
+            Default: <i>"(Page Description not defined)"</i><p /><code>public bool FullPage</code><br />
+            When defined the header will be removed so the page has maximum space.<br />
+            Default: <i>False</i><p />
+
+            In <i>Install</i> and <i>Configure</i> profiles the <i>SubTitle</i> property is used in the header portion 
+            of the control for the sub-title display. You should define a page description for each wizard page instance. 
+            When the <i>FullPage</i> property is defined the header portion of the control is hidden so that the page
+            takes up the extra space. <p />
+            
+            When the <i>Controller</i> profile is defined these properties have no effect because the header portion is 
+            always hidden meaning the <i>SubTitle</i>can never be seen and all pages are implicity already <i>FullPage</i>.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="notifications">Notifications</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Each button managed by the control generates an event when clicked. 
+            You should hook into these to perform the appropriate action, for example 
+            the <i>CancelClick</i> event should be trapped to ensure that when pressed 
+            the wizard performs the kind of action expected by the user. The <i>BackClick</i> 
+            and <i>NextClick</i> events allow the click to be cancelled and prevent the page 
+            transition from occuring.<p />
+            
+            The most useful events are <i>WizardPageEnter</i> and <i>WizardPageLeave</i> which as
+            the names imply, are fired on entry and exit from an individual <i>WizardPage</i>
+            You can hook into this event and enable/disable buttons in order to prevent page transitions 
+            until the user has entered some mandatory fields. Also use this event to override the default 
+            decisions made by the selected profile about which buttons are displayed.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public void ResetProfile()</code>
+                                    <br />
+	    	Resets the <i>Profile</i> property to its default value.<br /><br /><code>public void ResetPicture()</code><br />
+	    	Resets the <i>Picture</i> property to its default value.<br /><br /><code>public void ResetTitle()</code><br />
+	    	Resets the <i>Title</i> property to its default value.<br /><br /><code>public void ResetTitleFont()</code><br />
+	    	Resets the <i>TitleFont</i> property to its default value.<br /><br /><code>public void ResetSubTitleFont()</code><br />
+	    	Resets the <i>SubTitleFont</i> property to its default value.<br /><br /><code>public void ResetTitleColor()</code><br />
+	    	Resets the <i>TitleColor</i> property to its default value.<br /><br /><code>public void ResetSubTitleColor()</code><br />
+	    	Resets the <i>SubTitleColor</i> property to its default value.<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public Controls.TabControl TabControl</code>
+                                    <br />
+            Readonly property used to directly access the <i>TabControl</i> using within the <i>WizardControl</i>.
+            This should only be used for customizing the appearance and operation of the <i>TabControl</i> and not
+            alter the contents of the <i>TabControl.TabPages</i> directly.<br /><br /><code>public Panel HeaderPanel</code><br />
+            Readonly property used to directly access the header panel.<br /><br /><code>public Panel TrailerPanel</code><br />
+            Readonly property used to directly access the trailer panel.<br /><br /><code>public WizardPageCollection WizardPages</code><br />
+            Provides access to the list of wizard pages.<br /><br /><code>public Profiles Profile</code><br />
+            Use to define the default operation of buttons and pages.<br />
+            Default: <i>Profiles.Configure</i><p /><code>public int SelectedIndex</code><br />
+            Use to discover/set the current wizard page for display.<br /><br /><code>public Image Picture</code><br />
+            Define the picture to draw in the top-right corner of control.<br />
+            Default: <i>Built in picture</i><p /><code>public string Title</code><br />
+            Define the text for drawing the main title.<br />
+            Default: <i>"Welcome to the Wizard Control"</i><p /><code>public Font TitleFont</code><br />
+            Define the font for drawing the main title.<br />
+            Default: <i>"Tahoma", 10points, Regular</i><p /><code>public Font SubTitleFont</code><br />
+            Define the font for drawing the selected pages sub-title.<br />
+            Default: <i>"Tahoma", 8points, Regular</i><p /><code>public Color TitleColor</code><br />
+            Define the color for drawing the main title.<br />
+            Default: <i>base.ForeColor</i><p /><code>public Color SubTitleColor</code><br />
+            Define the color for drawing the selected pages sub-title.<br />
+            Default: <i>base.ForeColor</i><p /><code>public bool AssignDefaultButton</code><br />
+            Determine if the control should automatically assign an appropriate default button.<br />
+            Default: <i>False</i><p /><code>public Status ShowHelpButton</code><br />
+            Define when the <i>Help</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status ShowUpdateButton</code><br />
+            Define when the <i>Update</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status ShowCancelButton</code><br />
+            Define when the <i>Cancel</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status ShowBackButton</code><br />
+            Define when the <i>Back</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status ShowNextButton</code><br />
+            Define when the <i>Next</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status ShowFinishButton</code><br />
+            Define when the <i>Finish</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status ShowCloseButton</code><br />
+            Define when the <i>Close</i> button should be displayed.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableHelpButton</code><br />
+            Define when the <i>Help</i> button should be enabled.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableUpdateButton</code><br />
+            Define when the <i>Update</i> button should be enabled.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableCancelButton</code><br />
+            Define when the <i>Cancel</i> button should be enabled.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableBackButton</code><br />
+            Define when the <i>Back</i> button should be enabled.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableNextButton</code><br />
+            Define when the <i>Next</i> button should be enabled.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableFinishButton</code><br />
+            Define when the <i>Finish</i> button should be enabled.<br />
+            Default: <i>Status.Default</i><p /><code>public Status EnableCloseButton</code><br />
+            Text displayed in the <i>Close</i> button.<br />
+            Default: <i>"Close"</i><p /><code>public string ButtonHelpText</code><br />
+            Text displayed in the <i>Help</i> button.<br />
+            Default: <i>"Help"</i><p /><code>public string ButtonUpdateText</code><br />
+            Text displayed in the <i>Update</i> button.<br />
+            Default: <i>"Update"</i><p /><code>public string ButtonCancelText</code><br />
+            Text displayed in the <i>Cancel</i> button.<br />
+            Default: <i>"Cancel"</i><p /><code>public string ButtonBackText</code><br />
+            Text displayed in the <i>Back</i> button.<br />
+            Default: <i>"&lt; Back"</i><p /><code>public string ButtonNextText</code><br />
+            Text displayed in the <i>Next</i> button.<br />
+            Default: <i>"Next &gt;"</i><p /><code>public string ButtonFinishText</code><br />
+            Text displayed in the <i>Finish</i> button.<br />
+            Default: <i>"Finish"</i><p /><code>public string ButtonCloseText</code><br />
+            Text displayed in the <i>Close</i> button.<br />
+            Default: <i>"Close"</i></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="events">Events</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public event WizardPageHandler WizardPageEnter</code>
+                                    <br />
+            Fired when the user moves into a new <i>WizardPage</i>.<p /><code>public event WizardPageHandler WizardPageLeave</code><br />
+            Fired when the user leaves the current <i>WizardPage</i>.<p /><code>public event EventArgs WizardCaptionTitleChanged</code><br />
+            Fired when the <i>CaptionTitle</i> property of a <i>WizardPage</i> changes.<p /><code>public event EventArgs SelectionChanged</code><br />
+            Fired after a change in selected <i>WizardPage</i> occurs.<p /><code>public event EventArgs CloseClick</code><br />
+            Fired when the user clicks the <i>Close</i> button.<p /><code>public event EventArgs FinishClick</code><br />
+            Fired when the user clicks the <i>Finish</i> button.<p /><code>public event CancelEventArgs NextClick</code><br />
+            Fired when the user clicks the <i>Next</i> button.<p /><code>public event CancelEventArgs BackClick</code><br />
+            Fired when the user clicks the <i>Back</i> button.<p /><code>public event EventArgs CancelClick(EventArgs e)</code><br />
+            Fired when the user clicks the <i>Cancel</i> button.<p /><code>public event EventArgs UpdateClick(EventArgs e)</code><br />
+            Fired when the user clicks the <i>Update</i> button.
+            
+            <code>public event EventArgs HelpClick(EventArgs e)</code><br />
+            Fired when the user clicks the <i>Help</i> button.
+
+            <h1>Delegates</h1><pre>
+
+   public delegate void WizardPageHandler(WizardPage wp, WizardControl wc)
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

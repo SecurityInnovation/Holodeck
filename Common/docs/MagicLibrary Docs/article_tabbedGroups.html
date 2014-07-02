@@ -1,0 +1,829 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#top">top</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#createnavigateobjects">create/navigate</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#persistence">persistence</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#notifications">notifications</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#events">events</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="top">Class TabbedGroups</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            When using <i>Visual Studio .NET</i> you will have noticed that it offers an alternative to the traditional <i>SDI</i>
+            or <i>MDI</i> user interface. The <i>Tabbed MDI</i> mode presents a tab control appearance with an individual tab per
+            open document. It also allows the creation of additional groups, either vertically or horizontally. The <i>TabbedGroups</i> 
+            control is intended to offer this same method of organising documents.<p /><h2>User Interface</h2>
+            Right-clicking a selected tab with cause a context menu to be shown. This menu has all the options needed by the user to
+            manage the collection of groups and open documents. Options exist to create new groups and to move the currently selected
+            page to the next or previous group. You can also use the close command to request the current tab page be closed. This can
+            also be initiated by using the close button available directly from the tab control header.<p /><h2>Proportional Spacing</h2>
+            When more than one group is present you can use the resizing bar between groups in order to change the relative spacing of
+            the displayed groups. As you resize your application this proportional spacing is honoured. If you have a complex display
+            of different groups then the user can reset the spacing by the using the context menu displayed on right-clicking one of
+            the tabs. Choosing the <i>Rebalance</i> option will give each group an even share of the available space. For example, if
+            four groups are displayed in sequence then each group will be assigned 25% of the space. If you prefer to set the correct
+            spacing programmatically then you can use the <i>ResizeBarLock</i> property to prevent the user from resizing the spacing
+            between groups.<p />
+            
+            When the user is concentrating on a single document they can use the <i>Prominent</i> option available from the tabs context 
+            menu. This make the group containing the tab become maximized within the available space. All the other groups are reduced down 
+            to their minimum sizes so that the user can work with the selected group more easily. Seleting the same option again with remove
+            the maximized state and restore the proportional sizing that existed previously.<p /><h2>DragProvider</h2>
+		    You can rearrange the contents of the control using drag and drop of the tab pages. This is not however a true drag and drop 
+		    operation but a purely internal implementation. If you need to actually drag an external source and drop it into the control 
+		    then you can use the <i>ExternalDrop</i> event. When the event occurs you can then perform whatever application specific action 
+		    is required. Typically this will involve creating a new page and showing a new document.<p />
+		    
+		    The source of the drag operation needs to instantiate an instance of the <i>DragProvider</i> class that exists in the namespace
+		    of the <i>TabbedGroups</i> control. You provide this new object in the call to the <i>DoDragDrop</i> method. When the cursor moves
+		    over the <i>TabbedGroups</i> control this format is recognised and the appropriate drop indicator drawn. Then the drop occurs the
+		    <i>ExternalDrop</i> event is generated passing this <i>DragProvider</i> instance as one of the parameters. This allows pertinent
+		    information to be passed from the source to the destination to allow the correct application specific actions to occur. As the
+		    information passed across is going to vary from application to application the <i>DragProvider</i> has just a single property 
+		    called <i>Tag</i> of type <i>object</i>. At its simpliest you might box a string into the parameter, but you could create a new
+		    object instance and pass that instead.
+		
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="createnavigateobjects">Creating/Navigating</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>TabGroupLeaf</h2>
+		    This class implements an instance of the <i>TabControl</i> and as the name implies, instances should only ever occur as leaf nodes
+		    from the root sequence. To add new pages to an instance of this class you need only interact with the <i>TabGroupLeaf.TabPages</i>
+		    property which exposes the collection of tab pages from the underlying <i>TabControl</i> instance. <p />
+		    
+		    If you need to access the actual <i>TabControl</i> directly then you need to cast the <i>TabGroupLeaf.GroupControl</i> property to the 
+		    <i>TabControl</i> type. This is because the property is defined in the common base class called <i>TabGroupBase</i> as returned a 
+		    <i>Control</i> instance. For the <i>TabGroupLeaf</i> this is an instance of a <i>TabControl</i> but for the <i>TabGroupSequence</i> this 
+		    is a <i>Panel</i> instance used to organise its child groups.<p /><h2>TabGroupSequence</h2>
+		    This class contains a collection of leafs. There is only a single instance of this class which hold all the created leaf nodes. <p /><h2>TabGroupBase</h2>		    
+		    Both of the above classes derive from the base class called <i>TabGroupBase</i>. At times you may have a reference to the base class and 
+		    need to discover the actual derived class it represents. A quick way of doing this is to use the properties <i>TabGroupBase.IsLeaf</i> and 
+		    <i>TabGroupBase.IsSequence</i> and then cast the reference as appropriate.<p />
+		    
+		    The starting point for the hierarchy of nodes is the <i>TabbedGroups.RootSequence</i> property which exposes the top level sequence of 
+		    groups from the control instance. When you want to create a new leaf you should never create them directly. Instead you should call the 
+		    helper methods exposed by <i>TabGroupSequence</i>. For following code shows how to create two new leafs at the root sequence.<p /><code>C#</code><pre>
+
+    // Create new leaf at end of current sequence 
+    TabGroupLeaf leaf1 = _control.RootSequence.AddNewLeaf();
+    
+    // Create new leaf and insert at start of sequence
+    TabGroupLeaf leaf2 = _control.RootSequence.InsertNewLeaf(0);
+    
+    // Add a tab page to each new leaf
+    leaf1.TabPages.Add(new TabPage("Page1", new RichTextBox());
+    leaf2.TabPages.Add(new TabPage("Page2", new RichTextBox());
+
+</pre><code>VB.NET</code><pre>
+
+    ' Create new leaf at end of current sequence 
+    Dim leaf1 as TabGroupLeaf = _control.RootSequence.AddNewLeaf()
+    
+    ' Create new leaf and insert at start of sequence
+    Dim leaf2 as TabGroupLeaf = _control.RootSequence.InsertNewLeaf(0)
+    
+    ' Add a tab page to each new leaf
+    leaf1.TabPages.Add(New TabPage("Page1", new RichTextBox())
+    leaf2.TabPages.Add(New TabPage("Page2", new RichTextBox())
+
+</pre><h2>The Active Leaf</h2>
+		As long as there is at least one <i>TabGroupLeaf</i> instance then there will always be an active leaf. The active leaf
+		is the one that last had the focus. You can use the <i>TabbedGroups.ActiveLeaf</i> property to discover which leaf is
+		the currently active one and hook in the <i>ActiveLeafChanged</i> event for notification when it changes. This is useful 
+		when you need to create and add a new document to the control. In this situation you should add the new page to the 
+		currently active leaf rather than always using the first leaf that you can find.<p /><h2>Navigation</h2>
+		Moving around the set of leaf elements is made easier by the provision of the following set of useful helper methods. You
+		can use <i>TabbedGroups.FirstLeaf</i> and <i>TabbedGroups.LastLeaf</i> in return a reference to the first and last
+		leaf instances in the hierarchy. When you already have a leaf reference you can use <i>TabbedGroups.NextLeaf</i> and
+		<i>TabbedGroups.PreviousLeaf</i> to move to the next and previous leaf respectively. Note that these last two methods do 
+		not wrap and so will return <i>null/</i> when they reach either the start or end as appropriate. You can construct a simple
+		loop to process each leaf node in the hierarchy . For example.<p /><code>C#</code><pre>
+
+   // Get first leaf
+   TabGroupLeaf leaf = _control.FirstLeaf();
+   
+   while(leaf != null)
+   {
+      // Process leaf
+      
+      // Move to next leaf
+      leaf = _control.NextLeaf(leaf);
+   }
+
+</pre><code>VB.NET</code><pre>
+
+   ' Get first leaf
+   Dim leaf as TabGroupLeaf = _control.FirstLeaf()
+   
+   While No (leaf is Nothing)
+      ' Process leaf
+      
+      ' Move to next leaf
+      leaf = _control.NextLeaf(leaf)
+   End While
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="persistence">Persistence</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>Custom Information</h2>
+		    There are two places in the persistence mechanism that you can hook into the process and provide your own information. At
+		    the global level you can hook into the <i>TabbedGroups.GlobalSaving</i> and <i>TabbedGroups.GlobalLoading</i> events. This 
+		    allows extra XML information to be associated with the saved/loaded stream. You can also provide information on a per-page
+		    level. Do this by hooking into the <i>TabbedGroups.PageSaving</i> and <i>TabbedGroups.PageLoading</i> events. You could use 
+		    this to save the name of the document the page represents or even the entire document text. For example, if you were to use
+		    a simple <i>RichTextBox</i> per page in order to display a document you could save and load the contents in the following
+		    way.<p /><code>C#</code><pre>
+
+   private void HookEvents()
+   {
+      _tabbedGroup.PageSaving += new PageSavingHandler(OnPageSaving);
+      _tabbedGroup.PageLoading += new PageLoadingHandler(OnPageLoading);
+   }
+
+   private void OnPageSaving(Crownwood.Magic.Controls.TabbedGroups tg, 
+                             Crownwood.Magic.Controls.TGPageSavingEventArgs e)
+   {
+      e.XmlOut.WriteCData((e.TabPage.Control as RichTextBox).Text);
+   }
+
+   private void OnPageLoading(Crownwood.Magic.Controls.TabbedGroups tg, 
+                              Crownwood.Magic.Controls.TGPageLoadingEventArgs e)
+   {
+      (e.TabPage.Control as RichTextBox).Text = e.XmlIn.ReadString();
+   }
+   
+</pre><code>VB.NET</code><pre>
+
+   Private Sub HookEvents()
+      AddHandler _tabbedGroup.PageSaving, AddressOf OnPageSaving
+      AddHandler _tabbedGroup.PageLoading, AddressOf OnPageLoading
+   End Sub
+
+   Private Sub OnPageSaving(ByVal tg As TabbedGroups, _
+                            ByVal e As TGPageSavingEventArgs)
+      e.XmlOut.WriteCData(CType(e.TabPage.Control, RichTextBox).Text)
+   End Sub
+
+   Private Sub OnPageLoading(ByVal tg As TabbedGroups, _
+                             ByVal e As TGPageLoadingEventArgs)
+      CType(e.TabPage.Control, RichTextBox).Text = e.XmlIn.ReadString()
+   End Sub
+
+</pre><h2>Control Persistence</h2>
+		    By default the control provides a very simple level of control persistence. It does <b>NOT</b> save the contents of any
+		    control but will save the type name of the <i>TabPage.Control</i> assigned to each <i>TabPage</i> instance. It will attempt
+		    to recreate the specified control at load time. This works fine when you can a relatively simple control assigned to each of
+		    your tab pages, such as a <i>RichTextBox</i>. If however you have a more complex situation then you are advised to turn of the
+		    <i>SaveControl</i> property and to recreate the correct control at load time within the <i>PageLoading</i> event.<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="notifications">Notifications</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+		    The events related to persistence have already been described in the previous section. There are however three other events
+		    of special note that you will probably want to hook into and process. The first is the <i>TabControlCreated</i> event that is
+		    fired whenever a new <i>TabControl</i> is created for a <i>TabGroupLeaf</i> instance. Any associated event handlers will be
+		    called with the control already setup with the appropriate default properties but you can the modify these to customize the
+		    appearance as needed. For example, you might alter the <i>TabControl.PositionAtTop</i> so that the tabs are always displayed
+		    at the bottom of the group rather than defaulted to be at the top.<p />
+		    
+		    Next is the <i>PageCloseRequested</i> event that is fired in one of two ways. If the user presses the close button on the tab 
+		    control itself then the event is fired, or if the close command from the context menu associated with a page is selected. Either 
+		    way you have the chance to perform custom processing. Such as asking the user if they need to save the document because it has 
+		    changed since being opened. Note that you can cancel the request and not allow the page to be closed.<p />
+		    
+		    Another crucial event is the <i>PageContextMenu</i> that is fired when the context menu for a tab page is about to be displayed.
+		    This gives you the chance to add or remove commands from the <i>PopupMenu</i> instance or even to cancel the menu entirely. Note that
+		    the standard commands are always present in the menu commands collection and so it is safe to insert or remove entries by index value.
+		    Any events removed will have been reinserted then next time the event is fired.<p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public void Rebalance()</code>
+                                    <br />
+            Restore equal proportional spacing to all groups recursively.<p /><code>public void Rebalance(bool recurse)</code><br />
+            Restore equal proportional spacing to top level sequence and if specified, all children.<p /><code>public TabGroupLeaf FirstLeaf()</code><br />
+            Return reference to first leaf group.<p /><code>public TabGroupLeaf LastLeaf()</code><br />
+            Return reference to last leaf group.<p /><code>public TabGroupLeaf NextLeaf(TabGroupLeaf current)</code><br />
+            Return reference to next leaf group in hierarchy starting from specified leaf.<p /><code>public TabGroupLeaf PreviousLeaf(TabGroupLeaf current)</code><br />
+            Return reference to previous leaf group in hierarchy starting from specified leaf.<p /><code>public byte[] SaveConfigToArray()</code><br />
+            Saves layout information into an array of bytes using Encoding.Unicode.<p /><code>public byte[] SaveConfigToArray(Encoding encoding)</code><br />
+            Saves layout information into an array of bytes using caller provided 
+            encoding object.<P /><code>public void SaveConfigToFile(string filename)</code><br />
+            Saves layout information into a named file using Encoding.Unicode<p /><code>public void SaveConfigToFile(string filename, Encoding encoding)</code><br />
+            Saves layout information into a named file using caller provided encoding 
+            object.<p /><code>public void SaveConfigToStream(Stream stream, Encoding encoding)</code><br />
+            Saves layout information into a stream object using caller provided 
+            encoding object.<p /><code>public void LoadConfigFromArray(byte[] buffer)</code><br />
+            Loads layout information from given array of bytes.<p /><code>public void LoadConfigFromFile(string filename)</code><br />
+            Loads layout information from given filename.<p /><code>public void LoadConfigFromStream(Stream stream)</code><br />
+            Loads layout information from given stream object.<p /><code>public void OnTabControlCreated(Controls.TabControl tc)</code><br />
+            Defines the default properties of the specified <i>TabControl</i> and generates event.<p /><code>public void OnPageCloseRequested(TGCloseRequestEventArgs e)</code><br />
+            Generates <i>PageCloseRquested</i> event.<p /><code>public void OnPageContextMenu(TGContextMenuEventArgs e)</code><br />
+            Generates <i>PageContextMenu</i> event.<p /><code>public void OnGlobalSaving(XmlTextWriter xmlOut)</code><br />
+            Generates <i>GlobalSaving</i> event.<p /><code>public void OnGlobalLoading(XmlTextReader xmlIn)</code><br />
+            Generates <i>GlobalLoading</i> event.<p /><code>public void OnPageSaving(TGPageSavingEventArgs e)</code><br />
+            Generates <i>PageSaving</i> event.<p /><code>public void OnPageLoading(TGPageLoadingEventArgs e)</code><br />
+            Generates <i>PageLoading</i> event.<p /><code>public void OnProminentLeafChanged(EventArgs e)</code><br />
+            Generates <i>ProminentLeafChanged</i> event.<p /><code>public void OnActiveLeafChanged(EventArgs e)</code><br />
+            Generates <i>ActiveLeafChanged</i> event.<p /><code>public void OnDirtyChanged(EventArgs e)</code><br />
+            Generates <i>DirtyChanged</i> event.<p /><code>public void OnExternalDrop(TabGroupLeaf tgl, TabControl tc, DragProvider dp)</code><br />
+            Generates <i>ExternalDrop</i> event.<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public VisualStyle Style</code>
+                                    <br />
+            Has two possible values.
+            <UL><LI><i>VisualStyle.IDE</i>   shows in Visual Studio .NET style</LI><LI><i>VisualStyle.Plain</i>   shows in a simpler Visual C++ v6 style</LI></UL>
+            Default: <i>VisualStyle.IDE</i><p /><code>public TabGroupSequence RootSequence</code><br />
+            Provides access to the top-level sequence of groups.<p /><code>public int ResizeBarVector</code><br />
+            Defines the width of the resizing bars that separate different groups.<br />
+            A value of <i>-1</i> requests that the default vector for the current <i>Style</i> value be used.<br />
+            Default: <i>-1</i><p /><code>public Color ResizeBarColor</code><br />
+            Defines the color to use when drawing the resizing bar.<br />
+            Default: <i>this.BackColor</i><p /><code>public bool ResizeBarLock</code><br />
+            When defined this will lock the resizing bars so that the proportional spacing cannot be changed.<br />
+            Default: <i>false</i><p /><code>public TabGroupLeaf ProminentLeaf</code><br />
+            Define which tab group should be maximized.<br />
+            Default: <i>null</i><p /><code>public int DefaultGroupMinimumWidth</code><br />
+            Define the minimum width a group can be resized to become.<br />
+            Default: <i>4</i><p /><code>public int DefaultGroupMinimumHeight</code><br />
+            Define the minimum height a group can be resized to become.<br />
+            Default: <i>4</i><p /><code>public ImageList ImageList</code>
+            Default <i>ImageList</i> to be used by all leaf nodes.<br />
+            Default: <i>null</i><p /><code>public DisplayTabModes DisplayTabMode</code><br />
+            Has five possible values.
+            <UL><LI><i>HideAll</i> do not show any tab headers</LI><LI><i>ShowAll</i> show all tab headers</LI><LI><i>ShowActiveLeaf</i> only show active leaf tab header</LI><LI><i>ShowMouseOver</i> show tab header when mouse over</LI><LI><i>ShowActiveAndMouseOver</i> show when active or mouse over</LI></UL>
+            Default: <i>DisplayTabModes.ShowAll</i><p /><code>public bool SaveControls</code><br />
+            When defined and saving the configuration it will attempt to save the name of the <i>Control</i> instance
+            associated with each <i>TabPage</i>. On reloading it attempts to recreate the named control and so recreate
+            the saved setup. Note this will not save the properties or contents of the named control.<br /> 
+            Default: <i>true</i><p /><code>public bool Dirty</code><br />
+            Used by the developer to determine if the control is dirty and needs saving.<p /><code>public bool AutoCalculateDirty</code><br />
+            When this is defined the control will automatically update the value of the <i>Dirty</i> flag whenever any
+            change occurs to the structure of the control. Otherwise the developer is left to update the flag manually.<br />
+            Default: <i>true</i><p /><code>public TabGroupLeaf ActiveLeaf</code><br />
+            Defines which leaf node is the currently active one.<br />
+            Default: <i>null</i><p /><code>public bool AtLeastOneLeaf</code><br />
+            When defined the control will ensure there is at least one leaf node in existence at all times. Otherwise it is
+            possible that removing the last page from a leaf will cause compacting to remove that leaf and leave the control
+            with no leafs at all.<br />
+            Default: <i>true</i><p /><code>public bool AutoCompact</code><br />
+            Should the structure be automatically compacted to ensure the most efficient hierarchy is maintained at all times.<br />
+            Default: <i>true</i><p /><code>public string CloseMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for close command.<br />
+            Default: <i>Close</i><p /><code>public string ProminentMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for prominent command.<br />
+            Default: <i>Prominent</i><p /><code>public string RebalanceMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for rebalance command.<br />
+            Default: <i>Rebalance</i><p /><code>public string MovePreviousMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for move previous command.<br />
+            Default: <i>Move to Previous Tab Group</i><p /><code>public string MoveNextMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for move next command.<br />
+            Default: <i>Move to Next Tab Group</i><p /><code>public string NewVerticalMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for new vertical command.<br />
+            Default: <i>New Vertical Tab Group</i><p /><code>public string NewHorizontalMenuText</code><br />
+            Text to use on <i>TabPage</i> context menu for new horizontal command.<br />
+            Default: <i>New Horizontal Tab Group</i><p /><code>public Shortcut CloseShortcut</code><br />
+            Shortcut combination to invoke the close command.<br />
+            Default: <i>Shortcut.CtrlShiftC</i><p /><code>public Shortcut ProminentShortcut</code><br />
+            Shortcut combination to invoke the prominent command.<br />
+            Default: <i>Shortcut.CtrlShiftT</i><p /><code>public Shortcut RebalanceShortcut</code><br />
+            Shortcut combination to invoke the rebalance command.<br />
+            Default: <i>Shortcut.CtrlShiftR</i><p /><code>public Shortcut MovePreviousShortcut</code><br />
+            Shortcut combination to invoke the move previous command.<br />
+            Default: <i>Shortcut.CtrlShiftP</i><p /><code>public Shortcut MoveNextShortcut</code><br />
+            Shortcut combination to invoke the move next command.<br />
+            Default: <i>Shortcut.CtrlShiftN</i><p /><code>public Shortcut SplitVerticalShortcut</code><br />
+            Shortcut combination to invoke the new vertical command.<br />
+            Default: <i>Shortcut.CtrlShiftV</i><p /><code>public Shortcut SplitHorizontalShortcut</code><br />
+            Shortcut combination to invoke the new horizontal command.<br />
+            Default: <i>Shortcut.CtrlShiftH</i><p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="events">Events</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public event EventHandler ProminentLeafChanged</code>
+                                    <br />
+            Fired whenever the <i>ProminentLeaf</i> property value has changed.<p /><code>public event EventHandler ActiveLeafChanged</code><br />
+            Fired whenever the <i>ActiveLeaf</i> property value has changed.<p /><code>public event EventHandler DirtyChanged</code><br />
+            Fired whenever the <i>Dirty</i> property value has changed.<p /><code>public event PageCloseRequestHandler PageCloseRequest</code><br />
+            Fired when the user requests a page be closed via either the <i>TabControl</i> close button or by
+            selecting the <i>Close</i> command from the <i>TabPage</i>context menu.<p /><code>public event PageContextMenuHandler PageContextMenu</code><br />
+            Fired when the context menu is about to be shown for a <i>TabPage</i>. Use this event to add or
+            remove entries from the presented menu or to cancel the menu from appearing.<p /><code>public event TabControlCreatedHandler TabControlCreated</code><br />
+            Fired whenever a new <i>TabControl</i> instance is created. Use this to modify the default 
+            properties of the created control.<p /><code>public event GlobalSavingHandler GlobalSaving</code><br />
+            Fired when the configuration information is being saved and allows custom information to be stored
+            inside the configuration stream.<p /><code>public event GlobalLoadingHandler GlobalLoading</code><br />
+            Fired when a configuration is being reloaded and allows custom information previously saved to be
+            reloaded again.<p /><code>public event PageSavingHandler PageSaving</code><br />
+            Fired for each <i>TabPage</i> instance being saved. You should override this to save the actual data
+            associated with the page so that it can be recreated when the configuration is reloaded.<p /><code>public event PageLoadingHandler PageLoading</code><br />
+            Fired when a configuraton is ebing reloaded for each <i>TabPage</i> being recreated. Allows custom 
+            information to be reloaded and the appropriate setup of the page to be performed.<p /><code>public event ExternalDropHandler ExternalDrop</code><br />
+            Fired when an external drag source has been dropped onto a <i>TabGroupLeaf</i> instance.<p /><h2>Delegate Signatures</h2><pre>
+
+   void TabControlCreatedHandler(TabbedGroups tg, Controls.TabControl tc);
+   void PageCloseRequestHandler(TabbedGroups tg, TGCloseRequestEventArgs e);
+   void PageContextMenuHandler(TabbedGroups tg, TGContextMenuEventArgs e);
+   void GlobalSavingHandler(TabbedGroups tg, XmlTextWriter xmlOut);
+   void GlobalLoadingHandler(TabbedGroups tg, XmlTextReader xmlIn);
+   void PageSavingHandler(TabbedGroups tg, TGPageSavingEventArgs e);
+   void PageLoadingHandler(TabbedGroups tg, TGPageLoadingEventArgs e);
+   
+   void ExternalDropHandler(TabbedGroups tg, TabGroupLeaf tgl,        
+                            Controls.TabControl tc, DragProvider dp);
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

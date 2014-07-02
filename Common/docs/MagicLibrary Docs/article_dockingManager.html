@@ -1,0 +1,1330 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#top">top</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#contents">contents</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#showandhide">show / hide</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#accurate">accurate</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#samewindow">same window</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#samecolumnrow">same column</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#innerouter">inner / outer</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#persistence">persistence</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#events">events</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="top">Class DockingManager</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+		    An instance of the <i>DockingManager</i> class needs to be created and
+		    associated with each <i>ContainerControl</i> derived object you want to 
+		    have a docking capability. Most of the time this will be your applications
+		    top-level application <i>Form</i>. <p />
+            As well as a <i>ContainerControl</i> reference the constructor takes
+            a parameter indicating the visual style required. Currently two display 
+            styles are supported, <i>VisualStyle.IDE</i> for the Visual Studio .NET 
+            appearance and <i>VisualStyle.Plain</i> for the older Visual C++ Version 
+            6 appearance.<p />
+            The following code shows how to add docking support to a <i>Form</i><br /><br /><code>C#</code><pre>
+   
+using Crownwood.Magic.Common;
+using Crownwood.Magic.Docking;
+
+public class MyForm : Form
+{
+   protected Crownwood.Magic.Docking.DockingManager _dockingManager = null;
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      // Create the object that manages the docking state
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+   }
+}
+
+</pre><code>VB.NET</code><pre>
+   
+Imports Crownwood.Magic.Common
+Imports Crownwood.Magic.Docking
+
+Public Class MyForm
+   Inherits Form
+
+   Protected _dockingManager As Crownwood.Magic.Docking.DockingManager
+
+   Public Sub New()
+      InitializeComponent()
+
+      ' Create the object that manages the docking state
+      _dockingManager = New DockingManager(Me, VisualStyle.IDE)
+   End Sub
+End Class
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="contents">Contents</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Now we need to provide the docking manager with descriptions of 
+            each dockable unit. This is the purpose of the <i>Content</i> class. 
+            Each <i>Content</i> object creates an association between a title, 
+            image and <i>Control</i> derived object. You should read the full 
+            documentation of this important class before continuing, use this 
+            <a href="article_content.html">link</a>.<p />
+            The following code shows how to create a <i>Content</i> instance and 
+            add it to the docking manager inside the form constructor. It creates 
+            a <i>RichTextBox</i> control that will act as a dockable notepad for 
+            use by the user.<br /><br /><code>C#</code><pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      Content notePad = new Content(_dockingManager);
+   
+      notePad.Title = "Notepad";
+      notePad.Control = new RichTextBox();
+      notePad.ImageList = _internalImages;
+      notePad.ImageIndex = _imageIndex;
+
+      _dockingManager.Contents.Add(notePad);
+   }
+   
+</pre><code>VB.NET</code><pre>
+
+   Public Sub New()
+      InitializeComponent()
+
+      _dockingManager = New DockingManager(Me, VisualStyle.IDE)
+
+      Dim notePad As New Content(_dockingManager)
+   
+      notePad.Title = "Notepad"
+      notePad.Control = new RichTextBox()
+      notePad.ImageList = _internalImages
+      notePad.ImageIndex = _imageIndex
+
+      _dockingManager.Contents.Add(notePad)
+   End Sub
+   
+</pre>
+            As this is such a common operation the process has been streamlined. 
+            There are several overrides of the <i>Contents.Add</i> method that 
+            will create the required <i>Content</i> instance for you during the 
+            <i>Add</i> process. Here is the recommended approach.<br /><br /><code>C#</code><pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      ' This will create and add a new Content object all in one operation
+      _dockingManager.Contents.Add(new RichTextBox(), "Notepad", 
+                                   _internalImages, _imageIndex);
+   }
+
+</pre><code>VB.NET</code><pre>
+
+   Public Sub New()
+   {
+      InitializeComponent()
+
+      _dockingManager = New DockingManager(Me, VisualStyle.IDE)
+
+      ' This will create and add a new Content object all in one operation
+      _dockingManager.Contents.Add(New RichTextBox(), "Notepad", 
+                                   _internalImages, _imageIndex)
+   End Sub
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="showandhide">Showing and Hiding Contents</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Just adding a <i>Content</i> instance will not make it visible to the 
+            user. We want our application to make this instance visible immediately, 
+            so we use the <i>ShowContent</i> method as shown below: -
+<pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      _dockingManager.Contents.Add(new RichTextBox(),
+                                   "Notepad", 
+                                   _internalImages, 
+                                   _imageIndex);
+
+      // Make the content with title 'Notepad' visible
+      _dockingManager.ShowContent(_dockingManager.Contents["Notepad"]);
+   }
+
+</pre>
+            This shows how to find a reference to a <i>Content</i> object by using 
+            the string indexer of the <i>Contents</i> collection. In this particular 
+            case it is a little inefficient as we could have stored the <i>Content</i>
+            reference that is returned from the call to <i>Contents.Add</i>. Here is a 
+            more efficient example: -
+<pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      Content notePad = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad", _internalImages, _imageIndex);
+
+      _dockingManager.ShowContent(notePad);
+   }
+
+</pre>
+            At some point in the future you may want to hide this instance again in which 
+            case you can use the <i>HideContent</i> method. To make all the <i>Content</i> 
+            instances visible or invisible use the <i>ShowAllContent</i> and <i>HideAllContent</i> 
+            methods respectively.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="accurate">Accurate creation</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Three lines of code and we have a docking window made visible to the user which 
+            can be redocked and resized. However, at no point so far have we specified exactly 
+            where the new <i>Content</i> gets shown. The docking position for a <i>Content</i> 
+            made visible is the saved position from when it was last hidden. In our case the 
+            instance has never been hidden because it has just been created.<p />
+            The constructor for the <i>Content</i> will default the saved docking position to 
+            be the left edge. Therefore our last example above will display the content inside 
+            a docking window which is docked against the left edge of the application <i>Form</i>. 
+            The value of the <i>Content.DisplaySize</i> will be used to decide how wide the 
+            docking window should be, this defaults to <i>150, 150</i>.<p />
+            If you want to dock against a different edge or even begin in the floating state 
+            then you need to do a little more work. The following code shows the use of the 
+            <i>AddContentWithState</i> method to show the content with a defined initial state: -
+<pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      Content notePad = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad", _internalImages, _imageIndex);
+
+      // Request new Docking window be created and displayed on the right edge
+      _dockingManager.AddContentWithState(notePad, State.DockRight);
+   }
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="samewindow">Create in same window</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Using the above method allows a docking window to be made visible and its position 
+            defined. But it does have the drawback that it will always create a new docking 
+            window to host the <i>Content</i> instance. What if we want two or more <i>Content</i>
+             objects to be hosted inside the same docking window? To achieve this we need to bring 
+            another method called <i>AddContentToWindowContent</i> into use.<p />
+            Each content is always hosted inside a <i>WindowContent</i> derived object. We can 
+            remember the reference of the newly created <i>WindowContent</i> object and reuse it 
+            as the destination for other <i>Content</i> instances. The following example creates 
+            <i>notePad</i> instances that are placed inside the same docking window, when this happens 
+            the docking window will adopt a tabbed appearance: -
+<pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      Content notePad1 = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad1", _internalImages, _imageIndex);
+
+      Content notePad2 = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad2", _internalImages, _imageIndex);
+
+      WindowContent wc = _dockingManager.AddContentWithState(
+                            notePad1, State.DockRight) as WindowContent;
+
+      // Add the second notePad2 to the same WindowContent
+      _dockingManager.AddContentToWindowContent(notePad2, wc);
+   }
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="samecolumnrow">Create in same Column/Row</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            There is only one more ability we need to add so that any docking configuration 
+            can be constructed at start-up. We need the ability to place docking windows in 
+            the same column or row. To do this we have to understand more about the actual 
+            structure of objects maintained by the docking code.<p />
+            Docking is supported by providing three levels of object. Each <i>Content</i> 
+            object exists inside a <i>Window</i> derived object which itself exists inside a 
+            <i>Zone</i> derived object. The <i>WindowContent</i> class is a specialization 
+            of the <i>Window</i> base class that has special knowledge about how to handle 
+            <i>Content</i> objects. It is easiest to explain by providing some examples.<p />
+            The <i>AddContentWithState</i> method creates a new <i>WindowContent</i> instance 
+            and adds to it the provided <i>Content</i> parameter. Next a <i>Zone</i> is created 
+            and the <i>WindowContent</i> instance placed inside it. The <i>Zone</i> is then added
+            to the hosting <i>Form</i> and positioned according to the <i> State</i> 
+            parameter.<p />
+            The <i>AddContentToWindowContent</i> adds the provided <i>Content</i> parameter to the 
+            existing <i>WindowContent</i> instance.<p /> 
+            The <i>AddContentToZone</i> method creates a new <i>WindowContent</i> instance and 
+            adds to it the provided <i>Content</i> parameter. It then  adds the new 
+            <i>WindowContent</i> to the provided <i>Zone</i> in the correct relative position.<p />
+            The following example shows how to create three <i>notePad</i> objects, where the first two 
+            are added to the same <i>WindowContent</i> causing a tabbed appearance to occur. The 
+            final <i>notePad</i> is created in its own <i>WindowContent</i> and then added to the same 
+            <i>Zone</i>. The position value of <i>0</i> will make the second <i>WindowContent</i> 
+            be positioned first in the <i>Zone</i>.
+<pre>
+
+   public MyForm()
+   {
+      InitializeComponent();
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      Content notePad1 = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad1", _internalImages, _imageIndex);
+
+      Content notePad2 = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad2", _internalImages, _imageIndex);
+
+      Content notePad3 = _dockingManager.Contents.Add(
+        new RichTextBox(), "Notepad3", _internalImages, _imageIndex);
+
+      WindowContent wc = _dockingManager.AddContentWithState(
+                            notePad1, State.DockRight) as WindowContent;
+
+      _dockingManager.AddContentToWindowContent(notePad2, wc);
+
+      // Add a new WindowContent to the existing Zone already created
+      _dockingManager.AddContentToZone(notePad3, wc.ParentZone, 0);
+   }
+
+</pre>
+            You can use the <i>Content.ParentWindowContent</i> property to discover 
+            which <i>WindowContent</i> a <i>Content</i> instance is currently placed 
+            inside. Likewise, the <i>WindowContent.ParentZone</i> property indicates 
+            the <i>Zone</i> a <i>WindowContent</i> instance is inside. Using these and 
+            the above-described methods should allow any start up configuration to be 
+            constructed. Note that the <i>Content.ParentWindowContent</i> property returns 
+            <i>null</i> if the <i>Content</i> is not currently visible.
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="innerouter">Control where docking can occur</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            If you use the <i>SampleDocking</i> application you will notice that you 
+            cannot redock a docking window between a <i>Form</i> edge and either the <i>
+            MenuControl</i> or <i>StatusBar</i> controls. In order to achieve this effect 
+            we need to define a couple of the docking manager properties.<p />
+            The <i>OuterControl</i> property needs to be set to the first control in 
+            the <i>Forms.Control</i> collection that represents the group of controls 
+            that the manager must not dock between. Remember that the order of controls in 
+            the <i>Form.Control</i> collection determines the sizing and positioning of them. 
+            So the last control in the collection is the one that is positioned and sized 
+            first, the second to last control will be positioned and sized in the space that 
+            remains.<p />
+            As the <i>MenuControl</i> is the most important and needs to be positioned first 
+            it will be last in the collection. The <i>StatusBar</i> is the next most important 
+            and so is second to last in the collection. In this scenario the <i>OuterControl</i> 
+            would be set to a reference of the <i>StatusBar</i> control. This will prevent the 
+            docking manager from reordering any window after the <i>StatusBar</i> in the 
+            collection. If the <i>StatusBar</i> was last in the list and the <i>MenuControl</i> 
+            second to last then the <i>OuterControl</i> would need to reference the 
+            <i>MenuControl</i> instead.<p />
+            The <i>InnerControl</i> property needs to be set to the last control in the 
+            <i>Forms.Control</i> collection that represents the group of controls that the 
+            manager must not dock after. This might seem odd, as there is unlikely to be a 
+            docked window you would not want the docking windows to be placed inside of. However 
+            there is a situation where this becomes important.<p />
+            If you have a control that is defined as having the <i>Dock</i> property of 
+            <i>DockStyle.Fill</i> then this control must always occur in the <i>Form.Control</i>
+            collection before any docking windows. Otherwise you can get the situation where the 
+            control with the <i>DockStyle.Fill</i> value is not sized according to the actual 
+            space left over when all docking windows have been placed. Because this control is 
+            further up the list of controls it calculates its size without taking into account 
+            any docking windows that occur earlier in the collection.<p />
+            The following shows a <i>MenuControl</i>, <i>StatusBar</i> and a <i>RichTextBox</i> 
+            being created and added to the <i>Form.Control</i> collection. It then sets the 
+            correct <i>InnerControl</i> and <i>OuterControl</i> values to generate the expected 
+            runtime operation.<br /><br /><code>C#</code><pre>
+
+   public MyFormConstructor()
+   {
+      // This block would normally occur inside a call to:-
+      // InitializeComponent();
+      {
+         RichTextBox filler = new RichTextBox();
+         filler.Dock = DockStyle.Fill;
+         Controls.Add(filler);
+
+         StatusBar status = new StatusBar();
+         status.Dock = DockStyle.Bottom;
+         Controls.Add(status);
+
+         MenuControl menu = new MenuControl();
+         menu.Dock = DockStyle.Top;
+         Controls.Add(menu);
+      }
+
+      _dockingManager = new DockingManager(this, VisualStyle.IDE);
+
+      _dockingManager.InnerControl = filler;
+      _dockingManager.OuterControl = status;
+
+      // Now create and setup my Content objects
+      ...
+   }
+
+</pre><code>VB.NET</code><pre>
+
+   Public Sub New()
+      ' This block would normally occur inside a call to:-
+      ' InitializeComponent();
+
+         Dim filler As New RichTextBox()
+         filler.Dock = DockStyle.Fill
+         Controls.Add(filler)
+
+         Dim status As New StatusBar()
+         status.Dock = DockStyle.Bottom
+         Controls.Add(status)
+
+         Dim menu As New MenuControl()
+         menu.Dock = DockStyle.Top
+         Controls.Add(menu)
+
+      _dockingManager = New DockingManager(Me, VisualStyle.IDE)
+
+      _dockingManager.InnerControl = filler
+      _dockingManager.OuterControl = status
+
+      ' Now create and setup my Content objects
+      ...
+   End Sub
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="persistence">Persistence</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Many applications need to be able to remember several different docking 
+            configurations of the <i>Content</i> objects and be able to switch between 
+            them at runtime. You might also want to save the configuration when the 
+            application is shutdown so that it can be restored at start-up. The code to 
+            save and load configurations is as follows:-
+<pre>
+
+   // Save the current configuration to a named file   
+   _dockingManager.SaveConfigToFile("MyFileName.xml");
+
+   ...
+
+   // Load a saved configuration and apply immediately
+   _dockingManager.LoadConfigFromFile("MyFileName.xml");
+
+</pre>
+            There are a couple of issues to remember though. The saving process does 
+            not save the actual <i>Content</i> objects but just the state information 
+            it needs in order to restore that <i>Content</i> to the same docking 
+            size/position later. So the <i>Content</i> object must already exist and be 
+            part of the docking manager when the load operation takes place because 
+            loading will not recreate those objects.<p />
+            The second point is that the save and load use the <i>Title</i> property of 
+            the <i>Content</i> to identify the information. If you change the <i>Title</i> 
+            of a <i>Content</i> object between saving and loading then the latter process 
+            will fail to associate the saved information to the object. This will not 
+            cause an exception but that <i>Content</i> will not be updated with the 
+            required configuration.<p />
+            If you need to save the configuration information into a database or simply 
+            save it internally then you do not have to save into a file. There are 
+            matching methods for saving and loading into byte arrays which are easy to 
+            store within your application or to a database. For even greater control use 
+            the methods that take a stream object instance, in which case you must create 
+            and provide the stream object instance, but this gives the developer complete 
+            control over the storage medium.<p />
+            Some developers might find it useful to save and load some additional custom 
+            details inside the configuration data. This prevents the need for two sets of saved
+            data which then need to be maintained in parallel. The <i>SaveCustomConfig</i> 
+            event is generated when all the docking information has been written and allows
+            you to add additional information at the end. <p />
+            On loading the <i>LoadCustomConfig</i> is event is generated so that the corresponding 
+            information can be read back in again. The following sample code shows a trivial example 
+            of this:-
+            
+<pre>
+
+   public void InitialiseComponent()   
+   {
+      ...
+      
+      // Setup custom config handling at appropriate place in code
+      _manager.SaveCustomConfig += 
+         new DockingManager.SaveCustomConfigHandler(OnSaveConfig);
+         
+      _manager.LoadCustomConfig += 
+         new DockingManager.LoadCustomConfigHandler(OnLoadConfig);
+   }
+   
+   protected void OnSaveConfig(XmlTextWriter xmlOut)
+   { 
+      // Add an extra node into the config to store some example information
+      xmlOut.WriteStartElement("MyCustomElement");
+      xmlOut.WriteAttributeString("ExampleData1", "Hello");
+      xmlOut.WriteAttributeString("ExampleData2", "World!");
+      xmlOut.WriteEndElement();
+   }
+
+   protected void OnLoadConfig(XmlTextReader xmlIn)
+   {
+      // We are expecting our custom element to be the current one
+      if (xmlIn.Name == "MyCustomElement")
+      {
+         // Read in both the expected attributes
+         string attr1 = xmlIn.GetAttribute(0);
+         string attr2 = xmlIn.GetAttribute(1);
+
+         // Must move past our element
+         xmlIn.Read();
+      }
+   }
+   
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public virtual void ShowAllContents()</code>
+                                    <br />
+            Make all hidden <i>Content</i> objects visible.<p /><code>public virtual void HideAllContents()</code><br />
+            Make all visible <i>Content</i> objects hidden.<p /><code>public virtual bool ShowContent(Content c)</code><br />
+            If the provided object is hidden then it will be restored to become visible.<p /><code>public virtual bool HideContent(Content c)</code><br />
+            If the provided object is visible then it will become hidden.<p /><code>public virtual void HideContent(Content c, bool record, bool reorder)</code><br />
+            Provides greater control over actions taken when a <i>Content</i> becomes hidden.<br /> 
+            This is provided for internal use by the docking windows framework code.<br />
+            If <i>record</i> is set then it will record the current <i>Content</i> 
+            position before hiding window.<br />
+            If <i>reorder</i> is set then it will move the <i>Content</i> to the 
+            end of the <i>Contents</i> collection.<p /><code>public virtual Window CreateWindowForContent(Content c)</code><br />
+            Used to create an appropriately configured <i>Window</i> object for 
+            the given <i>Content</i> object.<br /> Currently this ensures the caption 
+            bar matches the requested style specified in the constructor.<p /><code>public virtual Zone CreateZoneForContent(State zoneState)</code><br />
+            Creates an appropriate <i>Zone</i> object and adds it to the managed control.<p /><code>public WindowContent AddContentWithState(Content c, State newState)</code><br />
+            Will create an appropriate <i>Window</i> for hosting the provided 
+            <i>Content</i> and place inside a new <i>Zone</i> which is placed 
+            according to the <i>State</i> given.<p /><code>public WindowContent AddContentToWindowContent(Content c, WindowContent wc)</code><br />
+            If you already have a reference to a <i>WindowContent</i> object then 
+            this method will add the provided 
+            <i>Content</i> into that object.<p /><code>public Window AddContentToZone(Content c, Zone z, int index)</code><br />
+            If you already have a reference to a <i>Zone</i> object then this will 
+            create a new <i>Window</i> to host the provided <i>Content</i> and then 
+            add the <i>Window</i> to the given relative position inside the <i>Zone</i>.<p /><code>public void ReorderZoneToInnerMost(Zone zone)</code><br />
+            Repositions the given reference within the list of <i>Form</i> controls 
+            to the innermost valid point.<p /><code>public void ReorderZoneToOuterMost(Zone zone)</code><br />
+            Repositions the given reference within the list of <i>Form</i> controls 
+            to the outermost valid point.<p /><code>public byte[] SaveConfigToArray()</code><br />
+            Saves layout information into an array of bytes using Encoding.Unicode.<p /><code>public byte[] SaveConfigToArray(Encoding encoding)</code><br />
+            Saves layout information into an array of bytes using caller provided 
+            encoding object.<P /><code>public void SaveConfigToFile(string filename)</code><br />
+            Saves layout information into a named file using Encoding.Unicode<p /><code>public void SaveConfigToFile(string filename, Encoding encoding)</code><br />
+            Saves layout information into a named file using caller provided encoding 
+            object.<p /><code>public void SaveConfigToStream(Stream stream)</code><br />
+            Saves layout information into a stream object Encoding.Unicode.<p /><code>public void SaveConfigToStream(Stream stream, Encoding encoding)</code><br />
+            Saves layout information into a stream object using caller provided 
+            encoding object.<p /><code>public void LoadConfigFromArray(byte[] buffer)</code><br />
+            Loads layout information from given array of bytes.<p /><code>public void LoadConfigFromFile(string filename)</code><br />
+            Loads layout information from given filename.<p /><code>public void LoadConfigFromStream(Stream stream)</code><br />
+            Loads layout information from given stream object.<p /><code>public Rectangle InnerResizeRectangle(Control source)</code><br />
+            Used to compute the rectangle of space left over after taking into 
+            account the size of all the docking windows. When a valid <i>source</i> 
+            is provided it will reduce the rectangle by twice the size of those controls 
+            inside of it.<p /><code>public void ResetColors()</code><br />
+            Use this to reset all colors to the defaults used when the docking 
+            manager is first created.<p /><code>public void UpdateInsideFill()</code><br />
+            Used internally to update the correct inner most docking window with 
+            the correct docking style when a change has occured to docking layout.<p /><code>public void RemoveShowingAutoHideWindows()</code><br />
+            If any of the AutoHide windows is currently being shown then this will 
+            remove it from display immediately.<p /><code>public void BringAutoHideIntoView(Content c)</code><br />
+            If the given content instance is in the AutoHide mode then it will be 
+            selected and slide out into view.<p /><code>public virtual void OnShowContextMenu(Point screenPos)</code><br />
+            Use this method to initiate the docking context menu at given screen location.<p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public ContainerControl Container</code>
+                                    <br />
+            The object to which the docking manager instance is attached.<br />
+            Default: <i>null</i><p /><code>public ManagerContentCollection Contents</code><br />
+            The collection of <i>Content</i> objects that the manager is responsible 
+            for docking.<p /><code>public Control InnerControl</code><br />
+            Docking windows will not be allowed to dock inside of the specified 
+            control.<br />
+            Default: <i>null</i><p /><code>public Control OuterControl</code><br />
+            Docking windows will not be allowed to dock outside of the specified 
+            control.<br />
+            Default: <i>null</i><p /><code>public bool ZoneMinMax</code><br />
+            If more than one <i>Window</i> is docked in the same column/row should 
+            they have a maximize capability.<br />
+            Default: <i>true</i><p /><code>public bool InsideFill</code><br />
+            When defined the innermost docking window will assume the <i>Fill</i> 
+            docking style so that you can create applications whose client area 
+            consists only of docking windows.<br />
+            Default: <i>false</i><p /><code>public bool AutoResize</code><br />
+            When defined a resizing of the control will cause the docking windows 
+            to be resized smaller if they would start overlapping. Note that the windows
+            will not be sized bigger again when the control is increased in size.<br />
+            Default: <i>true</i><p /><code>public Size InnerMinimum</code><br />
+            Defines the minimum size of the inner control, if resizing the application 
+            would cause the inner control to become smaller than this then the docking 
+            windows are resized smaller instead.<br />
+            Default: <i>Size(20, 20)</i><p /><code>public VisualStyle Style</code><br />
+            Read only property returning the style used when the object was created.<p /><code>public int ResizeBarVector</code><br />
+            Defines the width/height of resize bars used between docking windows. A value 
+            of -1 will cause the appropriate default value for the selected style to be 
+            used instead.<br />
+            Default: <i>-1</i><p /><code>public Color BackColor</code><br />
+            Background drawing color used in the caption bar when the docking window is 
+            not selected.<br />
+            Default: <i>SystemColors.Control</i><p /><code>public Color ActiveColor</code><br />
+            Background drawing color used in the caption bar when the docking window is 
+            selected.<br />
+            Default: <i>SystemColors.ActiveCaption</i><p /><code>public Color ActiveTextColor</code><br />
+            Text drawing color used in the caption bar when the docking window is 
+            selected.<br />
+            Default: <i>SystemColors.ActiveCaptionText</i><p /><code>public Color InactiveTextColor</code><br />
+            Text drawing color used in the caption bar when the docking window is not 
+            selected.<br />
+            Default: <i>SystemColors.ControlText</i><p /><code>public Color ResizeBarColor</code><br />
+            Background color used to draw the resize bar controls between docking windows.<br />
+            Default: <i>SystemColors.Control</i><p /><code>public Font CaptionFont</code><br />
+            Used when drawing text in the caption bars.<br />
+            Default: <i>SystemInformation.MenuFont</i><p /><code>public Font TabControlFont</code><br />
+            Used when drawing text in the TabControl that appears when multiple content is 
+            shown inside the same docking window.<br />
+            Default: <i>SystemInformation.MenuFont</i><p /><code>public bool PlainTabBorder</code><br />
+            If the appearance is defined as <i>VisualStyle.Plain</i> and this <i>PlainTabBorder</i>
+            property is defined then a full dumped border is drawn around the docking window content.<br />
+            Default: <i>false</i></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="events">Events</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public event ContextMenuHandler ContextMenu</code>
+                                    <br />
+            Fired when the user right clicks on the caption area of a docking window which 
+            will attempt to show a context menu. Hook into this event to either cancel it 
+            altogether or to customize the menu commands presented to the user.<p /><code>public event ContentHidingHandler ContentHiding</code><br />
+            Fired when the user causes a content object to be hidden. Either when the user 
+            presses the close button on the caption bar or closes a floating form in which 
+            case the event is fired for each content in the floating form. Hook into this 
+            event to cancel the close operation from occuring and so preventing the user 
+            from hiding a content.<p /><code>public event ContentHandler ContentHidden</code><br />
+            Fired after a content object has been hidden and occurs from either user or 
+            programmatic actions. You cannot prevent the operation occuring as this event is 
+            generated after the content had already been hidden but can be used to perform 
+            extra processing.<p /><code>public event ContentHandler ContentShown</code><br />
+            Fired after a content object has been made visible and occurs from either user 
+            or programmatic actions. You cannot prevent the operation occuring as this event 
+            is generated after the content had already been shown but can be used to 
+            perform extra processing.<p /><code>public event TabControlCreatedHandler TabControlCreated</code><br />
+            Fired whenever the docking windows code needs to create a TabControl instance 
+            for use inside a docking window. When generated the control has already been 
+            created and setup with the default properties, but use this event to customize 
+            the properties as required.<p /><code>public event SaveCustomConfigHandler SaveCustomConfig</code><br />
+		    Fired when persisting out configuration information about the current docking
+		    windows layout. The event is fired at the end of the process and allows the 
+		    developer to add custom XML information into the output stream.<p /><code>public event LoadCustomConfigHandler LoadCustomConfig</code><br />
+            Fired when persisting in configuration information to restore the docking
+            configuration to a previously saved state. The event is fired at the end of the
+            loading process and allows the developer to read back the custom data they
+            saved previously.<p /><h2>Delegate Signatures</h2><pre>
+                        
+   void ContextMenuHandler(PopupMenu pm, CancelEventArgs cea);
+   void ContentHidingHandler(Content c, CancelEventArgs cea);
+   void ContentHandler(Content c, EventArgs cea);
+   void TabControlCreatedHandler(Magic.Controls.TabControl tabControl);
+   void SaveCustomConfigHandler(XmlTextWriter xmlOut);
+   void LoadCustomConfigHandler(XmlTextReader xmlIn);
+        
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

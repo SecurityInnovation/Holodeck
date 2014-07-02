@@ -1,0 +1,15 @@
+LIBRARY Heat4Dll
+
+EXPORTS
+	init
+	deinit
+	disableInterceptionInCurrentThread
+	enableInterceptionInCurrentThread
+	IsHeatCreatedThread
+	HeatCreateThread
+	getCalledFunc
+	getCallLevel
+	getReturnAddr
+	getOriginalFunctionCaller
+	incrementCallLevel
+	decrementCallLevel

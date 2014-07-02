@@ -1,0 +1,425 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{B6269D35-A4AA-410C-B1BE-D739F2266630}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "SiIconLib"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "SiIconLib"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "ActiveLog.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "backtrace.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "breakpoint_columns.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Bug.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "call_stack.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "call_trace.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "compare_logs.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "copy.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "create_report.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "create_test.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Custom.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "cut.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_arrow.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_bp.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_break.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_go.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_restart.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_stepinto.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_stepout.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_stepover.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "debug_stop.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "disassembler.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Disk.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Exceptions.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Fault.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Faults.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "File.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "file_corrupt_pane.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FileCorruption.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Files.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "function.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "HDApp.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "help_contents_pane.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "help_pane.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "HolodeckEE.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "i2_logo.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "I2app.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "IconLibrary.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Limits.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "limits_pane.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "LogComparison.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Logs.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Memory.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Network.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "network_log.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "network_message_pane.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NetworkLog.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NetworkLogs.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "new_breakpoint.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "new_fault.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "new_project.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "new_test_app.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "open_project.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "paste.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PausedProcess.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Process.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ProcessFaults.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "project_pane.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "properties_pane.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RecordedSession.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RecordedSessions.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "registers.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Registry.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RegistryEntry.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RegistryFaults.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "remove.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Report.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Reports.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "resource_pane.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ResourceFaults.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Resources.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "save_project.gif"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SavedLog.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "sort_ascending.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "sort_descending.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "TerminatedProcess.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Test.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Tests.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Thread.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "tv_minus.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "tv_plus.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

@@ -1,0 +1,649 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - Article</title>
+    <link href="images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="5" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">Article</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="../readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#top">top</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#notifications">notifications</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#methods">methods</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#properties">properties</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#events">events</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#samplecode">sample code</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="top">Class PopupMenu</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Use this class to present the user with a context menu. Typically this is required 
+            as a result of the user right clicking the mouse button when over a control. For 
+            example, you might create a new <i>UserControl</i> derived class that needs to 
+            present the user with a set of options via a context menu, in the same way that 
+            the <i>RichTextBox</i> will allow you to cut, paste and copy text via its own 
+            context menu.<p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="notifications">Notifications</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+            Most windows applications will update the status bar with a menu description as the 
+            user selects different menu items. To help support this scenario the <i>Selected</i>
+            and <i>Deselected</i> events are provided. As the names suggest, the <i>Selected</i>
+            event is generated as the selection enters a menu item and the <i>Deselected</i> event 
+            when it moves away. The following example code shows how to use the 
+            <i>MenuCommand.Description</i> property of the <i>MenuCommand</i> class in conjunction 
+            with these events to provide status bar feedback.
+<pre>
+
+   protected void ShowPopupMenu(Point screenPos)
+   {
+      // Create the menu items
+      MenuCommand menu1 = new MenuCommand("&amp;Cut");
+      MenuCommand menu2 = new MenuCommand("&amp;Paste");
+
+      // Associate appropriate status bar descriptions for each menu
+      menu1.Description = "Cut selection to the clipboard";
+      menu2.Description = "Paste selection from the clipboard";
+
+      // Create the popup menu object
+      PopupMenu popup = new PopupMenu();
+
+      // Define the list of menu commands
+      popup.MenuCommands.AddRange(new MenuCommand[]{menu1, menu2});
+
+      // Hook into selection events
+      popup.Selected += new CommandHandler(OnSelected);
+      popup.Deselected += new CommandHandler(OnDeselected);
+
+      // Show it!
+      MenuCommand selected = popup.TrackPopup(screenPos);
+   }
+
+   protected void OnSelected(MenuCommand mc)
+   {
+      _statusBarPanel.SetStatusBarText(mc.Description);
+   }
+
+   protected void OnDeselected(MenuCommand mc)
+   {
+      _statusBarPanel.SetStatusBarText("");
+   }
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="methods">Methods</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public MenuCommand TrackPopup(Point screenPos)</code>
+                                    <br />
+            Create menu at the given screen position and return the <i>MenuCommand</i> that is selected.<p /><code>public MenuCommand TrackPopup(Point screenPos, bool selectFirst)</code><br />
+            As above except it will automatically show the first valid menu item as the initial selection.<p />
+            NOTE: The returned reference from both of the methods below can be <i>null</i>.<br />
+            This happens when the user presses the escape key to dismiss the displayed menu.<p /><code>public void Dismiss()</code><br />
+            Use this to remove a displayed instance.<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="properties">Properties</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public MenuCommandCollection MenuCommands</code>
+                                    <br />
+            Collection of <i>MenuCommand</i> instances for the <i>PopupMenu</i>.<p /><code>public VisualStyle Style</code><br />
+            Has two possible values.
+            <UL><LI><i>VisualStyle.IDE</i> shows in Visual Studio .NET style</LI><LI><i>VisualStyle.Plain</i> shows in a simpler Visual C++ v6 style</LI></UL>
+            Default: <i>VisualStyle.IDE</i><p /><code>public Font Font</code><br />
+            The font to use when drawing menu text<br />
+            Default: <i>SystemInformation.MenuFont</i><p /><code>public bool ShowInfrequent</code><br />
+            Items marked as <i>Infrequent</i> are shown immediately on displayed menu.<br />
+            Default: <i>false</i><p /><code>public bool RememberExpansion</code><br />
+            Expansion button selection updates the menu collection auto expand when next shown.<br />
+            Default: <i>true</i><p /><code>public bool HighlightInfrequent</code><br />
+            Items marked as <i>Infrequent</i> are drawn in a different visual style.<br />
+            Default: <i>true</i><p /><code>public Color BackColor</code><br />
+            Base color used when drawing the background.<br />
+            Default: <i>SystemColors.Control</i><p /><code>public Color TextColor</code><br />
+            Text drawing color for items that are not highlighted.<br />
+            Default: <i>SystemColors.MenuText</i><p /><code>public Color HighlightColor</code><br />
+            Base color for highlighting of items.<br />
+            Default: <i>SystemColors.Highlight</i><p /><code>public Color HighlightTextColor</code><br />
+            Text drawing color for item that is highlighted.<br />
+            Default: <i>SystemColors.HighlightText</i><code>public Animate Animate</code><br />
+            Can be set to one of the following enumeration values
+            <UL><LI><i>Animate.No</i> do not animate popup menus</LI><LI><i>Animate.Yes</i> always animate popup menus</LI><LI><i>Animate.System</i> use system setting</LI></UL>
+            Default: <i>Animate.System</i> property.<br /><code>public int AnimateTime</code><br />
+            Determines the total time the animation should take in milliseconds.<br />
+            Default: <i>100</i><p /><code>Animation AnimateStyle</code><br />
+            Can be set to one of the following enumeration values
+            <UL><LI><i>Animation.Blend</i></LI><LI><i>Animation.SlideCenter</i></LI><LI><i>Animation.SlideHorVerPositive</i></LI><LI><i>Animation.SlideHorVerNegative</i></LI><LI><i>Animation.SlideHorPosVerNegative</i></LI><LI><i>Animation.SlideHorNegVerPositive</i></LI><LI><i>Animation.System</i></LI></UL>
+            Default: <i>Animation.System</i> property.<br /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="events">Events</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>public event CommandHandler Selected</code>
+                                    <br />
+            Fired when the user moves the selection over this item.<br />
+            Use this event to update any status bar description appropriate for the item.<p /><code>public event CommandHandler Deselected</code><br />
+            Fired when the user selection moves away from this item.<br />
+            Use this event to remove any status bar description previously set.<br /><h2>Delegate Signatures</h2><pre>
+
+    void CommandHandler(MenuCommand item);
+
+</pre></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="samplecode">Sample code</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <code>C#</code>
+                                    <pre>
+
+   protected void OnMyControlButtonUp(object sender, MouseEventArgs e)
+   {
+      if (e.Button == MouseButtons.Right)
+      {
+         Control ctl = sender as Control;
+
+         // Create the menu items
+         MenuCommand menu0 = new MenuCommand("First");
+         MenuCommand menu1 = new MenuCommand("Second");
+         MenuCommand menu2 = new MenuCommand("Third");
+
+         // Create the popup menu object
+         PopupMenu popup = new PopupMenu();
+
+         // Define the list of menu commands
+         popup.MenuCommands.AddRange(new MenuCommand[]{menu0, 
+                                                       menu1, 
+                                                       menu2});
+
+         // Show it!
+         MenuCommand selected = 
+              popup.TrackPopup(ctl.PointToScreen(new Point(e.X, e.Y)));
+
+         // Was an item selected?
+         if (selected != null)
+         {
+            // Selection specific actions...
+			if (selected == menu0)
+               Console.WriteLine("Menu0 selected");
+            else if (selected == menu1)
+               Console.WriteLine("Menu1 selected");
+            else if (selected == menu2)
+               Console.WriteLine("Menu2 selected");
+         }
+      }
+   }
+
+</pre>
+                                    <code>VB.NET</code>
+                                    <pre>
+
+   Protected Sub OnMyControlButtonUp(ByVal sender As object, 
+                                     ByVal e As MouseEventArgs)
+                                     
+      If e.Button = MouseButtons.Right Then
+         Dim ctl As Control = sender
+
+         ' Create the menu items
+         Dim menu0 As New MenuCommand("First")
+         Dim menu1 As New MenuCommand("Second")
+         Dim menu2 As New MenuCommand("Third")
+
+         ' Create the popup menu object
+         Dim popup As New PopupMenu()
+
+         ' Define the list of menu commands
+         popup.MenuCommands.AddRange(new MenuCommand(){menu0, _ 
+                                                       menu1, _ 
+                                                       menu2})
+
+         ' Show it!
+         Dim selected As MenuCommand =
+              popup.TrackPopup(ctl.PointToScreen(New Point(e.X, e.Y)))
+
+         ' Was an item selected?
+         If Not (selected Is Nothing) Then
+            ' Selection specific actions...
+			If (selected Is menu0) Then
+               Console.WriteLine("Menu0 selected")
+            ElseIf (selected Is menu1)
+               Console.WriteLine("Menu1 selected")
+            ElseIf (selected Is menu2)
+               Console.WriteLine("Menu2 selected")
+            End If
+         End If
+      End If
+   End Sub
+
+</pre>
+                                  </content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2003 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
