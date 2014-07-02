@@ -1,0 +1,2002 @@
+10/31/2003 2:58:59:644 0VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 1VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 2VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 3VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 4VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 5VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 6VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 7VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 8VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 9VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 10VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 11VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 12VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 13VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 14VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 15VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 16VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 17VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 18VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 19VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 20VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 21VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 22VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 23VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 24VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 25VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 26VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 27VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 28VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 29VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 30VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 31VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 32VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 33VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 34VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 35VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 36VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 37VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 38VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 39VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 40VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 41VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 42VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 43VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 44VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 45VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 46VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 47VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 48VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 49VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 50VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 51VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 52VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 53VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 54VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 55VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 56VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 57VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 58VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 59VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 60VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 61VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 62VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 63VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 64VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 65VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 66VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 67VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 68VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 69VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 70VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 71VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 72VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 73VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 74VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 75VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 76VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 77VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 78VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 79VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 80VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 81VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 82VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 83VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 84VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 85VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 86VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 87VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 88VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 89VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 90VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 91VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 92VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 93VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 94VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 95VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 96VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 97VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 98VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 99VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 100VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 101VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 102VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 103VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 104VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 105VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 106VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 107VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 108VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 109VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 110VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 111VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 112VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 113VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 114VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 115VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 116VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 117VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 118VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 119VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 120VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 121VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 122VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 123VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 124VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 125VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 126VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 127VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 128VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 129VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 130VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 131VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 132VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 133VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 134VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 135VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 136VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 137VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 138VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 139VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 140VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 141VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 142VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 143VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 144VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 145VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 146VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 147VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 148VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 149VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 150VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 151VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 152VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 153VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 154VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 155VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 156VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 157VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 158VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 159VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 160VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 161VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 162VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 163VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 164VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 165VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 166VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 167VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 168VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 169VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 170VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 171VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 172VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 173VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 174VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 175VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 176VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 177VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 178VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 179VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 180VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 181VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 182VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 183VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 184VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 185VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 186VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 187VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 188VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 189VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 190VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 191VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 192VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 193VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 194VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 195VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 196VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 197VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 198VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 199VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 200VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 201VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 202VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 203VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 204VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 205VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 206VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 207VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 208VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 209VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 210VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 211VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 212VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 213VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 214VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 215VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 216VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 217VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 218VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 219VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 220VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 221VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 222VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 223VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 224VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 225VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 226VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 227VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 228VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 229VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 230VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 231VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 232VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 233VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 234VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 235VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 236VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 237VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 238VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 239VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 240VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 241VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 242VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 243VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 244VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 245VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 246VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 247VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 248VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 249VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 250VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 251VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 252VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 253VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 254VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 255VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 256VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 257VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 258VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 259VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 260VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 261VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 262VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 263VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 264VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 265VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 266VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 267VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 268VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 269VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 270VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 271VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 272VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 273VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 274VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 275VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 276VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 277VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 278VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 279VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 280VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 281VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 282VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 283VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 284VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 285VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 286VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 287VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 288VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 289VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 290VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 291VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 292VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 293VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 294VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 295VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 296VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 297VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 298VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 299VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 300VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 301VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 302VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 303VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 304VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 305VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 306VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 307VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 308VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 309VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 310VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 311VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 312VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 313VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 314VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 315VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 316VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 317VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 318VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 319VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 320VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 321VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 322VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 323VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 324VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 325VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 326VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 327VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 328VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 329VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 330VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 331VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 332VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 333VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 334VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 335VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 336VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 337VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 338VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 339VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 340VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 341VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 342VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 343VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 344VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 345VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 346VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 347VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 348VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 349VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 350VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 351VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 352VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 353VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 354VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 355VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 356VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 357VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 358VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 359VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 360VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 361VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 362VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 363VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 364VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 365VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 366VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 367VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 368VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 369VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 370VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 371VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 372VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 373VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 374VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 375VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 376VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 377VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 378VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 379VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 380VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 381VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 382VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 383VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 384VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 385VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 386VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 387VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 388VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 389VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 390VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 391VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 392VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 393VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 394VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 395VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 396VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 397VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 398VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 399VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 400VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 401VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 402VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 403VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 404VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 405VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 406VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 407VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 408VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 409VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 410VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 411VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 412VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 413VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 414VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 415VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 416VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 417VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 418VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 419VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 420VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 421VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 422VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 423VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 424VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 425VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 426VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 427VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 428VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 429VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 430VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 431VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 432VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 433VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 434VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 435VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 436VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 437VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 438VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 439VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 440VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 441VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 442VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 443VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 444VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 445VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 446VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 447VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 448VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 449VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 450VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 451VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 452VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 453VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 454VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 455VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 456VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 457VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 458VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 459VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 460VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 461VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 462VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 463VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 464VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 465VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 466VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 467VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 468VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 469VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 470VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 471VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 472VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 473VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 474VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 475VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 476VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 477VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 478VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 479VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 480VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 481VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 482VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 483VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 484VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 485VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 486VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 487VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 488VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 489VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 490VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 491VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 492VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 493VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 494VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 495VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 496VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 497VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 498VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 499VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 500VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 501VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 502VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 503VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 504VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 505VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 506VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 507VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 508VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 509VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 510VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 511VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 512VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 513VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 514VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 515VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 516VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 517VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 518VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 519VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 520VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 521VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 522VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 523VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 524VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 525VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 526VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 527VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 528VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 529VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 530VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 531VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 532VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 533VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 534VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 535VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 536VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 537VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 538VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 539VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 540VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 541VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 542VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 543VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 544VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 545VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 546VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 547VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 548VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 549VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 550VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 551VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 552VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 553VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 554VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 555VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 556VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 557VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 558VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 559VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 560VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 561VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 562VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 563VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 564VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 565VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 566VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 567VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 568VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 569VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 570VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 571VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 572VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 573VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 574VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 575VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 576VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 577VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 578VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 579VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 580VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 581VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 582VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 583VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 584VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 585VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 586VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 587VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 588VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 589VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 590VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 591VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 592VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 593VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 594VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 595VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 596VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 597VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 598VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 599VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 600VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 601VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 602VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 603VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 604VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 605VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 606VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 607VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 608VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 609VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 610VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 611VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 612VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 613VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 614VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 615VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 616VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 617VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 618VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 619VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 620VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 621VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 622VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 623VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 624VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 625VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 626VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 627VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 628VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 629VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 630VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 631VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 632VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 633VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 634VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 635VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 636VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 637VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 638VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 639VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 640VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 641VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 642VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 643VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 644VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 645VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 646VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 647VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 648VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 649VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 650VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 651VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 652VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 653VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 654VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 655VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 656VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 657VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 658VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 659VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 660VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 661VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 662VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 663VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 664VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 665VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 666VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 667VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 668VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 669VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 670VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 671VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 672VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 673VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 674VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 675VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 676VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 677VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 678VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 679VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 680VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 681VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 682VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 683VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 684VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 685VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 686VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 687VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 688VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 689VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 690VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 691VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 692VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 693VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 694VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 695VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 696VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 697VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 698VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 699VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 700VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 701VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 702VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 703VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 704VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 705VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 706VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 707VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 708VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 709VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 710VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 711VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 712VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 713VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 714VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 715VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 716VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 717VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 718VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 719VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 720VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 721VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 722VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 723VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 724VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 725VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 726VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 727VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 728VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 729VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 730VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 731VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 732VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 733VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 734VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 735VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 736VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 737VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 738VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 739VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 740VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 741VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 742VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 743VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 744VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 745VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 746VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 747VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 748VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 749VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 750VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 751VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 752VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 753VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 754VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 755VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 756VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 757VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 758VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 759VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 760VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 761VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 762VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 763VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 764VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 765VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 766VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 767VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 768VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 769VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 770VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 771VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 772VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 773VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 774VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 775VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 776VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 777VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 778VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 779VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 780VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 781VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 782VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 783VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 784VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 785VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 786VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 787VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 788VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 789VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 790VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 791VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 792VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 793VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 794VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 795VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 796VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 797VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 798VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 799VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 800VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 801VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 802VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 803VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 804VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 805VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 806VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 807VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 808VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 809VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 810VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 811VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 812VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 813VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 814VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 815VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 816VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 817VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 818VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 819VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 820VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 821VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 822VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 823VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 824VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 825VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 826VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 827VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 828VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 829VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 830VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 831VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 832VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 833VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 834VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 835VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 836VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 837VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 838VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 839VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 840VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 841VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 842VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 843VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 844VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 845VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 846VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 847VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 848VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 849VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 850VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 851VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 852VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 853VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 854VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 855VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 856VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 857VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 858VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 859VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 860VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 861VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 862VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 863VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 864VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 865VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 866VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 867VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 868VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 869VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 870VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 871VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 872VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 873VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 874VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 875VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 876VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 877VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 878VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 879VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 880VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 881VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 882VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 883VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 884VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 885VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 886VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 887VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 888VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 889VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 890VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 891VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 892VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 893VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 894VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 895VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 896VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 897VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 898VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 899VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 900VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 901VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 902VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 903VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 904VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 905VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 906VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 907VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 908VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 909VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 910VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 911VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 912VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 913VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 914VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 915VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 916VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 917VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 918VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 919VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 920VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 921VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 922VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 923VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 924VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 925VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 926VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:644 927VAL
+10/31/2003 2:58:59:644 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 928VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 929VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 930VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 931VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 932VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 933VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 934VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 935VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 936VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 937VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 938VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 939VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 940VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 941VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 942VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 943VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 944VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 945VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 946VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 947VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 948VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 949VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 950VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 951VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 952VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 953VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 954VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 955VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 956VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 957VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 958VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 959VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 960VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 961VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 962VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 963VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 964VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 965VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 966VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 967VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 968VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 969VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 970VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 971VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 972VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 973VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 974VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 975VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 976VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 977VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 978VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 979VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 980VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 981VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 982VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 983VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 984VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 985VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 986VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 987VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 988VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 989VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 990VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 991VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 992VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 993VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 994VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 995VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 996VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 997VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 998VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 999VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))
+10/31/2003 2:58:59:660 1000VAL
+10/31/2003 2:58:59:660 HeapFree(hHeap, NULL, sizeof(int))

@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HoloscriptTester", "HoloscriptTester.vcproj", "{14B1AD07-7435-4D45-8D89-632096B92026}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "..\..\Frameworks\ExecutionFramework\TestFramework.csproj", "{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Debug.ActiveCfg = Debug|Win32
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Debug.Build.0 = Debug|Win32
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Release.ActiveCfg = Release|Win32
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Release.Build.0 = Release|Win32
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.ActiveCfg = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.Build.0 = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.ActiveCfg = Release|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

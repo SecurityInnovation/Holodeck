@@ -46,14 +46,21 @@ namespace HoloScript
 	HoloScriptApplication::HoloScriptApplication() : settingsMgr(NULL), logReceiver(NULL),
 		appNeedsToBeTerminated(true), pendingServiceToStart(NULL), shouldRestart(true)
 	{
-		heat = new CHeatApp();
-
 		RegistryKey *key = Registry::LocalMachine->OpenSubKey(ROOT_PATH);
 		
-		String *installPath, *functionFolder;
+		String *installPath, *functionFolder, *heatPath;
 		installPath = dynamic_cast<String *> (key->GetValue(INSTALL_PATH_VALUE_NAME, new String(".")));
 		functionFolder = dynamic_cast<String *> (key->GetValue(FUNCTION_DB_PATH_VALUE_NAME, new String(".")));
 		functionFolder = String::Concat(installPath, "\\", functionFolder);
+
+//		heatPath = String::Concat(installPath, "\\", new String(HEAT_DLL_FILE_NAME));
+//		wchar_t *pwszHeatPath = new wchar_t[heatPath->Length + 1];
+//		__wchar_t gc_pwszHeatPath __gc[] = heatPath->ToCharArray();
+//		for (int i = 0; i < heatPath->Length; i++) pwszHeatPath[i] = gc_pwszHeatPath[i]; pwszHeatPath[heatPath->Length] = 0;
+//		heat = new CHeatApp(pwszHeatPath);
+		heat = new CHeatApp();
+//		delete[] pwszHeatPath;
+
 
 		db = InterceptedFunctionDB::GetInstance(FUNCTION_DB_FILE_NAME);
 		if (!db->IsLoaded)

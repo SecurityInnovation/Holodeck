@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Creating a Memory Space limit</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nCreating Limits\nCreating a Memory Space limit");
+addAvenueInfo("MAIN","Holodeck_in_depth/Creating_Limits/Creating_a_Disk_Space_limit.htm","Holodeck_in_depth/Creating_Limits/Creating_a_Network_Bandwidth_limit.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Creating a Memory Space limit</H1>
+ <P>This limits the amount of Memory space available to the Application Under Test. Test the Application Under Test’s ability to function under low memory conditions using memory limits.</P>
+ <P>Open the limits pane by clicking <FONT style="font-weight:bold; " >View</FONT> and making sure there is a checkmark by the <FONT style="font-weight:bold; " >Limits Pane</FONT>.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_558418783.gif" border=0 height=104 width=553 alt="images\ebx_558418783.gif">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Create a limit:</FONT></P>
+ <P>With the Limits Pane visible use the slider bar or the text box labeled <FONT style="font-weight:bold; " >Limit</FONT> to set a limit, or type in a specific memory amount. You can choose to display the available and limited memory space in Bytes, Kilobytes, or Megabytes.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Note:</FONT> The minimum limit for Memory Space is the amount the Application Under Test is currently using.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Remove a limit:</FONT></P>
+ <P>To remove a limit, simply slide the slider bar all the way to the right, or delete the node in the project pane.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >How Limits and Resources are calculated:</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-size:9pt; " >The amount used is updated through the monitor of API calls that allocate </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " >. The total </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " > amount is then incremented by the allocation request amount in these API calls. Before each request for </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " > is permitted, Holodeck </FONT><FONT style="font-size:9pt; " >checks to ensure the amount being allocated is below the set limit. If the </FONT><FONT style="font-size:9pt; " >Application Under Test</FONT><FONT style="font-size:9pt; " > goes above the limit the API call</FONT><FONT style="font-size:9pt; " > requesting </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " > is failed. Holodeck uses win32 API’s to get the max </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " > available. Percent used is calculated using the </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " > used through the API calls and the max disk space</FONT><FONT style="font-size:9pt; " > available. When a limit is set</FONT><FONT style="font-size:9pt; " > the max </FONT><FONT style="font-size:9pt; " >memory</FONT><FONT style="font-size:9pt; " > </FONT><FONT style="font-size:9pt; " >available</FONT><FONT style="font-size:9pt; " > is artificially reduced and the </FONT><FONT style="font-size:9pt; " >progress bar is recalculated (percentage of limit, instead of percentage of hardware capacity). </FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

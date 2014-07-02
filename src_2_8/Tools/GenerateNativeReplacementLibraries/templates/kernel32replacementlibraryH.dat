@@ -1,0 +1,36 @@
+//*************************************************************************
+// Copyright (C) Security Innovation, LLC, 2002-2004 – All Rights Reserved.
+//
+// FILE:		Kernel32ReplacementLibrary.h
+//
+// DESCRIPTION: Contains replacement library prototypes for kernel32.dll
+//
+//=========================================================================
+// Modification History
+//
+[MODIFICATIONTIMESTAMP]
+//*************************************************************************
+#pragma once
+
+#define _WIN32_WINNT 0x0501
+
+#include <windows.h>
+#include "Registry.h"
+#include "ReplacementLibrary.h"
+#include "Log.h"
+
+using namespace Replacement;
+using namespace Log;
+
+// function pointer definitions
+[REPLACEMENTFUNCTIONPOINTERTYPEDEFS]
+
+// original function pointers
+[REPLACEMENTFUNCTIONPOINTERS]
+
+ReplacementLibrary *library = NULL;
+LogSender *logSender = NULL;
+Mutex *createProcessMutex = NULL;
+Event *childProcessCreatedEvent = NULL;
+Event *holodeckAttachedToChildProcessEvent = NULL;
+MemoryMappedFile *childProcessDataFile = NULL;

@@ -1,0 +1,22 @@
+$RETURNTYPE$ $MODIFIER2$ $FUNCTIONNAME$Replacement ($PARAM_TYPES_AND_NAMES$)
+{
+	//Modify any parameters that you want here
+	
+	
+	//Call the Holodeck replacement function to inject any faults
+	$FUNCTIONNAME$FuncType $FUNCTIONNAME$InternalReplacement = ($FUNCTIONNAME$FuncType) GetHolodeckFunction ($HANDLE_REPL_LIB$, "$FUNCTIONNAME$Replacement");
+	#IF_RETURN_NONVOID#$RETURNTYPE$ returnValue = $FUNCTIONNAME$InternalReplacement ($PARAM_NAMES$);
+	#IF_RETURN_VOID#$FUNCTIONNAME$InternalReplacement ($PARAM_NAMES$);
+
+	//Get the last error set by the function
+	DWORD lastError = GetLastError();
+
+	//You may modify the error code or return value here
+	//lastError = 
+	//returnValue =
+	
+	//These should be the last two calls, no user code should go below them.
+	SetLastError (lastError);
+	#IF_RETURN_NONVOID#return returnValue;
+}
+

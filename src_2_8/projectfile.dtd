@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!ELEMENT FilteredFunction (#PCDATA)>
+<!ATTLIST FilteredFunction Index CDATA #REQUIRED>
+
+<!ELEMENT DiskFault (#PCDATA)>
+<!ATTLIST DiskFault Name CDATA #REQUIRED>
+
+<!ELEMENT MemoryFault (#PCDATA)>
+<!ATTLIST MemoryFault Name CDATA #REQUIRED>
+
+<!ELEMENT NetworkFault (#PCDATA)>
+<!ATTLIST NetworkFault Name CDATA #REQUIRED>
+
+<!ELEMENT RegistryFault (#PCDATA)>
+<!ATTLIST RegistryFault Name CDATA #REQUIRED>
+
+<!ELEMENT ProcessFault (#PCDATA)>
+<!ATTLIST ProcessFault Name CDATA #REQUIRED>
+
+<!ELEMENT CustomFault (#PCDATA)>
+<!ATTLIST CustomFault Name CDATA #REQUIRED>
+
+<!ELEMENT DiskSpaceLimit (#PCDATA)>
+<!ATTLIST DiskSpaceLimit LimitActivated (True|False) #REQUIRED>
+<!ATTLIST DiskSpaceLimit Limit CDATA #IMPLIED>
+<!ATTLIST DiskSpaceLimit LimitUnit (B|KB|MB|GB) #IMPLIED>
+
+<!ELEMENT MemorySpaceLimit (#PCDATA)>
+<!ATTLIST MemorySpaceLimit LimitActivated (True|False) #REQUIRED>
+<!ATTLIST MemorySpaceLimit Limit CDATA #IMPLIED>
+<!ATTLIST MemorySpaceLimit LimitUnit (B|KB|MB|GB) #IMPLIED>
+
+<!ELEMENT NetworkUpLimit (#PCDATA)>
+<!ATTLIST NetworkUpLimit LimitActivated (True|False) #REQUIRED>
+<!ATTLIST NetworkUpLimit Limit CDATA #IMPLIED>
+<!ATTLIST NetworkUpLimit LimitUnit (B|KB|MB|GB) #IMPLIED>
+
+<!ELEMENT NetworkDownLimit (#PCDATA)>
+<!ATTLIST NetworkDownLimit LimitActivated (True|False) #REQUIRED>
+<!ATTLIST NetworkDownLimit Limit CDATA #IMPLIED>
+<!ATTLIST NetworkDownLimit LimitUnit (B|KB|MB|GB) #IMPLIED>
+
+<!ELEMENT MatchParam (#PCDATA)>
+<!ATTLIST MatchParam Name CDATA #REQUIRED>
+<!ATTLIST MatchParam TestOperator CDATA #REQUIRED>
+<!ATTLIST MatchParam TestValue CDATA #REQUIRED>
+<!ATTLIST MatchParam CompareAsType CDATA #REQUIRED>
+<!ATTLIST MatchParam ID CDATA #REQUIRED>
+
+<!ELEMENT ChangeParam (#PCDATA)>
+<!ATTLIST ChangeParam Name CDATA #REQUIRED>
+<!ATTLIST ChangeParam TestValue CDATA #REQUIRED>
+<!ATTLIST ChangeParam CompareAsType CDATA #REQUIRED>
+<!ATTLIST ChangeParam ID CDATA #REQUIRED>
+
+<!ELEMENT MatchParams (MatchParam*)>
+<!ELEMENT ChangeParams (ChangeParam*)>
+
+<!ELEMENT FiringData (#PCDATA)>
+<!ATTLIST FiringData Data CDATA #REQUIRED>
+
+<!ELEMENT FiringDetails (FiringData+)>
+
+<!ELEMENT FiringSpecification (FiringDetails)>
+<!ATTLIST FiringSpecification FiringOption CDATA #REQUIRED>
+<!ATTLIST FiringSpecification PauseAUTAfterTest (True|False) #REQUIRED>
+
+<!ELEMENT ScheduledTest (MatchParams, ChangeParams, FiringSpecification)>
+<!ATTLIST ScheduledTest Enabled CDATA #REQUIRED>
+<!ATTLIST ScheduledTest TestID CDATA #REQUIRED>
+<!ATTLIST ScheduledTest FunctionName CDATA #REQUIRED>
+<!ATTLIST ScheduledTest Category CDATA #REQUIRED>
+<!ATTLIST ScheduledTest SpecifyErrorCode CDATA #REQUIRED>
+<!ATTLIST ScheduledTest ErrorCode CDATA #REQUIRED>
+<!ATTLIST ScheduledTest ReturnValue CDATA #REQUIRED>
+<!ATTLIST ScheduledTest Owner CDATA #IMPLIED>
+
+<!ELEMENT ResourceTest (#PCDATA)>
+<!ATTLIST ResourceTest Enabled CDATA #REQUIRED>
+<!ATTLIST ResourceTest ResourceName CDATA #REQUIRED>
+<!ATTLIST ResourceTest FaultName CDATA #REQUIRED>
+<!ATTLIST ResourceTest FaultType CDATA #REQUIRED>
+
+<!ELEMENT CorruptionRandomSettings (#PCDATA)>
+<!ATTLIST CorruptionRandomSettings CorruptAmount CDATA #REQUIRED>
+<!ATTLIST CorruptionRandomSettings CorruptionRandomType (SingleBytes|LongStrings|RepeatedSequence) #REQUIRED>
+<!ATTLIST CorruptionRandomSettings Length CDATA #REQUIRED>
+<!ATTLIST CorruptionRandomSettings CorruptStringType CDATA #REQUIRED>
+<!ATTLIST CorruptionRandomSettings CorruptString CDATA #REQUIRED>
+<!ATTLIST CorruptionRandomSettings Overwrite CDATA #REQUIRED>
+
+<!ELEMENT CorruptionSearchSettings (#PCDATA)>
+<!ATTLIST CorruptionSearchSettings SearchStringType CDATA #REQUIRED>
+<!ATTLIST CorruptionSearchSettings SearchString CDATA #REQUIRED>
+<!ATTLIST CorruptionSearchSettings CorruptionSearchType (Replace|LongStrings|RepeatedSequence) #REQUIRED>
+<!ATTLIST CorruptionSearchSettings Length CDATA #REQUIRED>
+<!ATTLIST CorruptionSearchSettings CorruptStringType CDATA #REQUIRED>
+<!ATTLIST CorruptionSearchSettings CorruptString CDATA #REQUIRED>
+<!ATTLIST CorruptionSearchSettings Overwrite CDATA #REQUIRED>
+
+<!ELEMENT CorruptionRegExprSettings (#PCDATA)>
+<!ATTLIST CorruptionRegExprSettings SearchString CDATA #REQUIRED>
+<!ATTLIST CorruptionRegExprSettings ReplaceString CDATA #REQUIRED>
+
+<!ELEMENT Port (#PCDATA)>
+<!ATTLIST Port Name CDATA #REQUIRED>
+
+<!ELEMENT PortList (Port*)>
+
+<!ELEMENT NetworkCorruptionSettings (CorruptionRandomSettings, CorruptionSearchSettings, CorruptionRegExprSettings)>
+<!ATTLIST NetworkCorruptionSettings Type CDATA #REQUIRED>
+
+<!ELEMENT NetworkCorruption (PortList, NetworkCorruptionSettings)>
+<!ATTLIST NetworkCorruption Enabled CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption SentData CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption ReceivedData CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption PortString CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption CorruptType CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption SearchFor CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption SearchRegularExpression CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption ReplaceWith CDATA #REQUIRED>
+<!ATTLIST NetworkCorruption ReplacementString CDATA #REQUIRED>
+
+<!ELEMENT FileCorruptionSettings (CorruptionRandomSettings, CorruptionSearchSettings, CorruptionRegExprSettings)>
+<!ATTLIST FileCorruptionSettings Type CDATA #REQUIRED>
+<!ATTLIST FileCorruptionSettings Regen CDATA #REQUIRED>
+
+<!ELEMENT FileCorruption (FileCorruptionSettings)>
+<!ATTLIST FileCorruption Enabled CDATA #REQUIRED>
+<!ATTLIST FileCorruption OriginalFile CDATA #REQUIRED>
+<!ATTLIST FileCorruption Regenerate (True|False) #REQUIRED>
+<!ATTLIST FileCorruption CorruptType CDATA #REQUIRED>
+<!ATTLIST FileCorruption SearchFor CDATA #REQUIRED>
+<!ATTLIST FileCorruption SearchRegularExpression CDATA #REQUIRED>
+<!ATTLIST FileCorruption ReplaceWith CDATA #REQUIRED>
+<!ATTLIST FileCorruption ReplacementString CDATA #REQUIRED>
+
+<!ELEMENT TimeStampFilter (#PCDATA)>
+<!ATTLIST TimeStampFilter Enabled (True|False) #REQUIRED>
+<!ATTLIST TimeStampFilter Show (True|False) #REQUIRED>
+<!ATTLIST TimeStampFilter RangeFrom CDATA #REQUIRED>
+<!ATTLIST TimeStampFilter RangeTo CDATA #REQUIRED>
+
+<!ELEMENT SelCategory (#PCDATA)>
+<!ATTLIST SelCategory Index CDATA #REQUIRED>
+
+<!ELEMENT CategoryFilter (SelCategory*)>
+<!ATTLIST CategoryFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT SelDll (#PCDATA)>
+<!ATTLIST SelDll Index CDATA #REQUIRED>
+
+<!ELEMENT DllFilter (SelDll*)>
+<!ATTLIST DllFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT SelFunc (#PCDATA)>
+<!ATTLIST SelFunc Index CDATA #REQUIRED>
+<!ATTLIST SelFunc Dll CDATA #REQUIRED>
+
+<!ELEMENT FunctionsFilter (SelFunc*)>
+<!ATTLIST FunctionsFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT SelThread (#PCDATA)>
+<!ATTLIST SelThread Index CDATA #REQUIRED>
+
+<!ELEMENT ThreadFilter (SelThread*)>
+<!ATTLIST ThreadFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT ParamFilter (#PCDATA)>
+<!ATTLIST ParamFilter MatchString CDATA #REQUIRED>
+<!ATTLIST ParamFilter MatchType CDATA #REQUIRED>
+<!ATTLIST ParamFilter ParamNum CDATA #REQUIRED>
+<!ATTLIST ParamFilter State (Show|Hide) #REQUIRED>
+
+<!ELEMENT ParameterFilters (ParamFilter*)>
+<!ATTLIST ParameterFilters Enabled (True|False) #REQUIRED>
+
+<!ELEMENT SelException (#PCDATA)>
+<!ATTLIST SelException Index CDATA #REQUIRED>
+
+<!ELEMENT ExceptionFilter (SelException*)>
+<!ATTLIST ExceptionFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT SelErrorCode (#PCDATA)>
+<!ATTLIST SelErrorCode Index CDATA #REQUIRED>
+
+<!ELEMENT ErrorCodeFilter (SelErrorCode*)>
+<!ATTLIST ErrorCodeFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT SelReturnValue (#PCDATA)>
+<!ATTLIST SelReturnValue Index CDATA #REQUIRED>
+
+<!ELEMENT ReturnValueFilter (SelReturnValue*)>
+<!ATTLIST ReturnValueFilter Enabled (True|False) #REQUIRED>
+
+<!ELEMENT LogFilters (TimeStampFilter*, CategoryFilter*, DllFilter*, FunctionsFilter*, ThreadFilter*, ParameterFilters*, ExceptionFilter*, ErrorCodeFilter*, ReturnValueFilter*)>
+<!ELEMENT Log (LogFilters)>
+<!ATTLIST Log FilePath CDATA #REQUIRED>
+<!ATTLIST Log ExeNameAndFileTime CDATA #REQUIRED>
+
+<!ELEMENT DiskFaults (DiskFault*)>
+
+<!ELEMENT MemoryFaults (MemoryFault*)>
+
+<!ELEMENT NetworkFaults (NetworkFault*)>
+
+<!ELEMENT RegistryFaults (RegistryFault*)>
+
+<!ELEMENT ProcessFaults (ProcessFault*)>
+
+<!ELEMENT CustomFaults (CustomFault*)>
+
+<!ELEMENT Faults (DiskFaults, MemoryFaults, NetworkFaults, RegistryFaults, ProcessFaults, CustomFaults)>
+
+<!ELEMENT FilteredFunctions (FilteredFunction*)>
+
+<!ELEMENT Limits (DiskSpaceLimit*, MemorySpaceLimit*, NetworkUpLimit*, NetworkDownLimit*)>
+
+<!ELEMENT ScheduledTests (ScheduledTest*)>
+
+<!ELEMENT ResourceTests (ResourceTest*)>
+
+<!ELEMENT NetworkCorruptionFaults (NetworkCorruption*)>
+<!ELEMENT FileCorruptionFaults (FileCorruption*)>
+
+<!ELEMENT AppInfo (#PCDATA)>
+<!ATTLIST AppInfo ApplicationPathAndName CDATA #REQUIRED>
+<!ATTLIST AppInfo InjectMode (ATTACH|LAUNCH|ATTACHSERVICE|LAUNCHSERVICE) #REQUIRED>
+<!ATTLIST AppInfo StartPaused (True|False) #REQUIRED>
+<!ATTLIST AppInfo CommandLineParams CDATA #REQUIRED>
+<!ATTLIST AppInfo ProcessChaining (True|False) #REQUIRED>
+<!ATTLIST AppInfo AttachDebugger (True|False) #REQUIRED>
+<!ATTLIST AppInfo LogFirstChance (True|False) #REQUIRED>
+<!ATTLIST AppInfo InheritSettings (True|False) #REQUIRED>
+
+<!ELEMENT ApplicationUnderTest (AppInfo, FilteredFunctions, Faults, Limits, ScheduledTests, ResourceTests, NetworkCorruptionFaults, FileCorruptionFaults, Log)>
+
+<!ELEMENT Report (#PCDATA)>
+<!ATTLIST Report FilePath CDATA #REQUIRED>
+
+<!ELEMENT RecordedSession (#PCDATA)>
+<!ATTLIST RecordedSession FilePath CDATA #REQUIRED>
+
+<!ELEMENT SavedLog (#PCDATA)>
+<!ATTLIST SavedLog FilePath CDATA #REQUIRED>
+<!ATTLIST SavedLog ExeNameAndFileTime CDATA #REQUIRED>
+	
+<!ELEMENT CorruptedFile (#PCDATA)>
+<!ATTLIST CorruptedFile ChangesPath CDATA #REQUIRED>
+
+<!ELEMENT Exception (#PCDATA)>
+<!ATTLIST Exception TimeStamp CDATA #REQUIRED>
+<!ATTLIST Exception ExeName CDATA #REQUIRED>
+<!ATTLIST Exception Thread CDATA #REQUIRED>
+<!ATTLIST Exception Description CDATA #REQUIRED>
+<!ATTLIST Exception MiniDump CDATA #REQUIRED>
+
+<!ELEMENT ApplicationsUnderTest (ApplicationUnderTest+)>
+<!ATTLIST ApplicationsUnderTest Count CDATA #REQUIRED>
+
+<!ELEMENT Reports (Report*)>
+<!ELEMENT RecordedSessions (RecordedSession*)>
+<!ELEMENT SavedLogs (SavedLog*)>
+<!ELEMENT CorruptedFiles (CorruptedFile*)>
+<!ELEMENT Exceptions (Exception*)>
+
+<!ELEMENT Project (ApplicationsUnderTest, Reports, RecordedSessions, SavedLogs, CorruptedFiles, Exceptions)>
+<!ATTLIST Project PerThreadLogging (True|False) #REQUIRED>
+<!ATTLIST Project Version CDATA #REQUIRED>

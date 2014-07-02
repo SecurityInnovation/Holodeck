@@ -78,7 +78,8 @@ namespace Holodeck
 			return false;
 
 		wchar_t *strTemp = new wchar_t[managedStr->Length + 1];
-		for (int i = 0; i < managedStr->Length; i++)
+		int i = 0;
+		for (; i < managedStr->Length; i++)
 			strTemp[i] = str[i];
 		strTemp[i] = L'\0';
 

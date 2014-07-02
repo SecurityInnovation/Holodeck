@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogVerification", "LogVerification\LogVerification.csproj", "{97E228C2-3E2F-46BC-8951-36D01760D4CD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionXMLFramework", "..\..\Frameworks\FunctionXMLFramework\FunctionXMLFramework.csproj", "{B83F7134-AF24-47F8-A547-75A6057724ED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogReader", "..\..\Frameworks\LogReader\LogReader\LogReader.vcproj", "{4EFC65C0-3349-4A32-B44C-094B5E22EF8A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{97E228C2-3E2F-46BC-8951-36D01760D4CD}.Debug.ActiveCfg = Debug|.NET
+		{97E228C2-3E2F-46BC-8951-36D01760D4CD}.Debug.Build.0 = Debug|.NET
+		{97E228C2-3E2F-46BC-8951-36D01760D4CD}.Release.ActiveCfg = Release|.NET
+		{97E228C2-3E2F-46BC-8951-36D01760D4CD}.Release.Build.0 = Release|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Debug.ActiveCfg = Debug|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Debug.Build.0 = Debug|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Release.ActiveCfg = Release|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Release.Build.0 = Release|.NET
+		{4EFC65C0-3349-4A32-B44C-094B5E22EF8A}.Debug.ActiveCfg = Debug|Win32
+		{4EFC65C0-3349-4A32-B44C-094B5E22EF8A}.Debug.Build.0 = Debug|Win32
+		{4EFC65C0-3349-4A32-B44C-094B5E22EF8A}.Release.ActiveCfg = Release|Win32
+		{4EFC65C0-3349-4A32-B44C-094B5E22EF8A}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

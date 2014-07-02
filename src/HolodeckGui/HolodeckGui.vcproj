@@ -21,7 +21,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..\Old\HD\V2_5\Common\src\SiUtils;..\common;..\holoscript;..\functiondatabase;..\..\..\Old\HD\V2_5\Common\src\heatapi;..\..\..\Old\HD\V2_5\Common\src\heatdll;..\log;..\replacementlibrary;..\CLRInterceptLib;..\..\..\Old\HD\V2_5\Common\src\ProductRegistrationLibrary;..\Tools\NewIntercepts;HDProjectFiles;FilterForms"
+				AdditionalIncludeDirectories="..\..\..\Old\HD\V2_5\Common\src\SiUtils;..\common;..\holoscript;..\functiondatabase;..\log;..\replacementlibrary;..\CLRInterceptLib;..\..\..\Old\HD\V2_5\Common\src\ProductRegistrationLibrary;..\Tools\NewIntercepts;HDProjectFiles;FilterForms"
 				AdditionalUsingDirectories="..\GuiSupport\bin\Debug;..\..\..\Old\HD\V2_5\Common\src\MagicLibrary\bin\Debug;..\HoloScript\Debug;..\FunctionDatabase\Debug;..\Tools\NewIntercepts\Debug;..\..\..\Old\HD\V2_5\Common\src\SIControls\Debug;..\Tools\CustomTestProjectGenerator\Debug"
 				PreprocessorDefinitions="WIN32;_DEBUG"
 				MinimalRebuild="FALSE"
@@ -72,7 +72,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\..\..\Old\HD\V2_5\Common\src\SiUtils;..\common;..\holoscript;..\functiondatabase;..\..\..\Old\HD\V2_5\Common\src\heatapi;..\..\..\Old\HD\V2_5\Common\src\heatdll;..\log;..\replacementlibrary;..\CLRInterceptLib;..\..\..\Old\HD\V2_5\Common\src\ProductRegistrationLibrary;..\Tools\NewIntercepts;HDProjectFiles;FilterForms"
+				AdditionalIncludeDirectories="..\..\..\Old\HD\V2_5\Common\src\SiUtils;..\common;..\holoscript;..\functiondatabase;..\log;..\replacementlibrary;..\CLRInterceptLib;..\..\..\Old\HD\V2_5\Common\src\ProductRegistrationLibrary;..\Tools\NewIntercepts;HDProjectFiles;FilterForms"
 				AdditionalUsingDirectories="..\GuiSupport\bin\Release;..\..\..\Old\HD\V2_5\Common\src\MagicLibrary\bin\release;..\HoloScript\Release;..\FunctionDatabase\Release;..\Tools\NewIntercepts\Release;..\..\..\Old\HD\V2_5\Common\src\SIControls\Release;..\Tools\CustomTestProjectGenerator\Release"
 				PreprocessorDefinitions="WIN32;NDEBUG"
 				MinimalRebuild="FALSE"

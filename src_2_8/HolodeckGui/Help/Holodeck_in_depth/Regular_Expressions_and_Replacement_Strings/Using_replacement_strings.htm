@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Using replacement strings</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nRegular Expressions and Replacement Strings\nUsing replacement strings");
+addAvenueInfo("MAIN","Holodeck_in_depth/Regular_Expressions_and_Replacement_Strings/Using_regular_expressions.htm","Holodeck_in_depth/Multiple_Threads_and_Processes/Dealing_with_Multiple_Processes.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Using replacement strings</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Replacement strings are useful when trying to insert a string into a stream of data that might have to be formed in a precise manner. This is useful for trying to create an improper string that will be checked as correct by the first or second string checking statements. These replacement strings replace whatever is found when using find and replace corruption or regular expression corruption.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Replacement string examples:</FONT></P>
+ <P>Replace with a random long string of between 500 and 1000 characters, followed by a string of 100 &quot;A&quot; characters:</P>
+ <P><FONT style="font-family:'Courier New'; " >$R500,1000$$S100,100,A$</FONT><FONT style="font-family:'Courier New'; " > - </FONT>This will replace the matched string (regular expression, or find and replace string) with a random string followed by a 100 ‘A’ characters. </P>
+ <P><FONT style="font-family:'Courier New'; " >$R500,1000$</FONT> - the first ‘R’ tells Holodeck to use Random strings, and expand it from 500 to 1000 characters long.</P>
+ <P><FONT style="font-family:'Courier New'; " >$S100,100,A$</FONT> - the first ‘S’ tells Holodeck to use the following string and expand it exactly 100 times, since the minimum and maximum are the same.</P>
+ <P>&nbsp;</P>
+ <P>Duplicate the matched string 500 times:<BR><FONT style="font-family:'Courier New'; " >$S500,500,$$&amp;$</FONT><FONT style="font-family:'Courier New'; " > - </FONT>The first ‘S’ tells Holodeck to use the following string.</P>
+ <P><FONT style="font-family:'Courier New'; " >$&amp; - </FONT>expands to the previously matched string (from the find and replace or regular expression corruption.)</P>
+ <P>&nbsp;</P>
+ <P>Insert 100 random characters just before the matched string</P>
+ <P><FONT style="font-family:'Courier New'; " >$R100,100$$&amp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >$R100,100$ - </FONT>expands to exactly 100 random characters.</P>
+ <P><FONT style="font-family:'Courier New'; " >$&amp; - </FONT>expands to the previously matches string (from the find and replace or regular expression corruption)</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Replacement strings definition:</FONT></P>
+ <P>All characters except &quot;(&quot;, &quot;)&quot;, &quot;$&quot;, &quot;\&quot;, &quot;?&quot;, &quot;,&quot;, and &quot;/&quot; can be used normally. C escape sequences are defined, as well as the following expansions:</P>
+ <P>&nbsp;</P>
+ <P>$` Expands to all data from the end of the previous match to the start of the current match.&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>$&amp; Expands to all of the current match.&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>$0 Expands to the entire current match.&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>$N (N is 0-9) Expands to matched sub-expression N.&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>$Rmin,max$ Expands to a random string of between min and max characters.&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>$Smin,max,seq$ Expands to a string of between min and max repetitions of character sequence seq.&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>?Ntrue:false If subexpression N has matched, expand true expression, otherwise expand false expression (or nothing if false expression is not specified).&nbsp;</P>
+ <P>&nbsp;</P>
+ <P>\/ Expands to a normal / character&nbsp;</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

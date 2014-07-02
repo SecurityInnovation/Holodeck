@@ -1,0 +1,43 @@
+:Base CustomInterceptGen.hlp
+1 Manipulating Existing Function Databases=Manipulating_Existing_Function_Databases
+1 Using the Custom Intercept Generator
+2 Introduction to the Custom Intercept Generator=Introduction_to_the_Library_Exporter
+2 Step by Step Guide to Custom Intercept Generator=Step_by_Step_Guide_to_Custom_Intercept_Generator
+2 Getting Started with the Custom Intercept Generator=Getting_Started_with_the_Library_Exporter
+2 Holodeck Internal Replacement Functions=Holodeck_Internal_Replacement_Functions
+2 Stub Function Format=Stub_Function_Format
+2 Modifying Input Parameters=Modifying_Input_Parameters
+2 Modifying Output Parameters=Modifying_Output_Parameters
+2 Modifying Return Values=Modifying_Return_Values
+2 Modifying Error Codes=Modifying_Error_Codes
+2 Calling Custom Methods/Functions=Calling_Custom_Methods_Functions
+2 About the Interception Process and Custom Intercept Generator Stub Functions=About_the_Interception_Process_and_Library_Exporter_Stub_Functions
+1 Using HoloScript
+2 Introduction to HoloScript=Introduction_to_HoloScript
+2 HoloScript Method List=HoloScript_Method_List
+2 Constructors and Destructors=Constructors_and_Destructors
+2 Log File Operations=Log_File_Operations
+2 AUT Execution and Control=AUT_Execution_and_Control
+2 AUT Environment Information and Control=AUT_Environment_Information_and_Control
+2 Interception Control and Scheduling=Interception_Control_and_Scheduling
+2 Fault Control=Fault_Control
+2 Network Fault Control=Network_Fault_Control
+2 Function Logging=Function_Logging
+2 Child Process Information and Monitoring Control=Child_Process_Information_and_Monitoring_Control
+2 First Example - Injecting Faults=First_Example_Injecting_Faults
+2 Second Example - Examining AUT Execution Environment=Second_Example_Examining_AUT_Execution_Environment
+2 Third Example - Modifying the AUT Execution Environment (Disk and Memory Limits)=Third_Example_Modifying_the_AUT_Execution_Environment_Disk_and_Memory_Limits_
+2 Fourth Example - Modifying the AUT Execution Environment (Network Limits)=Fourth_Example_Modifying_the_AUT_Execution_Environment_Network_Limits_
+1 Using the HEAT API
+2 Introduction to the HeatAPI=Introduction_to_the_HeatAPI
+2 Step by Step for HEAT API=Step_by_Step_for_HEAT_API
+2 HeatAPI Method List=HeatAPI_Method_List
+2 Constructors and Destructors of HeatAPI=Constructors_and_Destructors_of_HeatAPI
+2 Interception Information and Control=Interception_Information_and_Control
+2 Intercept Function Control=Intercept_Function_Control
+2 Fault Injection=Fault_Injection
+2 Application Execution Information and Control=Application_Execution_Information_and_Control
+2 HEAT API Example=HEAT_API_Example
+1 Appendices
+2 Error Codes=Error_Codes
+2 Exception Codes=Exception_Codes

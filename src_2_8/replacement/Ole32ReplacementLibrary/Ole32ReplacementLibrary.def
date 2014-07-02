@@ -1,0 +1,11 @@
+LIBRARY	Ole32ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+CoInitializeReplacement
+CoCreateInstanceReplacement
+CoCreateInstanceExReplacement
+CoInitializeExReplacement
+CoUninitializeReplacement
+OleCreateReplacement
+OleCreateExReplacement

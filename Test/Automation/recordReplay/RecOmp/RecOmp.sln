@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecOmp", "RecOmp.csproj", "{38201280-F741-4592-955C-70063F63F786}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{38201280-F741-4592-955C-70063F63F786}.Debug.ActiveCfg = Debug|.NET
+		{38201280-F741-4592-955C-70063F63F786}.Debug.Build.0 = Debug|.NET
+		{38201280-F741-4592-955C-70063F63F786}.Release.ActiveCfg = Release|.NET
+		{38201280-F741-4592-955C-70063F63F786}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

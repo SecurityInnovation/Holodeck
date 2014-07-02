@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FaultIntercepter", "FaultIntercepter.vcproj", "{983E93F8-0CBE-4E0E-8742-D485A0670729}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaultsXMLFramework", "F:\CVS Root\CVSROOT\Holodeck\Test\Frameworks\FaultsXMLFramework\FaultsXMLFramework.csproj", "{6E805F15-6F43-4465-920F-F46114C0323F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionXMLFramework", "F:\CVS Root\CVSROOT\Holodeck\Test\Frameworks\FunctionXMLFramework\FunctionXMLFramework.csproj", "{B83F7134-AF24-47F8-A547-75A6057724ED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{983E93F8-0CBE-4E0E-8742-D485A0670729}.Debug.ActiveCfg = Debug|Win32
+		{983E93F8-0CBE-4E0E-8742-D485A0670729}.Debug.Build.0 = Debug|Win32
+		{983E93F8-0CBE-4E0E-8742-D485A0670729}.Release.ActiveCfg = Release|Win32
+		{983E93F8-0CBE-4E0E-8742-D485A0670729}.Release.Build.0 = Release|Win32
+		{6E805F15-6F43-4465-920F-F46114C0323F}.Debug.ActiveCfg = Debug|.NET
+		{6E805F15-6F43-4465-920F-F46114C0323F}.Debug.Build.0 = Debug|.NET
+		{6E805F15-6F43-4465-920F-F46114C0323F}.Release.ActiveCfg = Release|.NET
+		{6E805F15-6F43-4465-920F-F46114C0323F}.Release.Build.0 = Release|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Debug.ActiveCfg = Debug|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Debug.Build.0 = Debug|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Release.ActiveCfg = Release|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

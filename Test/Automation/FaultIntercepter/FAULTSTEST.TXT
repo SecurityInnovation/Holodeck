@@ -1,0 +1,41 @@
+
+-------->   FileNotFound Fault has 38 functions    <-------
+
+CopyFileA has Failed!
+CopyFileW has Failed!
+CopyFileExA has Failed!
+CopyFileExW has Failed!
+CreateFileA has Failed!
+CreateFileW has Failed!
+DeleteFileA has Failed!
+DeleteFileW has Failed!
+GetFileAttributesA has Failed!
+GetFileAttributesW has Failed!
+GetFileAttributesExA has Failed!
+GetFileAttributesExW has Failed!
+MoveFileA has Failed!
+MoveFileW has Failed!
+MoveFileExA has Failed!
+MoveFileExW has Failed!
+MoveFileWithProgressA has Failed!
+MoveFileWithProgressW has Failed!
+ReplaceFileA has Failed!
+ReplaceFileW has Failed!
+SetFileAttributesA has Failed!
+SetFileAttributesW has Failed!
+GetBinaryTypeA has Failed!
+GetBinaryTypeW has Failed!
+RemoveDirectoryA has Failed!
+RemoveDirectoryW has Failed!
+FindFirstFileA has Failed!
+FindFirstFileW has Failed!
+FindFirstFileExA has Failed!
+FindFirstFileExW has Failed!
+FindNextFileA has Failed!
+FindNextFileW has Failed!
+FindFirstChangeNotificationA has Failed!
+FindFirstChangeNotificationW has Failed!
+SearchPathA has Failed!
+SearchPathW has Failed!
+OpenFileMappingA has Failed!
+OpenFileMappingW has Failed!

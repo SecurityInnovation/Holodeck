@@ -1,0 +1,5 @@
+LIBRARY	Crypt32ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

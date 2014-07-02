@@ -1,0 +1,5 @@
+-add static buffer overrun code.
+-check heap overrun code
+-print preview
+-file openings
+-colour fix/font/bold/italics

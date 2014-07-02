@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "TestFramework.csproj", "{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITest", "..\UITest\UITest.csproj", "{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.ActiveCfg = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.Build.0 = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.ActiveCfg = Release|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.Build.0 = Release|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Debug.ActiveCfg = Debug|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Debug.Build.0 = Debug|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Release.ActiveCfg = Release|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

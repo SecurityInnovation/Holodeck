@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Using regular expressions</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nRegular Expressions and Replacement Strings\nUsing regular expressions");
+addAvenueInfo("MAIN","Holodeck_in_depth/Generating_Network_Corruption_Faults/Creating_a_fault_using_Regular_Expressions.htm","Holodeck_in_depth/Regular_Expressions_and_Replacement_Strings/Using_replacement_strings.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Using regular expressions</H1>
+ <P>Regular expressions can be helpful while trying to match a well formed string that may change over time. Regular expressions are used in matching data being sent over the network in the network corruption faults as well as use in file corruption faults.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Note: to replace a string please see the <A href="Using_replacement_strings.htm">Using replacement strings</A> section.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Regular expression examples:</FONT></P>
+ <P><FONT style="font-weight:bold; " >Match any IP address, with optional port number:<BR></FONT><FONT style="font-family:'Courier New'; " >[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+((:[0-9]+)?)</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >[0-9]+ – </FONT>represents a random number between 0 and 9 the following ‘+’ means there can be a string of 1 or more of these numbers. </P>
+ <P><FONT style="font-family:'Courier New'; " >\. – </FONT>Since ‘.’ character is a reserved character it must be escaped. Escape reserved characters by using the ‘\’</P>
+ <P><FONT style="font-family:'Courier New'; " >((:[0-9]+)?)</FONT><FONT style="font-family:'Courier New'; " > – </FONT>This section matches a colon first, then a string of random numbers, the final ‘?’ makes this entire section optional.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Match a sequence of 10 or more consecutive &quot;A&quot; characters:</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >A{10,}</FONT><FONT style="font-family:'Courier New'; " > – </FONT>A sequence of the preceding group is represented by {min, max} this regular expression matches a sequence of 10 or more of the character ‘A’. If you leave a number for the max out of the expression Holodeck assumes any length.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Match any domain is as follows:</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >([wW]{3,}\.)?([abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+)\.(com|net|org)</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >([wW]{3,}\.)?</FONT> -  this part matches an optional capital or lowercase &quot;www.&quot; </P>
+ <P><FONT style="font-family:'Courier New'; " >([abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+)</FONT> – this part matches any length string consisting of upper or lowercase alphabet letters, greater than 1 (eg. &quot;abc&quot;, &quot;aRdfpQ&quot;, etc.)</P>
+ <P><FONT style="font-family:'Courier New'; " >\.(com|net|org)</FONT> – this part matches a period followed by any one of the following, &quot;com&quot;, &quot;net&quot;, or &quot;org&quot;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Regular Expression Definition:</FONT></P>
+ <P>All characters except &quot;(&quot;, &quot;)&quot;, &quot;{&quot;, &quot;}&quot;, &quot;$&quot;, &quot;\&quot;, &quot;?&quot;, &quot;/&quot;, &quot;.&quot;, &quot;*&quot;, &quot;+&quot;, &quot;^&quot;, and &quot;|&quot; can be used normally. C escape sequences are defined. To use a reserved character, place a &quot;\&quot; character in front of it (for example, &quot;\+&quot; represents a literal &quot;+&quot; character).</P>
+ <P>&nbsp;</P>
+ <P>The &quot;.&quot; character matches any single character.</P>
+ <P>&nbsp;</P>
+ <P>A &quot;*&quot; after an expression matches repetition of zero or more times, whereas a &quot;+&quot; character represents repetition of one or more times. A range of repetition counts can be specified with {}, i.e. &quot;a{2,5}&quot; matches between 2 and 5 repetitions of &quot;a&quot;.</P>
+ <P>&nbsp;</P>
+ <P>A &quot;?&quot; following an expression makes it optional (can be present exactly zero or one times).</P>
+ <P>&nbsp;</P>
+ <P>A &quot;|&quot; between two expressions represents an either-or match. The expression &quot;get|set&quot; will match either &quot;get&quot; or &quot;set&quot;.</P>
+ <P>&nbsp;</P>
+ <P>Character sets can be enclosed in []. The expression &quot;[Gg]et&quot; would match either &quot;Get&quot; or &quot;get&quot;.</P>
+ <P>&nbsp;</P>
+ <P>Sub-expressions can be enclosed in (). These sub-expressions can be referred to directly in the replacement string by numerical order starting at one.</P>
+ <P>&nbsp;</P>
+ <P>Nonprintable characters can be represented with a C-style octal or hexadecimal escape sequences, i.e. &quot;\0123&quot; for octal or &quot;\xAB&quot; for hexadecimal.</P>
+ <P>&nbsp;</P>
+ <P>Null characters can be matched using &quot;\x00&quot;.</P>
+ <P>&nbsp;</P>
+ <P>Regular expressions match the string closest to the start of the buffer first, and the length of the matched string second.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

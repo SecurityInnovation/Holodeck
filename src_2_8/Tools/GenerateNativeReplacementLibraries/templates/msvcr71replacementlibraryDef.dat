@@ -1,0 +1,5 @@
+LIBRARY	MsvCr71ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

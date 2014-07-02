@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!ELEMENT FunctionName (#PCDATA)>
+
+<!ELEMENT ReturnType (#PCDATA)>
+
+<!ELEMENT TypeModifier (#PCDATA)>
+
+<!ELEMENT CallingConventionModifier (#PCDATA)>
+
+<!ELEMENT Category (#PCDATA)>
+
+<!ELEMENT OriginalDll (#PCDATA)>
+
+<!ELEMENT InterceptedDll (#PCDATA)>
+
+<!ELEMENT ReplacementFunctionName (#PCDATA)>
+
+<!ELEMENT ReturnValue (#PCDATA)>
+<!ATTLIST ReturnValue Type (Error|Success|Informational|Warning) #REQUIRED>
+<!ATTLIST ReturnValue ValueOperator (EqualTo|GreaterThan|LessThan|GreaterThanOrEqualTo|LessThanOrEqualTo|NotEqualTo) #IMPLIED>
+
+<!ELEMENT ErrorCode (#PCDATA)>
+<!ATTLIST ErrorCode IdentifyBy (Name|Value) #REQUIRED>
+<!ATTLIST ErrorCode Type (Error|Success|Informational|Warning) #REQUIRED>
+
+<!ELEMENT HelpLink (#PCDATA)>
+
+<!ELEMENT Exception (#PCDATA)>
+
+<!ELEMENT Id (#PCDATA)>
+
+<!ELEMENT Name (#PCDATA)>
+
+<!ELEMENT Type (#PCDATA)>
+
+<!ELEMENT Access (#PCDATA)>
+
+<!ELEMENT Param (#PCDATA)>
+<!ATTLIST Param Index CDATA #REQUIRED>
+<!ATTLIST Param Type CDATA #REQUIRED>
+<!ATTLIST Param CompareAs (NullType|IIDRefType|StringType|WideStringType|OutStringType|OutWideStringType|BooleanType|IntegerType|UnsignedLongType|RealType|PointerType|PointerPointerType|Integer64Type) #REQUIRED>
+<!ATTLIST Param Access CDATA #IMPLIED>
+<!ATTLIST Param PointsToResource CDATA #IMPLIED>
+<!ATTLIST Param ConcatWith CDATA #IMPLIED>
+<!ATTLIST Param MapTo CDATA #IMPLIED>
+
+<!ELEMENT Function (FunctionName, OriginalDll, InterceptedDll, ReplacementFunctionName, ReturnType, TypeModifier*, CallingConventionModifier*, Category, ReturnValue*, ErrorCode*, Exception*, HelpLink?, Param*)>
+
+<!ELEMENT Functions (Function*)>

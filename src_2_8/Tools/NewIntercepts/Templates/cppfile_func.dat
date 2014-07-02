@@ -1,0 +1,13 @@
+/*
+
+	Caller and replacement code for $FUNCTIONNAME$
+
+*/
+
+#include "$PROJECT_NAME$.h"
+
+$FUNCTIONNAME$Function real$FUNCTIONNAME$ = NULL;
+
+@INSERT_CALLER_FUNCTION
+
+@INSERT_REPLACEMENT_FUNCTION

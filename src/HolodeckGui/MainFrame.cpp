@@ -332,7 +332,7 @@ namespace HolodeckGui
 		MenuCommand *applicationNewFaultMenuItem = new MenuCommand("Create A New &Fault", new EventHandler(this, applicationNewFaultMenuItemClicked));
 		MenuCommand *applicationCreateAResourceTestMenuItem = new MenuCommand("Create A New &Resource Fault...", new EventHandler(this, applicationCreateAResourceTestMenuItemClicked));
 		MenuCommand *applicationNewNetworkCorruptionMenuItem = new MenuCommand("Create A New &Network Fuzzing Fault...", new EventHandler(this, applicationNewNetworkCorruptionMenuItemClicked));
-		MenuCommand *applicationNewFileCorruptionMenuItem = new MenuCommand("Create A New File F&uzzing Fault", new EventHandler(this, applicationNewFileCorruptionMenuItemClicked));
+		MenuCommand *applicationNewFileCorruptionMenuItem = new MenuCommand("Create A New File Fuzzing Fault", new EventHandler(this, applicationNewFileCorruptionMenuItemClicked));
 
 		MenuCommand *applicationMenu = new MenuCommand ("&Application");
 		applicationMenu->MenuCommands->Add(applicationCopySelectedItemMenuItem);

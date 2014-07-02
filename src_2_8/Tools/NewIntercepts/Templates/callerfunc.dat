@@ -1,0 +1,16 @@
+
+
+bool $FUNCTIONNAME$Caller (int numParams, void **params, DWORD *retValue, DWORD *errCode)
+{
+	if (numParams != $NUMPARAMS$) return false;
+	#IF_RETURNTYPE_VOID#*retValue = 0;
+	#IF_RETURNTYPE_VOID#real$FUNCTIONNAME$ ($CASTEDPARAMSLIST$);
+
+	#IF_RETURN_NONVOID#$RETURNTYPE$ tempRetValue = real$FUNCTIONNAME$($CASTEDPARAMSLIST$);
+	#IF_RETURN_NONVOID#*retValue = 0;
+	#IF_RETURN_NONVOID#memcpy (retValue, &tempRetValue, sizeof($RETURNTYPE$) > sizeof(DWORD) ? sizeof(DWORD) : sizeof($RETURNTYPE$));
+
+	*errCode = GetLastError();
+	return true;
+}
+

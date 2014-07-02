@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Creating the Project</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nBeginner\nCreating your first project\nCreating the Project");
+addAvenueInfo("MAIN","Tutorials/Beginner/Creating_your_first_project/Setting_up_your_first_project.htm","Tutorials/Beginner/Creating_your_first_project/Saving_the_Project.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Creating the Project</H1>
+ <P>The first page of the Create a New Project Wizard asks for a location to store your project or workspace. This can be anywhere on your hard drive or a network share. You must have complete read/write access to this location.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To open the New Project Wizard click File &gt; &quot;<A href="../../../Holodeck_in_depth/New_Project_Wizard/New_Project_Wizard.htm">New Project</A> …&quot;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="../../../Holodeck_in_depth/New_Project_Wizard/New_Project_Wizard.htm"><FONT style="font-weight:bold; " >Workspace Selection</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <P>The first page of the New Project Wizard lets you specify the name of your project and where you want to save it. In this case I have chosen to save the project on the Desktop, and name it test. You can browse to any location on your computer, removable media or a network share using the &quot;Browse...&quot; button. Click next when you have finished saving your project and have a location to save it to.</P>
+ <P><IMG src="../../../images/ebx_2007039184.gif" border=0 height=400 width=394 alt="images\ebx_2007039184.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="../../../Holodeck_in_depth/New_Project_Wizard/Launch_an_Application.htm"><FONT style="font-weight:bold; " >Application Selection</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <P>The second page of the Create a New Project Wizard is asking which application or service you would like to create this project with. Holodeck supports Launching a new application, attaching to an already running application, Starting a Service, or attaching to an already running service. For this project we want to launch the BrokenApp.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>BrokenApp has been installed to the &lt;HolodeckInstallDirectory&gt;\BrokenApp\BrokenApp.exe browse to this location to specify the BrokenApp for Holodeck to launch.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>BrokenApp does not require any command line parameters so we can leave this text box blank.</P>
+ <P><IMG src="../../../images/ebx_-793719304.gif" border=0 height=400 width=400 alt="images\ebx_-793719304.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="../../../Holodeck_in_depth/New_Project_Wizard/New_Project_Options.htm"><FONT style="font-weight:bold; " >Options Selection</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <P>The BrokenApp is written in Managed C++ code compiled as a .NET application. Holodeck will automatically recognize BrokenApp as a .NET application and will check the default logging for a .NET application however since this application also uses many Native Win32 API calls we will need to intercept these as well. For more information see the <A href="../../../Holodeck_in_depth/New_Project_Wizard/Default_Logging.htm">Default Logging</A> help topic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The Native functions that we are most interested in are as follows:</P>
+ <TABLE width="546" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Category</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Reason to Intercept</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>COM</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>COM resources will be available for <A href="../../../Holodeck_in_depth/Resource_Faults/Resource_Fault_Overview.htm">fault</A> testing in the <A href="../../../Holodeck_Windows_and_Panes/Resource_Pane.htm">Resource Pane</A>.</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>File Functions</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Files will show up in the Resource Pane and <A href="../../../Holodeck_in_depth/Generating_File_Corruption_Faults/File_Corruption_Overview.htm">Corrupted files</A> will show up in the <A href="../../../Holodeck_Windows_and_Panes/Corrupted_Files_Pane.htm">Corrupted Files Pane</A>.</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Library Functions</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Library (dll) resources will be available for fault testing in the Resource Pane.</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Network Functions</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><A href="../../../Holodeck_in_depth/Working_with_Logs/Network_Logs.htm">Network Logs</A> will be enabled.</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Process Functions</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Process resources will be available for fault testing in the Resource Pane.</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.27%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Registry Functions</P></TD>
+  <TD width="74.73%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Registry resources will be available for fault testing in the Resource Pane.</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>On this page we can specify to pause the application on start so we can set tests and faults before the application starts up. This is useful for testing the startup functions of you application.</P>
+ <P>Process Chaining sets up Holodeck to automatically attach to any processes your application spawns. This is extremely useful if your application uses any helper applications to do some of its processing. </P>
+ <P style="margin-left:36.00pt;">Child Processes Inherit Settings allows the new process your application spawned to automatically inherit the same tests, limits, faults etc from the main application.</P>
+ <P>Holodeck can act as a debugger, log the <A href="../../../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">exceptions</A> your application creates and create <A href="../../../Holodeck_in_depth/Exceptions_and_mini_dumps/Mini_dump_Overview.htm">mini-dump</A> files for debugging the application by enabling the Attach Debugger and Log Exceptions option.</P>
+ <P>By default Holodeck does not log First Chance Exceptions as often they are quickly handled by the application under test, and does not create errors. Enable First Chance Exception logging if you would like to see each time your application creates a first chance exception</P>
+ <P> <IMG src="../../../images/ebx_-402483660.gif" border=0 height=400 width=400 alt="images\ebx_-402483660.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Setting_up_your_first_project.htm">&lt;&lt; Previous</A>   <A href="Saving_the_Project.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

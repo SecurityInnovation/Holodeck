@@ -60,7 +60,7 @@ namespace HolodeckGui
 		Label *copyRightLabel = new Label();
 		copyRightLabel->Location = Point(14, 103);
 		copyRightLabel->Size = System::Drawing::Size(490, 16);
-		copyRightLabel->Text = "Copyright 2002-2009, Security Innovation, Inc.";
+		copyRightLabel->Text = "Copyright 2002-2008, Security Innovation, Inc.";
 
 		Label *versionLabel = new Label();
 		versionLabel->Location = Point(14, 119);

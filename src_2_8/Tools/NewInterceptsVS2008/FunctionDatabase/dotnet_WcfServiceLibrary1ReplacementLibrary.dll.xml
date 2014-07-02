@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Functions SYSTEM "C:\Users\rahul\Documents\repos\trunk80\commercial\Holodeck\src\HolodeckGui\debug\..\..\FunctionDatabase\functions.dtd"[]>
+<Functions>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.CompositeType.get_BoolValue()</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass1.get_BoolValue</ReplacementFunctionName>
+		<ReturnType>System.Boolean</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1compositetypeclassget_boolvaluetopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.CompositeType" CompareAs="WideStringType" Access="IN">thisObj</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.CompositeType.set_BoolValue(Boolean)</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass1.set_BoolValue</ReplacementFunctionName>
+		<ReturnType>void</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1compositetypeclassset_boolvaluetopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.CompositeType" CompareAs="WideStringType" Access="IN">thisObj</Param>
+		<Param Index="1" Type="System.Boolean" CompareAs="WideStringType" Access="4329068">value</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.CompositeType.get_StringValue()</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass1.get_StringValue</ReplacementFunctionName>
+		<ReturnType>System.String</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1compositetypeclassget_stringvaluetopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.CompositeType" CompareAs="WideStringType" Access="IN">thisObj</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.CompositeType.set_StringValue(String)</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass1.set_StringValue</ReplacementFunctionName>
+		<ReturnType>void</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1compositetypeclassset_stringvaluetopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.CompositeType" CompareAs="WideStringType" Access="IN">thisObj</Param>
+		<Param Index="1" Type="System.String" CompareAs="WideStringType" Access="4329068">value</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.CompositeType.ctor()</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass1.ctor</ReplacementFunctionName>
+		<ReturnType>void</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1compositetypeclassctortopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.CompositeType" CompareAs="WideStringType" Access="IN">thisObj</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.Service1.GetData(Int32)</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass2.GetData</ReplacementFunctionName>
+		<ReturnType>System.String</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1service1classgetdatatopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.Service1" CompareAs="WideStringType" Access="IN">thisObj</Param>
+		<Param Index="1" Type="System.Int32" CompareAs="WideStringType" Access="4329068">value</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.Service1.GetDataUsingDataContract(CompositeType)</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass2.GetDataUsingDataContract</ReplacementFunctionName>
+		<ReturnType>WcfServiceLibrary1.CompositeType</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1service1classgetdatausingdatacontracttopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.Service1" CompareAs="WideStringType" Access="IN">thisObj</Param>
+		<Param Index="1" Type="WcfServiceLibrary1.CompositeType" CompareAs="WideStringType" Access="4329068">composite</Param>
+	</Function>
+	<Function>
+		<FunctionName>WcfServiceLibrary1.Service1.ctor()</FunctionName>
+		<OriginalDll>WcfServiceLibrary1.dll</OriginalDll>
+		<InterceptedDll>WcfServiceLibrary1ReplacementLibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeatInterceptHandlers.WcfServiceLibrary1_dllHandlerClass2.ctor</ReplacementFunctionName>
+		<ReturnType>void</ReturnType>
+		<Category>CUSTOM</Category>
+		<HelpLink>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfwcfservicelibrary1service1classctortopic.asp</HelpLink>
+		<Param Index="0" Type="WcfServiceLibrary1.Service1" CompareAs="WideStringType" Access="IN">thisObj</Param>
+	</Function>
+</Functions>

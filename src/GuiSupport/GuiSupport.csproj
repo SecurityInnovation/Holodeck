@@ -289,14 +289,6 @@
                     Lcid = "0"
                     WrapperTool = "primary"
                 />
-                <Reference
-                    Name = "MSDATASRC19"
-                    Guid = "{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}"
-                    VersionMajor = "1"
-                    VersionMinor = "0"
-                    Lcid = "0"
-                    WrapperTool = "primary"
-                />
             </References>
         </Build>
         <Files>

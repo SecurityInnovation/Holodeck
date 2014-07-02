@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingScheduleTests", "TestingScheduleTests.csproj", "{DA972D79-0946-48B2-9DD3-A9673D811083}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "..\..\Frameworks\ExecutionFramework\TestFramework.csproj", "{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIFramework", "..\..\Frameworks\UIFramework\UIFramework.csproj", "{8ECCB304-E881-4652-9561-D4B891EF4BA7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DA972D79-0946-48B2-9DD3-A9673D811083}.Debug.ActiveCfg = Debug|.NET
+		{DA972D79-0946-48B2-9DD3-A9673D811083}.Debug.Build.0 = Debug|.NET
+		{DA972D79-0946-48B2-9DD3-A9673D811083}.Release.ActiveCfg = Release|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.ActiveCfg = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.Build.0 = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.ActiveCfg = Release|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.Build.0 = Release|.NET
+		{8ECCB304-E881-4652-9561-D4B891EF4BA7}.Debug.ActiveCfg = Debug|.NET
+		{8ECCB304-E881-4652-9561-D4B891EF4BA7}.Debug.Build.0 = Debug|.NET
+		{8ECCB304-E881-4652-9561-D4B891EF4BA7}.Release.ActiveCfg = Release|.NET
+		{8ECCB304-E881-4652-9561-D4B891EF4BA7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

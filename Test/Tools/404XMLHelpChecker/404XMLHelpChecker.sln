@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "404XMLHelpChecker", "404XMLHelpChecker.csproj", "{0B588007-71BD-4E2A-B9F3-4912DC7263CE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{0B588007-71BD-4E2A-B9F3-4912DC7263CE}.Debug.ActiveCfg = Debug|.NET
+		{0B588007-71BD-4E2A-B9F3-4912DC7263CE}.Debug.Build.0 = Debug|.NET
+		{0B588007-71BD-4E2A-B9F3-4912DC7263CE}.Release.ActiveCfg = Release|.NET
+		{0B588007-71BD-4E2A-B9F3-4912DC7263CE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Corrupted Files Pane</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck Windows and Panes\nCorrupted Files Pane");
+addAvenueInfo("MAIN","Holodeck_Windows_and_Panes/File_Corruption_Faults_Pane.htm","Holodeck_Windows_and_Panes/Resource_Faults_Pane.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Corrupted Files Pane</H1>
+ <P>Through the Corrupted Files Pane Holodeck allows you to save the original file, save the corrupted file, save the file corruption details, and delete the corrupted file. Saving the corrupted file is useful for reproducing file parsing bugs since Holodeck may not corrupt the file the same each time. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>You can also save the corruption details to an RTF file by right clicking the corrupted file and selecting &quot;Save RTF details.&quot; Saving the RTF details of a corrupted file exports the offset, hex value, and ascii representation of the file. Before each modification to the original file a red x is displayed; any other modification to the file is represented in both the hex values and ASCII in blue text. This is also good file to attach to a bug report since it may contain unprintable characters that will help a developer track down and fix the reported bug.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The items in the Corrupted Files pane show up as the application accesses the file with corruption. At the time of access Holodeck creates the corrupted file and redirects your application to it, leaving the original file in tact. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Show the Corrupted Files Pane by double-clicking on the Corrupted Files Node in the <A href="Project_Pane.htm">Project Pane</A>.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Original File – </FONT>The path to the uncorrupted original file.</P>
+ <P><FONT style="font-weight:bold; " >Corrupted File – </FONT>The path to the newly generated corrupted file</P>
+ <P><IMG src="../images/ebx_-1317167225.gif" border=0 height=190 width=577 alt="images\ebx_-1317167225.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Right click one of the corrupted files for the following options:</P>
+ <P><FONT style="font-weight:bold; " >Save Original File – </FONT>Saves the original, uncorrupted, file.</P>
+ <P><FONT style="font-weight:bold; " >Save Corrupted File – </FONT>Saves the corrupted file to a location you specify.</P>
+ <P><FONT style="font-weight:bold; " >Save RTF Details – </FONT>Saves the file corruption details in an RTF file, with all corruption changes highlighted.</P>
+ <P><FONT style="font-weight:bold; " >Delete Corrupted File – </FONT>Deletes this corrupted file from the disk.</P>
+ <P><FONT style="font-weight:bold; " >Select Visible Columns… - </FONT>Allows you to choose which columns are displayed in this pane.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

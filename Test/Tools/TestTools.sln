@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fault_tester", "Fault Tester\fault_tester.vcproj", "{D1674C95-DDD3-474A-AB71-31EF9DDDE9E9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Intercepts", "Intercept Tester\Intercepts.vcproj", "{DB589D83-E9C3-4F53-B23E-3E1721C9FB32}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log_accuracy", "Log Accuracy\log_accuracy.vcproj", "{A7AF2FA3-6FF3-46D5-9C6B-E1D8A9CE9655}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log_speed", "Log Speed\log_speed.vcproj", "{543D1810-4D68-43FD-B288-19E1E6B22BE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplacementLibraryVerify", "ReplacementLibraryVerify\ReplacementLibraryVerify.csproj", "{1C5DAF7A-7CE0-4F8A-B1DD-56AF35AA1112}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D1674C95-DDD3-474A-AB71-31EF9DDDE9E9}.Debug.ActiveCfg = Debug|Win32
+		{D1674C95-DDD3-474A-AB71-31EF9DDDE9E9}.Debug.Build.0 = Debug|Win32
+		{D1674C95-DDD3-474A-AB71-31EF9DDDE9E9}.Release.ActiveCfg = Release|Win32
+		{D1674C95-DDD3-474A-AB71-31EF9DDDE9E9}.Release.Build.0 = Release|Win32
+		{DB589D83-E9C3-4F53-B23E-3E1721C9FB32}.Debug.ActiveCfg = Debug|Win32
+		{DB589D83-E9C3-4F53-B23E-3E1721C9FB32}.Debug.Build.0 = Debug|Win32
+		{DB589D83-E9C3-4F53-B23E-3E1721C9FB32}.Release.ActiveCfg = Release|Win32
+		{DB589D83-E9C3-4F53-B23E-3E1721C9FB32}.Release.Build.0 = Release|Win32
+		{A7AF2FA3-6FF3-46D5-9C6B-E1D8A9CE9655}.Debug.ActiveCfg = Debug|Win32
+		{A7AF2FA3-6FF3-46D5-9C6B-E1D8A9CE9655}.Debug.Build.0 = Debug|Win32
+		{A7AF2FA3-6FF3-46D5-9C6B-E1D8A9CE9655}.Release.ActiveCfg = Release|Win32
+		{A7AF2FA3-6FF3-46D5-9C6B-E1D8A9CE9655}.Release.Build.0 = Release|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Debug.ActiveCfg = Debug|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Debug.Build.0 = Debug|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Release.ActiveCfg = Release|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Release.Build.0 = Release|Win32
+		{1C5DAF7A-7CE0-4F8A-B1DD-56AF35AA1112}.Debug.ActiveCfg = Debug|.NET
+		{1C5DAF7A-7CE0-4F8A-B1DD-56AF35AA1112}.Debug.Build.0 = Debug|.NET
+		{1C5DAF7A-7CE0-4F8A-B1DD-56AF35AA1112}.Release.ActiveCfg = Release|.NET
+		{1C5DAF7A-7CE0-4F8A-B1DD-56AF35AA1112}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

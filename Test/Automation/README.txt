@@ -1,0 +1,1 @@
+Contained in this folder are folders representing separate areas for automated tests.

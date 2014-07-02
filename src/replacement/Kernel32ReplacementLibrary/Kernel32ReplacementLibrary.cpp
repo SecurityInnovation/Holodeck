@@ -11725,7 +11725,7 @@ HANDLE WINAPI CreateRemoteThreadReplacement(HANDLE hProcess, LPSECURITY_ATTRIBUT
 		library->RunStandardTestsAndGetResults(logSender, CreateRemoteThreadCaller, categoryName, functionName, numParams, params, paramTypes, &tempReturnValue, "HANDLE", &errorCode, 0, true);
 		memcpy(&returnValue, &tempReturnValue, sizeof(DWORD));
 
-		if ((hProcess == GetCurrentProcess()) && (!library->IsAutCreatedThread(*pThreadID)))
+		if (hProcess == GetCurrentProcess())// && (!library->IsAutCreatedThread(*pThreadID)))
 		{
 			//send the type flag
 			SiString fileString = NEW_THREAD_FLAG;

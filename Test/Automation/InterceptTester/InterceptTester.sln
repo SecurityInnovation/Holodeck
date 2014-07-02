@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterceptTester", "InterceptTester.csproj", "{3A49F91E-A77F-4AD4-A670-2A10ACA8AA1E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionXMLFramework", "..\..\Frameworks\FunctionXMLFramework\FunctionXMLFramework.csproj", "{B83F7134-AF24-47F8-A547-75A6057724ED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3A49F91E-A77F-4AD4-A670-2A10ACA8AA1E}.Debug.ActiveCfg = Debug|.NET
+		{3A49F91E-A77F-4AD4-A670-2A10ACA8AA1E}.Debug.Build.0 = Debug|.NET
+		{3A49F91E-A77F-4AD4-A670-2A10ACA8AA1E}.Release.ActiveCfg = Release|.NET
+		{3A49F91E-A77F-4AD4-A670-2A10ACA8AA1E}.Release.Build.0 = Release|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Debug.ActiveCfg = Debug|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Debug.Build.0 = Debug|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Release.ActiveCfg = Release|.NET
+		{B83F7134-AF24-47F8-A547-75A6057724ED}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

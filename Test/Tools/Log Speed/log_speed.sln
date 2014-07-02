@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log_speed", "log_speed.vcproj", "{543D1810-4D68-43FD-B288-19E1E6B22BE6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Debug.ActiveCfg = Debug|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Debug.Build.0 = Debug|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Release.ActiveCfg = Release|Win32
+		{543D1810-4D68-43FD-B288-19E1E6B22BE6}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

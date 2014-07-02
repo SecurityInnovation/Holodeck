@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Exception Pane</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck Windows and Panes\nException Pane");
+addAvenueInfo("MAIN","Holodeck_Windows_and_Panes/Network_Corruption_Faults_Pane.htm","Automated_Testing_with_Holodeck/Introduction_to_Automating_Holodeck.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Exception Pane</H1>
+ <P>Holodeck can catch all exceptions your application produces; however by default Holodeck will only log second chance exceptions. Exceptions are routed through Holodeck first, as a first chance exception, then passed back to the application to handle. If the application does not handle the exception it is logged as a second chance exception. </P>
+ <P>View the Exception in a debugger by right clicking an exception in the Exception Pane and selecting &quot;View Exception in Debugger.&quot; For more information on debugging Exceptions please see the <A href="../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">Exceptions Overview</A>.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To have Holodeck log both first and second chance exceptions either specify that on the last page of the <A href="../Holodeck_in_depth/New_Project_Wizard/New_Project_Wizard.htm">New Project Wizard</A> or select Session &gt; &quot;Attach Debugger and Log Exceptions&quot; from the Menu.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>You can save the mini-dump information for debugging the application at a later time. The mini-dump file is a snapshot of the computer state at the time of the crash. For more information on debugging using the mini-dump file please see the <A href="../Holodeck_in_depth/Exceptions_and_mini_dumps/Mini_dump_Overview.htm">Mini-dump Overview</A>.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To show the Exception pane double-click the Exception node in the <A href="Project_Pane.htm">Project Pane</A>.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Time Stamp </FONT><FONT style="font-weight:bold; " >–</FONT><FONT style="font-weight:bold; " > </FONT>The time in which the exception occurred.</P>
+ <P><FONT style="font-weight:bold; " >Executable Name – </FONT>The process name that caused the exception.</P>
+ <P><FONT style="font-weight:bold; " >Thread – </FONT>The thread ID that caused the exception.</P>
+ <P><FONT style="font-weight:bold; " >Exception Description – </FONT>a short description of a first chance or second chance exception and where the exception occurred in memory.</P>
+ <P><FONT style="font-weight:bold; " >Mini Dump File – </FONT>The location of the Mini-Dump Holodeck has created.</P>
+ <H1><IMG src="../images/ebx_1366812530.gif" border=0 height=189 width=578 alt="images\ebx_1366812530.gif"></H1>
+ <H1><FONT style="font-weight:normal; " >Right click an exception for the following options:</FONT></H1>
+ <P><FONT style="font-weight:bold; " >Copy – </FONT>Copy the details of the exception. Sample data follows:</P>
+ <P>&nbsp;Executable name: resizeImage.exe</P>
+ <P>&nbsp;Time stamp:  5/28/2004  15:35:58:919</P>
+ <P>&nbsp;Exception: First chance exception code 0xE0434F4D at 0x77E73887</P>
+ <P>&nbsp;Mini Dump File: C:\Documents and Settings\user\Desktop\test_Exceptions\Exception1.dmp</P>
+ <P><FONT style="font-weight:bold; " >View Exception in Debugger</FONT> – This will load the Exception and Mini-dump information into the Visual Studio so that you can debug the application. For more information on using the debugging information provided by Holodeck please see the <A href="../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">Exceptions</A> and <A href="../Holodeck_in_depth/Exceptions_and_mini_dumps/Mini_dump_Overview.htm">Mini-dump</A> overviews</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

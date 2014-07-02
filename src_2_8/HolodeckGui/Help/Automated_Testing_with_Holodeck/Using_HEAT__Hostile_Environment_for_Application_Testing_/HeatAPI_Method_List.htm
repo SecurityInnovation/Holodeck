@@ -1,0 +1,308 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>HeatAPI Method List</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HEAT (Hostile Environment for Application Testing)\nHeatAPI Method List");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/Step_by_Step_for_HEAT_API.htm","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/Constructors_and_Destructors_of_HeatAPI.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>HeatAPI Method List</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Constructors_and_Destructors_of_HeatAPI.htm"><FONT style="font-weight:bold; " >Constructors and Destructors of HeatAPI</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">CHeatApp() </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">This default Constructor creates a new instance of a <FONT style="font-weight:bold; " >CHeatApp</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">~CHeatApp() </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">This default Destructor releases any base resources allocated by the <FONT style="font-weight:bold; " >CHeatApp</FONT></P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Interception_Information_and_Control.htm"><FONT style="font-weight:bold; " >Interception Information and Control</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">initializeApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Launches an application with the given path and executable name.  The app will be initially suspended.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">attachToApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Attaches to a closed application.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">attachToRunningApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Attaches to a running application</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">detachFromApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Detaches from (stops interception of) the application that is currently being intercepted.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">deinitializeApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Terminates the process HEAT is currently attached to and removes all intercepts from the intercept list.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">isReady </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns true if an application is ready to run and be intercepted, false otherwise</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">isRunning </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns true if the application is running</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setIsRunning </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Allows procedure to set running state</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setIsReady </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Allows procedure to set ready state</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setIsInjected </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Allows procedure to set injected state</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getProcessId </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns the ID of the current process</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getProcessHandle </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns the handle of the current process.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getThreadId </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns the ID of the current thread.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getThreadsInCurrentProcess </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns an array of thread IDs being used by the process</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="../../HEAT_Application_Execution.htm"><FONT style="font-weight:bold; " >HEAT Application Execution</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">runApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Begins execution of the process</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">pauseApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Suspends execution of the process</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setPauseState </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">For Externally setting the pause state of the application</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">resumeApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Continues execution of the process</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">terminateApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Terminates execution of the process</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Intercept_Function_Control.htm"><FONT style="font-weight:bold; " >Intercept Function Control</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">interceptFunc </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Intercepts a function and redirects it.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">unInterceptFunc </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Stops intercepting calls from the Application Under Test</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">deInitOnProcessTerminate </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Automatically unintercept all functions and detach from the process if the given process ID terminates.</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="HEAT_API_Injection.htm"><FONT style="font-weight:bold; " >HEAT API Injection</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">forceInject </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Injects HEAT into the attached process.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">delayedInject </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Injects HEAT into a process that hasn’t been initialized yet.</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="../../HEAT_Application_Execution.htm"><FONT style="font-weight:bold; " >Application Execution Information and Control</FONT></A><FONT style="font-weight:bold; " > </FONT></P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="margin-left:13.50pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">runApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Resumes execution of the process.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">pauseApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Pauses execution of the process.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setPauseState </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Forces the pause state of the process.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">resumeApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Resumes execution of the current process if it is paused</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">terminateApp </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Terminates execution of the current process</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getProcessId </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns the process ID of the current process handled by this <FONT style="font-weight:bold; " >CHeatApp</FONT> instance.</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getThreadId </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns the thread ID of the current process handled by this <FONT style="font-weight:bold; " >CHeatApp</FONT> instance</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getThreadsInCurrentProcess </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">The thread IDs for all of the threads associated with the current process handled by this <FONT style="font-weight:bold; " >CHeatApp</FONT> are stored in <FONT style="font-weight:bold; " >threadList</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">isRunning </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">Returns true if an application is currently running and being intercepted, false otherwise</P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">getProcessHandle </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;"><FONT style="color:black; " >Gets a handle to the attached process</FONT><FONT style="color:black; " >.</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">isReady </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;"><FONT style="color:black; " >Returns true if HEAT is ready to accept commands.  If false, only initializeApp, attachToApp, or attachToRunningApp can be called</FONT><FONT style="color:black; " >.</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">isRunning </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;"><FONT style="color:black; " >Determines if the app is executing.  Returns false once the app has terminated.</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setIsRunning </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;"><FONT style="color:black; " >Allows the caller to override the value returned from isRunning</FONT><FONT style="color:black; " >.</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setIsReady </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;"><FONT style="color:black; " >Allows the caller to override the value returned from isReady</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="30.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;">setIsInjected </P></TD>
+  <TD width="69.14%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0.00pt;"><FONT style="color:black; " >Allows the caller to override the current injection state</FONT></P></TD></TR>
+ </TABLE>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

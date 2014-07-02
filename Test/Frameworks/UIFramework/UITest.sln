@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITest", "UITest.csproj", "{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Debug.ActiveCfg = Debug|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Debug.Build.0 = Debug|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Release.ActiveCfg = Release|.NET
+		{ABF02DA3-7AA0-477B-A363-9A4BC2A9472B}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

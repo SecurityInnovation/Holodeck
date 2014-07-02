@@ -1,0 +1,239 @@
+//*************************************************************************
+// Copyright (C) Security Innovation, LLC, 2002-2004 – All Rights Reserved.
+//
+// FILE:		Kernel32ReplacementLibrary.cpp
+//
+// DESCRIPTION: Contains replacement library functions for kernel32.dll
+//
+//=========================================================================
+// Modification History
+//
+// Date         SCR  Name        Purpose
+// -----------  ---  ----------- ------------------------------------------
+[MODIFICATIONTIMESTAMP]
+//*************************************************************************
+#include "NetCorruptLibrary.h"
+#include "kernel32replacementlibrary.h"
+#include "CLRIntercept.h"
+
+//*************************************************************************
+// Method:		ReplacementLibraryAttach
+// Description: Called when HEAT is attaching
+// Parameters: None
+// Return Value: None
+//*************************************************************************
+void ReplacementLibraryAttach()
+{
+	ReplacementLibrary::DisableInterception();
+	
+	if (library == NULL)
+	{
+		//Initialize intercepts
+		CLRInitializeIntercepts();
+		
+		Registry reg;
+
+		SiArray<SiString> externalLibs;
+		//Check for any external dotnet libraries have been specified and then cache them
+		if (reg.OpenKey(INSTALLED_ROOT_KEY, ROOT_PATH))
+		{
+			DWORD pid = GetCurrentProcessId();
+			char pidString[12];
+			_ultoa(pid, pidString, 10);
+			
+			SiString extLibPath = pidString;
+			extLibPath += "\\";
+			extLibPath += DOTNET_LIBS_INIT_LIST_KEY;
+
+			externalLibs = reg.GetValueNames (reg.GetCurrentKey(), extLibPath);
+
+			for (unsigned int j=0; j < externalLibs.GetLength(); j++)
+			{
+				SiString eLibs = externalLibs[j];
+				CLRAddInterceptHandlerModuleForCacheCheck((char *) eLibs);
+			}
+		}
+		
+		
+		//Cache user generated dotnet replacement libraries and Holodeck internal
+		//dotnet replacement libraries only if no external libs were initialized above
+		if (externalLibs.GetLength() == 0)
+		{
+			SiString sDotNetReplacementKey;
+			SiArray<SiString> interceptedDLLs;
+			if (reg.OpenKey(INSTALLED_ROOT_KEY, ROOT_PATH))
+			{
+				interceptedDLLs = reg.GetValueNames (reg.GetCurrentKey(), DOTNET_REPLACEMENT_DLLS_KEY);
+
+				for (unsigned int j=0; j<interceptedDLLs.GetLength(); j++)
+				{
+					SiString iDLL = interceptedDLLs[j];
+					CLRAddInterceptHandlerModuleForCacheCheck((char *) iDLL);
+				}
+			}
+
+			//Cache holodeck dotnet replacement libraries
+			CLRAddInterceptHandlerModuleForCacheCheck("MSCorLibReplacementLibrary.dll");
+			CLRAddInterceptHandlerModuleForCacheCheck("SystemReplacementLibrary.dll");
+			CLRAddInterceptHandlerModuleForCacheCheck("SystemServiceProcessReplacementLibrary.dll");
+			CLRAddInterceptHandlerModuleForCacheCheck("SystemXMLReplacementLibrary.dll");
+		}
+
+		library = new ReplacementLibrary("kernel32.dll");
+		logSender = &commonLogSender;
+		createProcessMutex = new Mutex();
+		childProcessCreatedEvent = new Event();
+		holodeckAttachedToChildProcessEvent = new Event();
+		childProcessDataFile = new MemoryMappedFile;
+
+		DWORD pid = GetCurrentProcessId();
+		char pidString[12];
+		_ultoa(pid, pidString, 10);
+
+		SiString childProcessDataFileName = CHILD_PROC_MAP_FILE_PREFIX;
+		childProcessDataFileName += pidString;
+
+		SiString childProcessCreatedEventName = CHILD_PROCESS_EVENT_PREFIX;
+		childProcessCreatedEventName += pidString;
+
+		SiString holodeckAttachedToChildProcessEventName = HOLODECK_ATTACHED_PREFIX;
+		holodeckAttachedToChildProcessEventName += pidString;
+
+		createProcessMutex->Create();
+		childProcessCreatedEvent->Create(childProcessCreatedEventName);
+		holodeckAttachedToChildProcessEvent->Create(holodeckAttachedToChildProcessEventName);
+		childProcessDataFile->Create(childProcessDataFileName, 256);
+
+		InitNetworkCorruption();
+
+		if (!logSender->GetIsSendLogThreadRunning())
+			logSender->StartSendLogThread();
+	}
+	ReplacementLibrary::EnableInterception();
+}
+
+//*************************************************************************
+// Method:		ReplacementLibraryDetach
+// Description: Called when HEAT is detaching
+// Parameters: None
+// Return Value: None
+//*************************************************************************
+void ReplacementLibraryDetach()
+{
+	ReplacementLibrary::DisableInterception();
+	if (library != NULL)
+	{
+		if ((logSender != NULL) && (logSender->GetIsSendLogThreadRunning()))
+		{
+			logSender->StopSendLogThread();
+			logSender = NULL;
+		}
+	}
+	ReplacementLibrary::EnableInterception();
+}
+
+//*************************************************************************
+// Method:		DllMain
+// Description: Entry point to this dll
+// Parameters: See MSDN DllMain function parameters
+// Return Value: See MSDN DllMain return value
+//*************************************************************************
+BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
+{
+	ReplacementLibrary::DisableInterception();
+	switch (ul_reason_for_call)
+	{
+	case DLL_PROCESS_ATTACH:
+		break;
+	case DLL_PROCESS_DETACH:
+		ReplacementLibraryDetach();
+		delete library;
+		library = NULL;
+		return TRUE; // Don't re-enable intercepts, as we are detaching
+	default:
+		break;
+	}
+	ReplacementLibrary::EnableInterception();
+
+	return TRUE;
+}
+
+//*************************************************************************
+// START OF ORIGINAL FUNCTION CALLER FUNCTIONS
+// For all functions in this section the following applies
+// Description:	Calls the original function for a replacement function
+// Parameters:
+//	numParams - the number of parameters in the params array
+//	params - the parameters to pass to the original function
+//	retVal - the return value from the original function
+//	errCode - the error code from the original function
+// Return Value: true if the correct number of parameters were passed in,
+//	false otherwise
+//*************************************************************************
+[STARTREPLACEMENTCALLERFUNCTIONS]
+//*************************************************************************
+// Method: [FUNCTIONNAME]Caller - See START OF ORIGINAL FUNCTION CALLER FUNCTIONS
+//*************************************************************************
+bool [FUNCTIONNAME]Caller(int numParams, void **params, DWORD *retValue, DWORD *errCode)
+{
+	if (numParams != [NUMPARAMS]) return false;[STARTVOIDBLOCK]
+	[REALFUNCTIONNAME]([PARAMS]);
+	*retValue = 0;[ENDVOIDBLOCK][STARTNONVOIDBLOCK]
+	[RETURNTYPE] tempRetValue = [REALFUNCTIONNAME]([PARAMS]);
+	memcpy(retValue, &tempRetValue, sizeof(DWORD));[ENDNONVOIDBLOCK]
+	*errCode = GetLastError();
+	return true;
+}
+[ENDREPLACEMENTCALLERFUNCTIONS]
+//*************************************************************************
+// END OF ORIGINAL FUNCTION CALLER FUNCTIONS
+//*************************************************************************
+
+//*************************************************************************
+// START OF REPLACEMENT FUNCTIONS
+//*************************************************************************
+[STARTREPLACEMENTFUNCTIONS]
+//*************************************************************************
+// Method:		[REPLACEMENTFUNCTIONNAME]
+// Description: See MSDN [FUNCTIONNAME] function
+// Parameters:	See MSDN [FUNCTIONNAME] parameters
+// Return Value: See MSDN [FUNCTIONNAME] return value
+//*************************************************************************
+[RETURNTYPE] [CALLINGCONVENTIONMODIFIER] [REPLACEMENTFUNCTIONNAME]([PARAMDEFS])
+{
+	const int numParams = [NUMPARAMS];
+	char *functionName = "[FUNCTIONNAME]";
+	char *categoryName = "[CATEGORYNAME]";
+	[STRINGARRAY]
+	[PARAMREFERENCES]
+	[PARAMCOMPAREASTYPES]
+	
+	if (real[FUNCTIONNAME] == NULL)
+		real[FUNCTIONNAME] = ([FUNCTIONNAME]Function)library->GetOriginalFunction(functionName);
+		
+	if (real[FUNCTIONNAME] != NULL)
+	{
+		[STARTNONVOIDBLOCK1]DWORD errorCode, tempReturnValue = 0;
+		[RETURNTYPE] returnValue;[ENDNONVOIDBLOCK1][STARTVOIDBLOCK1]DWORD errorCode, returnValue;[ENDVOIDBLOCK1]
+		[CUSTOMALLOCATIONINFOCODE]
+		
+		if (library->RunStandardTestsAndGetResults(logSender, [FUNCTIONNAME]Caller, categoryName, functionName, numParams, params, paramTypes, [RETURNVALVARREF], "[RETURNTYPE]", &errorCode, [ALLOCINFO], [POSITIVEALLOCATIONBOOL]))
+		{
+			[SUCCESSFULRUNSTANDARDTESTSCALLCUSTOMCODE]
+		}
+		else
+		{
+			[FAILEDRUNSTANDARDTESTSCALLCUSTOMCODE]
+		}
+		[POSTRUNSTANDARDTESTSCUSTOMCODE]
+		[STARTNONVOIDBLOCK2]memcpy(&returnValue, &tempReturnValue, sizeof(DWORD));
+		SetLastError(errorCode);
+		return returnValue;[ENDNONVOIDBLOCK2][STARTVOIDBLOCK2]SetLastError(errorCode);[ENDVOIDBLOCK2]
+	}
+	
+	[DEFAULTRETURN]
+}
+[ENDREPLACEMENTFUNCTIONS]
+//*************************************************************************
+// END OF REPLACEMENT FUNCTIONS
+//*************************************************************************

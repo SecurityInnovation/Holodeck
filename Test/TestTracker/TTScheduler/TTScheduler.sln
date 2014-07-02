@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTScheduler", "TTScheduler.csproj", "{BBA477EB-6A61-4B13-B872-14733109C7D8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTrackerDBCommon", "..\TTDBCommon\TestTrackerDBCommon.csproj", "{31C4B0F6-709A-4F2F-817A-18A5C68CFCED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BBA477EB-6A61-4B13-B872-14733109C7D8}.Debug.ActiveCfg = Debug|.NET
+		{BBA477EB-6A61-4B13-B872-14733109C7D8}.Debug.Build.0 = Debug|.NET
+		{BBA477EB-6A61-4B13-B872-14733109C7D8}.Release.ActiveCfg = Release|.NET
+		{BBA477EB-6A61-4B13-B872-14733109C7D8}.Release.Build.0 = Release|.NET
+		{31C4B0F6-709A-4F2F-817A-18A5C68CFCED}.Debug.ActiveCfg = Debug|.NET
+		{31C4B0F6-709A-4F2F-817A-18A5C68CFCED}.Debug.Build.0 = Debug|.NET
+		{31C4B0F6-709A-4F2F-817A-18A5C68CFCED}.Release.ActiveCfg = Release|.NET
+		{31C4B0F6-709A-4F2F-817A-18A5C68CFCED}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,164 @@
+// Intercepts.cpp : Defines the entry point for the console application.
+//
+#include <winsock2.h>
+#include "stdafx.h"
+
+FARPROC disable = NULL;
+FARPROC enable = NULL;
+
+extern RtlLocalTimeToSystemTime_DEF RtlLocalTimeToSystemTime = NULL;
+extern NtQuerySystemTime_DEF NtQuerySystemTime = NULL;
+extern RtlTimeToSecondsSince1970_DEF RtlTimeToSecondsSince1970 = NULL;
+
+BOOL loadLibraries( )
+{
+	HMODULE hModule = NULL;
+
+	hModule = LoadLibrary( "NTDLL.dll" );
+    
+    if ( hModule == NULL )
+    {
+        printf( "COULD NOT LOAD NTDLL.DLL\n" );
+        
+        goto error;
+    }
+
+	////
+    RtlLocalTimeToSystemTime = (RtlLocalTimeToSystemTime_DEF)GetProcAddress(hModule,"RtlLocalTimeToSystemTime");
+
+    if ( RtlLocalTimeToSystemTime == NULL )
+    {
+        printf( "ERROR Getting \"RtlLocalTimeToSystemTime\" Function Address!" );
+        goto error;
+    }
+
+	////
+    NtQuerySystemTime = (NtQuerySystemTime_DEF)GetProcAddress(hModule,"NtQuerySystemTime");
+
+    if ( NtQuerySystemTime == NULL )
+    {
+        printf( "ERROR Getting \"NtQuerySystemTime\" Function Address!" );
+        goto error;
+    }
+
+	RtlTimeToSecondsSince1970 = (RtlTimeToSecondsSince1970_DEF)GetProcAddress(hModule,"NtQuerySystemTime");
+
+    if ( RtlTimeToSecondsSince1970 == NULL )
+    {
+        printf( "ERROR Getting \"RtlTimeToSecondsSince1970\" Function Address!" );
+        goto error;
+    }
+
+    return true;
+
+error:
+	return false;
+}
+
+BOOL printFunctionResult( BOOL bSuccess, CHAR * pszFunctionName )
+{
+    printf( "*** %s ", pszFunctionName );
+
+    if ( bSuccess )
+        printf( "PASSED!" );    
+    else
+	{
+		printf( "FAILED!" );
+		getchar();
+	}
+
+    printf( " ***\n");
+
+    return bSuccess;
+}
+
+BOOL getInterceptionDisablers( )
+{
+    HMODULE hModule = NULL;
+
+    // this will fail unless HEATDLL.dll is currently in the process space...
+    hModule = GetModuleHandle("HEATDLL.dll");
+
+    if ( hModule == NULL )
+    {
+        printf( "HEAT DLL MODULE NOT LOADED!\n" );
+        printf( "Ensure that application is being intercepted by Holodeck!\n\n" );
+        
+        goto error;
+    }
+
+    disable = GetProcAddress(hModule,"disableInterceptionInCurrentThread");
+
+    if ( disable == NULL )
+    {
+        printf( "ERROR Getting \"disableInterceptionInCurrentThread\" Function Address!" );
+        goto error;
+    }
+
+    enable = GetProcAddress(hModule,"enableInterceptionInCurrentThread");
+
+    if ( enable == NULL )
+    {
+        printf( "ERROR Getting \"enableInterceptionInCurrentThread\" Function Address!" );
+        goto error;
+    }
+
+    return true;
+
+
+error:
+    return false;
+}
+
+void disableInterception( )
+{
+    if ( disable != NULL )
+        disable( );
+}
+
+void enableInterception( )
+{
+    if ( enable != NULL )
+        enable( );
+}
+
+int main( )
+{
+    printf( "<== HOLODECK INTERCEPT TESTER FOR WIN 32 Functions v1.0 ==>\n\n" );
+    
+    getInterceptionDisablers( );
+	
+	disableInterception( );
+	loadLibraries( );
+	enableInterception( );
+    
+    BOOL bSuccess = TRUE;
+
+
+    /// The following functions are automatically generated ///
+
+[FUNCTIONGENERATION]
+    
+
+    printf("\n\n");
+
+    if ( bSuccess )
+        printf( "===>TEST PASSED!<===\n" );
+    else
+        printf( "===>TEST FAILED!<===\n" );
+
+    printf( "\n<< PRESS ENTER TO CONTINUE >>\n" );
+    getchar( );
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+

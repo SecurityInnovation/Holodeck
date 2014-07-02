@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Restart BrokenApp with Resource Faults</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nBeginner\nHow to Deprive Your Application of its Dependencies\nRestart BrokenApp with Resource Faults");
+addAvenueInfo("Holodeck Help","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Set_the_Resource_Fault.htm","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Investigating_the_Failure.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Restart BrokenApp with Resource Faults</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Since this dll is loaded into memory when BrokenApp starts up we have to restart the application to see any changes. Restart BrokenApp by selecting Application &gt; Restart. When you restart the BrokenApp Holodeck will remember any Resource Faults you have previously set and apply them to the application as it starts up.</P>
+ <P>&nbsp;&nbsp;<IMG src="../../../images/ebx_-1962912293.gif" border=0 height=325 width=408 alt="images\ebx_-1962912293.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>As BrokenApp starts up it will fail as soon as it tries to load the RichEd20.dll library. Two exceptions will be thrown, the first chance exception is caught by Holodeck before the application has a chance to deal with it, first chance exceptions will be caught in any application every time there is an exception thrown. Holodeck immediately gives the exception back to the application so it can handle it. If the application does not handle it, which broken app does not, a second chance exception is thrown. At this point since BrokenApp does not handle the exception it crashes. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_-811485568.gif" border=0 height=117 width=624 alt="images\ebx_-811485568.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>For more information see the <A href="../../../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">Exceptions Overview</A> help topic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Set_the_Resource_Fault.htm">&lt;&lt; Previous</A>    <A href="Investigating_the_Failure.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

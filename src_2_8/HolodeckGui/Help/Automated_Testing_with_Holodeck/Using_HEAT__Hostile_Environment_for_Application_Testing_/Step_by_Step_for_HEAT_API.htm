@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Step by Step for HEAT API</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HEAT (Hostile Environment for Application Testing)\nStep by Step for HEAT API");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HoloScript/Examples/Fourth_Example_Modifying_the_AUT_Execution_Environment_Network_Limits_.htm","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/HeatAPI_Method_List.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Step by Step for HEAT API</H1>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>User will be required to create an impostor dll, and an exe.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>In the impostor dll, the user must create impostor functions for every function that he plans to intercept.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>The impostor function must have the same signature as the function it is replacing (same return value, same parameters).</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >4)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>The impostor function should call the real function once the user is done manipulating the parameters etc, unless the impostor function does all that the real function does.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >5)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Make sure all the impostor functions are exported by the impostor dll. HEAT will not be able to intercept real functions properly if imposter functions are not exported by the imposter dll.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >6)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Once the impostor dll is complete, write the code for the exe.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >7)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Include CHeatApp.h, and specify HeatApi.Lib in the dependencies\libraries for the project (both files are present in : Holodeck Install Directory\HEAT folder).</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >8)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>After creating a CHeatApp object, the user can use the various functions in the help to launch/manipulate application under test.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >9)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Functions to be intercepted can be specified using InterceptFunc from the Heat API.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >10)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>It is recommended to start the application using initializeApp( ), and then inject the heat dll into the target process using forceInject( ).</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >11)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>Once done injecting HEAT and setting up function intercepts, use runApp( ) to run the target application.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

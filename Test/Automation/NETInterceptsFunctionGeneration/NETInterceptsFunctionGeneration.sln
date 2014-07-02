@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETInterceptsFunctionGeneration", "NETInterceptsFunctionGeneration.csproj", "{4F195418-DFDF-4160-A61E-6FE371768277}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4F195418-DFDF-4160-A61E-6FE371768277}.Debug.ActiveCfg = Debug|.NET
+		{4F195418-DFDF-4160-A61E-6FE371768277}.Debug.Build.0 = Debug|.NET
+		{4F195418-DFDF-4160-A61E-6FE371768277}.Release.ActiveCfg = Release|.NET
+		{4F195418-DFDF-4160-A61E-6FE371768277}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

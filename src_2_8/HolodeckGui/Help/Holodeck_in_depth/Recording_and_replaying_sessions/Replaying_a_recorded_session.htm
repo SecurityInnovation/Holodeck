@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Replaying a recorded session</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nRecording and replaying sessions\nReplaying a recorded session");
+addAvenueInfo("MAIN","Holodeck_in_depth/Recording_and_replaying_sessions/Creating_a_recorded_session.htm","Automated_Testing_with_Holodeck/Using_Holodeck_with_other_Automated_Test_Frameworks/Using_Holodeck_with_other_Automated_Test_Frameworks.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Replaying a recorded session</H1>
+ <P>Replaying a recorded session and ensure Holodeck sets and lifts the same hostile environments every time it is run. Use this every time test scripts are run so you can ensure reproducibility of bugs, and ensure you are testing the same things on each different build.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>When a recorded session is replayed Holodeck will set each fault, test, limit etc. according to the logs coming in, as it was set when recording.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Right click the Recorded Session you would like to replay and select Replay from the menu.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Select the Recorded Session you would like to replay and select Replay Session from the Tests Menu</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >This will start the recorded session; Holodeck will automatically restart the </FONT><FONT style="font-size:9pt; " >Application Under Test</FONT><FONT style="font-size:9pt; " > and begin the repro steps exactly as they were recorded. Playing a Recorded session will set all the faults, limits, tests, etc. that were set while recording at the same relative time to application start.</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

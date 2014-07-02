@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Setup the Test Harness</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nAdvanced\nTest Harness and Code Coverage\nSetup the Test Harness");
+addAvenueInfo("MAIN","Tutorials/Advanced/Test_Harness_and_Code_Coverage/Create_a_Holodeck_project_file.htm","Tutorials/Advanced/Test_Harness_and_Code_Coverage/Begin_testing_with_Code_Coverage.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Setup the Test Harness</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The test harness is a piece of software that is responsible for launching Holodeck with command line options, this software is not part of Holodeck and must be supplied by the user. The Test Harness is also responsible for terminating the test at appropriate times and monitoring the application under test for exceptions. When launching Holodeck the following command line options are available: </P>
+ <P>&nbsp;/record – turns on session recording</P>
+ <P>&nbsp;/silent – runs Holodeck minimized and with no popup UI </P>
+ <P>&nbsp;/codecoverage:[high|medium|low] – turns on code coverage with either high, medium or low settings</P>
+ <P>&nbsp;/randomstress:[high|medium|low]<FONT style="font-weight:bold; " > </FONT>– turns on random stress testing with either high, medium or low settings</P>
+ <P>&nbsp;/intelligentstress:[high|medium|low] – turns on intelligent stress testing with either high, medium or low settings</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>For more information on the command-line options in Holodeck see the <A href="../../../Automated_Testing_with_Holodeck/Using_Holodeck_as_a_command_line_utility/Introduction_to_using_Holodeck_as_a_command_line_Utility.htm">Introduction to using Holodeck as a command-line Utility</A> </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The test harness must terminate the test process after Holodeck has finished running each test so that Holodeck can restart the Application Under Test with new faults set. The test harness is also responsible for monitoring and recording errors thrown by the Application Under Test, it is highly recommended that these are time stamped so that they may be easily compared to Holodeck’s recorded session xml files.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Create_a_Holodeck_project_file.htm">&lt;&lt; Previous</A>    <A href="Begin_testing_with_Code_Coverage.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

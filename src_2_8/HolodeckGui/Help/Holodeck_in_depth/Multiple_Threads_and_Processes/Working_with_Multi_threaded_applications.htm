@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Working with Multi-threaded applications</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nMultiple Threads and Processes\nWorking with Multi-threaded applications");
+addAvenueInfo("MAIN","Holodeck_in_depth/Multiple_Threads_and_Processes/Dealing_with_Multiple_Processes.htm","Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Working with Multi-threaded applications</H1>
+ <P>Holodeck will automatically track any new threads that are created by the process you are testing. If Holodeck is in Per-Thread mode each new thread will show up in the Project Pane as a child of its parent process. This can be extremely useful for testing specific threads, such as threads in charge of reading a file or parsing incoming network traffic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To turn on Per-Thread mode click Session &gt; Per Thread from the Menu.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Each new thread the application spawns can be treated like its own application, allowing you to set limits, faults, and tests on each thread individually. Each fault, limit, or test set on a single thread will only apply to that thread, however, setting a fault, limit or test on the main process node will create that fault, limit or test for all Threads of that process.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_790050376.gif" border=0 height=444 width=257 alt="images\ebx_790050376.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To change limits, set faults etc. expand the thread by clicking the ‘+’ sign next to the thread.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Double clicking an active log node in the Project Pane will open a log pane that will show just entries for the thread you chose.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

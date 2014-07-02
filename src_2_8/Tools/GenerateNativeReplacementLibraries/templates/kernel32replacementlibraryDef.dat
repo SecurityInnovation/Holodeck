@@ -1,0 +1,5 @@
+LIBRARY	Kernel32ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

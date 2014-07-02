@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="DotNetReplacementInstall"
+	ProjectGUID="{C4F46BD0-D415-4E89-A5E1-EA0520CB2189}"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="copy ..\HeatDotNet\bin\HeatDotNet.dll ..\replacement\
+copy ..\DotNetReplacementLibrary\bin\DotNetReplacementLibrary.dll ..\replacement\
+copy ..\replacement\MSCorLibReplacementLibrary\bin\debug\MSCorLibReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemReplacementLibrary\bin\debug\SystemReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemServiceProcessReplacementLibrary\bin\debug\SystemServiceProcessReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemXMLReplacementLibrary\bin\debug\SystemXMLReplacementLibrary.dll ..\replacement\"
+				ReBuildCommandLine="copy ..\HeatDotNet\bin\HeatDotNet.dll ..\replacement\
+copy ..\DotNetReplacementLibrary\bin\DotNetReplacementLibrary.dll ..\replacement\
+copy ..\replacement\MSCorLibReplacementLibrary\bin\debug\MSCorLibReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemReplacementLibrary\bin\debug\SystemReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemServiceProcessReplacementLibrary\bin\debug\SystemServiceProcessReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemXMLReplacementLibrary\bin\debug\SystemXMLReplacementLibrary.dll ..\replacement\"
+				CleanCommandLine="del ..\replacement\HeatDotNet.dll
+del ..\replacement\DotNetReplacementLibrary.dll
+del ..\replacement\MSCorLibReplacementLibrary.dll
+del ..\replacement\SystemReplacementLibrary.dll
+del ..\replacement\SystemServiceProcessReplacementLibrary.dll
+del ..\replacement\SystemXMLReplacementLibrary.dll"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="copy ..\HeatDotNet\bin\HeatDotNet.dll ..\replacement\
+copy ..\DotNetReplacementLibrary\bin\DotNetReplacementLibrary.dll ..\replacement\
+copy ..\replacement\MSCorLibReplacementLibrary\bin\release\MSCorLibReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemReplacementLibrary\bin\release\SystemReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemServiceProcessReplacementLibrary\bin\release\SystemServiceProcessReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemXMLReplacementLibrary\bin\release\SystemXMLReplacementLibrary.dll ..\replacement\"
+				ReBuildCommandLine="copy ..\HeatDotNet\bin\HeatDotNet.dll ..\replacement\
+copy ..\DotNetReplacementLibrary\bin\DotNetReplacementLibrary.dll ..\replacement\
+copy ..\replacement\MSCorLibReplacementLibrary\bin\release\MSCorLibReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemReplacementLibrary\bin\release\SystemReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemServiceProcessReplacementLibrary\bin\release\SystemServiceProcessReplacementLibrary.dll ..\replacement\
+copy ..\replacement\SystemXMLReplacementLibrary\bin\release\SystemXMLReplacementLibrary.dll ..\replacement\"
+				CleanCommandLine="del ..\replacement\HeatDotNet.dll
+del ..\replacement\DotNetReplacementLibrary.dll
+del ..\replacement\MSCorLibReplacementLibrary.dll
+del ..\replacement\SystemReplacementLibrary.dll
+del ..\replacement\SystemServiceProcessReplacementLibrary.dll
+del ..\replacement\SystemXMLReplacementLibrary.dll"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

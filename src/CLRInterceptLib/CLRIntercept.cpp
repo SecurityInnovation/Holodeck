@@ -51,6 +51,9 @@ DWORD g_dwReplacementLibraryChecksum = 0;
 // Total number of intercepts processed so far
 DWORD g_dwInterceptsProcessed = 0;
 
+// Is the current executable .NET v1.0/1.1 or v2.0+ executable?
+DWORD g_bIsDotNet20 = false;
+
 
 //*************************************************************************
 // Function:	 CLRInitializeIntercepts
@@ -67,6 +70,28 @@ bool CLRInitializeIntercepts()
 	SiString sInstalledPath;
 	SiString sReplacementLibFolder;
 
+
+	// Load the current executable and check if it's a .NET 2.0+ executable or not
+	char pszExecutable[MAX_PATH + 1];
+	if (!GetModuleFileName(0, pszExecutable, MAX_PATH))
+		return false;
+
+	PEFile *ppeExec = new PEFile();
+	if (!ppeExec)
+		return false;
+
+	if (!ppeExec->load(pszExecutable, true))
+	{
+		delete ppeExec;
+		return false;
+	}
+
+	if (ppeExec->getManagedHeader()->MinorRuntimeVersion == 5)
+	{ // is a .NET 2.0+ file
+		g_bIsDotNet20 = true;
+	}
+	delete ppeExec;
+
 	if (!reg.OpenKey(INSTALLED_ROOT_KEY, ROOT_PATH))
 		return false;
 	if (!reg.Read(INSTALL_PATH_VALUE_NAME, sInstalledPath))
@@ -77,6 +102,7 @@ bool CLRInitializeIntercepts()
 	// HeatDotNet.dll is in the same folder as the replacement libraries
 	sInstalledPath += "\\";
 	sInstalledPath += sReplacementLibFolder;
+	if (g_bIsDotNet20) sInstalledPath += "\\net20";
 
 	// Find the location of HeatDotNet.dll
 	char szHeatDotNetFullPath[MAX_PATH];
@@ -185,7 +211,21 @@ bool CLRAddInterceptHandlerModule(const SiString& sModuleName)
 
 	//If file cannot be located, then try and look for it in the Holodeck
 	//plugins folder
-	if (_access (sModuleName, 0) == -1)
+
+	SiUtils::SiString sFileNameLocal = sModuleName;
+	if (g_bIsDotNet20)
+	{
+		// Add 35 to the name of the file
+		SiUtils::SiString sFileNameBase, sFileNameExt;
+		sFileNameLocal.SubString(sFileNameBase, 0, sFileNameLocal.FindLast(".") - 1);
+		sFileNameLocal.SubString(sFileNameExt,     sFileNameLocal.FindLast(".") + 1);
+		sFileNameLocal  = sFileNameBase;
+		sFileNameLocal += "35.";
+		sFileNameLocal += sFileNameExt;
+	}
+
+
+	if (_access (sFileNameLocal, 0) == -1)
 	{
 		Registry reg;
 		SiString sInstalledPath;
@@ -201,10 +241,22 @@ bool CLRAddInterceptHandlerModule(const SiString& sModuleName)
 		// Handler DLLs are in the same folder as the replacement libraries
 		sInstalledPath += "\\";
 		sInstalledPath += sReplacementLibFolder;
+		if (g_bIsDotNet20) sInstalledPath += "\\net20";
 
+
+		OutputDebugString("Searching for:");
+		OutputDebugString(sFileNameLocal);
 		// Find the full path name of the module
-		if (!SearchPathW(sInstalledPath, (wchar_t*)sModuleName, NULL, MAX_PATH, wszFullPath, NULL))
+		wchar_t wszFullPath[MAX_PATH];
+		if (!SearchPathW(sInstalledPath, (wchar_t*)sFileNameLocal, NULL, MAX_PATH, wszFullPath, NULL))
 			return false;
+		OutputDebugStringW(wszFullPath);
+
+
+
+		//// Find the full path name of the module
+		//if (!SearchPathW(sInstalledPath, (wchar_t*)sModuleName, NULL, MAX_PATH, wszFullPath, NULL))
+		//	return false;
 	}
 	else
 		wcscpy (wszFullPath, sModuleName);
@@ -355,10 +407,27 @@ bool CLRAddInterceptHandlerModuleForCacheCheck(const SiUtils::SiString& sFileNam
 	sInstalledPath += "\\";
 	sInstalledPath += sReplacementLibFolder;
 
+	SiUtils::SiString sFileNameLocal = sFileName;
+	if (g_bIsDotNet20)
+	{
+		sInstalledPath += "\\net20";
+
+		// Add 35 to the name of the file
+		SiUtils::SiString sFileNameBase, sFileNameExt;
+		sFileNameLocal.SubString(sFileNameBase, 0, sFileNameLocal.FindLast(".") - 1);
+		sFileNameLocal.SubString(sFileNameExt,     sFileNameLocal.FindLast(".") + 1);
+		sFileNameLocal  = sFileNameBase;
+		sFileNameLocal += "35.";
+		sFileNameLocal += sFileNameExt;
+	}
+
+	OutputDebugString("Searching for:");
+	OutputDebugString(sFileNameLocal);
 	// Find the full path name of the module
 	wchar_t wszFullPath[MAX_PATH];
-	if (!SearchPathW(sInstalledPath, (wchar_t*)sFileName, NULL, MAX_PATH, wszFullPath, NULL))
+	if (!SearchPathW(sInstalledPath, (wchar_t*)sFileNameLocal, NULL, MAX_PATH, wszFullPath, NULL))
 		return false;
+	OutputDebugStringW(wszFullPath);
 
 	// Load the module information
 	PEFile* ppeHandlerModule = new PEFile();
@@ -2508,6 +2577,8 @@ SiUtils::SiString CLRCheckInterceptedCache(const SiUtils::SiString& sModuleName)
 	SiString sInstalledPath;
 	SiString sCacheFolder;
 
+	OutputDebugString("Checking for:"); OutputDebugString((char*) sModuleName);
+
 	// Find the full path name of the module
 	wchar_t wszFullPath[MAX_PATH];
 	wchar_t *wszFileName;
@@ -2558,6 +2629,7 @@ SiUtils::SiString CLRCheckInterceptedCache(const SiUtils::SiString& sModuleName)
 	swprintf(wszNewDLLPath, L"%s\\%s.%X.%X.dll", (wchar_t*)sInstalledPath, wszFileName, dwModuleChecksum,
 		g_dwReplacementLibraryChecksum);
 
+	OutputDebugString("Checking against:"); OutputDebugStringW((wchar_t*) wszNewDLLPath);
 	if (PathFileExistsW(wszNewDLLPath))
 	{
 		// Module has a cached intercepted module.  Save information about the module.

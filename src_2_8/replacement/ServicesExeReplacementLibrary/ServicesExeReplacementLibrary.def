@@ -1,0 +1,10 @@
+LIBRARY	ServicesExeReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+CreateProcessAReplacement
+CreateProcessWReplacement
+CreateProcessAsUserAReplacement
+CreateProcessAsUserWReplacement
+CreateProcessWithLogonWReplacement
+CreateProcessWithTokenWReplacement

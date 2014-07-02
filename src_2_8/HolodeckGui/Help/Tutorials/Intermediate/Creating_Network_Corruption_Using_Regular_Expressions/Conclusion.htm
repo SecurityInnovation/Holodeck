@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Summary</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nCreating Network Corruption Using Regular Expressions\nSummary");
+addAvenueInfo("Holodeck Help","Tutorials/Intermediate/Creating_Network_Corruption_Using_Regular_Expressions/Verify_the_Fault_is_set.htm","Holodeck_in_depth/Add_Holodeck_Intercepts/Add_Holodeck_Intercepts.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Summary</H1>
+ <P>This tutorial has shown how to create network packet corruption, by replacing certain regular expressions with a long string of ‘A’s. This helps to find obvious serious errors, however you can use the replacement and expansion strings to trick your application into parsing the input as valid. For instance, in this case you could replace any URL with a known outlying case such as www%2Eintel%2Ecom the %2Es represent the hexadecimal version of the period (.) however in Browsers such as Internet Explorer the period is used to specify zones and decide whether to allow or disallow certain scripts and executables. Using the Regular Expression functionality to replace all the URLs you will be able to check many different locations for the address at one time.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Further Exploration</FONT></P>
+ <P>You can use Holodeck to test server packet parsing as well. Try loading a client that connects to the server you wish to test into Holodeck. Create a <A href="../../../Holodeck_in_depth/Creating_Faults/Fault_Categories/Network_Faults.htm">Network Corruption Faults</A> on outgoing packets. Holodeck will now send packets that are corrupted from the original packet from your client application.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Verify_the_Fault_is_set.htm">&lt;&lt; Previous</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

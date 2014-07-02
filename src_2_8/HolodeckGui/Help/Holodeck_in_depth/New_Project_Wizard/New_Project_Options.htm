@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>New Project Options</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nNew Project Wizard\nNew Project Options");
+addAvenueInfo("Holodeck Help","Holodeck_in_depth/New_Project_Wizard/Attach_to_a_Service.htm","Holodeck_in_depth/New_Project_Wizard/Default_Logging.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>New Project Options</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>This page allows you to set options on how Holodeck monitors your application. Turning on more function logging will increase the number of tests and faults that are available, however more logging may impair the performance of your application. For more information on working with logs please see the <A href="../Working_with_Logs/Logs_Overview.htm">Logs Overview</A> help topic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>You can pause your application on start to set tests, limits, faults etc. before your application starts up. If you are attaching Holodeck to an already running instance of an application or service Holodeck will pause the application or service when the wizard has finished; to resume execution of your application uncheck Application &gt; Pause Application from the menu.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>If Process Chaining is turned on Holodeck will automatically attach itself to any processes your application launches. If you check Child Process Inherit Settings, any process your application launches will automatically inherit the same tests, limits, faults etc. that were set for the parent application. For more information please see the <A href="../Multiple_Threads_and_Processes/Dealing_with_Multiple_Processes.htm">Dealing with Multiple Processes</A> help topic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Holodeck comes with a built in Debugger which catches exceptions and creates mini-dump files. Check &quot;Attach Debugger and Log Exceptions&quot; to enable this feature. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>If any of the following categories are not logged some of the features of Holodeck may not work properly or as expected, for more information please see the <A href="Default_Logging.htm">Default Logging</A> help page. Function Category: COM Functions, File Functions, Library Functions, Network Functions, Process Functions or Registry Functions</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>If your application produces first chance exceptions that might help you debug the application upon a crash you can enable the logging of First Chance Exceptions. If you enable this option when your application produces a first chance exception Holodeck will generate a compressed mini-dump file that you can use to debug your application in Visual Studio. For more information regarding Exceptions and Mini-dumps please see the <A href="../Exceptions_and_mini_dumps/Exceptions_Overview.htm">Exceptions</A> and <A href="../Exceptions_and_mini_dumps/Mini_dump_Overview.htm">Mini-dump</A> help pages.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Note to Windows 2000 users:</FONT> Windows 2000 is incapable of detatching a debugger already attached to an application. Thus if the Holodeck Debugger option is enabled, it isn’t possible for Holodeck to detach from the application. For more information please see the <A href="../../Appendices/Windows_2000_and_attaching_the_Holodeck_Debugger.htm">Windows 2000 and attaching the Holodeck Debugger</A> help topic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_-1859603638.gif" border=0 height=400 width=400 alt="images\ebx_-1859603638.gif"></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

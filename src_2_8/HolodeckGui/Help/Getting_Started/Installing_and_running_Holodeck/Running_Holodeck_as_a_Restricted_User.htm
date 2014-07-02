@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Running Holodeck as a Restricted User</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Getting Started\nInstalling and running Holodeck\nRunning Holodeck as a Restricted User");
+addAvenueInfo("MAIN","Getting_Started/Installing_and_running_Holodeck/Installing_Holodeck.htm","Getting_Started/Exploring_the_Holodeck_workspace/Windows_and_panes_overview.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Running Holodeck as a Restricted User</H1>
+ <P>To run Holodeck as a restricted user you must give the users group read/write access to both the HolodeckEE registry keys and the Holodeck install directory. To accomplish this follow these directions while logged on as an Administrator:</P>
+ <P><FONT style="font-weight:bold; " >Note:</FONT> Simple file sharing must be turned off to give the users group read/write permission to the Holodeck install directory. Follow these directions to turn off simple file sharing:</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Open any folder</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Select Tools &gt; Folder Options</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the View tab</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >4)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Uncheck &quot;Use simple file sharing (Recommended)&quot;</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >5)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Click OK</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Grant the users group read/write access to the HolodeckEE registry keys</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Run regedit.exe</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >i)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Start &gt; Run…</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >ii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Type <FONT style="font-family:'Times New Roman'; font-weight:bold; " >regedit.exe</FONT></P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Right click the folder HolodeckEE found at HKEY_LOCAL_MACHINE\SOFTWARE\Security Innovation\Holodeck Enterprise Edition and select Permissions</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >c)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the Users group</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >d)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Grant the Users group full control by selecting the checkbox next to Full Control</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >e)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Click OK to save the change</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Grant the Users group read/write access to the install directory of Holodeck</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>If Holodeck was installed using the default directory it will be located at C:\Program Files\Security Innovation.</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Browse to the install directory</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >c)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Right click the folder Holodeck Enterprise Edition and select Sharing and Security… </P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >d)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the Security tab</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >e)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the Users group</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >f)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Grant the Users group full control by selecting the checkbox next to Full Control</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >g)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Click OK to save the changes</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Holodeck will now work as expected when launched from a restricted user account.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

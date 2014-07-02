@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Welcome to Holodeck</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+.blackheader { 
+	font-family: Verdana, Arial, sans-serif, Helvetica; 
+	font-size: 14px; 
+	color: #000000; 
+	font-weight: bold;
+}
+
+.blacktext { 
+	font-family: Verdana, Arial, sans-serif, Helvetica; 
+	font-size: 12px; 
+	color: #000000; 
+	font-weight: bold;
+}
+
+a:link, a:visited, a:active { 
+	font-family: Verdana, Arial, sans-serif, Helvetica; 
+	font-size: 12px; 
+	color: #000000;
+}
+
+.style2 {font-family: Verdana, Arial, sans-serif, Helvetica; font-size: 10px; color: #000000; font-weight: bold; }
+</style>
+<script type="text/javascript">
+
+function write()
+{
+	var x = navigator
+	var demos = "";
+	var other = "";
+	if(x.onLine)
+	{
+		demos = "http://www.sisecure.com/holodeck/iframe/AnimatedDemos.htm";
+		other = "http://www.sisecure.com/holodeck/iframe/purchased.htm";
+	}
+	else
+	{
+		demos = "..//AnimatedDemos.htm";
+		other = "..//purchased.htm";
+	}
+	
+	frames['demoFrame'].location.href = demos;
+	frames['otherFrame'].location.href = other;
+}
+</script>
+</head>
+
+<body onLoad="write()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="center">
+    <td height="379" valign="middle"><table width="750" border="1">
+  <tr>
+    <td colspan="2"><div align="left"><img src="images/header.jpg" width="750" height="86"></div></td>
+  </tr>
+  <tr bgcolor="EEEEE6">
+    <td width="359" valign="top" bgcolor="EEEEEE"><p align="left" class="blackheader"><IFRAME allowtransparency="true" width="359" scrolling="auto" frameborder="1" id="demoFrame" name="demoFrame">
+	<span class="blacktext">Your browser does not support frames or is currently configured  not to display frames. However, you may visit the <A href="http://www.securityinnovation.com">Security Innovation website.</A></span></IFRAME></p>      
+      </td>
+    <td width="385" valign="top" bgcolor="EEEEEE"><p align="left" class="blackheader">Learn More: </p>
+              <div align="left">
+                <table border="0" cellspacing="5" cellpadding="0" class="blacktext">
+                <tr>
+                  <td width="18"><img src="images/bookopen.gif" width="15" height="15"></td>
+                  <td><a href="../hd_help.htm" target="_top">Holodeck Help Topics </a></td>
+                </tr>
+                <tr>
+                  <td><img src="images/websearch.gif" width="20" height="21"></td>
+                  <td><a href="http://www.securityinnovation.com/holodeck/learn.shtml" target="_blank">Online Resources</a> </td>
+                </tr>
+                <tr>
+                  <td><img src="images/search.gif" width="20" height="21"></td>
+                  <td><a href="http://www.securityinnovation.com/products.shtml" target="_blank">About Holodeck</a></td>
+                </tr>
+                </table>
+              </div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="left">
+      <table width="750" border="0" cellspacing="5">
+          <tr>
+            <td width="55" valign="middle"><img src="images/blackboard.jpg" width="55" height="69"></td>
+            <td width="676" class="blacktext"><p>Take a <a href="Exploring_the_Holodeck_workspace/Windows_and_panes_overview.htm">quick tour</a> of Holodeck<br>
+                <br>
+                Check out <a href="What_s_new/What_s_new.htm">What's New</a> in this version<br>
+              <br>
+              Explore a <a href="Holodeck_Tutorials.htm">Holodeck Tutorial</a></p>          </td>
+          </tr>
+      </table>
+    </div></td>
+  </tr>
+  <tr bgcolor="EEEEEE">
+    <td colspan="2"><IFRAME allowtransparency="true" width="750" height="100" scrolling="auto" frameborder="1" id="otherFrame" name="otherFrame">
+	<span class="blacktext">Your browser does not support frames or is currently configured  not to display frames. However, you may visit the <A href="http://www.securityinnovation.com">Security Innovation website.</A></span></IFRAME><BR>
+	<span class="style2">if you see a page not found error set your browser in offline mode to view the iFrame content</span> </td>
+  </tr>
+</table></td>
+  </tr>
+</table>
+</body>
+</html>

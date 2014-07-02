@@ -1,0 +1,10 @@
+LIBRARY	HEATTesterIntercepts
+EXPORTS
+My_CreateFileA
+My_WriteFile
+My_TlsSetValue
+My_TlsGetValue
+My_GetLastError
+My_SetLastError
+My_NtOpenFile
+My_ZwOpenFile

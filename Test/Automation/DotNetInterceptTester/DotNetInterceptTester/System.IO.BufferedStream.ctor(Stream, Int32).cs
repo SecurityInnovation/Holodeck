@@ -1,0 +1,44 @@
+namespace DotNetInterceptTester.My_System.IO.BufferedStream
+{
+public class ctor_System_IO_BufferedStream_System_IO_Stream_System_Int32
+{
+public static bool _ctor_System_IO_BufferedStream_System_IO_Stream_System_Int32( )
+{
+   //Parameters
+   System.IO.Stream stream = null;
+   System.Int32 bufferSize = null;
+
+
+   //Exception
+   Exception exception_Real = null;
+   Exception exception_Intercepted = null;
+
+   InterceptionMaintenance.disableInterception( );
+
+   try
+   {
+      returnValue_Real = System.IO.BufferedStream.ctor(stream,bufferSize);
+   }
+
+   catch( Exception e )
+   {
+      exception_Real = e;
+   }
+
+
+   InterceptionMaintenance.enableInterception( );
+
+   try
+   {
+      returnValue_Intercepted = System.IO.BufferedStream.ctor(stream,bufferSize);
+   }
+
+   catch( Exception e )
+   {
+      exception_Intercepted = e;
+   }
+
+
+}
+}
+}

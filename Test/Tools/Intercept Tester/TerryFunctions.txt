@@ -1,0 +1,685 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Functions SYSTEM "Functions.dtd"[]>
+<Functions>
+	<Function>
+		<FunctionName>AllocateUserPhysicalPages</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>AllocateUserPhysicalPagesReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hProcess</Param>
+		<Param Index="1" Type="PULONG_PTR" CompareAs="PointerType" Access="IN OUT">NumberOfPages</Param>
+		<Param Index="2" Type="PULONG_PTR" CompareAs="PointerType" Access="OUT">PageArray</Param>
+	</Function>
+	<Function>
+		<FunctionName>bind</FunctionName>
+		<OriginalDll>ws2_32.dll</OriginalDll>
+		<InterceptedDll>ws2_32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>bindReplacement</ReplacementFunctionName>
+		<ReturnType>int</ReturnType>
+		<Modifier>WINSOCK_API_LINKAGE</Modifier>
+		<Modifier>WSAAPI</Modifier>
+		<Category>NETWORK</Category>
+		<Param Index="0" Type="SOCKET" CompareAs="PointerType" Access="IN">s</Param>
+		<Param Index="1" Type="const struct sockaddr FAR *" CompareAs="PointerType" Access="IN">name</Param>
+		<Param Index="2" Type="int" CompareAs="IntegerType" Access="IN">namelen</Param>
+	</Function>
+	<Function>
+		<FunctionName>connect</FunctionName>
+		<OriginalDll>ws2_32.dll</OriginalDll>
+		<InterceptedDll>ws2_32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>connectReplacement</ReplacementFunctionName>
+		<ReturnType>int</ReturnType>
+		<Modifier>WINSOCK_API_LINKAGE</Modifier>
+		<Modifier>WSAAPI</Modifier>
+		<Category>NETWORK</Category>
+		<Param Index="0" Type="SOCKET" CompareAs="PointerType" Access="IN">s</Param>
+		<Param Index="1" Type="const struct sockaddr FAR *" CompareAs="PointerType" Access="IN">name</Param>
+		<Param Index="2" Type="int" CompareAs="IntegerType" Access="IN">namelen</Param>
+	</Function>
+	<Function>
+		<FunctionName>CopyFileA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CopyFileAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpExistingFileName</Param>
+		<Param Index="1" Type="LPCSTR" CompareAs="StringType" Access="IN">lpNewFileName</Param>
+		<Param Index="2" Type="BOOL" CompareAs="BooleanType" Access="IN">bFailIfExists</Param>
+	</Function>
+	<Function>
+		<FunctionName>CopyFileExA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CopyFileExAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpExistingFileName</Param>
+		<Param Index="1" Type="LPCSTR" CompareAs="StringType" Access="IN">lpNewFileName</Param>
+		<Param Index="2" Type="LPPROGRESS_ROUTINE" CompareAs="PointerType" Access="IN OPTIONAL">lpProgressRoutine</Param>
+		<Param Index="3" Type="LPVOID" CompareAs="PointerType" Access="IN OPTIONAL">lpData</Param>
+		<Param Index="4" Type="LPBOOL" CompareAs="PointerType" Access="IN OPTIONAL">pbCancel</Param>
+		<Param Index="5" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwCopyFlags</Param>
+	</Function>
+	<Function>
+		<FunctionName>CopyFileExW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CopyFileExWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpExistingFileName</Param>
+		<Param Index="1" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpNewFileName</Param>
+		<Param Index="2" Type="LPPROGRESS_ROUTINE" CompareAs="PointerType" Access="IN OPTIONAL">lpProgressRoutine</Param>
+		<Param Index="3" Type="LPVOID" CompareAs="PointerType" Access="IN OPTIONAL">lpData</Param>
+		<Param Index="4" Type="LPBOOL" CompareAs="PointerType" Access="IN OPTIONAL">pbCancel</Param>
+		<Param Index="5" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwCopyFlags</Param>
+	</Function>
+	<Function>
+		<FunctionName>CopyFileW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CopyFileWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpExistingFileName</Param>
+		<Param Index="1" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpNewFileName</Param>
+		<Param Index="2" Type="BOOL" CompareAs="BooleanType" Access="IN">bFailIfExists</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateDirectoryA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateDirectoryAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpPathName</Param>
+		<Param Index="1" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpSecurityAttributes</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateDirectoryExA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateDirectoryExAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpTemplateDirectory</Param>
+		<Param Index="1" Type="LPCSTR" CompareAs="StringType" Access="IN">lpNewDirectory</Param>
+		<Param Index="2" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpSecurityAttributes</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateDirectoryExW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateDirectoryExWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpTemplateDirectory</Param>
+		<Param Index="1" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpNewDirectory</Param>
+		<Param Index="2" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpSecurityAttributes</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateDirectoryW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateDirectoryWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpPathName</Param>
+		<Param Index="1" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpSecurityAttributes</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateFileA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateFileAReplacement</ReplacementFunctionName>
+		<ReturnType>HANDLE</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpFileName</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwDesiredAccess</Param>
+		<Param Index="2" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwShareMode</Param>
+		<Param Index="3" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpSecurityAttibutes</Param>
+		<Param Index="4" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwCreationDisposition</Param>
+		<Param Index="5" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlagsAndAttributes</Param>
+		<Param Index="6" Type="HANDLE" CompareAs="PointerType" Access="IN">hTemplateFile</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateFileW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateFileWReplacement</ReplacementFunctionName>
+		<ReturnType>HANDLE</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpFileName</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwDesiredAccess</Param>
+		<Param Index="2" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwShareMode</Param>
+		<Param Index="3" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpSecurityAttibutes</Param>
+		<Param Index="4" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwCreationDisposition</Param>
+		<Param Index="5" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlagsAndAttributes</Param>
+		<Param Index="6" Type="HANDLE" CompareAs="PointerType" Access="IN">hTemplateFile</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateProcessA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateProcessAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>PROCESS</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpApplicationName</Param>
+		<Param Index="1" Type="LPSTR" CompareAs="StringType" Access="IN">lpCommandLine</Param>
+		<Param Index="2" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpProcessAttributes</Param>
+		<Param Index="3" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpThreadAttibutes</Param>
+		<Param Index="4" Type="BOOL" CompareAs="BooleanType" Access="IN">bInheritHandles</Param>
+		<Param Index="5" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwCreationFlags</Param>
+		<Param Index="6" Type="LPVOID" CompareAs="PointerType" Access="IN">lpEnvironment</Param>
+		<Param Index="7" Type="LPCSTR" CompareAs="StringType" Access="IN">lpCurrentDirectory</Param>
+		<Param Index="8" Type="LPSTARTUPINFOA" CompareAs="PointerType" Access="IN">lpStartupInfo</Param>
+		<Param Index="9" Type="LPPROCESS_INFORMATION" CompareAs="PointerType" Access="IN">lpProcessInformation</Param>
+	</Function>
+	<Function>
+		<FunctionName>CreateProcessW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>CreateProcessWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>PROCESS</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpApplicationName</Param>
+		<Param Index="1" Type="LPWSTR" CompareAs="WideStringType" Access="IN">lpCommandLine</Param>
+		<Param Index="2" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpProcessAttributes</Param>
+		<Param Index="3" Type="LPSECURITY_ATTRIBUTES" CompareAs="PointerType" Access="IN">lpThreadAttibutes</Param>
+		<Param Index="4" Type="BOOL" CompareAs="BooleanType" Access="IN">bInheritHandles</Param>
+		<Param Index="5" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwCreationFlags</Param>
+		<Param Index="6" Type="LPVOID" CompareAs="PointerType" Access="IN">lpEnvironment</Param>
+		<Param Index="7" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpCurrentDirectory</Param>
+		<Param Index="8" Type="LPSTARTUPINFOW" CompareAs="PointerType" Access="IN">lpStartupInfo</Param>
+		<Param Index="9" Type="LPPROCESS_INFORMATION" CompareAs="PointerType" Access="IN">lpProcessInformation</Param>
+	</Function>
+	<Function>
+		<FunctionName>DeleteFileA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>DeleteFileAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpFileName</Param>
+	</Function>
+	<Function>
+		<FunctionName>DeleteFileW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>DeleteFileWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpFileName</Param>
+	</Function>
+	<Function>
+		<FunctionName>FlushFileBuffers</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>FlushFileBuffersReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hFile</Param>
+	</Function>
+	<Function>
+		<FunctionName>FreeLibrary</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>FreeLibraryReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>LIBRARY</Category>
+		<Param Index="0" Type="HMODULE" CompareAs="PointerType" Access="IN OUT">hLibModule</Param>
+	</Function>
+	<Function>
+		<FunctionName>FreeLibraryAndExitThread</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>FreeLibraryAndExitThreadReplacement</ReplacementFunctionName>
+		<ReturnType>VOID</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>LIBRARY</Category>
+		<Param Index="0" Type="HMODULE" CompareAs="PointerType" Access="IN">hLibModule</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwExitCode</Param>
+	</Function>
+	<Function>
+		<FunctionName>FreeUserPhysicalPages</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>FreeUserPhysicalPagesReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hProcess</Param>
+		<Param Index="1" Type="PULONG_PTR" CompareAs="PointerType" Access="IN OUT">NumberOfPages</Param>
+		<Param Index="2" Type="PULONG_PTR" CompareAs="PointerType" Access="IN OPTIONAL">PageArray</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetBinaryTypeA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetBinaryTypeAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpApplicationName</Param>
+		<Param Index="1" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpBinaryType</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetBinaryTypeW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetBinaryTypeWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpApplicationName</Param>
+		<Param Index="1" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpBinaryType</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetCurrentDirectoryA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetCurrentDirectoryAReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">nBufferLength</Param>
+		<Param Index="1" Type="LPSTR" CompareAs="PointerType" Access="OUT">lpBuffer</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetCurrentDirectoryW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetCurrentDirectoryWReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">nBufferLength</Param>
+		<Param Index="1" Type="LPWSTR" CompareAs="PointerType" Access="OUT">lpBuffer</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetDiskFreeSpaceA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetDiskFreeSpaceAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpRootPathName</Param>
+		<Param Index="1" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpSectorsPerCluster</Param>
+		<Param Index="2" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpBytesPerSector</Param>
+		<Param Index="3" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpNumberOfFreeClusters</Param>
+		<Param Index="4" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpTotalNumberOfClusters</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetDiskFreeSpaceExA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetDiskFreeSpaceExAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpDirectoryName</Param>
+		<Param Index="1" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpFreeBytesAvailableToCaller</Param>
+		<Param Index="2" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpTotalNumberOfBytes</Param>
+		<Param Index="3" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpTotalNumberOfFreeBytes</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetDiskFreeSpaceExW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetDiskFreeSpaceExWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpDirectoryName</Param>
+		<Param Index="1" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpFreeBytesAvailableToCaller</Param>
+		<Param Index="2" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpTotalNumberOfBytes</Param>
+		<Param Index="3" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpTotalNumberOfFreeBytes</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetDiskFreeSpaceW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetDiskFreeSpaceWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpRootPathName</Param>
+		<Param Index="1" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpSectorsPerCluster</Param>
+		<Param Index="2" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpBytesPerSector</Param>
+		<Param Index="3" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpNumberOfFreeClusters</Param>
+		<Param Index="4" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpTotalNumberOfClusters</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetDriveTypeA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetDriveTypeAReplacement</ReplacementFunctionName>
+		<ReturnType>UINT</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpRootPathName</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetDriveTypeW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetDriveTypeWReplacement</ReplacementFunctionName>
+		<ReturnType>UINT</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpRootPathName</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileAttributesA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileAttributesAReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpFileName</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileAttributesExA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileAttributesExAReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpFileName</Param>
+		<Param Index="1" Type="GET_FILEEX_INFO_LEVELS" CompareAs="UnsignedLongType" Access="IN">fInfoLevelId</Param>
+		<Param Index="2" Type="LPVOID" CompareAs="PointerType" Access="OUT">lpFileInformation</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileAttributesExW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileAttributesExWReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCSTR" CompareAs="StringType" Access="IN">lpFileName</Param>
+		<Param Index="1" Type="GET_FILEEX_INFO_LEVELS" CompareAs="UnsignedLongType" Access="IN">fInfoLevelId</Param>
+		<Param Index="2" Type="LPVOID" CompareAs="PointerType" Access="OUT">lpFileInformation</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileAttributesW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileAttributesWReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="LPCWSTR" CompareAs="WideStringType" Access="IN">lpFileName</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileInformationByHandle</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileInformationByHandleReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hFile</Param>
+		<Param Index="1" Type="LPBY_HANDLE_FILE_INFORMATION" CompareAs="PointerType" Access="OUT">lpFileInformation</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileSize</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileSizeReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hFile</Param>
+		<Param Index="1" Type="LPDWORD" CompareAs="PointerType" Access="OUT">lpFileSizeHigh</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileSizeEx</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileSizeExReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hFile</Param>
+		<Param Index="1" Type="PULARGE_INTEGER" CompareAs="PointerType" Access="OUT">lpFileSize</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetFileType</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetFileTypeReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hFile</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetLogicalDrives</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetLogicalDrivesReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+	</Function>
+	<Function>
+		<FunctionName>GetLogicalDriveStringsA</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetLogicalDriveStringsAReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">nBufferLength</Param>
+		<Param Index="1" Type="LPSTR" CompareAs="PointerType" Access="OUT">lpBuffer</Param>
+	</Function>
+	<Function>
+		<FunctionName>GetLogicalDriveStringsW</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GetLogicalDriveStringsWReplacement</ReplacementFunctionName>
+		<ReturnType>DWORD</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>FILE</Category>
+		<Param Index="0" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">nBufferLength</Param>
+		<Param Index="1" Type="LPWSTR" CompareAs="PointerType" Access="OUT">lpBuffer</Param>
+	</Function>
+	<Function>
+		<FunctionName>GlobalAlloc</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GlobalAllocReplacement</ReplacementFunctionName>
+		<ReturnType>HGLOBAL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="UINT" CompareAs="UnsignedLongType" Access="IN">uFlags</Param>
+		<Param Index="1" Type="SIZE_T" CompareAs="UnsignedLongType" Access="IN">dwBytes</Param>
+	</Function>
+	<Function>
+		<FunctionName>GlobalFree</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GlobalFreeReplacement</ReplacementFunctionName>
+		<ReturnType>HGLOBAL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HGLOBAL" CompareAs="PointerType" Access="IN">hMem</Param>
+	</Function>
+	<Function>
+		<FunctionName>GlobalMemoryStatusEx</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>GlobalMemoryStatusExReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="LPMEMORYSTATUS" CompareAs="PointerType" Access="IN OUT">lpBuffer</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapAlloc</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapAllocReplacement</ReplacementFunctionName>
+		<ReturnType>LPVOID</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hHeap</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlags</Param>
+		<Param Index="2" Type="SIZE_T" CompareAs="UnsignedLongType" Access="IN">dwBytes</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapCompact</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapCompactReplacement</ReplacementFunctionName>
+		<ReturnType>SIZE_T</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hHeap</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlags</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapCreate</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapCreateReplacement</ReplacementFunctionName>
+		<ReturnType>HANDLE</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">flOptions</Param>
+		<Param Index="1" Type="SIZE_T" CompareAs="UnsignedLongType" Access="IN">dwInitialSize</Param>
+		<Param Index="2" Type="SIZE_T" CompareAs="UnsignedLongType" Access="IN">dwMaximumSize</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapDestroy</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapDestroyReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN OUT">hHeap</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapFree</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapFreeReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hHeap</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlags</Param>
+		<Param Index="2" Type="LPVOID" CompareAs="PointerType" Access="IN">lpMem</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapLock</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapLockReplacement</ReplacementFunctionName>
+		<ReturnType>BOOL</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hHeap</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapReAlloc</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapReAllocReplacement</ReplacementFunctionName>
+		<ReturnType>LPVOID</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hHeap</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlags</Param>
+		<Param Index="2" Type="LPVOID" CompareAs="PointerType" Access="IN">lpMem</Param>
+		<Param Index="3" Type="SIZE_T" CompareAs="UnsignedLongType" Access="IN">dwBytes</Param>
+	</Function>
+	<Function>
+		<FunctionName>HeapSize</FunctionName>
+		<OriginalDll>kernel32.dll</OriginalDll>
+		<InterceptedDll>kernel32replacementlibrary.dll</InterceptedDll>
+		<ReplacementFunctionName>HeapSizeReplacement</ReplacementFunctionName>
+		<ReturnType>SIZE_T</ReturnType>
+		<Modifier>WINBASEAPI</Modifier>
+		<Modifier>WINAPI</Modifier>
+		<Category>MEMORY</Category>
+		<Param Index="0" Type="HANDLE" CompareAs="PointerType" Access="IN">hHeap</Param>
+		<Param Index="1" Type="DWORD" CompareAs="UnsignedLongType" Access="IN">dwFlags</Param>
+		<Param Index="2" Type="LPCVOID" CompareAs="PointerType" Access="IN">lpMem</Param>
+	</Function>
+

@@ -1,0 +1,73 @@
+=============================================================================
+==                                                                         ==
+=  Project Line Counter Add-In 2.10                Copyright (c) 1999-2003  =
+=  (June 17, 2003)                                      by Oz Solomonovich  =
+==                                                                         ==
+=============================================================================
+
+CONTENTS OF THIS FILE:
+----------------------
+1. Abstract
+2. What's New?
+3. System Requirements
+4. Installation
+5. The Workspace Whiz! Interface
+6. Contact Info
+
+
+1. Abstract
+-----------
+Project Line Counter is an add-in for both Microsoft Visual C++ and Visual 
+Studio .NET.  Line Counter reports statistics about files in your projects, 
+including: number of lines, lines with code, lines with comments, mixed 
+lines (code and comments), and more.  
+
+
+2. What's New?
+--------------
+A full version history can be found in the online help file.  You can open
+this file by selecting Help|Contents from the Line Counter menu.
+You can also view the version history at:
+http://www.wndtabs.com/plc/plc_ver.asp.
+
+
+
+3. System Requirements
+----------------------
+Line Counter requires one of the following host development environments:
+	o Microsoft Visual C++ version 5 (DevStudio '97)
+	o Microsoft Visual C++ version 6 (DevStudio 6)
+	o Microsoft Visual Studio .NET 2002
+	o Microsoft Visual Studio .NET 2003
+Line Counter has been tested under Windows 2000 and XP, but under Visual C++
+5/6 it *should* work will all OSes going back to Windows 95.
+
+
+4. Installation
+---------------
+Starting with v2.10, Project Line Counter comes with a fully automatic 
+installer/uninstaller.  To install, run the installer and follow the 
+instructions.  You can uninstall Project Line Counter from Add/Remove 
+Programs Control Panel.
+
+
+5. The Workspace Whiz! Interface
+--------------------------------
+Under Visual C++ 5/6, Line Counter requires the freely available Workspace
+Whiz! Interface library.  This library allows Line Counter to extract 
+project file information which would otherwise not be available to it.
+Generally, you should install the version of the Interface that ships with
+Line Counter (the automatic installer will take care of this for you).  
+However, newer versions of the interface (as they become available) will 
+probably be compatible as well.
+For more information, see the online help, or http://www.workspacewhiz.com.
+
+NOTE: The Workspace Whiz! Interface is not required under Visual Studio.NET.
+
+
+6. Contact Info
+---------------
+If you have any questions, comments or suggestions, feel free to contact me:
+
+    web:    http://www.wndtabs.com
+    e-mail: support@wndtabs.com

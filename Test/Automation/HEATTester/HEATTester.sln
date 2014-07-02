@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "..\..\Frameworks\ExecutionFramework\TestFramework.csproj", "{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HEATTester", "HEATTester.vcproj", "{14B1AD07-7435-4D45-8D89-632096B92026}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HEATTesterIntercepts", "..\HEATTesterIntercepts\HEATTesterIntercepts.vcproj", "{7BCDDEAC-8EF5-4DBF-81D8-3D925E622F1A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HEATInterceptable", "..\HEATInterceptable\HEATInterceptable.vcproj", "{734029AE-C3A0-475A-B0AA-9B2E4CFD35F8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.ActiveCfg = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Debug.Build.0 = Debug|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.ActiveCfg = Release|.NET
+		{7BF8D97C-4669-4E36-BB1D-C5ED6ADC8386}.Release.Build.0 = Release|.NET
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Debug.ActiveCfg = Debug|Win32
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Debug.Build.0 = Debug|Win32
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Release.ActiveCfg = Release|Win32
+		{14B1AD07-7435-4D45-8D89-632096B92026}.Release.Build.0 = Release|Win32
+		{7BCDDEAC-8EF5-4DBF-81D8-3D925E622F1A}.Debug.ActiveCfg = Debug|Win32
+		{7BCDDEAC-8EF5-4DBF-81D8-3D925E622F1A}.Debug.Build.0 = Debug|Win32
+		{7BCDDEAC-8EF5-4DBF-81D8-3D925E622F1A}.Release.ActiveCfg = Release|Win32
+		{7BCDDEAC-8EF5-4DBF-81D8-3D925E622F1A}.Release.Build.0 = Release|Win32
+		{734029AE-C3A0-475A-B0AA-9B2E4CFD35F8}.Debug.ActiveCfg = Debug|Win32
+		{734029AE-C3A0-475A-B0AA-9B2E4CFD35F8}.Debug.Build.0 = Debug|Win32
+		{734029AE-C3A0-475A-B0AA-9B2E4CFD35F8}.Release.ActiveCfg = Release|Win32
+		{734029AE-C3A0-475A-B0AA-9B2E4CFD35F8}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

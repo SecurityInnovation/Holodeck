@@ -235,6 +235,12 @@ namespace HolodeckGui
 					dotNetUpdateProcess->StartInfo->FileName = Path::Combine(installFolder, "DotNetCacheGen.exe");
 					dotNetUpdateProcess->Start();
 					dotNetUpdateProcess->WaitForExit();
+
+					System::Diagnostics::Process* dotNetUpdateProcess35 = new System::Diagnostics::Process();
+					dotNetUpdateProcess35->StartInfo->FileName = Path::Combine(installFolder, "DotNetCacheGen35.exe");
+					dotNetUpdateProcess35->Start();
+					dotNetUpdateProcess35->WaitForExit();
+
 				}
 				catch (...)
 				{

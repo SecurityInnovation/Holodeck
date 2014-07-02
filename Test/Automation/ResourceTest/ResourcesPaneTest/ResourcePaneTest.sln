@@ -1,0 +1,221 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication3", "..\TestApplication3\TestApplication3.vcproj", "{67646117-FE08-4918-B392-DB753CF64144}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Helper_dll", "..\..\..\Frameworks\UIFramework\Helper_dll\Helper_dll.vcproj", "{15A90CE2-7EE6-4210-ADEB-03332519B762}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecutionFramework", "..\..\..\Frameworks\ExecutionFramework\ExecutionFramework.csproj", "{400A043C-4AF3-4102-96B2-EC696D170D5E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIFramework", "..\..\..\Frameworks\UIFramework\UIFramework.csproj", "{031421EC-1F3D-420C-9150-38D3744E78E6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesPaneTest", "ResourcesPaneTest.csproj", "{5F8A0C55-084F-4022-80A1-72B13C0A654D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication1", "..\TestApplication1\TestApplication1.vcproj", "{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication2", "..\TestApplication2\TestApplication2.csproj", "{B1A59F1F-0CDD-4442-9C57-9766DC957B98}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication4", "..\TestApplication4\TestApplication4.csproj", "{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication5", "..\TestApplication5\TestApplication5.vcproj", "{3A0B0210-45CA-4A0A-8815-F87769B90B87}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication6", "..\TestApplication6\TestApplication6.vcproj", "{EF686EB6-B565-44CF-96F7-844B4E4D5CE3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication7", "..\TestApplication7\TestApplication7.vcproj", "{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication9", "..\TestApplication9\TestApplication9.vcproj", "{67646117-FE08-4918-B392-DB753CF64144}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication8", "..\TestApplication8\TestApplication8.csproj", "{B1A59F1F-0CDD-4442-9C57-9766DC957B98}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication11", "..\TestApplication11\TestApplication11.vcproj", "{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication12", "..\TestApplication12\TestApplication12.csproj", "{B1A59F1F-0CDD-4442-9C57-9766DC957B98}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication15", "..\TestApplication15\TestApplication15.vcproj", "{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication16", "..\TestApplication16\TestApplication16.csproj", "{B1A59F1F-0CDD-4442-9C57-9766DC957B98}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication19", "..\TestApplication19\TestApplication19.vcproj", "{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication20", "..\TestApplication20\TestApplication20.csproj", "{B1A59F1F-0CDD-4442-9C57-9766DC957B98}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication10", "..\TestApplication10\TestApplication10.csproj", "{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication13", "..\TestApplication13\TestApplication13.vcproj", "{67646117-FE08-4918-B392-DB753CF64144}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication14", "..\TestApplication14\TestApplication14.csproj", "{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication17", "..\TestApplication17\TestApplication17.vcproj", "{67646117-FE08-4918-B392-DB753CF64144}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication18", "..\TestApplication18\TestApplication18.csproj", "{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApplication21", "..\TestApplication21\TestApplication21.vcproj", "{67646117-FE08-4918-B392-DB753CF64144}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication22", "..\TestApplication22\TestApplication22.csproj", "{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.ActiveCfg = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.Build.0 = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.ActiveCfg = Release|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.Build.0 = Release|Win32
+		{15A90CE2-7EE6-4210-ADEB-03332519B762}.Debug.ActiveCfg = Debug|Win32
+		{15A90CE2-7EE6-4210-ADEB-03332519B762}.Debug.Build.0 = Debug|Win32
+		{15A90CE2-7EE6-4210-ADEB-03332519B762}.Release.ActiveCfg = Release|Win32
+		{15A90CE2-7EE6-4210-ADEB-03332519B762}.Release.Build.0 = Release|Win32
+		{400A043C-4AF3-4102-96B2-EC696D170D5E}.Debug.ActiveCfg = Debug|.NET
+		{400A043C-4AF3-4102-96B2-EC696D170D5E}.Debug.Build.0 = Debug|.NET
+		{400A043C-4AF3-4102-96B2-EC696D170D5E}.Release.ActiveCfg = Release|.NET
+		{400A043C-4AF3-4102-96B2-EC696D170D5E}.Release.Build.0 = Release|.NET
+		{031421EC-1F3D-420C-9150-38D3744E78E6}.Debug.ActiveCfg = Debug|.NET
+		{031421EC-1F3D-420C-9150-38D3744E78E6}.Debug.Build.0 = Debug|.NET
+		{031421EC-1F3D-420C-9150-38D3744E78E6}.Release.ActiveCfg = Release|.NET
+		{031421EC-1F3D-420C-9150-38D3744E78E6}.Release.Build.0 = Release|.NET
+		{5F8A0C55-084F-4022-80A1-72B13C0A654D}.Debug.ActiveCfg = Debug|.NET
+		{5F8A0C55-084F-4022-80A1-72B13C0A654D}.Debug.Build.0 = Debug|.NET
+		{5F8A0C55-084F-4022-80A1-72B13C0A654D}.Release.ActiveCfg = Release|.NET
+		{5F8A0C55-084F-4022-80A1-72B13C0A654D}.Release.Build.0 = Release|.NET
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.ActiveCfg = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.Build.0 = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.ActiveCfg = Release|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.Build.0 = Release|Win32
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.ActiveCfg = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.Build.0 = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.ActiveCfg = Release|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.Build.0 = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.ActiveCfg = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.Build.0 = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.ActiveCfg = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.Build.0 = Release|.NET
+		{3A0B0210-45CA-4A0A-8815-F87769B90B87}.Debug.ActiveCfg = Debug|Win32
+		{3A0B0210-45CA-4A0A-8815-F87769B90B87}.Debug.Build.0 = Debug|Win32
+		{3A0B0210-45CA-4A0A-8815-F87769B90B87}.Release.ActiveCfg = Release|Win32
+		{3A0B0210-45CA-4A0A-8815-F87769B90B87}.Release.Build.0 = Release|Win32
+		{EF686EB6-B565-44CF-96F7-844B4E4D5CE3}.Debug.ActiveCfg = Debug|Win32
+		{EF686EB6-B565-44CF-96F7-844B4E4D5CE3}.Debug.Build.0 = Debug|Win32
+		{EF686EB6-B565-44CF-96F7-844B4E4D5CE3}.Release.ActiveCfg = Release|Win32
+		{EF686EB6-B565-44CF-96F7-844B4E4D5CE3}.Release.Build.0 = Release|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.ActiveCfg = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.Build.0 = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.ActiveCfg = Release|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.Build.0 = Release|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.ActiveCfg = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.Build.0 = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.ActiveCfg = Release|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.Build.0 = Release|Win32
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.ActiveCfg = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.Build.0 = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.ActiveCfg = Release|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.Build.0 = Release|.NET
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.ActiveCfg = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.Build.0 = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.ActiveCfg = Release|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.Build.0 = Release|Win32
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.ActiveCfg = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.Build.0 = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.ActiveCfg = Release|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.Build.0 = Release|.NET
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.ActiveCfg = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.Build.0 = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.ActiveCfg = Release|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.Build.0 = Release|Win32
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.ActiveCfg = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.Build.0 = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.ActiveCfg = Release|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.Build.0 = Release|.NET
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.ActiveCfg = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Debug.Build.0 = Debug|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.ActiveCfg = Release|Win32
+		{E628FB27-0962-4A6F-B2BF-9EDA5963F06E}.Release.Build.0 = Release|Win32
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.ActiveCfg = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Debug.Build.0 = Debug|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.ActiveCfg = Release|.NET
+		{B1A59F1F-0CDD-4442-9C57-9766DC957B98}.Release.Build.0 = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.ActiveCfg = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.Build.0 = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.ActiveCfg = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.Build.0 = Release|.NET
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.ActiveCfg = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.Build.0 = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.ActiveCfg = Release|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.Build.0 = Release|Win32
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.ActiveCfg = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.Build.0 = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.ActiveCfg = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.Build.0 = Release|.NET
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.ActiveCfg = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.Build.0 = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.ActiveCfg = Release|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.Build.0 = Release|Win32
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.ActiveCfg = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.Build.0 = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.ActiveCfg = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.Build.0 = Release|.NET
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.ActiveCfg = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Debug.Build.0 = Debug|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.ActiveCfg = Release|Win32
+		{67646117-FE08-4918-B392-DB753CF64144}.Release.Build.0 = Release|Win32
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.ActiveCfg = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Debug.Build.0 = Debug|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.ActiveCfg = Release|.NET
+		{C77A3E97-B3E0-4B14-B9EF-5D3F550387D7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,295 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Application and Service Control</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nHoloScript Functions\nApplication and Service Control");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Debugging_Functions.htm","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Logging_Control.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Application and Service Control</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >void</FONT> AddExternalDotNetLibrary(String * externalLibrary);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets a .NET library to be intercepted to the Kernel32 so at load time the intercepted version of the dll is used instead of the original.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >externalLibrary – </FONT>the external library to use as a replacement library.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String *get_ApplicationName()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to retrieve the name of the current Application Under Test </P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>a string of the application name, (for example, <FONT style="font-weight:bold; " >MyApp.exe</FONT>)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:18.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:blue; " >String</FONT><FONT style="font-family:'Courier New'; " > *appName =</FONT></P>
+ <P style="margin-left:77.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >holoApp-&gt;ApplicationName;</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String *get_ApplicationPath()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to retrieve the full path name of the current Application Under Test </P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>a string of the entire application path.  (for example, <FONT style="font-weight:bold; " >C:\MyHScriptProject\MyApp.exe</FONT>)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:18.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:blue; " >String</FONT><FONT style="font-family:'Courier New'; " > *pathName =</FONT></P>
+ <P style="margin-left:77.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >holoApp-&gt;ApplicationName;</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >bool</FONT> get_ApplicationPaused()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to detect if the interception framework is currently intercepting calls from the Application Under Test </P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the application is currently paused</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:18.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >if (holoApp-&gt;ApplicationPaused) {</FONT></P>
+ <P style="margin-left:77.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:#339966; " >// NOT INTERCEPTING</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >} else {</FONT></P>
+ <P style="margin-left:77.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:#339966; " >// INTERCEPTING</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String *get_CommandLineParams()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to retrieve the command line parameters that were passed to the current Application Under Test</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>returns a string of the command line parameters that were passed to the current Application.</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:18.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:blue; " >String</FONT><FONT style="font-family:'Courier New'; " > *cmdLine =</FONT></P>
+ <P style="margin-left:77.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >holoApp-&gt;CommandLineParams;</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >bool</FONT> get_IsPaused()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to detect if the interception framework has been properly initialized and is currently intercepting calls from the Application Under Test </P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the application is currently paused</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:18.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >if (holoApp-&gt;IsPaused) {</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:#339966; " >// NO HEAT</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >} else {</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:#339966; " >// HEAT ON</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property bool</FONT> get_IsRunning();</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Returns if the current application is running.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the application is currently running</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property bool</FONT> get_IsService()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets a Boolean value if the current process is a service.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the application is a service</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >bool</FONT> get_PauseOnStart()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to detect if the Application Under Test has been requested to pause upon launch</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the application will be paused on start</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:18.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:59.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >if (holoApp-&gt;PauseOnStart) {</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >     </FONT><FONT style="font-family:'Courier New'; color:#339966; " >// WILL PAUSE</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >} else {</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >     </FONT><FONT style="font-family:'Courier New'; color:#339966; " >// WON’T PAUSE</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String* get_ProjectFolder()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Returns the folder the project is contained in.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>returns the folder the application is contained in.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String* get_ProjectPath()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Returns the path of the current project</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>the entire project path for the current project</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String* get_ProjectTitle()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Returns the Title name of the current project.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>a string of the project path </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> String *get_ServiceName()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Returns the name of the current service.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>a string of the name of the current service.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >__property bool</FONT> get_ShouldRestartWithProject()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets a Boolean value if the process should restart with the project.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the current process will restart when the project is restarted</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property bool</FONT> get_TerminateOnClose()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets whether the application will be terminated when the project closes.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the application will be closed when the project termininates.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >bool</FONT> GetApplicationProcessID(UInt32 &amp;processID)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets the process ID of the application currently being monitored and stores it in processID</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >processID – </FONT>The process id for the current application</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >bool</FONT> GetApplicationThreadID(UInt32 &amp;threadID)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets the thread ID of the application currently being monitored and stores it in threadID</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >int </FONT>GetApplicationThreadList(DWORD * threadID)</P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;">&nbsp;</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Stores the thread identifiers of all the application’s threads in the array pointed to by <FONT style="font-weight:bold; " >threadID</FONT></P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >threadID</FONT> - all the application’s threads in the array pointed to by <FONT style="font-weight:bold; " >threadID</FONT><FONT style="font-weight:bold; " >.</FONT><FONT style="font-weight:bold; " > </FONT>if NULL, the number of thread is returned</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>the number of threads.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> InterceptFunction(&nbsp;String * functionName,</P>
+ <P style="margin-top:0.00pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	String * redirectedFunctionName,</P>
+ <P style="margin-top:0.00pt;">&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String * redirectedDllName)</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to redirect a specific function to an intercept function</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >functionName</FONT> – the original function to be intercepted</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >redirectedFunctionName</FONT> – the replacement function.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >redirectedDllName</FONT><FONT style="font-weight:bold; " > - </FONT>the DLL file where the replacement function is located.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operation is successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >static bool</FONT> IsSystemProcess(<FONT style="color:blue; " >unsigned long</FONT> processIDToCheck)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Checks to see if the specified process is a system process or not.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >processIDToCheck – </FONT>the process ID to check.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the current process is a system process</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >static bool</FONT> IsSystemService(String *serviceNameToCheck)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Checks to see if the specified service is a system service or not.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >serviceNameToCheck – </FONT>the service name to check</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>true if the current process is a system service.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> PauseApplication()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Pauses interception for the current application</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> ResumeApplication()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Resumes interception for the current application</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >void</FONT> set_ApplicationName(String *value)</P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;">&nbsp;</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to set the full path name for the current Application Under Test (for example, <FONT style="font-weight:bold; " >C:\MyHScriptProject\MyApp.exe</FONT>)</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:36.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >String *appToLaunch =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="font-family:'Courier New'; " >new String(</FONT></P>
+ <P style="margin-left:77.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >&quot;C:\MyHScriptProject\MyApp.exe&quot;);</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >holoApp-&gt;ApplicationName = appToLaunch;</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property void</FONT> set_IsService(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets whether or not the process is a service.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >value – </FONT>true if the process is a service</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >__property void</FONT> set_PauseOnStart(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the application to be paused on launch.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Value – </FONT>true if the application should pause on start</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property void</FONT> set_ProjectPath(String* path)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the path where the current project file will be saved.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Path – </FONT>a string of where the current project file will be saved (&quot;C:\myProject&quot;)</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >__property void</FONT> set_ServiceName(String *value)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the service name to the value passed in.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Value – </FONT>the name of the service</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >__property void</FONT> set_ShouldRestartWithProject(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets whether the process should restart with the project.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Value – </FONT>true if the application should restart with the project</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >__property void</FONT> set_TerminateOnClose(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the application to be terminated when the project closes.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Value </FONT><FONT style="font-weight:bold; " >–</FONT><FONT style="font-weight:bold; " > </FONT>true if the application will terminate on close</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >void</FONT> SetAppPauseState(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Pauses or unpauses the current application</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Value – </FONT>true to pause the application, false to unpause the application</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> TerminateApplication()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Terminates the current application</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

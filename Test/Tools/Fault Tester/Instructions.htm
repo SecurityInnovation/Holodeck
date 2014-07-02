@@ -1,0 +1,1879 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>Message</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=us-ascii">
+<META content="MSHTML 6.00.2723.2500" name=GENERATOR></HEAD>
+<BODY><B>From:</B> Terry Lentz [teejay@se.fit.edu]<BR><B>Sent:</B> Wednesday, 
+February 26, 2003 9:23 AM<BR><B>To:</B> Jason Taylor (E-mail); Brian Shirey; 
+Helayne Ray; Leslie LaLuzerne; Ady Kakrania<BR><B>Subject:</B> Fault Tester 
+Results<BR>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><STRONG>Fault Tester 
+Options</STRONG></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>Attached is a copy 
+of the fault tester source code named <STRONG>fault_tester.zip,</STRONG> also I 
+have included a precompiled version called 
+<STRONG>fault_tester_exec.zip</STRONG>. I added a boolean variable in the code 
+that you can set to TRUE or FALSE called bErrorVerbose. Setting this to TRUE 
+causes ERROR codes to be displayed in the output. I had to do this for some 
+functions to determine why they were failing. The compiled version has verbose 
+enabled.</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><STRONG>Using the 
+Tester</STRONG></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003><STRONG></STRONG></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>To use the tester, 
+intercept it using Holodeck. Once the menu is displayed, check the fault in 
+Holodeck that you wish to test. Then, enter the corresponding menu item in the 
+tester and press enter. The results of the test will be 
+displayed.</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003><STRONG></STRONG></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003><STRONG>Implementation 
+Issues</STRONG></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003><STRONG></STRONG></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>I ran into some 
+interesting issues while implementing the tester. The most notable ones 
+were:</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>1) No Output To 
+Console Window</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>2) Crashes When 
+Injecting Memory Faults</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>To get around these 
+issues, I created my own print function and used the exported 
+disableInterceptionInCurrentThread() and enableInterceptionInCurrentThread() 
+functions of HEATDLL to disable interception before a print operation is 
+performed. For the memory function tests, I had the same problem where I needed 
+to allocate memory but could not because of the fault. So, I just surrounded the 
+allocation with those two functions to allow it to occur, then the function test 
+could use that successfully allocated memory to test the function. To get those 
+functions to work, I basically got the function pointer to them. If the function 
+pointer cannot be obtained, the functions are ignored (this way you can run the 
+fault_tester without needing Holodeck just to verify that stuff fails when 
+Holodeck doesn't inject faults).</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><STRONG>Results from 
+Using the Tester</STRONG></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>The result is that 
+MoveMemory and CopyMemory, of which either one or both are used in every memory 
+fault, are not being intercepted. This can be verified by disassembling a normal 
+MoveMemory/CopyMemory and a supposedly intercepted MoveMemory/CopyMemory. 
+According to documentation online, MoveMemory and CopyMemory are essentially the 
+same functions which call RtlMoveMemory in KERNEL32.DLL... So, here is the 
+disassembly of RtlMoveMemory before being intercepted:</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face="Courier New" size=2><SPAN class=159520016-26022003>0:000&gt; u 
+kernel32!RtlMoveMemory<BR>ntdll!RtlMoveMemory:<BR>77f82d8c 
+56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+push&nbsp;&nbsp;&nbsp; esi<BR>77f82d8d 
+57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+push&nbsp;&nbsp;&nbsp; edi<BR>77f82d8e 
+8b742410&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mov&nbsp;&nbsp;&nbsp;&nbsp; esi,[esp+0x10]<BR>77f82d92 
+8b7c240c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mov&nbsp;&nbsp;&nbsp;&nbsp; edi,[esp+0xc]<BR>77f82d96 
+8b4c2414&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mov&nbsp;&nbsp;&nbsp;&nbsp; ecx,[esp+0x14]<BR>77f82d9a 
+fc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cld<BR>77f82d9b 
+3bf7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cmp&nbsp;&nbsp;&nbsp;&nbsp; esi,edi<BR>77f82d9d 
+761a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+jbe&nbsp;&nbsp;&nbsp;&nbsp; ntdll!RtlMoveMemory+0x2d 
+(77f82db9)</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003>And, here is the 
+disassmebly after being intercepted:</SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face="Courier New" size=2><SPAN 
+class=159520016-26022003>ntdll!RtlMoveMemory:<BR>77f82d8c 
+56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+push&nbsp;&nbsp;&nbsp; esi<BR>77f82d8d 
+57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+push&nbsp;&nbsp;&nbsp; edi<BR>77f82d8e 
+8b742410&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mov&nbsp;&nbsp;&nbsp;&nbsp; esi,[esp+0x10]<BR>77f82d92 
+8b7c240c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mov&nbsp;&nbsp;&nbsp;&nbsp; edi,[esp+0xc]<BR>77f82d96 
+8b4c2414&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mov&nbsp;&nbsp;&nbsp;&nbsp; ecx,[esp+0x14]<BR>77f82d9a 
+fc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cld<BR>77f82d9b 
+3bf7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cmp&nbsp;&nbsp;&nbsp;&nbsp; esi,edi<BR>77f82d9d 
+761a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+jbe&nbsp;&nbsp;&nbsp;&nbsp; ntdll!RtlMoveMemory+0x2d 
+(77f82db9)</SPAN></FONT></DIV>
+<DIV><FONT face="Courier New" size=2><SPAN 
+class=159520016-26022003></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003>There should be a JMP at/near the beginning of the 
+intercepted one, but there isn't. So, they are not intercepting this function 
+from what I can tell.</SPAN></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003>Other than that, I had no problems, at least in 
+verifying that the functions were setting the error codes and return values that 
+had been specified in the fault_db.xml file.</SPAN></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003><STRONG>Future Uses</STRONG></SPAN></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003><STRONG></STRONG></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003>I am hoping someone can modify the fault tester 
+sometime in the future to easily read the fault_db.xml file and automagically 
+generate the menus and perform the checks. This will be useful for regression 
+testing later.</SPAN></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003><STRONG>Raw Data 
+Results</STRONG></SPAN></SPAN></FONT></DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV><FONT face=Arial 
+size=2><SPAN class=159520016-26022003><SPAN class=159520016-26022003>
+<DIV>
+<TABLE class=MsoTableGrid 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-yfti-tbllook: 480; mso-padding-alt: 0in 5.4pt 0in 5.4pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR style="mso-yfti-irow: 0">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><B 
+      style="mso-bidi-font-weight: normal"><FONT face="Times New Roman">TEST 
+      CASE<o:p></o:p></FONT></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><B 
+      style="mso-bidi-font-weight: normal"><FONT 
+      face="Times New Roman">RESULT<o:p></o:p></FONT></B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><B 
+      style="mso-bidi-font-weight: normal"><FONT 
+      face="Times New Roman">DETAILS<o:p></o:p></FONT></B></P></TD></TR>
+  <TR style="mso-yfti-irow: 1">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">File not Found<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Cannot Access<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Access Denied<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetCurrentDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetCurrentDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileSize PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileSizeEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetLogicalDrives PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetLogicalDriveStringsA 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetLogicalDriveStringsW 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">LoadLibraryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Write Protected<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileGather PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 5">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CRC Data Error<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileGather PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MapViewOfFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MapViewOfFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFileScatter PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 6">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Cannot Seek Disk<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileGather PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MapViewOfFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MapViewOfFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFileScatter PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 7">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">File In Use<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 8">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Locked<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileGather PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MapViewOfFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MapViewOfFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReadFileScatter PASSED!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 9">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Disk Full<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFile PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileEx PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">WriteFileGather PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 10">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Already Exists<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 11">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Cannot Be Created<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 12">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Name Too Long<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SearchPathA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SearchPathW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 13">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Read Only Directory<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 14">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Path Not Found<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SearchPathA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SearchPathW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 15">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Cannot Be Removed<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 16">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Directory Not Empty<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 17">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Path Invalid<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDiskFreeSpaceExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetDriveTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SearchPathA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SearchPathW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 18">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Corrupt Structure<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CopyFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">DeleteFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetFileAttributesExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">MoveFileWithProgressW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ReplaceFileW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SetFileAttributesW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">CreateDirectoryExW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">RemoveDirectoryW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeA PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">GetBinaryTypeW PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 19">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Insufficient Memory<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">FAILURE<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --malloc 
+PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --LocalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --LocalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --HeapCreate 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --HeapAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --HeapReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --VirtualAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --VirtualAllocEx 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 8 --GlobalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --CopyMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Failed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 20">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Invalid Access<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">FAILURE<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --malloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --LocalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --LocalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --HeapAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --HeapReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --VirtualAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --VirtualAllocEx 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --GlobalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 998 --GlobalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --CopyMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --MoveMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Failed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 21">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Segment is Locked<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">FAILURE<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 212 --LocalFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 212 --GlobalFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 212 --VirtualFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 212 --VirtualFreeEx 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 212 --HeapFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 212 --HeapDestroy 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --MoveMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Failed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 22">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Invalid Address<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">FAILURE<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --malloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --LocalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --LocalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --HeapAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --HeapReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --VirtualAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --VirtualAllocEx 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --GlobalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --GlobalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --CopyMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --MoveMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --LocalFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --GlobalFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --VirtualFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --VirtualFreeEx 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --HeapFree 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 487 --HeapDestroy 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Failed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 23">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Paging File Too Small<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">FAILURE<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --LocalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --LocalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --HeapCreate 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --HeapAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --HeapReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --VirtualAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --VirtualAllocEx 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --GlobalAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 1454 --GlobalReAlloc 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --CopyMemory 
+      FAILED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Failed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 24">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Disconnect<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSAConnect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --connect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSARecv 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --recv 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSASend 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --send 
+      PASSED!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 25">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Not Installed<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --WSAStartup 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 26">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Wrong Winsock<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --WSAStartup 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 27">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Tasklimit Reached<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 0 --WSAStartup 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 28">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">No Ports<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10048 --WSAConnect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10048 --connect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST Passed!<o:p></o:p></FONT></P></TD></TR>
+  <TR style="mso-yfti-irow: 29; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=163>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">Network Down<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 63pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=84>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">SUCCESS<o:p></o:p></FONT></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: #ece9d8; WIDTH: 257.4pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=343>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSAConnect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --connect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSARecv 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --recv 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSASend 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --send 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --ioctlsocket 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --select 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --socket 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSAEventSelect 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSAIoctl 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSASocketA 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSASocketW 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">ERROR CODE: 10050 --WSAStartup 
+      PASSED!<o:p></o:p></FONT></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT 
+      face="Times New Roman">&nbsp;</FONT></o:p></P>
+      <P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT 
+      face="Times New Roman">TEST 
+Passed!<o:p></o:p></FONT></P></TD></TR></TBODY></TABLE></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><SPAN class=159520016-26022003>Thanks!</SPAN></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><SPAN class=159520016-26022003>-Terry</SPAN></DIV></SPAN></SPAN></FONT>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2><SPAN class=159520016-26022003><SPAN 
+class=159520016-26022003></SPAN></SPAN></FONT>&nbsp;</DIV></BODY></HTML>

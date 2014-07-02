@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Creating a fault using Find and Replace Corruption</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nGenerating Network Corruption Faults\nCreating a fault using Find and Replace Corruption");
+addAvenueInfo("MAIN","Holodeck_in_depth/Generating_Network_Corruption_Faults/Creating_a_fault_using_Random_Corruption.htm","Holodeck_in_depth/Generating_Network_Corruption_Faults/Creating_a_fault_using_Regular_Expressions.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Creating a fault using Find and Replace Corruption</H1>
+ <P>Random Corruption is a good way of testing for the type of corruption that would happen as a result of common line noise. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>On the first page of the wizard you can specify that Corruption should happen on data being sent, received, or sent and received. Corruption being received over the network will test your client’s ability to parse corrupted network messages and corruption being sent over the network will test your server’s ability to receive corrupted network messages. You can also specify to corrupt messages only being sent and received over certain network ports. You might want to focus your testing on a specific service that uses a specific port.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_-1855972568.gif" border=0 height=440 width=420 alt="images\ebx_-1855972568.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Select Find and Replace Corruption from the list.</P>
+ <P><IMG src="../../images/ebx_-195453505.gif" border=0 height=440 width=420 alt="images\ebx_-195453505.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>In the example below all occurrences of the word &quot;coffee&quot; will be replaced by the word decaf. You can use hex strings and escape string to find or replace strings that would otherwise be unprintable.</P>
+ <P><FONT style="font-weight:bold; " >Hex Strings</FONT><FONT style="font-weight:bold; " >:</FONT></P>
+ <P>Hex strings will take any number of hex digits (0-9, a-f or A-F) with any amount of whitespace, where each two digits represent a byte. There must be an even number of digits, or this will result in an incomplete byte.</P>
+ <P>Example of a Hex String: </P>
+ <P>5465737404 - Converts to the word Test with an &quot;End of Transmission&quot; character at the end.</P>
+ <P>54 65 73 74 04 – This is the same string, but with whitespace, and easier to read.</P>
+ <P><FONT style="font-weight:bold; " >Escaped Strings:</FONT></P>
+ <P>Escaped strings allow you to inject unprintable characters into your Normal String. Escaped strings take the following escape sequences:</P>
+ <TABLE width="522" cellspacing="0" cellpadding="1" style="margin-left:18.00pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\f</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Form feed</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\n</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Newline</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\r</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Carriage Return</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\t</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Tab</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\v</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Vertical Tab</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\xNN</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Hexadecimal character (ex \x20 represents a space)</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>\\</P></TD>
+  <TD width="74.71%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Single backslash</P></TD></TR>
+ </TABLE>
+ <P>Example of an Escaped String:</P>
+ <P>\t\tTest\x04 – Converts to two tab spaces the word &quot;Test&quot; and the &quot;End of Transmission&quot; character at the end.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>You can replace the matched string with a normal string, hex strings, escaped strings, random strings or a repeated sequence of a string. Since packet size is so important in Network messages you may opt to overwrite bytes following the string to find. If you overwrite bytes following the string the data length will be the same total length as the original.</P>
+ <P><IMG src="../../images/ebx_1269577787.gif" border=0 height=440 width=420 alt="images\ebx_1269577787.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The final page shows a summary of the corruption fault you just created. To edit any information on this page simply select it, and click edit. This will take you back to that page to make any necessary changes.</P>
+ <P><IMG src="../../images/ebx_2005988399.gif" border=0 height=440 width=420 alt="images\ebx_2005988399.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>In the network corruption pane of Holodeck we can see the fault has been set to search for the normal string &quot;coffee&quot; and replace it with the Normal string &quot;decaf&quot;</P>
+ <P><IMG src="../../images/ebx_-554764814.gif" border=0 height=74 width=549 alt="images\ebx_-554764814.gif"></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

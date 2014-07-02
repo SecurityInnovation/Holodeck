@@ -1,0 +1,36 @@
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#define _WIN32_WINNT 0x0501
+#define WINVER 0x500 
+
+#include <winsock2.h>
+#include <winsafer.h>
+
+
+//#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
+#include <windows.h>
+#include <lmaccess.h>
+#include <Tlhelp32.h>
+#include <Lzexpand.h>
+#include <stdio.h>
+#include <tchar.h>
+#include <string.h>
+
+//typedef LONG NTSTATUS;
+// TODO: reference additional headers your program requires here
+
+// FUNCTIONS WITH NO LIB FILE...
+typedef NTSYSAPI NTSTATUS (NTAPI *RtlLocalTimeToSystemTime_DEF)(PLARGE_INTEGER, PLARGE_INTEGER);
+typedef NTSYSAPI NTSTATUS (NTAPI *NtQuerySystemTime_DEF)(PLARGE_INTEGER);
+typedef NTSYSAPI BOOLEAN (*RtlTimeToSecondsSince1970_DEF)(PLARGE_INTEGER, PULONG);
+
+// utility functions...
+void enableInterception( );
+void disableInterception( );
+
+[FUNCTIONGENERATION]

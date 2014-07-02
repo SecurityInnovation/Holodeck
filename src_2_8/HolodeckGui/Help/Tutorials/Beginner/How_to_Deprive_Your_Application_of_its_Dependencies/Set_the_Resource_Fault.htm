@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Set the Resource Fault</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nBeginner\nHow to Deprive Your Application of its Dependencies\nSet the Resource Fault");
+addAvenueInfo("Holodeck Help","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Investigate_Resources.htm","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Restart_BrokenApp_with_Resource_Faults.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Set the Resource Fault</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Now that we have done the research we need to do, the next step is to set a resource fault and restart the application. Often the application loads the entire library into memory, and doesn’t access it after that; this is why we need to restart the application.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To set a resource fault, find the resource in the resource pane and right click it. If you select &quot;Create a fault&quot; Holodeck will launch the &quot;Create a Fault Wizard&quot; with the correct resource automatically checked. However Holodeck allows you to set a fault quickly by using the &quot;Set a Process Fault&quot; menu. After you select one of the faults in this menu that fault is set immediately. Set the &quot;Process file not found&quot; fault on RichEd20.dll. This fault will fail any attempts to load a library or create a process which is what happens when the BrokenApp tries to load this dll.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_-337607939.gif" border=0 height=329 width=488 alt="images\ebx_-337607939.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Investigate_Resources.htm">&lt;&lt; Previous</A>    <A href="Restart_BrokenApp_with_Resource_Faults.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

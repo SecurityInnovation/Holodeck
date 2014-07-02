@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Intercepting Overloaded Functions with HEAT</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HEAT (Hostile Environment for Application Testing)\nIntercepting Overloaded Functions with HEAT");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/HEAT_API_Example.htm","HEAT_Error_Codes.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Intercepting Overloaded Functions with HEAT</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To intercept overloaded functions with Holodeck’s HEAT, you must use the mangled function names. To find the mangled function names you must use depends.exe provided with Visual Studio.net</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Steps to find out the mangled names:</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Start Depends.exe from the Visual Studio.NET Command Prompt (found under the Visual Studio.NET tools section of the Visual Studio in the Start Menu).</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Open the DLL containing the function.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>On the right side, the bottom list contains a list of functions that are exported from the DLL. Right click anywhere in this list and choose &quot;Undecorate C++ functions&quot; </P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >4)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Find the desired function in the list.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >5)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Right click in the list, and select &quot;Undecorate C++ Functions&quot; again to show the mangled names.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >6)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Right click on the desired function and choose &quot;Copy Function Name&quot;. This places the mangled function name in the clipboard.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >7)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Paste the mangled name into your HEAT project.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

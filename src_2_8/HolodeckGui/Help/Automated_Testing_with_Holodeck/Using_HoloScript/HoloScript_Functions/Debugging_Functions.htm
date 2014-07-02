@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Debugging Functions</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nHoloScript Functions\nDebugging Functions");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Process_Chaining.htm","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Application_and_Service_Control.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Debugging Functions</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >_property bool</FONT> get_AttachDebugger()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Returns whether or not Holodeck will be used as a debugger.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>True if Holodeck will be used as a debugger.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property bool</FONT> get_LogFirstChance()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets whether or not Holodeck will log first chance exceptions.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>True if Holodeck will log first chance exceptions</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> Array* get_ProcessSymbols()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets the symbol list for the current process</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>A ponter to an array of the symbols for the current process</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;_</FONT><FONT style="color:blue; " >_property</FONT> <FONT style="color:blue; " >void</FONT> set_AttachDebugger(<FONT style="color:blue; " >bool</FONT> value);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets if Holodeck should be used as a debugger.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property void</FONT> set_LogFirstChance(<FONT style="color:blue; " >bool</FONT> value);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets Holodeck to log all first chance exceptions.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+
+
+$RETURNTYPE$ $MODIFIERS_B$ $FUNCTIONNAME$Replacement ($PARAM_TYPES_AND_NAMES$)
+{
+	const int numParams = $NUMPARAMS$;
+	char *functionName = "$FUNCTIONNAME$";
+	char *categoryName = "$FUNCTIONCATEGORY$";
+	#IF_HAS_SISTRINGS#$SISTRING_LIST$
+	#IF_NUMPARAMS_NONZERO#void *params[numParams] = { $PARAM_REFS_LIST$ };
+	#IF_NUMPARAMS_ZERO#void **params = NULL;
+	#IF_NUMPARAMS_NONZERO#ParameterType paramTypes[numParams] = {$BASIC_PARAM_TYPE_LIST$};
+	#IF_NUMPARAMS_ZERO#ParameterType *paramTypes = NULL;
+	
+	if (real$FUNCTIONNAME$ == NULL)
+		real$FUNCTIONNAME$ = ($FUNCTIONNAME$Function)library->GetOriginalFunction(functionName);
+
+	if (real$FUNCTIONNAME$ != NULL)
+	{
+		DWORD errorCode, tempReturnValue;
+		#IF_RETURN_NONVOID#$RETURNTYPE$ returnValue;
+
+		library->RunStandardTestsAndGetResults(logSender, $FUNCTIONNAME$Caller, categoryName, functionName, numParams, params, paramTypes, &tempReturnValue, "$RETURNTYPE$", &errorCode, 1, true);
+
+		#IF_RETURN_NONVOID#memcpy (&returnValue, &tempReturnValue, sizeof(DWORD));
+		SetLastError(errorCode);
+		#IF_RETURN_NONVOID#return returnValue;		
+	}
+	return 0;
+}
+

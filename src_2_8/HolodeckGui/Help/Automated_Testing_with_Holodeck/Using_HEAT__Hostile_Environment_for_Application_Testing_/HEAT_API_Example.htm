@@ -1,0 +1,227 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>HEAT API Example</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HEAT (Hostile Environment for Application Testing)\nHEAT API Example");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/HEAT_API_Injection.htm","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/Intercepting_Overloaded_Functions_with_HEAT.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>HEAT API Example</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-weight:bold; " >.cpp file for Application Interception</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &lt;CHeatApp.h&gt;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >int</FONT><FONT style="font-family:'Courier New'; " > main(</FONT><FONT style="font-family:'Courier New'; color:blue; " >void</FONT><FONT style="font-family:'Courier New'; " >)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;CHeatApp *testApp = </FONT><FONT style="font-family:'Courier New'; color:blue; " >new</FONT><FONT style="font-family:'Courier New'; " > CHeatApp();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;DWORD retVal = 0;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;retVal = testApp-&gt;initializeApp(&quot;D:\\WINDOWS&quot;, &quot;NOTEPAD.EXE&quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >if</FONT><FONT style="font-family:'Courier New'; " > (retVal != HEAT_SUCCESS)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;MessageBox (NULL, &quot;not initialized&quot;, &quot;Heat Test&quot;, 0);</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;retVal = testApp-&gt;forceInject();</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >if</FONT><FONT style="font-family:'Courier New'; " > (retVal != HEAT_SUCCESS)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;MessageBox (NULL, &quot;not injected&quot;, &quot;Heat Test&quot;, 0);</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;retVal = testApp-&gt;interceptFunc(&quot;GetStartupInfoA&quot; , &quot;kernel32.dll&quot;, &quot;GetStartupInfoAReplacement&quot;,  &quot;D:\\TestProjDll.dll&quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >if</FONT><FONT style="font-family:'Courier New'; " > (retVal != HEAT_SUCCESS)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;MessageBox (NULL, &quot;not intercepted&quot;, &quot;Heat Test&quot;, 0);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;retVal = testApp-&gt;interceptFunc(&quot;GetStartupInfoW&quot; , &quot;kernel32.dll&quot;, &quot;GetStartupInfoWReplacement&quot;,  &quot;D:\\TestProjDll.dll&quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >if</FONT><FONT style="font-family:'Courier New'; " > (retVal != HEAT_SUCCESS)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;MessageBox (NULL, &quot;not intercepted&quot;, &quot;Heat Test&quot;, 0);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;retVal = testApp-&gt;interceptFunc(&quot;GetProcessHeap&quot; , &quot;kernel32.dll&quot;, &quot;GetProcessHeapReplacement&quot;,  &quot;D:\\TestProjDll.dll&quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >if</FONT><FONT style="font-family:'Courier New'; " > (retVal != HEAT_SUCCESS)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;MessageBox (NULL, &quot;not intercepted&quot;, &quot;Heat Test&quot;, 0);</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;testApp-&gt;runApp();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >return</FONT><FONT style="font-family:'Courier New'; " > 0;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-weight:bold; " >.cpp  file for DLL</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >/*</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp;TestProjDll.cpp</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >*/</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &quot;TestProjDll.h&quot;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >BOOL APIENTRY DllMain( HANDLE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved )</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >switch</FONT><FONT style="font-family:'Courier New'; " > (ul_reason_for_call)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >case</FONT><FONT style="font-family:'Courier New'; " > DLL_PROCESS_ATTACH:</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >case</FONT><FONT style="font-family:'Courier New'; " > DLL_THREAD_ATTACH:</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >case</FONT><FONT style="font-family:'Courier New'; " > DLL_THREAD_DETACH:</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >case</FONT><FONT style="font-family:'Courier New'; " > DLL_PROCESS_DETACH:</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >break</FONT><FONT style="font-family:'Courier New'; " >;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;}</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >    </FONT><FONT style="font-family:'Courier New'; color:blue; " >return</FONT><FONT style="font-family:'Courier New'; " > TRUE;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >TESTPROJDLL_API VOID GetStartupInfoAReplacement (LPSTARTUPINFOA lpStartupInfo)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Modify any parameters that you want here</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Call the real function</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;GetStartupInfoA(lpStartupInfo);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Get the last error set by the function</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;DWORD lastError = GetLastError();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//You may modify the error code or return value here</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//lastError = </FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//returnValue =</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//These should be the last two calls, no user code should go below them.</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;SetLastError (lastError);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >TESTPROJDLL_API VOID GetStartupInfoWReplacement (LPSTARTUPINFOW lpStartupInfo)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Modify any parameters that you want here</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Call the real function</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;GetStartupInfoW(lpStartupInfo);</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Get the last error set by the function</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;DWORD lastError = GetLastError();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//You may modify the error code or return value here</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//lastError = </FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//returnValue =</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//These should be the last two calls, no user code should go below them.</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;SetLastError (lastError);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >TESTPROJDLL_API HANDLE GetProcessHeapReplacement ()</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Modify any parameters that you want here</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//call the real function</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;HANDLE returnValue = GetProcessHeap ();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//Get the last error set by the function</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;DWORD lastError = GetLastError();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//You may modify the error code or return value here</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//lastError = </FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//returnValue =</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >//These should be the last two calls, no user code should go below them.</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;SetLastError (lastError);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >return</FONT><FONT style="font-family:'Courier New'; " > returnValue;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-weight:bold; " >.h file for DLL</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >// All files within this DLL have</FONT><FONT style="font-family:'Courier New'; color:green; " > to be compiled with the symbol T</FONT><FONT style="font-family:'Courier New'; color:green; " >ESTPROJDLL_EXPORTS</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >// symbol defined on the command line. This symbol should not be defined on any project</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >// that uses this DLL. This way any other project whose source files include this file see </FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >// IMPDLL_API functions as being imported from a DLL, whereas this DLL sees symbols</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >// defined with this macro as being exported.</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#ifdef</FONT><FONT style="font-family:'Courier New'; " > TESTPROJDLL_EXPORTS</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#define</FONT><FONT style="font-family:'Courier New'; " > TESTPROJDLL_API </FONT><FONT style="font-family:'Courier New'; color:blue; " >__declspec</FONT><FONT style="font-family:'Courier New'; " >(</FONT><FONT style="font-family:'Courier New'; color:blue; " >dllexport</FONT><FONT style="font-family:'Courier New'; " >)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#else</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#define</FONT><FONT style="font-family:'Courier New'; " > TESTPROJDLL_API </FONT><FONT style="font-family:'Courier New'; color:blue; " >__declspec</FONT><FONT style="font-family:'Courier New'; " >(</FONT><FONT style="font-family:'Courier New'; color:blue; " >dllimport</FONT><FONT style="font-family:'Courier New'; " >)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#endif</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &lt;windows.h&gt;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >TESTPROJDLL_API VOID GetStartupInfoAReplacement (LPSTARTUPINFOA lpStartupInfo);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >TESTPROJDLL_API VOID GetStartupInfoWReplacement (LPSTARTUPINFOW lpStartupInfo);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >TESTPROJDLL_API HANDLE GetProcessHeapReplacement ();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-weight:bold; " >Definitions file</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >LIBRARY TESTPROJDLL</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >EXPORTS</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >GetStartupInfoAReplacement</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >GetStartupInfoWReplacement</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >GetProcessHeapReplacement</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -130,6 +130,7 @@ public:
 	SiUtils::SiArray<SiUtils::SiString> enumerateNativeImports(SiUtils::SiString sModuleName);
 
 	DWORD getChecksum();
+	IMAGE_COR20_HEADER* getManagedHeader() { return m_pchManagedHeader; }
 
 	bool merge(PEFile& pFile);
 };
