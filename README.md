@@ -1,6 +1,8 @@
 Holodeck
 ========
+Holodeck is a [Fault Injection](http://en.wikipedia.org/wiki/Fault_injection) tool for testing Windows binaries and .NET applications. Holodeck utilizes fault-injection techniques to introduce the application to simulated scenarios that arise as the result of "broken" environments, such as out of memory conditions, corrupt files, bad registry data, or mauled network packets. It encapsulates the target application within a simulated, tester-controlled environment that exists between the application and operating system. It is therefore able to introduce and test the application's reaction to various anomalies of the environment by changing the simulation without actually effecting the base operating or file system.
 
+While Holodeck is intercepting all your system and API calls, it is also monitoring and logging them. This gives you the power to examine low-level interactions and network packets - pinpointing and easily recreating bug-generating events with ease. Meanwhile, the integrated debugger creates a "minidump" when errors occur and provides the exact line of code and machine state where the crash occurred. With this information, suitable for use directly in an IDE like Visual Studio, you or your developer will know exactly what was happening at the time an error occurred - such as if your application was trying to access a restricted piece of memory, looking for a file that wasn’t there, or write sensitive/private data to a text file during a crash etc.
 
 Comprehensive Simulation and Tuning for Fragility & Security Testing
 --------------------
@@ -9,8 +11,7 @@ Holodeck is a unique test tool that uses fault injection to simulate real-world 
 
 Holodeck is the first commercially available fault-simulation tool and was developed by leading researchers in the application quality field.  It is used by organizations like Microsoft, Adobe, Symantec, EMC and McAfee to ensure the products delivered to their customers are of the highest quality. 
 
->> Download Holodeck
- 
+[Download Holodeck](https://securityinnovation.com/Holodeck/Holodeck2.8.exe) 
 
 Unprecedented Control
 ----------------------
