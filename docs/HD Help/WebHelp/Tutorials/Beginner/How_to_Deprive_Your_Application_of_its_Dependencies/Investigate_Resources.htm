@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Investigate Resources</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nBeginner\nHow to Deprive Your Application of its Dependencies\nInvestigate Resources");
+addAvenueInfo("HD HELP 2_5","Tutorials/Beginner/Dealing_with_Multiple_Processes/Summary_2.htm","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Set_the_Resource_Fault.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Investigate Resources</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Once the application has started up, navigate to the resource pane by clicking the tab in the lower pane that says &quot;Resources.&quot; Holodeck will show all the resources that BrokenApp has touched on startup. More resources might show up here as the application is used, but we can find a pretty nice bug without having to do that. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>If you drill down into the processes and libraries resource node you will find a dll called RichEd20.dll. This dll is responsible for all the rich text editing that BrokenApp is able to do. We want to see what happens when BrokenApp is unable to load this dll when it is starting up. </P>
+ <P><IMG src="../../../images/ebx_-1426209210.gif" border=0 height=329 width=399 alt="images\ebx_-1426209210.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Introduction6.htm">&lt;&lt; Previous</A>    <A href="Set_the_Resource_Fault.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

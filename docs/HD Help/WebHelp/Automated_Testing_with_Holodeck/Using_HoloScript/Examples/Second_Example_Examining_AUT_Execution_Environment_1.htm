@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Second Example - Examining AUT Execution Environment</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nExamples\nSecond Example - Examining AUT Execution Environment");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HoloScript/Examples/First_Example_Injecting_Faults.htm","Automated_Testing_with_Holodeck/Using_HoloScript/Examples/Third_Example_Modifying_the_AUT_Execution_Environment_Disk_and_Memory_Limits_.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Second Example - Examining AUT Execution Environment</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The following is a simple example of a Managed C++ Application that uses Holoscript to launch the Windows Notepad application.  Once Notepad is running, its process ID and thread ID are written to the console.  The application also gets the current Disk and Memory usage information and writes it to the console.</P>
+ <P style="margin-left:4.50pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &quot;stdafx.h&quot;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;FunctionDatabase.dll&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;mscorlib.dll&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &lt;tchar.h&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;HoloScript.dll&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >using</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >namespace</FONT><FONT style="font-family:'Courier New'; " > System;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >using</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >namespace</FONT><FONT style="font-family:'Courier New'; " > HoloScript;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >int</FONT><FONT style="font-family:'Courier New'; " > _tmain(</FONT><FONT style="font-family:'Courier New'; color:blue; " >void</FONT><FONT style="font-family:'Courier New'; " >)</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;text-indent:31.50pt;"><FONT style="font-family:'Courier New'; " >UInt32&nbsp;processId, threadId;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;UInt64&nbsp;maxDiskUse, curDiskUse,</FONT></P>
+ <P style="margin-left:40.50pt;margin-top:0.00pt;text-indent:31.50pt;"><FONT style="font-family:'Courier New'; " >maxMemUse, curMemUse;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;text-indent:31.50pt;"><FONT style="font-family:'Courier New'; color:green; " >// create a new interception framework</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >new</FONT><FONT style="font-family:'Courier New'; " > HoloScriptApplication();</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >// launch Notepad as the application under test</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;LaunchApplication(</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&quot;C:\\WINDOWS\\NOTEPAD.EXE&quot;, NULL,</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >false</FONT><FONT style="font-family:'Courier New'; " >,</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;holoApp-&gt;GetFilteredFunctionList());</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >/* get the application process ID and write it</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; * to the console</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; */</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;GetApplicationProcessID(processId);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot;Process ID: &quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(processId);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >/* get the application thread ID and write it</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; * to the console</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; */</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;GetApplicationThreadID(threadId);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot;Thread ID:  &quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(threadId);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >/* get the resource limits and utilization</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; * and write them to the console</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; */</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;GetMonitorInformation(maxDiskUse,</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;curDiskUse, maxMemUse, curMemUse);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot;Disk Usage: &quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(maxDiskUse);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot; (bytes max), &quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(curDiskUse);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(&quot; (bytes current)&quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot;Memory Usage:  &quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(maxMemUse);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot; (bytes max), &quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(curMemUse);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(&quot;(bytes current)&quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine();</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >/* wait for user input to terminate the</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; * interception</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; */</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&quot;Press [ENTER] to Terminate Application&quot;);</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::ReadLine();</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >// terminate the interception</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;TerminateApplication();</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >return</FONT><FONT style="font-family:'Courier New'; " > 0;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Process/Library Faults</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nCreating Faults\nFault Categories\nProcess/Library Faults");
+addAvenueInfo("HD HELP 2_5","Holodeck_in_depth/Creating_Faults/Fault_Categories/Registry_Faults.htm","Holodeck_in_depth/Creating_Faults/Fault_Categories/Custom_Faults.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Process/Library Faults</H1>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; " >Faults of the Process/Library type are failures in loading external processes and libraries.</FONT></P>
+ <P class="Normal-(Web)" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; font-weight:bold; " >Process File Not Found</FONT><FONT style="font-size:9pt; font-weight:bold; " > – </FONT><FONT style="font-size:9pt; " >Calls to functions trying to load a library, create a process or load a module are failed; sets the error code 2</FONT><FONT style="font-size:9pt; " >, Error File Not Found,</FONT><FONT style="font-size:9pt; " > on return and returns 0 as the return value.</FONT></P>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; font-weight:bold; " >Not Enough Resources</FONT><FONT style="font-size:9pt; font-weight:bold; " > – </FONT><FONT style="font-size:9pt; " >Calls to functions trying to load a library, create a process or load a module are failed; sets the error code 8</FONT><FONT style="font-size:9pt; " >, Error Not Enough Memory,</FONT><FONT style="font-size:9pt; " > on return and returns 0 as the return value.</FONT></P>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; font-weight:bold; " >Invalid File Type</FONT><FONT style="font-size:9pt; font-weight:bold; " > – </FONT><FONT style="font-size:9pt; " >Calls to functions trying to load a library are failed and </FONT><FONT style="font-size:9pt; " >sets</FONT><FONT style="font-size:9pt; " > the error code 126</FONT><FONT style="font-size:9pt; " >, Error Mod Not Found,</FONT><FONT style="font-size:9pt; " > and return a value of 1, functions trying to create a process, or load a module are failed and </FONT><FONT style="font-size:9pt; " >set the error code 193, invalid file type and </FONT><FONT style="font-size:9pt; " >use a return value of 0</FONT><FONT style="font-size:9pt; " >.</FONT></P>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; font-weight:bold; " > </FONT><FONT style="font-size:9pt; font-weight:bold; " >Access Denied</FONT><FONT style="font-size:9pt; font-weight:bold; " > - </FONT><FONT style="font-size:9pt; " >Calls to functions trying to load a library, create a process or load a module are failed; sets the error code 5</FONT><FONT style="font-size:9pt; " >, Error Access Denied,</FONT><FONT style="font-size:9pt; " > on return and returns 0 as the return value.</FONT></P>
+ <P class="Normal-(Web)" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; font-weight:bold; " >Note</FONT><FONT style="font-size:9pt; font-weight:bold; " >: </FONT><FONT style="font-size:9pt; " >Some faults will return a variety of error codes and return values depending on the function called and the condition.  The list above specifies what the majority behavior is for each fault.  For more information</FONT><FONT style="font-size:9pt; " > see the faults.xml file located in &lt;Holodeck Enterprise Edition Install Path&gt;\function_db\faults.xml</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<HTML>
+	<HEAD>
+	</HEAD>
+	<BODY>
+		<Center><H2>Holodeck Could Not Create A Log File for the Application Under Test</H2>
+		</Center>
+		<P style="MARGIN-TOP:0pt"><FONT style="COLOR:black">The likely cause for this is that 
+				the&nbsp;Application Under Test runs as a user that does not have access to 
+				Holodeck's log folder.&nbsp; <STRONG>All Logging will be disabled for this 
+					application</STRONG>.&nbsp; Instructions on how to fix this are below:</FONT>
+		</P>
+		<OL>
+			<LI>
+			Open Windows Explorer&nbsp;
+			<LI>
+			Navigate to the folder "Logs" under your Holodeck install folder.&nbsp; By 
+			default this is "C:\Program Files\Security Innovation\Holodeck Enterprise 
+			Edition\Logs"
+			<LI>
+			Right-click on the&nbsp;"Logs" folder and click "Properties"&nbsp;
+			<LI>
+			Click on the Security tab in the Properties window
+			<LI>
+			Click the "Add..." button
+			<LI>
+			Click the "Advanced..." button in the "Select Users or Groups" window
+			<LI>
+			Click "Find Now" in the next window
+			<LI>
+			Select the correct user in the list that appears and click "OK"
+			<LI>
+			Click "OK" to close the "Select Users or Groups" window&nbsp;
+			<LI>
+			In the "Logs Properties" window, click on the user you selected in step 8.
+			<LI>
+			Click the checkboxes so that Modify, Read, and Write are checked, or 
+			alternatively click Full Control.&nbsp;
+			<LI>
+			Click&nbsp;"OK" to close the "Logs Properties" window&nbsp;
+			<LI>
+				Restart your Application Under Test&nbsp;
+				<P></P>
+				<P>Visit&nbsp;<A href="http://www.sisecure.com/contact.shtml">http://www.sisecure.com/contact.shtml</A>&nbsp;to 
+					contact support if you need further assistance</P>
+			</LI>
+		</OL>
+	</BODY>
+</HTML>

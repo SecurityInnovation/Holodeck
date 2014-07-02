@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Dealing with Multiple Processes</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nMultiple Threads and Processes\nDealing with Multiple Processes");
+addAvenueInfo("MAIN","Holodeck_in_depth/Regular_Expressions_and_Replacement_Strings/Using_replacement_strings.htm","Holodeck_in_depth/Multiple_Threads_and_Processes/Working_with_Multi_threaded_applications.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Dealing with Multiple Processes</H1>
+ <P>This option is available if you check the Process Chaining option on the last page of the Holodeck Project Setup Wizard. If the application spawns multiple processes, or if you choose to test multiple applications simultaneously Holodeck will allow you to set faults, tests etc for each process.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Holodeck allows you to test multiple processes or applications at the same time. This is useful if your application spawns new processes while running or if you simply want to add another application to the project to test two separate applications in the same Holodeck Project.&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Automatically Testing new processes your application spawns:</FONT></P>
+ <P>To have Holodeck automatically attach to any process your application spawns check &quot;Process Chaining&quot; on the last page of the <A href="../New_Project_Wizard/New_Project_Wizard.htm">New Project Wizard</A>. If you would like the new process to inherit all the tests, limits, faults, etc. that you are currently using with the main application check &quot;Child Processes Inherit Settings&quot; on the last page of the New Project Wizard.</P>
+ <P><IMG src="../../images/ebx_-1859603638.gif" border=0 height=400 width=400 alt="images\ebx_-1859603638.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Each new process the Application Under Test spawns can be treated like its own application. You can set limits, faults, and tests on each new process, as well as viewing resources specific to that process. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Testing multiple applications at the same time:</FONT></P>
+ <P>To test multiple applications at the same time select File &gt; New Test Application, this will bring up the New Test Application Wizard<FONT style="font-weight:bold; " > </FONT>to select an additional Application Under Test. You can specify different APIs to log for each Application Under Test, by selecting the functions under Log &gt; Functions Logged…</P>
+ <P>&nbsp;</P>
+ <P><IMG src="../../images/ebx_1253664188.gif" border=0 height=290 width=213 alt="images\ebx_1253664188.gif"></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

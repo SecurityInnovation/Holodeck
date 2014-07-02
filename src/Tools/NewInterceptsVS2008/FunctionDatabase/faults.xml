@@ -1,0 +1,1263 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Faults SYSTEM "faults.dtd"[]>
+<!-- NOTE: All comments must go above the Faults tag
+	ERROR CODE VALUES - See Winerror.h for predefined values in Windows
+	ERROR_FILE_NOT_FOUND = 2
+	ERROR_TOO_MANY_OPEN_FILES = 4
+	ERROR_ACCESS_DENIED = 5
+	ERROR_WRITE_PROTECT = 19
+	ERROR_CRC = 23
+	ERROR_SEEK = 25
+	ERROR_SHARING_VIOLATION = 32
+	ERROR_LOCK_VIOLATION = 33
+	ERROR_DISK_FULL = 112
+	ERROR_FILE_EXISTS = 80
+	ERROR_CANNOT_MAKE = 82
+	ERROR_BUFFER_OVERFLOW = 111
+	ERROR_INVALID_NAME = 123
+	ERROR_FILE_READ_ONLY = 6009
+	ERROR_PATH_NOT_FOUND = 3
+	ERROR_CURRENT_DIRECTORY = 16
+	ERROR_DIR_NOT_EMPTY = 145
+	ERROR_FILE_CORRUPT = 1392
+	ERROR_NOT_ENOUGH_MEMORY = 8
+	ERROR_NOACCESS = 998
+	ERROR_LOCKED = 212
+	ERROR_INVALID_ADDRESS = 487
+	ERROR_PAGEFILE_QUOTA = 1454
+	WSAENETDOWN = 10050
+	WSAEADDRINUSE = 10048
+-->
+<!-- RETURN VALUES
+	SOCKET_ERROR = -1
+	WSASYSNOTREADY = 10091
+	WSAEPROCLIM = 10067
+-->
+<Faults>
+	<Fault Name="File_Not_Found" Type="Disk" ReturnValue="0" ErrorCode="2">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="GetFileAttributesA" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesW" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesExA"/>
+		<Function Name="GetFileAttributesExW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+		<Function Name="FindFirstFileA" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstFileW" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstFileExA" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstFileExW" OverrideReturnValue="-1"/>
+		<Function Name="FindNextFileA" OverrideErrorCode="18"/>
+		<Function Name="FindNextFileW" OverrideErrorCode="18"/>
+		<Function Name="FindFirstChangeNotificationA" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstChangeNotificationW" OverrideReturnValue="-1"/>
+		<Function Name="SearchPathA"/>
+		<Function Name="SearchPathW"/>
+		<Function Name="OpenFileMappingA"/>
+		<Function Name="OpenFileMappingW"/>
+	</Fault>
+	<Fault Name="Too_Many_Open_Files" Type="Disk" ReturnValue="-1" ErrorCode="4">
+		<Function Name="CreateFileA">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="FindFirstFileA"/>
+		<Function Name="FindFirstFileW"/>
+		<Function Name="FindFirstFileExA"/>
+		<Function Name="FindFirstFileExW"/>
+		<Function Name="OpenFileMappingA" OverrideReturnValue="0"/>
+		<Function Name="OpenFileMappingW" OverrideReturnValue="0"/>
+	</Fault>
+	<Fault Name="Access_Denied_To_File" Type="Disk" ReturnValue="0" ErrorCode="5">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"></MatchParam>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="GetFileAttributesA" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesW" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesExA"/>
+		<Function Name="GetFileAttributesExW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="GetCurrentDirectoryA"/>
+		<Function Name="GetCurrentDirectoryW"/>
+		<Function Name="GetDiskFreeSpaceA"/>
+		<Function Name="GetDiskFreeSpaceW"/>
+		<Function Name="GetDiskFreeSpaceExA"/>
+		<Function Name="GetDiskFreeSpaceExW"/>
+		<Function Name="GetDriveTypeA"/>
+		<Function Name="GetDriveTypeW"/>
+		<Function Name="GetFileSize" OverrideReturnValue="-1"/>
+		<Function Name="GetFileSizeEx"/>
+		<Function Name="GetLogicalDrives"/>
+		<Function Name="GetLogicalDriveStringsA"/>
+		<Function Name="GetLogicalDriveStringsW"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+		<Function Name="DefineDosDeviceA"/>
+		<Function Name="DefineDosDeviceW"/>
+		<Function Name="FindFirstFileA" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstFileW" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstFileExA" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstFileExW" OverrideReturnValue="-1"/>
+		<Function Name="FindNextFileA"/>
+		<Function Name="FindNextFileW"/>
+		<Function Name="FindFirstChangeNotificationA" OverrideReturnValue="-1"/>
+		<Function Name="FindFirstChangeNotificationW" OverrideReturnValue="-1"/>
+		<Function Name="GetFileInformationByHandle"/>
+		<Function Name="QueryDosDeviceA"/>
+		<Function Name="QueryDosDeviceW"/>
+		<Function Name="ReadDirectoryChangesA"/>
+		<Function Name="ReadDirectoryChangesW"/>
+		<Function Name="ReadFile"/>
+		<Function Name="ReadFileEx"/>
+		<Function Name="ReadFileScatter"/>
+		<Function Name="SearchPathA"/>
+		<Function Name="SearchPathW"/>
+		<Function Name="SetFileSecurityA"/>
+		<Function Name="SetFileSecurityW"/>
+		<Function Name="SetFileShortNameA"/>
+		<Function Name="SetFileShortNameW"/>
+		<Function Name="SetFileValidData"/>
+		<Function Name="SetVolumeLabelA"/>
+		<Function Name="SetVolumeLabelW"/>
+		<Function Name="LockFile"/>
+		<Function Name="LockFileEx"/>
+		<Function Name="UnlockFile"/>
+		<Function Name="UnlockFileEx"/>
+		<Function Name="GetTempPathA"/>
+		<Function Name="GetTempPathW"/>
+		<Function Name="FlushFileBuffers"/>
+		<Function Name="SetEndOfFile"/>
+		<Function Name="SetFilePointer" OverrideReturnValue="-1"/>
+		<Function Name="SetFilePointerEx"/>
+		<Function Name="WriteFile"/>
+		<Function Name="WriteFileEx"/>
+		<Function Name="WriteFileGather"/>
+		<Function Name="OpenFileMappingA"/>
+		<Function Name="OpenFileMappingW"/>
+		<Function Name="CreateFileMappingA"/>
+		<Function Name="CreateFileMappingW"/>
+		<Function Name="MapViewOfFile"/>
+		<Function Name="MapViewOfFileEx"/>
+	</Fault>
+	<Fault Name="File_Is_Read_Only" Type="Disk" ReturnValue="0" ErrorCode="6009">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+				<MatchParam Name="dwDesiredAccess" TestOperator="!=" TestValue="2147483648"  CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+				<MatchParam Name="dwDesiredAccess" TestOperator="!=" TestValue="2147483648"  CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+		<Function Name="SetEndOfFile"/>
+		<Function Name="SetFilePointer" OverrideReturnValue="-1"/>
+		<Function Name="SetFilePointerEx"/>
+		<Function Name="WriteFile"/>
+		<Function Name="WriteFileEx"/>
+		<Function Name="WriteFileGather"/>
+		<Function Name="SetFileShortNameA"/>
+		<Function Name="SetFileShortNameW"/>
+		<Function Name="SetFileValidData"/>
+		<Function Name="FlushFileBuffers"/>
+		<Function Name="LockFile"/>
+		<Function Name="LockFileEx"/>
+		<Function Name="UnlockFile"/>
+		<Function Name="UnlockFileEx"/>
+		<Function Name="SetFileSecurityA"/>
+		<Function Name="SetFileSecurityW"/>
+		<Function Name="SetVolumeLabelA"/>
+		<Function Name="SetVolumeLabelW"/>
+	</Fault>
+	<Fault Name="Data_Error" Type="Disk" ReturnValue="0" ErrorCode="23">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReadFile"/>
+		<Function Name="ReadFileEx"/>
+		<Function Name="ReadFileScatter"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="GetFileAttributesA" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesW" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesExA"/>
+		<Function Name="GetFileAttributesExW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="GetFileInformationByHandle"/>	
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+		<Function Name="WriteFile"/>
+		<Function Name="WriteFileEx"/>
+		<Function Name="WriteFileGather"/>
+		<Function Name="LockFile"/>
+		<Function Name="LockFileEx"/>
+		<Function Name="UnlockFile"/>
+		<Function Name="UnlockFileEx"/>
+		<Function Name="SetEndOfFile"/>
+		<Function Name="SetFilePointer" OverrideReturnValue="-1"/>
+		<Function Name="SetFilePointerEx"/>
+		<Function Name="SetFileSecurityA"/>
+		<Function Name="SetFileSecurityW"/>
+		<Function Name="SetFileShortNameA"/>
+		<Function Name="SetFileShortNameW"/>
+		<Function Name="SetFileValidData"/>
+		<Function Name="OpenFileMappingA"/>
+		<Function Name="OpenFileMappingW"/>
+		<Function Name="CreateFileMappingA"/>
+		<Function Name="CreateFileMappingW"/>
+		<Function Name="MapViewOfFile"/>
+		<Function Name="MapViewOfFileEx"/>		
+	</Fault>
+	<Fault Name="Drive_Cannot_Seek_Disk" Type="Disk" ReturnValue="0" ErrorCode="25">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReadFile"/>
+		<Function Name="ReadFileEx"/>
+		<Function Name="ReadFileScatter"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="GetFileAttributesA" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesW" OverrideReturnValue="-1"/>
+		<Function Name="GetFileAttributesExA"/>
+		<Function Name="GetFileAttributesExW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="GetFileInformationByHandle"/>	
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+		<Function Name="WriteFile"/>
+		<Function Name="WriteFileEx"/>
+		<Function Name="WriteFileGather"/>
+		<Function Name="LockFile"/>
+		<Function Name="LockFileEx"/>
+		<Function Name="UnlockFile"/>
+		<Function Name="UnlockFileEx"/>
+		<Function Name="SetEndOfFile"/>
+		<Function Name="SetFilePointer" OverrideReturnValue="-1"/>
+		<Function Name="SetFilePointerEx"/>
+		<Function Name="SetFileSecurityA"/>
+		<Function Name="SetFileSecurityW"/>
+		<Function Name="SetFileShortNameA"/>
+		<Function Name="SetFileShortNameW"/>
+		<Function Name="SetFileValidData"/>
+		<Function Name="OpenFileMappingA"/>
+		<Function Name="OpenFileMappingW"/>
+		<Function Name="CreateFileMappingA"/>
+		<Function Name="CreateFileMappingW"/>
+		<Function Name="MapViewOfFile"/>
+		<Function Name="MapViewOfFileEx"/>		
+	</Fault>
+	<Fault Name="File_In_Use" Type="Disk" ReturnValue="0" ErrorCode="32">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="OpenFileMappingA"/>
+		<Function Name="OpenFileMappingW"/>
+		<Function Name="CreateFileMappingA"/>
+		<Function Name="CreateFileMappingW"/>
+	</Fault>
+	<Fault Name="File_Locked" Type="Disk" ReturnValue="0" ErrorCode="33">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+			</MatchParams>
+		</Function>
+		<Function Name="DeleteFileA"/>
+		<Function Name="DeleteFileW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="SetFileAttributesA"/>
+		<Function Name="SetFileAttributesW"/>
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+		<Function Name="SetEndOfFile"/>
+		<Function Name="SetFilePointer" OverrideReturnValue="-1"/>
+		<Function Name="SetFilePointerEx"/>
+		<Function Name="WriteFileEx"/>
+		<Function Name="WriteFileGather"/>
+		<Function Name="SetFileShortNameA"/>
+		<Function Name="SetFileShortNameW"/>
+		<Function Name="SetFileValidData"/>
+		<Function Name="FlushFileBuffers"/>
+		<Function Name="LockFile"/>
+		<Function Name="LockFileEx"/>
+		<Function Name="UnlockFile"/>
+		<Function Name="UnlockFileEx"/>
+		<Function Name="SetFileSecurityA"/>
+		<Function Name="SetFileSecurityW"/>
+		<Function Name="SetVolumeLabelA"/>
+		<Function Name="SetVolumeLabelW"/>
+		<Function Name="OpenFileMappingA"/>
+		<Function Name="OpenFileMappingW"/>
+		<Function Name="CreateFileMappingA"/>
+		<Function Name="CreateFileMappingW"/>
+		<Function Name="MapViewOfFile"/>
+		<Function Name="MapViewOfFileEx"/>
+	</Fault>
+	<Fault Name="Disk_Full" Type="Disk" ReturnValue="0" ErrorCode="112">
+		<Function Name="CopyFileA" Allocation="GT">
+			<CheckResource ParamIndex="1" Exists="2"/>
+			<MatchParams>
+				<MatchParam Name="bFailIfExists" TestOperator="=" TestValue="1"  CompareAsType="3" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileA" Allocation="GT">
+			<MatchParams>
+				<MatchParam Name="bFailIfExists" TestOperator="=" TestValue="0"  CompareAsType="3" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileW" Allocation="GT">
+			<CheckResource ParamIndex="1" Exists="2"/>
+			<MatchParams>
+				<MatchParam Name="bFailIfExists" TestOperator="=" TestValue="1"  CompareAsType="3" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileW" Allocation="GT">
+			<MatchParams>
+				<MatchParam Name="bFailIfExists" TestOperator="=" TestValue="0"  CompareAsType="3" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileExA" Allocation="GT">
+			<CheckResource ParamIndex="1" Exists="2"/>
+			<MatchParams>
+                <MatchParam Name="dwCopyFlags" TestOperator="binary contains" TestValue="1" CompareAsType="5" ID="5"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileExA" Allocation="GT">
+			<MatchParams>
+                <MatchParam Name="dwCopyFlags" TestOperator="binary not contains" TestValue="1" CompareAsType="5" ID="5"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileExW" Allocation="GT">
+			<CheckResource ParamIndex="1" Exists="2"/>
+			<MatchParams>
+                <MatchParam Name="dwCopyFlags" TestOperator="binary contains" TestValue="1" CompareAsType="5" ID="5"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileExW" Allocation="GT">
+			<MatchParams>
+                <MatchParam Name="dwCopyFlags" TestOperator="binary not contains" TestValue="1" CompareAsType="5" ID="5"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="2" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<CheckResource ParamIndex="0" Exists="2"/>
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="4" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="2" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<CheckResource ParamIndex="0" Exists="2"/>
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="4" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="ReplaceFileA" Allocation="GT"/>
+		<Function Name="ReplaceFileW" Allocation="GT"/>
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="WriteFile"/>
+		<Function Name="WriteFileEx"/>
+		<Function Name="WriteFileGather"/>
+	</Fault>
+	<Fault Name="File_Already_Exists" Type="Disk" ReturnValue="0" ErrorCode="183">
+		<Function Name="CopyFileA" OverrideErrorCode="80">
+			<MatchParams>
+				<MatchParam Name="bFailIfExists" TestOperator="=" TestValue="1"  CompareAsType="3" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileW" OverrideErrorCode="80">
+			<MatchParams>
+				<MatchParam Name="bFailIfExists" TestOperator="=" TestValue="1"  CompareAsType="3" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileExA" OverrideErrorCode="80">
+			<MatchParams>
+                <MatchParam Name="dwCopyFlags" TestOperator="binary contains" TestValue="1" CompareAsType="5" ID="5"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CopyFileExW" OverrideErrorCode="80">
+			<MatchParams>
+                <MatchParam Name="dwCopyFlags" TestOperator="binary contains" TestValue="1" CompareAsType="5" ID="5"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileA" PassThrough="True" OverrideErrorCode="No Change" OverrideReturnValue="No Change">
+			<CheckResource ParamIndex="0" Exists="3"/> 
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="!=" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileA" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" PassThrough="True" OverrideErrorCode="No Change" OverrideReturnValue="No Change">
+			<CheckResource ParamIndex="0" Exists="3"/> 
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="!=" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateFileW" OverrideReturnValue="-1">
+			<MatchParams>
+				<MatchParam Name="lpFileName" TestOperator="not contains" TestValue="\\."  CompareAsType="1" ID="0"/>
+                <MatchParam Name="dwCreationDisposition" TestOperator="=" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA">
+ 			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary not contains" TestValue="1" CompareAsType="5" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="MoveFileExW">
+ 			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary not contains" TestValue="1" CompareAsType="5" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="MoveFileWithProgressA">
+ 			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary not contains" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="MoveFileWithProgressW">
+ 			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary not contains" TestValue="1" CompareAsType="5" ID="4"/>
+			</MatchParams>
+		</Function>
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+		<Function Name="GetFileAttributesA" PassThrough="True" OverrideErrorCode="No Change" OverrideReturnValue="No Change">
+			<CheckResource ParamIndex="0" Exists="3"/> 
+		</Function>
+		<Function Name="GetFileAttributesW" PassThrough="True" OverrideErrorCode="No Change" OverrideReturnValue="No Change">
+			<CheckResource ParamIndex="0" Exists="3"/> 
+		</Function>
+		<Function Name="GetFileAttributesExA" PassThrough="True" OverrideErrorCode="No Change" OverrideReturnValue="No Change">
+			<CheckResource ParamIndex="0" Exists="3"/> 
+		</Function>
+		<Function Name="GetFileAttributesExW" PassThrough="True" OverrideErrorCode="No Change" OverrideReturnValue="No Change">
+			<CheckResource ParamIndex="0" Exists="3"/> 
+		</Function>
+	</Fault>
+	<Fault Name="File_Cannot_Be_Created" Type="Disk" ReturnValue="0" ErrorCode="82">
+		<Function Name="CopyFileA"/>
+		<Function Name="CopyFileW"/>
+		<Function Name="CopyFileExA"/>
+		<Function Name="CopyFileExW"/>
+		<Function Name="CreateFileA"/>
+		<Function Name="CreateFileW"/>
+		<Function Name="MoveFileA"/>
+		<Function Name="MoveFileW"/>
+		<Function Name="MoveFileExA"/>
+		<Function Name="MoveFileExW"/>
+		<Function Name="MoveFileWithProgressA"/>
+		<Function Name="MoveFileWithProgressW"/>
+		<Function Name="ReplaceFileA"/>
+		<Function Name="ReplaceFileW"/>
+		<Function Name="CreateDirectoryA"/>
+		<Function Name="CreateDirectoryW"/>
+		<Function Name="CreateDirectoryExA"/>
+		<Function Name="CreateDirectoryExW"/>
+	</Fault>
+	<Fault Name="Cannot_Remove_Directory" Type="Disk" ReturnValue="0" ErrorCode="16">
+		<Function Name="RemoveDirectoryA"/>
+		<Function Name="RemoveDirectoryW"/>
+	</Fault>
+	<Fault Name="Insufficient_Memory" Type="Memory" ReturnValue="0" ErrorCode="8">
+		<Function Name="malloc"/>
+		<Function Name="AllocateUserPhysicalPages"/>
+		<Function Name="GlobalAlloc"/>
+		<Function Name="GlobalReAlloc" Allocation="GT">
+			<MatchParams>
+				<MatchParam Name="uFlags" TestOperator="binary not contains" TestValue="128" CompareAsType="4" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="LocalAlloc"/>
+		<Function Name="LocalReAlloc" Allocation="GT">
+			<MatchParams>
+				<MatchParam Name="uFlags" TestOperator="binary not contains" TestValue="128" CompareAsType="4" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapAlloc" OverrideErrorCode="0"/>
+		<Function Name="HeapAlloc" Exception="3221225495" OverrideErrorCode="0">
+			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary contains" TestValue="4" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapReAlloc" OverrideErrorCode="0" Allocation="GT"/>
+		<Function Name="HeapReAlloc" Exception="3221225495" OverrideErrorCode="0" Allocation="GT">
+  			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary contains" TestValue="4" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapCreate"/>
+		<Function Name="VirtualAlloc"/>
+		<Function Name="VirtualAllocEx"/>
+	</Fault>
+	<Fault Name="Invalid_Access" Type="Memory" ReturnValue="0" ErrorCode="998">
+		<Function Name="malloc"/>
+		<Function Name="AllocateUserPhysicalPages"/>
+		<Function Name="FreeUserPhysicalPages"/>
+		<Function Name="MapUserPhysicalPages"/>
+		<Function Name="MapUserPhysicalPagesScatter"/>
+		<Function Name="GlobalAlloc"/>
+		<Function Name="GlobalReAlloc"/>
+		<Function Name="GlobalDiscard"/>
+		<Function Name="GlobalFree"/>
+		<Function Name="LocalAlloc"/>
+		<Function Name="LocalReAlloc"/>
+		<Function Name="LocalDiscard"/>
+		<Function Name="LocalFree"/>
+		<Function Name="HeapAlloc" OverrideErrorCode="0"/>
+		<Function Name="HeapAlloc" Exception="3221225477" OverrideErrorCode="0">
+			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary contains" TestValue="4" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapReAlloc" OverrideErrorCode="0" Allocation="GT"/>
+		<Function Name="HeapReAlloc" Exception="3221225477" OverrideErrorCode="0" Allocation="GT">
+  			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary contains" TestValue="4" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapCreate"/>
+		<Function Name="HeapDestroy"/>
+		<Function Name="HeapFree"/>
+		<Function Name="VirtualAlloc"/>
+		<Function Name="VirtualAllocEx"/>
+		<Function Name="VirtualFree"/>
+		<Function Name="VirtualFreeEx"/>
+	</Fault>
+	<Fault Name="Segment_Locked" Type="Memory" ReturnValue="0" ErrorCode="212">
+		<Function Name="FreeUserPhysicalPages"/>
+		<Function Name="GlobalReAlloc"/>
+		<Function Name="GlobalDiscard"/>
+		<Function Name="GlobalFree"/>
+		<Function Name="LocalReAlloc"/>
+		<Function Name="LocalDiscard"/>
+		<Function Name="LocalFree"/>
+		<Function Name="HeapReAlloc">
+  			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary not contains" TestValue="16" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapDestroy"/>
+		<Function Name="HeapFree"/>
+		<Function Name="VirtualFree"/>
+		<Function Name="VirtualFreeEx"/>
+	</Fault>
+	<Fault Name="Invalid_Address" Type="Memory" ReturnValue="0" ErrorCode="487">
+		<Function Name="MapUserPhysicalPages"/>
+		<Function Name="MapUserPhysicalPagesScatter"/>
+		<Function Name="VirtualAlloc"/>
+		<Function Name="VirtualAllocEx"/>
+		<Function Name="VirtualFree"/>
+		<Function Name="VirtualFreeEx"/>
+	</Fault>
+	<Fault Name="Page_File_Too_Small" Type="Memory" ReturnValue="0" ErrorCode="1454">
+		<Function Name="malloc"/>
+		<Function Name="AllocateUserPhysicalPages"/>
+		<Function Name="GlobalAlloc"/>
+		<Function Name="GlobalReAlloc" Allocation="GT">
+			<MatchParams>
+				<MatchParam Name="uFlags" TestOperator="binary not contains" TestValue="128" CompareAsType="4" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="LocalAlloc"/>
+		<Function Name="LocalReAlloc" Allocation="GT">
+			<MatchParams>
+				<MatchParam Name="uFlags" TestOperator="binary not contains" TestValue="128" CompareAsType="4" ID="2"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapCreate"/>
+		<Function Name="HeapAlloc" OverrideErrorCode="0"/>
+		<Function Name="HeapAlloc" Exception="3221225495" OverrideErrorCode="0">
+			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary contains" TestValue="4" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="HeapReAlloc" OverrideErrorCode="0" Allocation="GT"/>
+		<Function Name="HeapReAlloc" Exception="3221225495" OverrideErrorCode="0" Allocation="GT">
+  			<MatchParams>
+				<MatchParam Name="dwFlags" TestOperator="binary contains" TestValue="4" CompareAsType="5" ID="1"/>
+			</MatchParams>
+		</Function>
+		<Function Name="VirtualAlloc"/>
+		<Function Name="VirtualAllocEx"/>
+	</Fault>
+	<Fault Name="Network_Disconnected" Type="Network" ReturnValue="-1" ErrorCode="10050">
+		<Function Name="connect"/>
+		<Function Name="recv"/>
+		<Function Name="recvfrom"/>
+		<Function Name="send"/>
+		<Function Name="sendto"/>
+		<Function Name="WSAConnect"/>
+		<Function Name="WSARecv"/>
+		<Function Name="WSARecvFrom"/>
+		<Function Name="WSASend"/>
+		<Function Name="WSASendTo"/>
+	</Fault>
+	<Fault Name="Network_Not_Installed" Type="Network" ReturnValue="10091" ErrorCode="0">
+		<Function Name="WSAStartup"/>
+	</Fault>
+	<Fault Name="Wrong_Version_of_Winsock" Type="Network" ReturnValue="10092" ErrorCode="0">
+		<Function Name="WSAStartup"/>
+	</Fault>
+	<Fault Name="Winsock_Task_Limit_Reached" Type="Network" ReturnValue="10067" ErrorCode="0">
+		<Function Name="WSAStartup"/>
+	</Fault>
+	<Fault Name="No_Ports_Available" Type="Network" ReturnValue="-1" ErrorCode="10048">
+		<Function Name="bind"/>
+		<Function Name="connect"/>
+		<Function Name="WSAConnect"/>
+	</Fault>
+	<Fault Name="Network_Down" Type="Network" ReturnValue="-1" ErrorCode="10050">
+		<Function Name="accept"/>
+		<Function Name="bind"/>
+		<Function Name="closesocket"/>
+		<Function Name="connect"/>
+		<Function Name="getpeername"/>
+		<Function Name="getsockname"/>
+		<Function Name="getsockopt"/>
+		<Function Name="ioctlsocket"/>
+		<Function Name="listen"/>
+		<Function Name="recv"/>
+		<Function Name="recvfrom"/>
+		<Function Name="select"/>
+		<Function Name="send"/>
+		<Function Name="sendto"/>
+		<Function Name="setsockopt"/>
+		<Function Name="shutdown"/>
+		<Function Name="socket"/>
+		<Function Name="WSAAccept"/>
+		<Function Name="WSAAsyncGetHostByAddr" OverrideReturnValue="0"/>
+		<Function Name="WSAAsyncGetHostByName" OverrideReturnValue="0"/>
+		<Function Name="WSAAsyncGetProtoByName" OverrideReturnValue="0"/>
+		<Function Name="WSAAsyncGetProtoByNumber" OverrideReturnValue="0"/>
+		<Function Name="WSAAsyncGetServByName" OverrideReturnValue="0"/>
+		<Function Name="WSAAsyncGetServByPort" OverrideReturnValue="0"/>
+		<Function Name="WSAAsyncSelect"/>
+		<Function Name="WSACancelAsyncRequest"/>
+		<Function Name="WSACleanup"/>
+		<Function Name="WSACloseEvent" OverrideReturnValue="0"/>
+		<Function Name="WSAConnect"/>
+		<Function Name="WSACreateEvent" OverrideReturnValue="0"/>
+		<Function Name="WSADuplicateSocket"/>
+		<Function Name="WSAEnumNetworkEvents"/>
+		<Function Name="WSAEnumProtocolsA"/>
+		<Function Name="WSAEnumProtocolsW"/>
+		<Function Name="WSAEventSelect"/>
+		<Function Name="WSAGetOverlappedResult" OverrideReturnValue="0"/>
+		<Function Name="WSAGetQOSByName" OverrideReturnValue="0"/>
+		<Function Name="WSAIoctl"/>
+		<Function Name="WSAJoinLeaf"/>
+		<Function Name="WSAProviderConfigChange"/>
+		<Function Name="WSARecv"/>
+		<Function Name="WSARecvFrom"/>
+		<Function Name="WSAResetEvent" OverrideReturnValue="0"/>
+		<Function Name="WSASend"/>
+		<Function Name="WSASendTo"/>
+		<Function Name="WSASetEvent" OverrideReturnValue="0"/>
+		<Function Name="WSASocketA"/>
+		<Function Name="WSASocketW"/>
+		<Function Name="WSAWaitForMultipleEvents"/>
+	</Fault>
+	<Fault Name="Key_Not_Found" Type="Registry" ReturnValue="2" ErrorCode="0">
+		<Function Name="RegDeleteKeyA"/>
+		<Function Name="RegDeleteKeyW"/>
+		<Function Name="RegOpenKeyA"/>
+		<Function Name="RegOpenKeyW"/>
+		<Function Name="RegOpenKeyExA"/>
+		<Function Name="RegOpenKeyExW"/>
+		<Function Name="RegReplaceKeyA"/>
+		<Function Name="RegReplaceKeyW"/>
+		<Function Name="RegRestoreKeyA"/>
+		<Function Name="RegRestoreKeyW"/>
+		<Function Name="RegUnloadKeyA"/>
+		<Function Name="RegUnloadKeyW"/>
+	</Fault>
+	<Fault Name="Value_Not_Found" Type="Registry" ReturnValue="2" ErrorCode="0">
+		<Function Name="RegDeleteValueA"/>
+		<Function Name="RegDeleteValueW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+	</Fault>
+	<Fault Name="Access_Denied" Type="Registry" ReturnValue="5" ErrorCode="0">
+		<Function Name="RegCreateKeyA"/>
+		<Function Name="RegCreateKeyW"/>
+		<Function Name="RegCreateKeyExA"/>
+		<Function Name="RegCreateKeyExW"/>
+		<Function Name="RegDeleteKeyA"/>
+		<Function Name="RegDeleteKeyW"/>
+		<Function Name="RegConnectRegistryA"/>
+		<Function Name="RegConnectRegistryW"/>
+		<Function Name="RegDeleteValueA"/>
+		<Function Name="RegDeleteValueW"/>
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegOpenKeyA"/>
+		<Function Name="RegOpenKeyW"/>
+		<Function Name="RegOpenKeyExA"/>
+		<Function Name="RegOpenKeyExW"/>
+		<Function Name="RegOpenUserClassesRoot"/>
+		<Function Name="RegGetKeySecurity"/>
+		<Function Name="RegLoadKeyA"/>
+		<Function Name="RegLoadKeyW"/>
+		<Function Name="RegQueryInfoKeyA"/>
+		<Function Name="RegQueryInfoKeyW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+		<Function Name="RegReplaceKeyA"/>
+		<Function Name="RegReplaceKeyW"/>
+		<Function Name="RegRestoreKeyA"/>
+		<Function Name="RegRestoreKeyW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegSetKeySecurity"/>
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+	</Fault>
+	<Fault Name="Query_Buffer_Too_Small" Type="Registry" ReturnValue="234" ErrorCode="0">
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+	</Fault>
+	<Fault Name="No_More_Query_Items" Type="Registry" ReturnValue="259" ErrorCode="0">
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+	</Fault>
+	<Fault Name="Registry_Is_Corrupt" Type="Registry" ReturnValue="1015" ErrorCode="0">
+		<Function Name="RegCloseKey"/>
+		<Function Name="RegConnectRegistryA"/>
+		<Function Name="RegConnectRegistryW"/>
+		<Function Name="RegCreateKeyA"/>
+		<Function Name="RegCreateKeyW"/>
+		<Function Name="RegCreateKeyExA"/>
+		<Function Name="RegCreateKeyExW"/>
+		<Function Name="RegDeleteKeyA"/>
+		<Function Name="RegDeleteKeyW"/>
+		<Function Name="RegDeleteValueA"/>
+		<Function Name="RegDeleteValueW"/>
+		<Function Name="RegDisablePredefinedCache"/>
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegFlushKey"/>
+		<Function Name="RegGetKeySecurity"/>
+		<Function Name="RegLoadKeyA"/>
+		<Function Name="RegLoadKeyW"/>
+		<Function Name="RegNotifyChangeKeyValue"/>
+		<Function Name="RegOpenCurrentUser"/>
+		<Function Name="RegOpenKeyA"/>
+		<Function Name="RegOpenKeyW"/>
+		<Function Name="RegOpenKeyExA"/>
+		<Function Name="RegOpenKeyExW"/>
+		<Function Name="RegOpenUserClassesRoot"/>
+		<Function Name="RegOverridePredefKey"/>
+		<Function Name="RegQueryInfoKeyA"/>
+		<Function Name="RegQueryInfoKeyW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+		<Function Name="RegReplaceKeyA"/>
+		<Function Name="RegReplaceKeyW"/>
+		<Function Name="RegRestoreKeyA"/>
+		<Function Name="RegRestoreKeyW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegSetKeySecurity"/>
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+		<Function Name="RegUnloadKeyA"/>
+		<Function Name="RegUnloadKeyW"/>
+	</Fault>
+	<Fault Name="Key_Is_Corrupt" Type="Registry" ReturnValue="1010" ErrorCode="0">
+		<Function Name="RegCloseKey"/>
+		<Function Name="RegConnectRegistryA"/>
+		<Function Name="RegConnectRegistryW"/>
+		<Function Name="RegCreateKeyA"/>
+		<Function Name="RegCreateKeyW"/>
+		<Function Name="RegCreateKeyExA"/>
+		<Function Name="RegCreateKeyExW"/>
+		<Function Name="RegDeleteKeyA"/>
+		<Function Name="RegDeleteKeyW"/>
+		<Function Name="RegDeleteValueA"/>
+		<Function Name="RegDeleteValueW"/>
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegFlushKey"/>
+		<Function Name="RegGetKeySecurity"/>
+		<Function Name="RegNotifyChangeKeyValue"/>
+		<Function Name="RegOpenCurrentUser"/>
+		<Function Name="RegOpenKeyA"/>
+		<Function Name="RegOpenKeyW"/>
+		<Function Name="RegOpenKeyExA"/>
+		<Function Name="RegOpenKeyExW"/>
+		<Function Name="RegOpenUserClassesRoot"/>
+		<Function Name="RegQueryInfoKeyA"/>
+		<Function Name="RegQueryInfoKeyW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegSetKeySecurity"/>
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+		<Function Name="RegUnloadKeyA"/>
+		<Function Name="RegUnloadKeyW"/>
+	</Fault>
+	<Fault Name="Key_Cannot_Be_Opened" Type="Registry" ReturnValue="1011" ErrorCode="0">
+		<Function Name="RegCreateKeyA"/>
+		<Function Name="RegCreateKeyW"/>
+		<Function Name="RegCreateKeyExA"/>
+		<Function Name="RegCreateKeyExW"/>
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegOpenCurrentUser"/>
+		<Function Name="RegOpenKeyA"/>
+		<Function Name="RegOpenKeyW"/>
+		<Function Name="RegOpenKeyExA"/>
+		<Function Name="RegOpenKeyExW"/>
+		<Function Name="RegOpenUserClassesRoot"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+	</Fault>
+	<Fault Name="Value_Cannot_Be_Read" Type="Registry" ReturnValue="1012" ErrorCode="0">
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegQueryInfoKeyA"/>
+		<Function Name="RegQueryInfoKeyW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+	</Fault>
+	<Fault Name="Value_Cannot_Be_Written" Type="Registry" ReturnValue="1013" ErrorCode="0">
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+	</Fault>
+	<Fault Name="IO_Operation_Failed" Type="Registry" ReturnValue="1016" ErrorCode="0">
+		<Function Name="RegLoadKeyA"/>
+		<Function Name="RegLoadKeyW"/>
+		<Function Name="RegRestoreKeyA"/>
+		<Function Name="RegRestoreKeyW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegUnloadKeyA"/>
+		<Function Name="RegUnloadKeyW"/>
+	</Fault>
+	<Fault Name="Key_Marked_For_Deletion" Type="Registry" ReturnValue="1018" ErrorCode="0">
+		<Function Name="RegDeleteKeyA"/>
+		<Function Name="RegDeleteKeyW"/>
+		<Function Name="RegDeleteValueA"/>
+		<Function Name="RegDeleteValueW"/>
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegFlushKey"/>
+		<Function Name="RegGetKeySecurity"/>
+		<Function Name="RegNotifyChangeKeyValue"/>
+		<Function Name="RegQueryInfoKeyA"/>
+		<Function Name="RegQueryInfoKeyW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegSetKeySecurity"/>
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+	</Fault>
+	<Fault Name="No_Log_Space" Type="Registry" ReturnValue="1019" ErrorCode="0">
+		<Function Name="RegCloseKey"/>
+		<Function Name="RegConnectRegistryA"/>
+		<Function Name="RegConnectRegistryW"/>
+		<Function Name="RegCreateKeyA"/>
+		<Function Name="RegCreateKeyW"/>
+		<Function Name="RegCreateKeyExA"/>
+		<Function Name="RegCreateKeyExW"/>
+		<Function Name="RegDeleteKeyA"/>
+		<Function Name="RegDeleteKeyW"/>
+		<Function Name="RegDeleteValueA"/>
+		<Function Name="RegDeleteValueW"/>
+		<Function Name="RegDisablePredefinedCache"/>
+		<Function Name="RegEnumKeyA"/>
+		<Function Name="RegEnumKeyW"/>
+		<Function Name="RegEnumKeyExA"/>
+		<Function Name="RegEnumKeyExW"/>
+		<Function Name="RegEnumValueA"/>
+		<Function Name="RegEnumValueW"/>
+		<Function Name="RegFlushKey"/>
+		<Function Name="RegGetKeySecurity"/>
+		<Function Name="RegLoadKeyA"/>
+		<Function Name="RegLoadKeyW"/>
+		<Function Name="RegNotifyChangeKeyValue"/>
+		<Function Name="RegOpenCurrentUser"/>
+		<Function Name="RegOpenKeyA"/>
+		<Function Name="RegOpenKeyW"/>
+		<Function Name="RegOpenKeyExA"/>
+		<Function Name="RegOpenKeyExW"/>
+		<Function Name="RegOpenUserClassesRoot"/>
+		<Function Name="RegOverridePredefKey"/>
+		<Function Name="RegQueryInfoKeyA"/>
+		<Function Name="RegQueryInfoKeyW"/>
+		<Function Name="RegQueryMultipleValuesA"/>
+		<Function Name="RegQueryMultipleValuesW"/>
+		<Function Name="RegQueryValueA"/>
+		<Function Name="RegQueryValueW"/>
+		<Function Name="RegQueryValueExA"/>
+		<Function Name="RegQueryValueExW"/>
+		<Function Name="RegReplaceKeyA"/>
+		<Function Name="RegReplaceKeyW"/>
+		<Function Name="RegRestoreKeyA"/>
+		<Function Name="RegRestoreKeyW"/>
+		<Function Name="RegSaveKeyA"/>
+		<Function Name="RegSaveKeyW"/>
+		<Function Name="RegSetKeySecurity"/>
+		<Function Name="RegSetValueA"/>
+		<Function Name="RegSetValueW"/>
+		<Function Name="RegSetValueExA"/>
+		<Function Name="RegSetValueExW"/>
+		<Function Name="RegUnloadKeyA"/>
+		<Function Name="RegUnloadKeyW"/>
+	</Fault>
+	<Fault Name="Process_File_Not_Found" Type="Process" ReturnValue="0" ErrorCode="2">
+		<Function Name="LoadLibraryA"/>
+		<Function Name="LoadLibraryW"/>
+		<Function Name="LoadLibraryExA"/>
+		<Function Name="LoadLibraryExW"/>
+		<Function Name="CreateProcessA"/>
+		<Function Name="CreateProcessW"/>
+		<Function Name="CreateProcessAsUserA"/>
+		<Function Name="CreateProcessAsUserW"/>
+		<Function Name="CreateProcessWithLogonW"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="LoadModule"/>
+	</Fault>
+	<Fault Name="Not_Enough_Resources" Type="Process" ReturnValue="0" ErrorCode="8">
+		<Function Name="LoadLibraryA"/>
+		<Function Name="LoadLibraryW"/>
+		<Function Name="LoadLibraryExA"/>
+		<Function Name="LoadLibraryExW"/>
+		<Function Name="CreateProcessA"/>
+		<Function Name="CreateProcessW"/>
+		<Function Name="CreateProcessAsUserA"/>
+		<Function Name="CreateProcessAsUserW"/>
+		<Function Name="CreateProcessWithLogonW"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="LoadModule"/>
+	</Fault>
+	<Fault Name="Invalid_File_Type" Type="Process" ReturnValue="0" ErrorCode="193">
+		<Function Name="LoadLibraryA" OverrideErrorCode="126" OverrideReturnValue="1"/>
+		<Function Name="LoadLibraryW" OverrideErrorCode="126" OverrideReturnValue="1"/>
+		<Function Name="LoadLibraryExA" OverrideErrorCode="126" OverrideReturnValue="1"/>
+		<Function Name="LoadLibraryExW" OverrideErrorCode="126" OverrideReturnValue="1"/>
+		<Function Name="CreateProcessA"/>
+		<Function Name="CreateProcessW"/>
+		<Function Name="CreateProcessAsUserA"/>
+		<Function Name="CreateProcessAsUserW"/>
+		<Function Name="CreateProcessWithLogonW"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="LoadModule" OverrideReturnValue="11"/>
+	</Fault>
+	<Fault Name="Access_Denied" Type="Process" ReturnValue="0" ErrorCode="5">
+		<Function Name="LoadLibraryA"/>
+		<Function Name="LoadLibraryW"/>
+		<Function Name="LoadLibraryExA"/>
+		<Function Name="LoadLibraryExW"/>
+		<Function Name="CreateProcessA"/>
+		<Function Name="CreateProcessW"/>
+		<Function Name="CreateProcessAsUserA"/>
+		<Function Name="CreateProcessAsUserW"/>
+		<Function Name="CreateProcessWithLogonW"/>
+		<Function Name="GetBinaryTypeA"/>
+		<Function Name="GetBinaryTypeW"/>
+		<Function Name="LoadModule"/>
+	</Fault>
+	<Fault Name="COM_Object_Does_Not_Exist" Type="Custom" ReturnValue="2147746132" ErrorCode="0">
+		<Function Name="CoCreateInstance"/>
+		<Function Name="CoCreateInstanceEx"/>
+		<Function Name="OleCreate" OverrideReturnValue="2147500034"/>
+		<Function Name="OleCreateEx" OverrideReturnValue="2147500034"/>
+	</Fault>
+</Faults>

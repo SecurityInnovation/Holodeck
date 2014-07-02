@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>HolodeckLib Application Execution and Control</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nHolodeckLib\nHolodeckLib Application Execution and Control");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/HolodeckLib/HolodeckLib_Log_Operations.htm","Automated_Testing_with_Holodeck/HolodeckLib/HolodeckLib_Limit_Control.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>HolodeckLib Application Execution and Control</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> LaunchApplication(String * applicationName, String * cmdLine, <FONT style="color:blue; " >bool</FONT> startPaused);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Launch an application that is not currently running</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >applicationName</FONT> – the full path to the application to launch</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >cmdLine</FONT> – any command line arguments the application requires to start properly</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >startPaused</FONT> – Start the application in a paused state</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> AttachApplication(<FONT style="color:blue; " >unsigned</FONT> <FONT style="color:blue; " >long</FONT> processID, <FONT style="color:blue; " >bool</FONT> pauseOnAttach);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attach to an application that is currently running</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >processID</FONT> – the ProcessID of which to attach.</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pauseOnAttach</FONT> – Pause the application as soon as the Test Application has attached</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> LaunchService(String *serviceName, <FONT style="color:blue; " >bool</FONT> startPaused);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Launch a service that is not currently running</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >serviceName</FONT> – the name of the service to launch</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >startPaused</FONT> – Start the service in a paused state.</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> AttachService(String *serviceName, <FONT style="color:blue; " >bool</FONT> startPaused);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attach to a service that is currently running</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >serviceName</FONT> – the name of the service to launch</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >startPaused</FONT> – Pause the service as soon as the Test Application has attached</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> PauseApplication();</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Pause the application</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-left:23.75pt;">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> ResumeApplication();</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Resume the application from a paused state</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> TerminateApplication();</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Terminate Execution of the application</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> GetApplicationProcessID(UInt32 &amp;processID);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Retrieves the process ID for the current application</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >processID – </FONT>the process ID of the current application</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> GetApplicationThreadID(UInt32 &amp;threadID);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Retrieve the test application’s ThreadID</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >threadID</FONT><FONT style="font-weight:bold; " > – </FONT>the Thread ID of the current thread.</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> SetUseProcessChaining(<FONT style="color:blue; " >bool</FONT> useChaining);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Set HolodeckLib to use <A href="../../Holodeck_in_depth/Multiple_Threads_and_Processes/Dealing_with_Multiple_Processes.htm">process chaining</A> </P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >useChaining </FONT>– Use process chaining</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >void</FONT> SetDotNetLibraryInitList(ArrayList * externalLibsList);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Passes the specified list of .NET dll names to the Kernel32 replacement library so that at load time the intercepted versions of the dlls are used rather than the originals.</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >externalLibsList</FONT> – an arraylist of .NET dll names that will be intercepted.</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>How to compare log files</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nAdvanced\nTest Harness and Code Coverage\nHow to compare log files");
+addAvenueInfo("MAIN","Tutorials/Advanced/Test_Harness_and_Code_Coverage/Begin_testing_with_Code_Coverage.htm","Getting_Started/Getting_started_guide.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>How to compare log files</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The two files we will compare are Holodeck’s Recorded Session log (Recorded Sessions\Recorded Session #1.xml) and the log from our test harness. By matching the timestamps, or the order of execution, we can tell which faults caused which errors, making for easy reproduction. To match the timestamps, open the Recorded Sesson.xml file and look for the TimeStamp attribute of the &lt;Log&gt; tag, then look at your own timestamp from your test harness. When two match, you have found the cause of the fault (the &lt;Inject&gt; tag from Recorded Session.xml) and what happened (the log file from the test harness). The two log files are included in the resources section of this document.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >How to Compare Log Files:</FONT></P>
+ <P>Using the Recorded Session #1.xml file and a test harness that logs each crash with a timestamp you can match which fault caused which timestamp. Notice the timestamp is set as soon as that fault was set, which may or may not cause an immediate failure in the Application Under Test. </P>
+ <P>&nbsp;</P>
+ <P>Match timestamps by working backward in time from the Exception, you can see which faults, tests, and limits were set before the exception happened. The Test Harness Log timestamps are often a few seconds after the Recorded Sessions #1.xml timestamps, because the Application Under Test often does not fail immediately after a fault is set. Multiple Faults, Tests, or Limits might be set for any given Exception, so when working backwards you will have to keep track of how each Fault, Test, or Limit was set, deleted or modified. It is also important to make sure you consider Session numbers, each session is a new instance of the Application Under Test, which means all Faults, Tests, and Limits have been reset, be sure not to traverse Sessions or you will not be matching the proper Exceptions with the proper Recorded Session.</P>
+ <P>&nbsp;</P>
+ <P>The following logs match up as follows:</P>
+ <P>Fault 1 (File not found) caused the first Exception</P>
+ <P>Fault 2 (Can’t access file) caused the third Exception</P>
+ <P>Fault 3 (Access denied to file) caused the second Exception</P>
+ <P>Fault 4 (File is write protected) caused the fourth Exception</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >1.</FONT>&nbsp;&nbsp;&nbsp;&nbsp;<FONT style="font-weight:bold; " >Recorded Session #1.xml </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Recorded_Session&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Log&nbsp;Index=&quot;1&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;TimeStamp=&quot;7/21/2003 17:8:12.906&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;Session=&quot;1&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;AppName=&quot;notepad.exe&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Inject Type=&quot;21&quot; Name=&quot;File not found&quot; Enabled=&quot;2&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;/Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Log Index=&quot;1&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;TimeStamp=&quot;7/21/2003 17:8:20.109&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;Session=&quot;2&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;AppName=&quot;notepad.exe&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Inject Type=&quot;21&quot; Name=&quot;Can't access file&quot; Enabled=&quot;2&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;/Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Log Index=&quot;1&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;TimeStamp=&quot;7/21/2003 17:8:26.718&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;Session=&quot;3&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;AppName=&quot;notepad.exe&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Inject Type=&quot;21&quot; Name=&quot;Access denied to file&quot; Enabled=&quot;2&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;/Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Log Index=&quot;1&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;TimeStamp=&quot;7/21/2003 17:9:13.625&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;Session=&quot;4&quot; </FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;AppName=&quot;notepad.exe&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;Inject Type=&quot;21&quot; Name=&quot;File is write protected&quot; Enabled=&quot;2&quot; /&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;/Record&gt;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&lt;/Recorded_Session&gt;</FONT></P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >2.</FONT>&nbsp;&nbsp;&nbsp;&nbsp;<FONT style="font-weight:bold; " >TestHarnessLog.txt</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >-------- First chance exception, VERY LOW chance of exploitation --------</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Exception #1 in test case #2</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Process HolodeckGui.exe caused access violation:</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Read of 0x00000000 at instruction 0x040f5314</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Test case started at 7/21/2003 17:8:14.76</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >-------- First chance exception, LOW chance of exploitation --------</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Exception #2 in test case #2</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Process HolodeckGui.exe caused access violation:</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Read of 0x0000004c at instruction 0x040f19c6</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Test case started at 7/21/2003 17:8:28.40</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >-------- First chance exception, LOW chance of exploitation --------</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Exception #3 in test case #2</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Process HolodeckGui.exe caused access violation:</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Read of 0x0000004c at instruction 0x77e73887</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Test case started at 7/21/2003 17:8:22.9</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >-------- First chance exception, VERY LOW chance of exploitation --------</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Exception #4 in test case #2</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Process HolodeckGui.exe caused access violation:</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Read of 0x00000000 at instruction 0x0390e241</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >Test case started at 7/21/2003 17:9:16.10</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Begin_testing_with_Code_Coverage.htm">&lt;&lt; Previous</A>     <A href="Summary_6.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

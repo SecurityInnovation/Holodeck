@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Create a Memory Fault for BrokenApp.exe</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nBeginner\nDealing with Multiple Processes\nCreate a Memory Fault for BrokenApp.exe");
+addAvenueInfo("MAIN","Tutorials/Beginner/Dealing_with_Multiple_Processes/Create_a_File_in_Use_fault_for_Notepad_exe.htm","Tutorials/Beginner/Dealing_with_Multiple_Processes/Create_a_memory_limit_for_Notepad_exe.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Create a Memory Fault for BrokenApp.exe</H1>
+ <P>Invalid Address faults can happen when a memory address has been stored incorrectly or has been changed by corrupt RAM. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:36.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Select BrokenApp.exe &gt; Faults &gt; Memory in the <A href="../../../Holodeck_Windows_and_Panes/Project_Pane.htm">Project Pane.</A> </P>
+ <P style="margin-left:36.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>In the <A href="../../../Holodeck_Windows_and_Panes/Faults_Pane.htm">Faults Pane</A> select &quot;Invalid Address.&quot;</P>
+ <P style="margin-left:36.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Verify Failure:</P>
+ <P style="margin-left:36.00pt;">In BrokenApp type a few words, then apply bold to the text by clicking Format &gt; Bold on the menu. BrokenApp quickly crashes without throwing an error.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Investigating the error</FONT></P>
+ <P>We can investigate BrokenApp’s failure many ways, but using the built in reporting feature of Holodeck is the easiest. To create a report right click the Reports node in the Project Pane and select &quot;Create a Report.&quot; Holodeck will generate a report on all the processes currently running in this project in an easy to read file, for more information on this feature please see the <A href="../../../Holodeck_in_depth/Working_with_Reports/Reports_Overview.htm">Reports section</A> of the help documents.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Amongst other things, the API failures of the BrokenApp process are recorded in the &quot;Error Codes Summary Table.&quot; To research this failure drill down into the Error Codes of type &quot;Fail&quot; by clicking the plus [+] sign next to fail. This will show the error codes type &quot;Fail&quot; broken into the categories by Error Code. We want to know what functions failed right before the crash, so expand the &quot;Total&quot; Error Code, which was compiled by Holodeck to show all the error codes in chronological order. Click the plus [+] sign next to the Total row under the BrokenApp column to see all the errors that BrokenApp created. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Scroll all the way to the bottom of this list of error codes, to see the final calls BrokenApp made. Here we can see calls to memory allocation functions in the System.IO.MemoryStream class. Since we know the error happened after typing some text and applying the bold format to it, the developer could begin by investigating the source code around the function relevant to these operation and looking for any place he/she is allocating memory. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Create_a_File_in_Use_fault_for_Notepad_exe.htm">&lt;&lt; Previous</A>     <A href="Create_a_memory_limit_for_Notepad_exe.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

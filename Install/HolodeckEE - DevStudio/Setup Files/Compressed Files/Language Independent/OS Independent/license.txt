@@ -1,0 +1,51 @@
+Holodeck Enterprise License Agreement
+
+
+READ THE TERMS AND CONDITIONS OF THIS AGREEMENT CAREFULLY BEFORE LOADING, AND/OR OTHERWISE USING THE SOFTWARE.  THIS AGREEMENT REPRESENTS THE ENTIRE AGREEMENT CONCERNING THE SOFTWARE BETWEEN YOU AND SECURITY INNOVATION, AND IT SUPERCEDES ANY PRIOR PROPOSAL OR UNDERSTANDING BETWEEN YOU AND SECURITY INNOVATION.  BY DOWNLOADING OR INSTALLING THE SOFTWARE, AND/OR USING THE SOFTWARE, YOU ARE ACCEPTING AND AGREEING TO THE TERMS OF THIS AGREEMENT, AND ARE THEREBY CREATING A CONTRACTUAL AGREEMENT BETWEEN YOU AND SECURITY INNOVATION.  IF YOU ARE NOT WILLING TO BE BOUND BY THE TERMS OF THIS AGREEMENT, YOU SHOULD NOT DOWNLOAD, INSTALL, OR USE THE SOFTWARE, AND PROMPTLY RETURN THE SOFTWARE AND ASSOCIATED DOCUMENTATION.
+
+1. LICENSE GRANT
+Security Innovation grants to you, and you accept, a perpetual, non-exclusive, and non-transferable license to use one (1) copy of the Holodeck Enterprise software program(s) provided by SECURITY INNOVATION, and the accompanying user documentation ("Documentation"), (collectively, the "Software") on one (1) personal computer only as authorized in this Agreement.  You may not assign, transfer, rent, or sublicense the Software (any violation of the foregoing will result in automatic termination of the license without any right of refund).  The Software consists of proprietary products of SECURITY INNOVATION or its third party suppliers, and the proprietary rights that protect such property may include, but are not limited to, U.S. and international copyrights, trademarks, patents, and trade secret laws of general applicability.  All right, title and interest in and to the Software are and shall remain with SECURITY INNOVATION or its third party suppliers, as applicable.  This Agreement does not convey to you any interest in or title to the Software, but only a limited right of use revocable in accordance with its terms.
+
+For SECURITY INNOVATION software testing products, CUSTOMER is hereby granted a license solely for use in a single network owned and operated by CUSTOMER.  If CUSTOMER desires to provide service to third parties, additional fees shall be payable for each engagement.
+
+2. INSTALLATION AND RESTRICTIONS
+You assume responsibility for selection of the Software to achieve your intended results and for the installation, use, and rendering operable the Software.  You agree at all times to maintain records specifically identifying the Software and the personal computers on which the Software is being used and to make such records available for inspection by SECURITY INNOVATION during normal business hours.
+	
+You may make copies of the software media solely for backup, disaster recovery, or archival purposes, which copies shall contain SECURITY INNOVATION’s copyright and other proprietary notices.  You may not modify, translate, adapt, decompile, disassemble, decrypt, extract, or otherwise reverse engineer or attempt to discover the confidential source code and techniques incorporated in the Software.  You may not create derivative software based on any trade secret or proprietary information of SECURITY INNOVATION.
+	
+3. LICENSE FEES
+The license fees paid by you are in consideration of the licenses granted under this Agreement.  If the Software is under evaluation and no license fees have been paid, this Agreement will expire at the end of the evaluation period unless Licensee has purchased a license key to enable subsequent activation.
+	
+4. TERMINATION
+This License Agreement is effective until terminated. You may terminate this License Agreement at any time.   The License Agreement will also terminate if you fail to comply with any terms and conditions set forth elsewhere herein.  You agree upon any termination to destroy the Software together with all copies, modifications and merged portions in any form, and certify in writing that you have done so. 
+	
+	
+5. LIMITED WARRANTY
+For sixty (60) days (the "Warranty Period") from your date of purchase, SECURITY INNOVATION warrants for your benefit alone, that (i) the Software will substantially conform to the applicable Documentation and (ii) the media on which the Software is distributed and the Documentation (if any) are free from defects in materials and workmanship and, (iii) during the Warranty Period, the Software will operate substantially in accordance with the Documentation. If during the Warranty Period an error in the Software occurs, you may return the Software to SECURITY INNOVATION for either repair or replacement, or if so elected by SECURITY INNOVATION, refund of the license fee paid by you under this Agreement.
+
+THE FOREGOING ARE THE ONLY WARRANTIES PROVIDED BY SECURITY INNOVATION AND SECURITY INNOVATION DISCLAIMS ANY AND ALL OTHER WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+	
+6. LIMITATION OF LIABILITY
+Because computer software is inherently complex and may not be completely free of errors, it is your responsibility to verify your work and to make backup copies, and SECURITY INNOVATION will not be responsible for your failure to do so. SECURITY INNOVATION’S cumulative liability to you or any party for any loss or damages resulting from any claims, demands, or actions arising out of or relating to this Agreement shall not exceed the license fee paid to SECURITY INNOVATION for the applicable Software.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL SECURITY INNOVATION BE LIABLE FOR INDIRECT, SPECIAL, INCIDENTAL, ECONOMIC, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE SECURITY INNOVATION PRODUCTS OR SERVICES, INCLUDING, WITHOUT LIMITATION, DAMAGES OR COSTS RELATING TO THE LOSS OF PROFITS, BUSINESS, GOODWILL, DATA, OR COMPUTER PROGRAMS, EVEN IF SECURITY INNOVATION HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE EXCLUSION OR LIMITATION MAY NOT APPLY TO YOU.
+	
+7. U.S. GOVERNMENT RESTRICTED RIGHTS
+If the Software and Documentation (collectively the "Software") are acquired on behalf of a unit or agency of the United States Government this provision applies.
+For units of the Department of Defense (DoD), this Software is supplied only with "Restricted Rights" as that term is defined in the DoD Supplement to the Federal Acquisition Regulations, 52.227-7013(c)(1)(ii) and: Use, duplication or disclosure by the Government is subject to restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in Technical Data and Computer Software clause at DFARS 52.227-7013. Contractor: SECURITY INNOVATION, Inc., 187 Ballardvale Street, Wilmington, MA 01887
+
+Government personnel using this Software, other than under a DoD contract or GSA Schedule, are hereby on notice that use of this Software is subject to restricted rights, which are the same as, or similar to those specified above.
+	
+8. GENERAL
+This Agreement will be governed by the laws of the Commonwealth of Massachusetts without regard to conflict of law principles. The export of this product is governed by the U.S. Department of Commerce under Export Administration Regulations and may be exported to appropriate countries and end-users under either authorization ENC or NLR.  In the event the product contains cryptographic software, regulation ENC applies, otherwise regulation NLR applies.  The appropriate classification for each product is specified on Security Innovation’s website.  It is the responsibility of the exporter to adhere to appropriate Export Administration Regulations.  You shall remain fully responsible for and certify compliance with all applicable Export laws and regulations, and you agree to indemnify Security Innovation from all costs, expenses, and liability for such compliance.
+
+Should any term of this Agreement be declared void or unenforceable by any court of competent jurisdiction such declaration shall have no effect on the remaining terms hereof. 
+
+SECURITY INNOVATION, INC.
+187 Ballardvale Street
+Wilmington, MA 01887
+
+Phone: (978) 694-1008
+Fax  : (978) 694-1666
+Email: support@securityinnovation.com 
+                                    

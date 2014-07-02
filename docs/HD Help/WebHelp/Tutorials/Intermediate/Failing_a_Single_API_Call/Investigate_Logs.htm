@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Investigate Logs</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nFailing a Single API Call\nInvestigate Logs");
+addAvenueInfo("HD HELP 2_5","Tutorials/Intermediate/Using_Code_Coverage_with_Record_Replay_to_Test_the_Application/Summary_5.htm","Tutorials/Intermediate/Failing_a_Single_API_Call/Failing_the_ReadLine_function.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Investigate Logs</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To investigate logs we first must do a little research to see how the BrokenApp handles the open URL menu item. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Once BrokenApp has finished loading return to Holodeck and open the API logs from the <A href="../../../Holodeck_Windows_and_Panes/Project_Pane.htm">Project Pane</A> by double clicking on the API log icon. For easier investigation we want to filter only the API calls that happen for one specific feature within the application; create a timestamp <A href="../../../Holodeck_in_depth/Working_with_Logs/Custom_Log_Filtering_and_Sorting.htm">Custom Filter</A>. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To create a custom filter right click the TimeStamp column header and select Custom Filter. This will bring up the Custom Filter dialog box for the TimeStamp column. Click the Now button on the From row, then click the Now button on the To row, this will set the viewable logs in the log pane to those that only show up between those two times. There should not be any log entries. </P>
+ <P><IMG src="../../../images/ebx_1517645155.gif" border=0 height=229 width=500 alt="images\ebx_1517645155.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Return to BrokenApp and Click File &gt; &quot;Open URL…&quot; This will bring up the Enter URL to Open dialog box. Type &quot;http://www.google.com&quot; into this box. Google was chosen because it is a small and lightweight webpage, and won’t take long to download. </P>
+ <P><IMG src="../../../images/ebx_-1981832014.gif" border=0 height=77 width=316 alt="images\ebx_-1981832014.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Once the BrokenApp has finished loading the URL return to Holodeck and expand your logs to include the log entries that were just created by this function. Right click the TimeStamp header and when the TimeStamp filter dialog box pops up click the &quot;Now&quot; button on the &quot;To&quot; row; doing this will expand the logs available for viewing to all logs that have been recorded since the last TimeStamp filter until now.</P>
+ <P><IMG src="../../../images/ebx_-1232684487.gif" border=0 height=229 width=500 alt="images\ebx_-1232684487.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The logs pane now shows all the API functions BrokenApp calls to open a URL and output the source to the main window. To get all the API function calls grouped together click the header of the function column. Now scroll down, keeping an eye on the return value column. You might notice that there are a number of calls to the .NET function &quot;System.IO.StreamReader.ReadLine()&quot; BrokenApp uses this function to read from the incoming network stream; this is clear by the return values present in this function call. This is the function we will fail.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Introduction2.htm">&lt;&lt; Previous</A>     <A href="Failing_the_ReadLine_function.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

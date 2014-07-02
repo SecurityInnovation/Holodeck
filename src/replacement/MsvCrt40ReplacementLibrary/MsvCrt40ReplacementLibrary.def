@@ -1,0 +1,22 @@
+LIBRARY	MsvCrt40ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+memcpyReplacement
+wcsncatReplacement
+strcpyReplacement
+wcscpyReplacement
+_mbscpyReplacement
+strcatReplacement
+_mbsnbcpyReplacement
+wcsncpyReplacement
+getsReplacement
+_tcsncpyReplacement
+_mbscatReplacement
+strncpyReplacement
+wcscatReplacement
+_mbsnbcatReplacement
+strncatReplacement
+_mbslenReplacement
+strlenReplacement
+_tcsncatReplacement

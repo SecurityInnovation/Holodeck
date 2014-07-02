@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Set up the project</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nUsing Code Coverage with Record/Replay to Test the Application\nSet up the project");
+addAvenueInfo("HD HELP 2_5","Tutorials/Intermediate/Learning_About_API_Failures_During_Startup_and_Comparing_Logs/Summary_4.htm","Tutorials/Intermediate/Using_Code_Coverage_with_Record_Replay_to_Test_the_Application/Start_Recording_the_Session.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Set up the project</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>In this tutorial we will cover how to set up <A href="../../../Holodeck_in_depth/Using_Automatic_Test_Generation/Creating_Code_Coverage_Generation.htm">Code Coverage</A> testing within Holodeck to more fully test your application. Code Coverage sets a different fault, limit test or combination of the three each time the application is run. You can let Code Coverage test generation run in the background while you test your application, or have a test harness automatically run tests, to find more code paths than would be normally used. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>New code paths are created by the hostile environment Holodeck creates while generating Code Coverage test cases. The hostile environment causes your application to call error catching code paths and recover from these errors on the fly.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Setup a project using the BrokenApp as the application under test, or load the project you created in the <A href="../../Beginner/Creating_your_first_project/Setting_up_your_first_project.htm">Creating your first project</A> tutorial.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>BrokenApp is so unstable that many of the faults, limits and tests will cause it to crash. This is fine because Holodeck will automatically restart the application when it crashes to continue testing.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Start_Recording_the_Session.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,241 @@
+body, form, ul, ol, li, h1, h2, h3, h4  { margin: 0; padding: 0; }
+
+body { font: 78%/155% "Lucida Grande", Tahoma, Arial, sans-serif;}
+
+.image_col{width: 35px; }
+
+.sideitems { margin: .75em 0 0 0; padding: 0; float: left; max-width: 300px;}
+* html .sideitems li a { max-width: 300px; }
+.sideitems ul {margin: 0; padding: 0; }
+.sideitems li { list-style: none;padding: 0 3px 0 3px; font-size: 110%; margin: 0 0 12px 5px;}
+.sideitems li:hover { background: #dce7f4;}
+.sideitems a {color: black; text-decoration: none;}
+.sideitems a em {display: block; font-style: normal;font-weight: bold;}
+.sideitems a span {font-size: 80%;}
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font: .9em Tahoma, arial, sans-serif;
+	background: #E2E8EA url(../../img/interface/bg-body.gif) repeat-x;
+}
+
+input, select, textarea { font: 1em Tahoma, arial, sans-serif; }
+
+#top {
+    margin: 0px auto 0 auto;
+    background: #4E7DD1;
+    border-bottom: solid 1px #656565;
+    font-weight: bold;
+    padding: 0 0 0 0;
+    width: 800px;
+}
+
+.license_list{width: 650px;}
+
+#main {
+    margin: 0 auto 10px auto;
+    text-align: left;
+	background: #ffffff;
+	border-bottom: solid 1px #656565;
+    padding: 5px 15px;
+    width: 768px;
+}
+
+#bottom {
+    margin: 0 auto 0 auto;
+    text-align: right;
+	background: #E2E8EA;
+    padding: 5px 15px;
+    width: 768px;
+    height: 20px;
+}
+
+#top h2 {
+	font-family: Verdana, Tahoma;
+	font-size: 1.2em;
+	color: rgb(240,240,240);
+	font-weight: bold;
+	margin-bottom: 3px;
+	margin-top: 20px;
+}
+
+#main h2 {
+	font-family: Verdana, Tahoma;
+	font-size: 1.5em;
+	color: #000;
+	font-weight: bold;
+	margin-bottom: .7em;
+	margin-top: .5em;
+}
+
+#main h3 {
+	font-family: Verdana, Tahoma;
+	font-size: 10px;
+	color: #000;
+	font-weight: bold;
+	margin: 0 0 6px 0;
+	border-bottom: solid 1px #656565;
+}
+
+#main h4 {
+        color: black;
+        background: white;
+        font-size: 11px;
+        padding: 1px 0 0px 4px;
+        margin: 0px 0px 6px 0px; 
+        border-bottom: solid 1px #656565;}
+
+        h4 .edit { display: inline; margin-left: 10px; font-size: 10px; }
+        h4 .edit a { color: #656565; }
+        h4 .edit a:hover { color: black; }
+
+#main p.red {
+        color: red;
+        font-weight: bold;}
+        
+#fullwidth {
+  float: left;
+  width: 720px;
+  padding: 0 2px 0 2px;
+  margin: 0 4px; 
+  /* border-width:thin; border-style:solid; */ }        
+        
+.one_half {
+  float: left;
+  width: 356px;
+  padding: 2px 2px 2px 2px;
+  margin: 4px; 
+  /*border-width:thin; border-style:solid;*/ 
+}
+  
+#one_quarter {
+  float: left;
+  width: 170px;
+  padding: 0;
+  margin: 0; }
+  
+#photo_left {
+  float: left;
+  width: 205px;
+  padding: 0;
+  margin: 0; 
+  /*border-width:thin; border-style:solid;*/}
+  
+#photo_right {
+  float: left;
+  width: 145px;
+  padding: 0;
+  margin: 0; 
+  /*border-width:thin; border-style:solid; */}
+
+#newline {
+  clear: left;
+}
+  
+.editor {
+  margin: 0px;
+  padding: 0px; 
+  font-family: Verdana, Tahoma; 
+  font-size: .85em;
+  }
+
+
+.editor .textname {
+  margin: 0px;
+  padding: 0px; 
+  background-color: #fff;
+}
+
+.textname {
+  margin: 0px;
+  padding: 0px; 
+  background-color: #E2E8EA;
+}
+.tablecol1 {
+  margin: 0px;
+  padding: 0px; 
+  background-color: #F2F2F2;
+}
+.tablecol2 {
+  margin: 0px;
+  padding: 0px; 
+  background-color: #FFFFFF;
+}
+
+.editor .label {
+  text-align: right;   
+  padding-right: 15px;
+  font-weight: bold;
+  color: grey;
+  width: 140px; }
+  
+.editor .label2 {
+  text-align: right;   
+  padding-right: 15px;
+  font-weight: bold;
+  color: grey;
+  width: 65px; }
+  
+.editor .buttons {
+  padding-left: 155px;
+  text-align: left; }
+  
+.editor .inputtext,
+.editor .inputpassword {
+  margin-left: 0px;
+  width: 140px; 
+  background: #f5f5f5; }
+  
+.editor #im {
+  width: 80px; }
+  
+.editor #day {
+  width: 30px; }
+  
+.editor #month {
+  width: 30px; }
+  
+.editor #year {
+  width: 60px; }
+  
+.editor #website {
+  width: 250px; }
+  
+.editor #notes {
+  width: 250px; }
+  
+.editor td {
+  border: none;
+  margin: 0px;
+  padding: 5px 1px 1px; }
+
+  
+#rightbuttons ul { 
+	list-style: none;
+	}
+	#rightbuttons li {
+		float: right;
+		display: block;
+		margin-top: 1em;
+		margin-right: 10px;
+		}
+
+/* footer */
+
+#footer {
+	clear: both;
+	padding: 11px 15px 0 0;
+	margin-bottom: 8px;
+	text-align: right;
+	color: #777;
+	/* border-width:thin; border-style:solid; */
+}
+
+#footer a {
+	color: #a8a8a8;
+	text-decoration: none;
+}
+
+#footer a:hover { color: #eeeeee; }

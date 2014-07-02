@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiBuilder", "SiBuilder.csproj", "{1CA863EE-63B7-450E-ACF0-B75C6290C083}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E} = {DE0A2848-7725-4EA2-97F4-0FC3210AD63E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSIBuilder", "CSIBuilder\CSIBuilder.csproj", "{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1CA863EE-63B7-450E-ACF0-B75C6290C083}.Debug.ActiveCfg = Debug|.NET
+		{1CA863EE-63B7-450E-ACF0-B75C6290C083}.Debug.Build.0 = Debug|.NET
+		{1CA863EE-63B7-450E-ACF0-B75C6290C083}.Release.ActiveCfg = Release|.NET
+		{1CA863EE-63B7-450E-ACF0-B75C6290C083}.Release.Build.0 = Release|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Debug.ActiveCfg = Debug|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Debug.Build.0 = Debug|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Release.ActiveCfg = Release|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

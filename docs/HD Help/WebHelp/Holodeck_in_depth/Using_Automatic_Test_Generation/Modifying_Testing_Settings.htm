@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Modifying Testing Settings</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nUsing Automatic Test Generation\nModifying Testing Settings");
+addAvenueInfo("MAIN","Holodeck_in_depth/Using_Automatic_Test_Generation/Creating_Code_Coverage_Generation.htm","Holodeck_in_depth/Generating_Network_Corruption_Faults/Using_the_Network_Corruption_Fault_Wizard.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Modifying Testing Settings</H1>
+ <P>You can change how Holodeck Stress and Code Coverage tests your application by modifying the TestGeneration.xml file found in the Test Generation folder in the Holodeck install directory (default: C:\Program Files\Security Innovation\Holodeck Enterprise Edition\Test Generation).</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>This XML file holds all the settings for how Holodeck tests your application. Before making any changes to this file it is recommended that you make a backup copy.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >TestInterval</FONT><FONT style="font-weight:bold; " > – </FONT>Time between setting individual tests, in milliseconds.</P>
+ <P><FONT style="font-weight:bold; " >TestDuration</FONT><FONT style="font-weight:bold; " > – </FONT>Time to enable each test, in milliseconds.</P>
+ <P><FONT style="font-weight:bold; " >AllowNetworkLimit</FONT><FONT style="font-weight:bold; " > – </FONT>Boolean, allow or disallow network limits.</P>
+ <P><FONT style="font-weight:bold; " >AllowDiskLimit</FONT><FONT style="font-weight:bold; " > - </FONT>Boolean, allow or disallow disk limits.</P>
+ <P><FONT style="font-weight:bold; " >AllowMemoryLimit</FONT><FONT style="font-weight:bold; " > - </FONT>Boolean, allow or disallow memory faults.</P>
+ <P><FONT style="font-weight:bold; " >AllowNetworkFaults</FONT><FONT style="font-weight:bold; " > - </FONT>Boolean, allow or disallow network faults.</P>
+ <P><FONT style="font-weight:bold; " >AllowRegistryFaults</FONT><FONT style="font-weight:bold; " > - </FONT>Boolean, allow or disallow registry faults.</P>
+ <P><FONT style="font-weight:bold; " >AllowProcessFaults</FONT><FONT style="font-weight:bold; " > - </FONT>Boolean, allow or disallow process faults.</P>
+ <P><FONT style="font-weight:bold; " >AllowCustomFaults</FONT><FONT style="font-weight:bold; " > - </FONT>Boolean, allow or disallow custom faults.</P>
+ <P><FONT style="color:black; font-weight:bold; " >AllowDiskFaults - </FONT><FONT style="color:black; " >Boolean, allow or disallow disk faults.</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >AllowMemoryFaults - </FONT><FONT style="color:black; " >Boolean, allow or disallow memory faults.</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >AllowNetworkCorruption - </FONT><FONT style="color:black; " >Boolean, allow or disallow network corruption.</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >NumOverlappingTests </FONT><FONT style="color:black; font-weight:bold; " >–</FONT><FONT style="color:black; " > The number of tests allowed to execute at the same time.</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >NetworkLowRange</FONT><FONT style="color:black; font-weight:bold; " > </FONT><FONT style="color:black; font-weight:bold; " >–</FONT><FONT style="color:black; font-weight:bold; " > </FONT><FONT style="color:black; " >Lowest the network limit can be</FONT><FONT style="color:black; " >, in bytes per second.</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >NetworkHighRange</FONT><FONT style="color:black; font-weight:bold; " > </FONT><FONT style="color:black; " > - H</FONT><FONT style="color:black; " >ighest the network limit can be, in bytes per second.</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >DiskLimitSet </FONT><FONT style="color:black; font-weight:bold; " >–</FONT><FONT style="color:black; font-weight:bold; " > </FONT><FONT style="color:black; " >set value 0 for at current usage, set value 1 for above current usage</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >DiskLimitMax</FONT><FONT style="color:black; font-weight:bold; " > – </FONT><FONT style="font-size:9pt; color:black; " >limits will be set from current usage to current usage plus this number</FONT></P>
+ <P><FONT style="font-weight:bold; " >MemoryLimitSet</FONT><FONT style="color:black; font-weight:bold; " >– </FONT><FONT style="color:black; " >set value 0 for at current usage, set value 1 for above current usage</FONT></P>
+ <P><FONT style="font-weight:bold; " >MemoryLimitMax</FONT><FONT style="color:black; font-weight:bold; " >– </FONT><FONT style="font-size:9pt; color:black; " >limits will be set from current usage to current usage plus this number</FONT><FONT style="font-size:9pt; color:black; " >.</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

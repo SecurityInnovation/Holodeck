@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE Ports SYSTEM "Ports.dtd"[]>
+<Ports>
+	<Port Number="21" Name="FTP" />
+	<Port Number="22" Name="SSH" />
+	<Port Number="23" Name="Telnet" />
+	<Port Number="25" Name="SMTP" />
+	<Port Number="70" Name="Gopher" />
+	<Port Number="79" Name="Finger" />
+	<Port Number="80" Name="HTTP" />
+	<Port Number="110" Name="POP3" />
+	<Port Number="119" Name="NNTP" />
+	<Port Number="161" Name="SNMP" />
+	<Port Number="162" Name="SNMP Trap" />
+</Ports>

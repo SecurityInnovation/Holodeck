@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!ELEMENT Action (#PCDATA)>
+<!ATTLIST Action Type (Replace|Insert|Delete) #REQUIRED>
+<!ATTLIST Action Offset CDATA #REQUIRED>
+<!ATTLIST Action ByteCount CDATA #REQUIRED>
+<!ATTLIST Action OldValue CDATA #IMPLIED>
+<!ATTLIST Action NewValue CDATA #IMPLIED>
+
+<!ELEMENT Actions (Action*)>
+
+<!ELEMENT OriginalFile (#PCDATA)>
+<!ELEMENT CorruptedFile (#PCDATA)>
+
+<!ELEMENT CorruptionLog (OriginalFile, CorruptedFile, Actions)>

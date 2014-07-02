@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Making sense of the difference</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nLearning About API Failures During Startup and Comparing Logs\nMaking sense of the difference");
+addAvenueInfo("MAIN","Tutorials/Intermediate/Learning_About_API_Failures_During_Startup_and_Comparing_Logs/Comparing_logs.htm","Tutorials/Intermediate/Failing_a_Single_API_Call/Introduction2.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Making sense of the difference</H1>
+ <P>Now we can load the two files into Windiff, and see the difference in the way Excel loads a file by double clicking on it, or by loading it from the QuickLaunch Bar. We notice that the first 2000 lines of the logs are very similar; this is the startup of the application. The next 1000 lines are where we loaded the files. you may notice that, with the exception of a few operating system dependant calls, the two load methods take a very similar API path. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_1222881898.gif" border=0 height=479 width=429 alt="images\ebx_1222881898.gif"></P>
+ <P>&nbsp;</P>
+ <P>Using Windiff we can see the differences in each file, the first column shows which line corresponds to each file. Red lines come from the first file, Yellow lines from the second file. On the far left a graphical representation of each file is shown where Windiff tries to match each line to the other file, if it can. Here we can see similarities to the way Excel starts up, and the similarities in the way Excel shuts itself down. The middle of the log file we see the drastic difference of how Excel loads by double clicking or by loading from Quick Launch pane. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Comparing_logs.htm">&lt;&lt; Previous</A>    <A href="Summary_4.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Investigating the Failure</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nBeginner\nHow to Deprive Your Application of its Dependencies\nInvestigating the Failure");
+addAvenueInfo("HD HELP 2_5","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Restart_BrokenApp_with_Resource_Faults.htm","Tutorials/Beginner/How_to_Deprive_Your_Application_of_its_Dependencies/Summary.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Investigating the Failure</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>We can load the debugging information into Visual Studio.NET and reproduce the crash. To load the debugging information into Visual Studio double-click one of the exception nodes in the Project pane. This will show the Exception pane in the main window. The Exception pane shows every exception your application has thrown, whether it handled it or not. For more information see the <A href="../../../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">Exceptions Overview</A>.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_-42865598.gif" border=0 height=162 width=785 alt="images\ebx_-42865598.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Double-click the exception you want to debug in this pane and Holodeck will launch Visual Studio and load the exception debugging information. You can reproduce the crash or exception by pressing f5. If source code is available for the crash Visual Studio will load it and highlight the offending line. If no source code is available Visual Studio will ask to show the assembly code, and highlight the last instruction to be called.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>For more information see the <A href="../../../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">Exceptions Overview</A> help topic.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_-328048910.gif" border=0 height=619 width=540 alt="images\ebx_-328048910.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Restart_BrokenApp_with_Resource_Faults.htm">&lt;&lt; Previous</A>    <A href="Summary.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

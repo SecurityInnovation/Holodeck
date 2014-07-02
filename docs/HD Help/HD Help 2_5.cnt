@@ -1,0 +1,293 @@
+:Base HD Help 2_5.hlp
+1 Getting Started
+2 Getting started guide=Getting_started_guide
+2 Holodeck Tutorials=Holodeck_Tutorials
+2 Holodeck support center=Holodeck_support_center
+2 Learning Holodeck Basics
+3 How to use this guide=How_to_use_this_guide
+3 Other resources=Other_resources
+2 Installing and running Holodeck
+3 System Requirements=System_Requirements
+3 Installing Holodeck=Installing_Holodeck
+3 Running Holodeck as a Restricted User=Running_Holodeck_as_a_Restricted_User
+3 EULA=EULA
+2 What's new in v. 2.5
+3 What's new in v. 2.5=What_s_new_in_v_2_5
+2 Exploring the Holodeck workspace
+3 Windows and panes overview=Windows_and_panes_overview
+3 Project toolbar=Project_toolbar
+3 Moving, detaching and hiding panels=Moving_detaching_and_hiding_panels
+3 Menus overview=Menus_overview
+3 Menus in Depth
+4 File Menu=File_Menu
+4 Session Menu=Session_Menu
+4 Application Menu=Application_Menu
+4 Log Menu=Log_Menu
+4 Tools Menu=Tools_Menu
+4 View Menu=View_Menu
+4 Help Menu=Help_Menu
+1 Holodeck Windows and Panes
+2 Windows and panes overview=Windows_and_panes_overview
+2 Corrupted Files Pane=Corrupted_Files_Pane
+2 Dynamic Help Pane=Dynamic_Help_Pane
+2 Exception Pane=Exception_Pane
+2 Faults Pane=Faults_Pane
+2 File Corruption Details Pane=File_Corruption_Details_Pane
+2 File Corruption Faults Pane=File_Corruption_Faults_Pane
+2 Help Pane=Help_Pane
+2 Limits Pane=Limits_Pane
+2 Log Pane=Log_Pane
+2 Network Corruption Faults Pane=Network_Corruption_Faults_Pane
+2 Network Logs Pane=Network_Logs_Pane
+2 Network Message Details Pane=Network_Message_Details_Pane
+2 Project Pane=Project_Pane
+2 Project toolbar=Project_toolbar
+2 Properties Pane=Properties_Pane
+2 Resource Faults Pane=Resource_Faults_Pane
+2 Resource Pane=Resource_Pane
+2 Test Pane=Test_Pane
+1 Tutorials
+2 Holodeck Tutorials=Holodeck_Tutorials
+2 Beginner
+3 Creating your first project
+4 Introduction=Setting_up_your_first_project
+4 Creating the Project=The_Create_a_New_Project_Wizard
+4 Saving the Project=Saving_the_Project
+3 How to Use Faults to Deprive Excel of Memory
+4 Introduction=Introduction9
+4 Set Insufficient Memory=Set_Insufficient_Memory
+4 Verify Insufficient Memory=Verify_Insufficient_Memory
+4 Summary=Summary_1
+3 How to Deprive Your Application of its Dependencies
+4 Introduction=Introduction6
+4 Investigate Resources=Investigate_Resources
+4 Set the Resource Fault=Set_the_Resource_Fault
+4 Restart BrokenApp with Resource Faults=Restart_BrokenApp_with_Resource_Faults
+4 Investigating the Failure=Investigating_the_Failure
+4 Summary=Summary
+3 Dealing with Multiple Processes
+4 Introduction=Introduction4
+4 Adding a second process to a project=Adding_a_second_process_to_a_project
+4 Setting per process items=Setting_per_process_items
+4 Create a File in Use fault for Notepad.exe=Create_a_File_in_Use_fault_for_Notepad_exe
+4 Create a Memory Fault for BrokenApp.exe=Create_a_Memory_Fault_for_BrokenApp_exe
+4 Create a Memory Limit for Notepad.exe=Create_a_memory_limit_for_Notepad_exe
+4 Spawning Another Process from the BrokenApp=Spawning_Another_Process_from_the_BrokenApp
+4 Summary=Summary_2
+2 Intermediate
+3 Using Holodeck to Corrupt Files and Test File Processing
+4 Introduction=Introduction_1
+4 Corrupting Files=Corrupting_Files
+4 Using Corrupted Files to test file processing=Using_Corrupted_Files_to_test_file_processing
+4 Viewing the details of the corrupted file=Viewing_the_details_of_the_corrupted_file
+4 Summary=Conclusion_1
+3 Creating Network Corruption Using Regular Expressions
+4 Introduction=Introduction10
+4 Investigate Network Packets=Investigate_Network_Packets
+4 Open Network Corruption Wizard=Open_Network_Corruption_Wizard
+4 Select Which Data Should be Corrupted=Select_Which_Data_Should_be_Corrupted
+4 Select Regular Expressions as the Method of Corruption=Select_Regular_Expressions_as_the_Method_of_Corruption
+4 Create a Regular Expression and Expansion String=Create_a_Regular_Expression_and_Expansion_String
+4 Verify the Fault is set=Verify_the_Fault_is_set
+4 Summary=Conclusion
+3 Failing a Single API Call
+4 Introduction=Introduction2
+4 Investigate Logs=Investigate_Logs
+4 Failing the ReadLine function=Failing_the_ReadLine_function
+4 Verify ReadLine Fault is Set=Verify_ReadLine_Fault_is_Set
+4 Summary=Summary_3
+3 Learning About API Failures During Startup and Comparing Logs
+4 Introduction=Introduction
+4 Load project=Load_project
+4 Filtering the log result=Filtering_the_log_result
+4 Creating a Report for easy viewing=Creating_a_Report_for_easy_viewing
+4 Exporting logs=Exporting_logs
+4 Comparing logs=Comparing_logs
+4 Making sense of the difference=Making_sense_of_the_difference
+4 Summary=Summary_4
+3 Using Code Coverage with Record/Replay to Test the Application
+4 Set up the project=Set_up_the_project
+4 Start Recording the Session=Start_Recording_the_Session
+4 Begin Code Coverage Test Generation=Begin_Code_Coverage_Test_Generation
+4 Stop Test Generation=Stop_Test_Generation
+4 Replay the Recorded Session=Replay_the_Recorded_Session
+4 Summary=Summary_5
+2 Advanced
+3 Test Harness and Code Coverage
+4 Introduction=Introduction3
+4 Create a Holodeck project file=Create_a_Holodeck_project_file
+4 Setup the Test Harness=Setup_the_Test_Harness
+4 Begin testing with Code Coverage=Begin_testing_with_Code_Coverage
+4 How to compare log files=How_to_compare_log_files
+4 Summary=Summary_6
+3 Adding New Intercepts
+4 Adding New Intercepts Introduction=Adding_New_Intercepts_Introduction
+4 Create a Test dll=Create_a_Test_dll
+4 Create the Test Application=Create_the_Test_Application
+4 Add a New Intercept Library=Add_a_New_Intercept_Library
+4 Compile the TestDLL Replacement Library=Compile_the_TestDLL_Replacement_Library
+4 View Logs and Create a Test for the Test dll=View_Logs_and_Create_a_Test_for_the_Test_dll
+4 Summary=Further_Exploration
+3 Create a New Test Project
+4 Create a New Test Project Introduction=Create_a_New_Test_Project_Introduction
+4 Create the Custom Test Project=Create_the_Custom_Test_Project
+4 Use the Custom Test Project to Test Notepad=Use_the_Custom_Test_Project_to_Test_Notepad
+4 Summary=Further_Exploration_1
+1 Holodeck in depth
+2 Introduction to Holodeck in depth=Introduction_to_Holodeck_in_depth
+2 New Project Wizard
+3 New Project Wizard=New_Project_Wizard
+3 Launch an Application=Launch_an_Application
+3 Attach to an Application=Attach_to_an_Application
+3 Start a Service=Start_a_Service
+3 Attach to a Service=Attach_to_a_Service
+3 New Project Options=New_Project_Options
+3 Default Logging=Default_Logging
+2 Creating Tests
+3 Tests Overview=Tests
+3 Creating and Deleting a test=Creating_a_test
+3 Scheduled Test Wizard=Scheduled_Test_Wizard
+3 Modifying a test=Modifying_a_test
+3 Creating a Test Based on Stack Matching=Creating_a_Test_Based_on_Stack_Matching
+2 Creating Limits
+3 Limits overview=Limits_overview
+3 Creating a Disk Space limit=Creating_a_Disk_Space_limit
+3 Creating a Memory Space limit=Creating_a_Memory_Space_limit
+3 Creating a Network Bandwidth limit=Creating_a_Network_Bandwidth_limit
+2 Creating Faults
+3 Faults Overview=Faults_Overview
+3 Adding and Removing a fault=Removing_a_fault
+3 Adding custom faults=Adding_custom_faults
+3 Types of faults=Types_of_faults
+3 Fault Categories
+4 Disk Faults=Disk_Faults
+4 Memory Faults=Memory_Faults
+4 Network Faults=Network_Faults
+4 Registry Faults=Registry_Faults
+4 Process/Library Faults=Process_Library_Faults
+4 Custom Faults=Custom_Faults
+2 Resource Faults
+3 Resource Fault Overview=Resource_Fault_Overview
+3 Adding and Removing a Resource Fault=Adding_and_Removing_a_Resource_Fault
+3 Create a New Resource Fault Wizard=Create_a_New_Resource_Fault_Wizard
+2 Working with Logs
+3 Logs Overview=Logs_Overview
+3 API Log Categories=Log_Categories
+3 Custom Log Filtering and Sorting=Custom_Log_Filtering_and_Sorting
+3 To find text in the log files=To_find_text_in_the_log_files
+3 Changing which functions are logged=Changing_which_functions_are_logged
+3 Exporting Logs=Exporting_Logs_1
+3 Printing Logs=Printing_Logs
+3 Exporting Resource Logs=Exporting_Resource_Logs
+3 Network Logs=Network_Logs
+2 Working with Reports
+3 Reports Overview=Reports_Overview
+3 Managing and Printing Reports=Managing_and_Printing_Reports
+3 What's Contained in a Report=What_s_Contained_in_a_Report
+3 Working with Pivot Tables=Working_with_Pivot_Tables
+3 Reports Tables
+4 API Log Summary Table=API_Log_Summary_Table
+4 Faults Summary Table=Faults_Summary_Table
+4 Tests Summary Table=Tests_Summary_Table
+4 Error Codes Summary Table=Error_Codes_Summary_Table
+4 Resource Dependencies Summary Table=Resource_Dependencies_Summary_Table
+4 Resource Usage Summary Table=Resource_Usage_Summary_Table
+4 Return Values Summary Table=Return_Values_Summary_Table
+2 Using Automatic Test Generation
+3 Introduction to Automatic Test Generation=Introduction_to_Automatic_Test_Generation
+3 Using Holodeck for Stress Test Generation=Creating_Stress_Test_Generation
+3 Using Holodeck for Code Coverage Test Generation=Creating_Code_Coverage_Generation
+3 Modifying Testing Settings=Modifying_Testing_Settings
+2 Generating Network Corruption Faults
+3 Using the Network Corruption Fault Wizard=Using_the_Network_Corruption_Fault_Wizard
+3 Creating a fault using Random Corruption=Creating_a_fault_using_Random_Corruption
+3 Creating a fault using Find and Replace Corruption=Creating_a_fault_using_Find_and_Replace_Corruption
+3 Creating a fault using Regular Expressions=Creating_a_fault_using_Regular_Expressions
+2 Generating File Corruption Faults
+3 File Corruption Overview=File_Corruption_Overview
+3 Create a File Corruption Fault using Random Corruption=Create_a_File_Corruption_Fault_using_Random_Corruption
+3 Create a File Corruption Fault using Find and Replace=Create_a_File_Corruption_Fault_using_Find_and_Replace
+3 Create a File Corruption Fault with Regular Expressions=Create_a_File_Corruption_Fault_with_Regular_Expressions
+2 Regular Expressions and Replacement Strings
+3 Using regular expressions=Using_regular_expressions
+3 Using replacement strings=Using_replacement_strings
+2 Multiple Threads and Processes
+3 Dealing with Multiple Processes=Dealing_with_Multiple_Processes
+3 Working with Multi-threaded applications=Working_with_Multi_threaded_applications
+2 Exceptions and mini-dumps
+3 Exceptions Overview=Exceptions_Overview
+3 Mini-dump Overview=Mini_dump_Overview
+2 Recording and replaying sessions
+3 Introduction to recoding and replaying=Introduction_to_recoding_and_replaying
+3 Creating a recorded session=Creating_a_recorded_session
+3 Replaying a recorded session=Replaying_a_recorded_session
+2 Add Holodeck Intercepts
+3 Add Holodeck Intercepts=Add_Holodeck_Intercepts
+3 Holodeck Intercepts Manager=Holodeck_Intercepts_Manager
+3 Add Holodeck Intercepts Wizard
+4 Select the functions to add to the Holodeck Database=Select_the_functions_to_add_to_the_Holodeck_Database
+4 Review the Definitions of the Functions=Review_the_Definitions_of_the_Functions
+4 Review Your Choices=Review_Your_Choices
+4 Replacement Library Results=Replacement_Library_Results
+1 Automated Testing with Holodeck
+2 Introduction to Automating Holodeck=Introduction_to_Automating_Holodeck
+2 Using Holodeck with other Automated Test Frameworks
+3 Using Holodeck with other Automated Test Frameworks=Using_Holodeck_with_other_Automated_Test_Frameworks
+2 Using Holodeck as a command-line utility
+3 Introduction to using Holodeck as a command-line Utility=Introduction_to_using_Holodeck_as_a_command_line_Utility
+3 Code Coverage testing from the command-line=Code_Coverage_testing_from_the_command_line
+3 Stress testing from the command-line=Stress_testing_from_the_command_line
+3 Using Recorded Sessions from the command-line=Using_Recorded_Sessions_from_the_command_line
+3 Running Holodeck silently=Running_Holodeck_silently
+2 Create a Custom Test Project
+3 Create a Custom Test Project Wizard=Create_a_Custom_Test_Project_Wizard
+3 Create a Custom Test Project=Create_a_Custom_Test_Project
+3 Selecting Libraries and Methods=Selecting_Libraries_and_Methods
+3 Specifying the Output Options=Specifying_the_Output_Options
+3 Custom Test Project Summary=Custom_Test_Project_Summary
+2 HolodeckLib
+3 Using HolodeckLib=Using_HolodeckLib
+3 HolodeckLib Method List=HolodeckLib_Method_List
+3 HolodeckLib Constructors and Destructors=HolodeckLib_Constructors_and_Destructors
+3 HolodeckLib Application Execution and Control=HolodeckLib_Application_Execution_and_Control
+3 HolodeckLib Log Operations=HolodeckLib_Log_Operations
+3 HolodeckLib Limit Control=HolodeckLib_Limit_Control
+3 HolodeckLib Fault Control=HolodeckLib_Fault_Control
+3 HolodeckLib Interception Control=HolodeckLib_Interception_Control
+2 Using HoloScript
+3 Using HoloScript=Using_HoloScript
+3 HoloScript Method List=HoloScript_Method_List
+3 HoloScript Functions
+4 Constructors and Destructors=Constructors_and_Deconstructors
+4 Application and Service Launch=Application_and_Service_Launch
+4 Process Chaining=Process_Chaining
+4 Debugging Functions=Debugging_Functions
+4 Application and Service Control=Application_and_Service_Control
+4 Logging Control=Logging_Control
+4 Tests Control=Tests_Control
+4 Limits Control=Limits_Control
+4 Fault Control=Fault_Control
+3 Examples
+4 First Example - Injecting Faults=First_Example_Injecting_Faults
+4 Second Example - Examining AUT Execution Environment=Second_Example_Examining_AUT_Execution_Environment_1
+4 Third Example - Modifying the AUT Execution Environment (Disk and Memory Limits)=Third_Example_Modifying_the_AUT_Execution_Environment_Disk_and_Memory_Limits_
+4 Fourth Example - Modifying the AUT Execution Environment (Network Limits)=Fourth_Example_Modifying_the_AUT_Execution_Environment_Network_Limits_
+2 Using HEAT (Hostile Environment for Application Testing)
+3 Using HEAT=Using_HEAT
+3 Step by Step for HEAT API=Step_by_Step_for_HEAT_API
+3 HeatAPI Method List=HeatAPI_Method_List
+3 Constructors and Destructors of HeatAPI=Constructors_and_Destructors_of_HeatAPI
+3 Interception Information and Control=Interception_Information_and_Control
+3 Intercept Function Control=Intercept_Function_Control
+3 HEAT API Injection=HEAT_API_Injection
+3 HEAT API Example=HEAT_API_Example
+3 Intercepting Overloaded Functions with HEAT=Intercepting_Overloaded_Functions_with_HEAT
+1 Appendices
+2 About fault injection=About_fault_injection
+2 How to Break Software=How_to_Break_Software
+2 How to Break Software Security=How_to_Break_Software_Security
+2 Windows 2000 and attaching the Holodeck Debugger=Windows_2000_and_attaching_the_Holodeck_Debugger
+2 API Call Categories=API_Call_Categories
+2 Error Codes=Error_Codes
+2 Exception Codes=Exception_Codes
+2 EULA=EULA

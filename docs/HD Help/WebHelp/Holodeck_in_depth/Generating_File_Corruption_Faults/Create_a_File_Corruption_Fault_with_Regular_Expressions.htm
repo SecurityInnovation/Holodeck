@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Create a File Corruption Fault with Regular Expressions</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nGenerating File Corruption Faults\nCreate a File Corruption Fault with Regular Expressions");
+addAvenueInfo("MAIN","Holodeck_in_depth/Generating_File_Corruption_Faults/Create_a_File_Corruption_Fault_using_Find_and_Replace.htm","Tutorials/Intermediate/Using_Holodeck_to_Corrupt_Files_and_Test_File_Processing/Introduction_1.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Create a File Corruption Fault with Regular Expressions</H1>
+ <P>Select the file you wish to corrupt by browsing to it using the Browse… button or type it directly into the &quot;File to Corrupt&quot; text box. </P>
+ <P>Select Regular expressions. This will allow you to search for a number of different strings, and replace them with normal strings or with expansion strings. This is very useful for matching on filenames, web addresses, or other well formed, but unique, strings.</P>
+ <P>Holodeck creates a copy of the file to be corrupted and corrupts file on the first access, then uses that same file each time it is accessed unless &quot;Regenerate the corruption at each access to the original file&quot; is checked. Check this checkbox for better overall testing when using any kind of random corruption, uncheck this checkbox for help reproducing bugs or if you are performing the same find and replace corruption.</P>
+ <P><IMG src="../../images/ebx_-1588769722.gif" border=0 height=440 width=420 alt="images\ebx_-1588769722.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>This regular expression: ((created|file)|[0-9]+) will match the word &quot;created&quot; or the word &quot;file&quot; or a string of numbers of any length. My file contains all three of these things so Holodeck will replace any of these occurrences with the long string of ‘a’s below.</P>
+ <P><IMG src="../../images/ebx_-1686699075.gif" border=0 height=440 width=420 alt="images\ebx_-1686699075.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The final page shows a summary of the corruption fault you just created. To edit any information on this page simply select it, and click edit. This will take you back to that page to make any necessary changes.</P>
+ <P><IMG src="../../images/ebx_478836073.gif" border=0 height=440 width=420 alt="images\ebx_478836073.gif"></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

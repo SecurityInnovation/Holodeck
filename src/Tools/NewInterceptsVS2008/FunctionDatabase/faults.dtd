@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!ELEMENT Function (CheckResource?, MatchParams?, ChangeParams?)>
+<!ATTLIST Function OverrideErrorCode CDATA #IMPLIED>
+<!ATTLIST Function OverrideReturnValue CDATA #IMPLIED>
+<!ATTLIST Function Name CDATA #REQUIRED>
+<!ATTLIST Function PassThrough (True|False) #IMPLIED>
+<!ATTLIST Function Exception CDATA #IMPLIED>
+<!ATTLIST Function Allocation (GT|GTE|LT|LTE|E) #IMPLIED>
+
+<!ELEMENT MatchParams (MatchParam+)>
+<!ELEMENT ChangeParams (ChangeParam+)>
+
+<!ELEMENT MatchParam (#PCDATA)>
+<!ATTLIST MatchParam Name CDATA #REQUIRED>
+<!ATTLIST MatchParam TestOperator CDATA #REQUIRED>
+<!ATTLIST MatchParam TestValue CDATA #REQUIRED>
+<!ATTLIST MatchParam CompareAsType CDATA #REQUIRED>
+<!ATTLIST MatchParam ID CDATA #REQUIRED>
+
+<!ELEMENT ChangeParam (#PCDATA)>
+<!ATTLIST ChangeParam Name CDATA #REQUIRED>
+<!ATTLIST ChangeParam TestValue CDATA #REQUIRED>
+<!ATTLIST ChangeParam CompareAsType CDATA #REQUIRED>
+<!ATTLIST ChangeParam ID CDATA #REQUIRED>
+
+<!ELEMENT CheckResource (#PCDATA)>
+<!ATTLIST CheckResource ParamIndex CDATA #REQUIRED>
+<!ATTLIST CheckResource Exists (1|2|3) #REQUIRED>
+
+<!ELEMENT ReturnValue (#PCDATA)>
+
+<!ELEMENT ErrorCode (#PCDATA)>
+
+<!ELEMENT Fault (Function*)>
+<!ATTLIST Fault Name CDATA #REQUIRED>
+<!ATTLIST Fault Type CDATA #REQUIRED>
+<!ATTLIST Fault ReturnValue CDATA #REQUIRED>
+<!ATTLIST Fault ErrorCode CDATA #REQUIRED>
+
+<!ELEMENT Faults (Fault*)>

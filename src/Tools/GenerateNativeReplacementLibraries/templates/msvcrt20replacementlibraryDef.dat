@@ -1,0 +1,5 @@
+LIBRARY	MsvCrt20ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

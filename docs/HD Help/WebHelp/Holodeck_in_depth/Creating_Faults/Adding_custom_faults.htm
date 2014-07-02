@@ -1,0 +1,350 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Adding custom faults</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nCreating Faults\nAdding custom faults");
+addAvenueInfo("MAIN","Holodeck_in_depth/Creating_Faults/Types_of_faults.htm","Holodeck_in_depth/Resource_Faults/Resource_Fault_Overview.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Adding custom faults</H1>
+ <P>You can create your own faults to fail a specific set of API functions simply by editing the faults.xml file located in the function_db folder within the Holodeck install folder (default: C:\Program Files\Security Innovation\Holodeck Enterprise Edition\function_db).</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Open faults.xml in a text or XML editor, and within the beginning and ending &lt;Faults&gt; tag insert your custom fault as follows.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Example:</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">This XML snippet, when added to faults.xml will create a fault named &quot;My Fault&quot;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >&lt;</FONT><FONT style="font-family:'Courier New'; color:maroon; " >Fault</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >Name</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;</FONT><FONT style="font-family:'Courier New'; color:blue; " >M</FONT><FONT style="font-family:'Courier New'; color:blue; " >y</FONT><FONT style="font-family:'Courier New'; color:blue; " >_</FONT><FONT style="font-family:'Courier New'; color:blue; " >Fault</FONT><FONT style="font-family:'Courier New'; color:blue; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >Type</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;</FONT><FONT style="font-family:'Courier New'; color:blue; " >Custom</FONT><FONT style="font-family:'Courier New'; color:blue; " >&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >ReturnValue</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;0&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >ErrorCode</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;112&quot;&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >&lt;</FONT><FONT style="font-family:'Courier New'; color:maroon; " >Function</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >Name</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;CopyFileA&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >Allocation</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;GT&quot;&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >&lt;</FONT><FONT style="font-family:'Courier New'; color:maroon; " >CheckResource</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >ParamIndex</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;1&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >Exists</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;2&quot;/&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >&lt;</FONT><FONT style="font-family:'Courier New'; color:maroon; " >MatchParams</FONT><FONT style="font-family:'Courier New'; color:blue; " >&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >&lt;</FONT><FONT style="font-family:'Courier New'; color:maroon; " >MatchParam</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >Name</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;bFailIfExists&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >TestOperator</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;=&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >TestValue</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;1&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " >  </FONT><FONT style="font-family:'Courier New'; color:fuchsia; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:red; " >CompareAsType</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;3&quot;</FONT><FONT style="font-family:'Courier New'; color:fuchsia; " > </FONT><FONT style="font-family:'Courier New'; color:red; " >ID</FONT><FONT style="font-family:'Courier New'; color:blue; " >=&quot;2&quot;/&gt;</FONT></P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >&lt;/</FONT><FONT style="font-family:'Courier New'; color:maroon; " >MatchParams</FONT><FONT style="font-family:'Courier New'; color:blue; " >&gt;</FONT></P>
+ <P style="margin-left:4.50pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >&lt;/</FONT><FONT style="font-family:'Courier New'; color:maroon; " >Function</FONT><FONT style="font-family:'Courier New'; color:blue; " >&gt;</FONT></P>
+ <P style="margin-left:4.50pt;"><FONT style="font-family:'Courier New'; color:blue; " >&lt;/</FONT><FONT style="font-family:'Courier New'; color:maroon; " >Fault</FONT><FONT style="font-family:'Courier New'; color:blue; " >&gt;</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">The fault name will show up in the faults pane as &quot;My Fault&quot; under the Custom column, Holodeck converts underscores ‘_’ to spaces.</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">Unless the function tag overrides the setting, all function in this fault will use a returnValue of 0 and an ErrorCode of 112</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">Each function to be failed has to have its own &lt;Function&gt; tag, to have this function fail under every circumstance simply use the closed tag form (&lt;Function Name=&quot;CopyFileB&quot; /&gt;)</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">In this case the function to be failed is the &quot;CopyFileA&quot; API function, and will only fire when this function tries to allocate more space than it had originally had.</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">The CheckResource tag checks to see if the resource with handle 1 does not exist.</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">The MatchParams tag allows you to only fire when certain parameters are matched. In this case this test will only fire if the parameter named bFailIfExists matches the test value, 1, exactly. Holodeck will compare the actual value and the TestValue as a Boolean. ID is the zero based index of the parameter to match.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>In summary CopyFileA will fail only if the filename we are copying to does not yet exist, the parameter bFailIfExists equals 1 and the file we are copying is larger than 0 bytes (ie. Allocation is increasing)</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >&lt;Fault&gt; tag</FONT><FONT style="font-weight:bold; " > – </FONT>the main tag for the custom fault</P>
+ <TABLE width="552" cellspacing="0" cellpadding="1" style="margin-left:24.85pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Attribute</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Description</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Example</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Name</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The Name of your custom fault</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>My_Custom_Fault</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Type</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Which category this will show up. </P>
+  <P>Valid values are: Disk, Memory, Network, Registry, Process, Custom</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Custom</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>ReturnValue</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The value to return when the API call is failed</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>0</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>ErrorCode</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The error code to set using the setlasterror system call</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>8</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >&lt;Function&gt; tag</FONT> – the individual function to fail</P>
+ <TABLE width="552" cellspacing="0" cellpadding="1" style="margin-left:24.85pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Attribute</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Description</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Example</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Name</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The Name of the API function to fail</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>LoadLibraryA</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>OverrideErrorCode</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>You can override the error code implied from the parent fault tag by setting the code here</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>8</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Implied</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>OverrideReturnValue</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>You can override the return value implied from the parent fault tag by setting the return value here</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>0</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Implied</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>PassThrough</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>If PassThrough is set to true the actual API function will be called and Holodeck will use that return value, instead of the error value specified in the fault element.<BR>Valid Values are: True, False</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>True</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Implied</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Exception</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>While using .NET function calls it might be necessary to specify an exception code to be set</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3221225495</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Implied</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.33%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Allocation</P></TD>
+  <TD width="37.49%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The amount of memory or disk use caused by this call.<BR>Valid Values are: </P>
+  <P style="margin-left:7.80pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>GT – only fire if disk or mem usage increases by this call</P>
+  <P style="margin-left:7.80pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>LT – only fire if disk or mem usage decreases by this call</P>
+  <P style="margin-left:7.80pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>GTE – only fire if disk or mem usage increases or is unchanged</P>
+  <P style="margin-left:7.80pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>LTE – only fire if disk or mem usage decreases or is unchanged</P>
+  <P style="margin-left:7.80pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>E – only fire if disk or mem usage unchanged</P></TD>
+  <TD width="20.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>GT</P></TD>
+  <TD width="13.42%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Implied</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >&lt;MatchParams&gt; tag – </FONT>Fire the test if all the attributes match the api call.</P>
+ <TABLE width="552" cellspacing="0" cellpadding="1" style="margin-left:24.85pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Attribute</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Description</P></TD>
+  <TD width="19.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Example</P></TD>
+  <TD width="13.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Name</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The Name of the parameter to match</P></TD>
+  <TD width="19.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>lpFileName</P></TD>
+  <TD width="13.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>TestOperator</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>How the test value will be compared to the incoming parameter value.<BR>Valid values are:</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>= – test value matches param value exactly</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>!= – test value does not match param value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>&lt; – test value is less than the param value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>&gt; – test value is greater than the param value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>&lt;= – test value is less than or equal to the param value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>&gt;= - test value is greater than or equal to the param value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>starts with – A string parameter starts with the test value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>ends with – a string parameter ends with the test value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>contains – a string parameter contains the test value (could also start or end with the value)</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>not contains – a string parameter does not contain the test value</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>binary contains – a binary flag parameter has OR’d test test value in</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>binary not contains – a binary flag parameter hasn’t OR’d the test value in</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>=resource – a path or handle parameter represents the test value resource path</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>!=resource – a path or handle parameter does not represent the test value resource path</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>contains resource – a path or handle value contains the test value resource path</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>not contains resource – a path or handle value does not contain the test value resource path</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>starts with resource path – a path or handle value represents a resource path that starts with the test value resource path</P></TD>
+  <TD width="19.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>not contains</P></TD>
+  <TD width="13.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>TestValue</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The value to compare.</P>
+  <P>All characters except ‘(‘, ‘)’, ‘{‘, ‘}’, ‘$’, ‘\’, ‘?’, ‘/’, ‘.’, ‘*’, ‘+’, ‘^’, and ‘|’ can be used normally. To use these characters you must precede that character with the ‘\’ character.</P></TD>
+  <TD width="19.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>&quot;\\.&quot;</P></TD>
+  <TD width="13.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>CompareAsType</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The type of the test value to compare:</P>
+  <P>Valid Values:</P>
+  <P>0 -&nbsp;NullType</P>
+  <P>1 -&nbsp;StringType</P>
+  <P>2 -&nbsp;WideStringType</P>
+  <P>3 -&nbsp;BooleanType</P>
+  <P>4 -&nbsp;IntegerType</P>
+  <P>5 -&nbsp;UnsignedLongType</P>
+  <P>6 -&nbsp;RealType</P>
+  <P>7 -&nbsp;PointerType</P>
+  <P>8 -&nbsp;PointerPointerType</P>
+  <P>9 -&nbsp;Integer64Type</P>
+  <P>10 -&nbsp;OutStringType</P>
+  <P>11 -&nbsp;OutWideStringType</P>
+  <P>12 -&nbsp;IgnoreType</P></TD>
+  <TD width="19.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>1</P></TD>
+  <TD width="13.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>ID</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The zero based index of the parameter to match.</P></TD>
+  <TD width="19.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>0</P></TD>
+  <TD width="13.76%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >&lt;CheckResource&gt; tag - </FONT>check for a resource existence or non-existence before firing the test</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <TABLE width="552" cellspacing="0" cellpadding="1" style="margin-left:24.85pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Attribute</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Description</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Example</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>ParamIndex</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The index of the parameter that represents the resource to check.  Could be a handle or a string resource path.</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>0</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.26%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Exists</P></TD>
+  <TD width="38.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>1 – only fire if the resource exists</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>2 – only fire if the resource doesn’t exist</P>
+  <P style="margin-left:8.10pt;text-indent:-9.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;</span>3 – fire if the resource doesn’t exist then create it</P></TD>
+  <TD width="20.65%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>1</P></TD>
+  <TD width="13.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Required</P></TD></TR>
+ </TABLE>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>HolodeckLib Fault Control</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nHolodeckLib\nHolodeckLib Fault Control");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/HolodeckLib/HolodeckLib_Limit_Control.htm","Automated_Testing_with_Holodeck/HolodeckLib/HolodeckLib_Interception_Control.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>HolodeckLib Fault Control</H1>
+ <P><FONT style="color:blue; " >bool</FONT> InjectFault(Array *targetThreadID, <FONT style="color:blue; " >int</FONT> faultID);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Injects the specified fault to the target thread.</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >targetThreadID</FONT> – the thread ID of the thread for which to set the fault</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >faultID</FONT> – the FaultID of the fault you wish to set</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> RemoveFault(Array *targetThreadID, <FONT style="color:blue; " >int</FONT> faultID);</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Removes a set fault from the target thread</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >targetThreadID</FONT> – the thread ID of the fault to remove</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >faulted</FONT> – the faulted of the fault you wish to remove</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

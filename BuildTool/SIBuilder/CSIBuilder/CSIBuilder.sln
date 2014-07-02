@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSIBuilder", "CSIBuilder.csproj", "{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Debug.ActiveCfg = Debug|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Debug.Build.0 = Debug|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Release.ActiveCfg = Release|.NET
+		{DE0A2848-7725-4EA2-97F4-0FC3210AD63E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

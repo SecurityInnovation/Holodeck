@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Tests Control</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nHoloScript Functions\nTests Control");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Logging_Control.htm","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Limits_Control.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Tests Control</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;"><FONT style="color:blue; " >bool</FONT> CreateScheduledTest(&nbsp;Array *targetThreadID, </P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;">&nbsp;&nbsp;&nbsp;String *category,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;">String *functionName,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">String *returnValue, String *errorCode,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">ArrayList *matchParams,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">ArrayList *changeParams, </P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">String **testID)</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Creates a test to be performed upon the next call to <FONT style="font-weight:bold; " >functionName</FONT> from the Application Under Test thread(s) in <FONT style="font-weight:bold; " >targetThreadID</FONT> (a pointer to an Array of UInt32 pointers) if the specified conditions are met</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >category</FONT> is the category of the function used by the settings manager</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >returnValue</FONT> specifies the String to return if the test returns a positive result</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >errorCode</FONT> specifies the error code to set if the test returns a positive result</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >matchParams</FONT> is a pointer to a list of <FONT style="font-weight:bold; " >InterceptedFunctionParameter</FONT> pointers that specify the IN parameters to match for the test to execute</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >changeParams</FONT> is a pointer to a list of <FONT style="font-weight:bold; " >InterceptedFunctionParameter</FONT> pointers that specify the OUT parameters that will change when the test executes</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >testID</FONT> - will contain a pointer to a unique identifier for this test, following this call</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;"><FONT style="color:blue; " >bool</FONT> DeleteScheduledTest(Array *targetThreadID, String *testID)</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Removes the test identified by <FONT style="font-weight:bold; " >testID</FONT> (value set by previous call to <FONT style="font-weight:bold; " >CreateScheduledTest</FONT>) from the thread(s) specified in <FONT style="font-weight:bold; " >targetThreadID</FONT> (a pointer to an Array of UInt32 pointers)</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >targetThreadID</FONT><FONT style="font-weight:bold; " > – </FONT>the thread to delete the scheduled test from, if null this function will delete the specified test from all threads</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >testID – </FONT>the test ID of the test you would like to remove</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

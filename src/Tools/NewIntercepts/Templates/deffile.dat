@@ -1,0 +1,8 @@
+LIBRARY $PROJECT_NAME$
+EXPORTS
+
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+
+@INSERT_EXPORTED_LIST
+

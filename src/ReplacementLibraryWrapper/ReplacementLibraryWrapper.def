@@ -1,0 +1,33 @@
+LIBRARY	ReplacementLibraryWrapper
+EXPORTS
+	InitReplacementLibraryWrapper
+	GetSiStringLength
+	GetSiStringContents
+	FreeSiString
+	GetFunctionTests
+	FreeFunctionTests
+	CreateParamTypedArrays
+	FreeParamTypedArrays
+	SetParamString
+	DoesTestMatch
+	IsCategoryLoggingEnabled
+	IsFunctionLoggingEnabled
+	SendLog
+	
+	CheckFiringSpecification
+	GetFiringOptionForTest
+	SuspendProcess
+	FlushLog
+	IncrementTestExecutionCount
+	SetPauseEventInLogEntry
+	InitCallStackList
+	DeInitCallStackList
+	AddFunctionToCallStackList
+	
+	CreateNewEventsArray
+	InitNewEventsArrayAndSavePrevious
+	RestorePreviousEventsArray
+	DeleteEventArray
+
+	IsParentLogged
+	SetParentLogged

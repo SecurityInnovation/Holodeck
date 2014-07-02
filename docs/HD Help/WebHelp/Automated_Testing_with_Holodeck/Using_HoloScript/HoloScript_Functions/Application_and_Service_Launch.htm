@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Application and Service Launch</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nHoloScript Functions\nApplication and Service Launch");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Constructors_and_Deconstructors.htm","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Process_Chaining.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Application and Service Launch</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:36.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool</FONT> LaunchApplication(&nbsp;String *ApplicationToLaunch,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;">String *CommandLineParams,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="color:blue; " >bool</FONT> PauseOnStart,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;">ArrayList *FilteredFunctionList,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;">String * exporterLog,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="color:blue; " >bool</FONT> UseExternalInterceptionList)</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;">&nbsp;</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Launches the specified application, passing it the specified command line parameters and begins interception</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >ApplicationToLaunch – </FONT>the full path to the application to launch (i.e. &quot;C:\\programDirectory\\myProgram.exe&quot;)</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >CommandLineParams</FONT> – any command line parameters your application needs to operate properly.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >PauseOnStart</FONT> – interception will pause when the application first starts up if true.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >FilteredFunctionList</FONT> - a list of pointers to Strings containing the names of functions that will not be logged by the interception framework</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >exporterLog</FONT> – the current log file for the application – if this value is NULL, the default path will be used for the application’s current log file</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >UseExternalIntercaptionList</FONT> – true if functions to be intercepted are to be specified by an external list (such as the one created by the <FONT style="font-weight:bold; " >Custom Test Project</FONT>)</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication hsapp = </FONT><FONT style="font-family:'Courier New'; color:blue; " >new</FONT><FONT style="font-family:'Courier New'; " > HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >ArrayList list = </FONT><FONT style="font-family:'Courier New'; color:blue; " >new</FONT><FONT style="font-family:'Courier New'; " > ArrayList();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >list.Add(&quot;WriteFile&quot;);</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >hsapp.FilteredFunctionList = list;</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >hsapp.LaunchApplication(&quot;c:\\windows\\notepad.exe&quot;, null, </FONT><FONT style="font-family:'Courier New'; color:blue; " >true</FONT><FONT style="font-family:'Courier New'; " >, list, null, </FONT><FONT style="font-family:'Courier New'; color:blue; " >false</FONT><FONT style="font-family:'Courier New'; " >);</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >hsapp.ResumeApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >System.Console.WriteLine(&quot;{0} filtered functions&quot;, hsapp.FilteredFunctionList.Count);</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-weight:bold; " >Note: </FONT>the above code will print 1, as you would expect. However if UseExternalExceptionList is true LaunchApplication will reset the list and the above code will print 485. Do not test this parameter to true if you are using a list </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;text-indent:36.00pt;"><FONT style="color:blue; " >bool</FONT> LaunchApplication(&nbsp;String *ApplicationToLaunch,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;">String *CommandLineParams,</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:36.00pt;"><FONT style="color:blue; " >bool</FONT> PauseOnStart,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">ArrayList *FilteredFunctionList)</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Launches the specified application, passing it the specified command line parameters and begins interception The default path will be used for the application’s current log file.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >ApplicationToLaunch – </FONT>the full path to the application to launch (i.e. &quot;C:\\programDirectory\\myProgram.exe&quot;)</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >CommandLineParams</FONT> – any command line parameters your application needs to operate properly.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >PauseOnStart</FONT> – interception will pause when the application first starts up if true.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >FilteredFunctionList</FONT> - a list of pointers to Strings containing the names of functions that will not be logged by the interception framework</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >bool</FONT> LaunchService(&nbsp;String *serviceToLaunch, </P>
+ <P>&nbsp;&nbsp;&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> pauseOnStart, </P>
+ <P>&nbsp;&nbsp;&nbsp;&nbsp;ArrayList *filteredFunctionList);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Launches the specified Service.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >serviceToLaunch</FONT> – the name of the service to launch.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pauseOnStart – </FONT>if true the service will start paused.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >FilteredFunctionList</FONT> contains an ArrayList of pointers to Strings containing the names of functions that will not be logged by the interception framework</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> AttachApplication(&nbsp;<FONT style="color:blue; " >unsigned</FONT> <FONT style="color:blue; " >long</FONT> processID, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> pauseOnAttach, </P>
+ <P>&nbsp;&nbsp;ArrayList *filteredFunctionList, </P>
+ <P>&nbsp;&nbsp;String * exporterLog, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> UseExternalInterceptionList, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> suspendedApp, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> injectOnlyServiceExeLibrary);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches HoloScript to the process to an already running application.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >processID</FONT> – the ID of the process to attach to.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pauseOnAttach</FONT> – pause the application when Holodeck attaches.</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >filteredFunctionList – </FONT>an ArrayList of pointers to Strings containing the names of functions that will not be logged by the interception framework</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >exporterLog – </FONT>the path for the log file to be saved.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >UseExternalInterceptionList</FONT> – Boolean value to use an external Interception list, or use the default interception libraries provided by Holodeck</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >suspendedApp – </FONT>true if the application is already suspended.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >injectOnlyServiceExeLibrary – </FONT></P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> AttachApplication(&nbsp;<FONT style="color:blue; " >unsigned</FONT> <FONT style="color:blue; " >long</FONT> processID, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> pauseOnAttach, </P>
+ <P>&nbsp;&nbsp;ArrayList *filteredFunctionList, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> suspendedApp);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches HoloScript to the process to an already running application.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >processID – </FONT>the processID of the application to attach to.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pauseOnAttach – </FONT>Boolean to pause the application when the interception library is attached.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >filteredFunctionList – </FONT>an ArrayList of pointers to Strings containing the names of functions that will not be logged by the interception framework</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >suspendedApp – </FONT>true if the application is already suspended.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> AttachService(&nbsp;String *serviceToAttachTo, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> pauseOnAttach, </P>
+ <P>&nbsp;&nbsp;ArrayList *filteredFunctionList, </P>
+ <P>&nbsp;&nbsp;<FONT style="color:blue; " >bool</FONT> terminateOnExit);</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches to a service that is currently running</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >serviceToAttachTo – </FONT>the name of the service to attach to.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pauseOnAttach – </FONT>enable to pause the service when the interception library attaches.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >filteredFunctionList – </FONT>an ArrayList of pointers to Strings containing the names of functions that will not be logged by the interception framework</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >terminateOnExit – </FONT>terminate the application when the interception framework exits.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if all operations are successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Failing the ReadLine function</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nFailing a Single API Call\nFailing the ReadLine function");
+addAvenueInfo("HD HELP 2_5","Tutorials/Intermediate/Failing_a_Single_API_Call/Investigate_Logs.htm","Tutorials/Intermediate/Failing_a_Single_API_Call/Verify_ReadLine_Fault_is_Set.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Failing the ReadLine function</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To set a fault for the System.IO.StreamReader.ReadLine() function call right click any of the log items for this function and select &quot;Create a Scheduled Test…&quot; This will bring up the Scheduled Test Wizard with the correct function already highlighted. </P>
+ <P><IMG src="../../../images/ebx_1812492603.gif" border=0 height=400 width=400 alt="images\ebx_1812492603.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>No In-Parameters need to be changed as the In-Parameter only specifies this is to be used as a streamreader. </P>
+ <P><IMG src="../../../images/ebx_1766802356.gif" border=0 height=400 width=400 alt="images\ebx_1766802356.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>There are no Out-Parameters to change, so we can leave the third page untouched. </P>
+ <P><IMG src="../../../images/ebx_-573193003.gif" border=0 height=400 width=400 alt="images\ebx_-573193003.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The fourth page allows you to specify a new return value, or throw an exception. In this case we want to throw an exception so leave this page untouched as well and click next.</P>
+ <P><IMG src="../../../images/ebx_950068973.gif" border=0 height=400 width=400 alt="images\ebx_950068973.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>On the last page we can research which Exceptions this function calls by clicking the link at the bottom of the page. Opening this link will take you to the MSDN topic for the ReadLine method. This page shows there are two exceptions that are used by this method, OutOfMemoryException and IOException. Since we can simulate low and out of memory states using limits and faults we will select the IOException which MSDN states will happen when any I/O error occurs. Return to Holodeck and select the System.IO.IOException in the exception list to have Holodeck set this exception state every time the function is called.</P>
+ <H1><IMG src="../../../images/ebx_-65576300.gif" border=0 height=400 width=400 alt="images\ebx_-65576300.gif"></H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To make sure this test will fire on the next time the function is called, we will specify the test to fire 100% of the time.</P>
+ <P><IMG src="../../../images/ebx_-657383008.gif" border=0 height=400 width=400 alt="images\ebx_-657383008.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The final page of the wizard is a summary of the fault, if everything looks in order click finish and the fault will be set immediately.</P>
+ <P><IMG src="../../../images/ebx_1391701543.gif" border=0 height=400 width=400 alt="images\ebx_1391701543.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Investigate_Logs.htm">&lt;&lt; Previous</A>     <A href="Verify_ReadLine_Fault_is_Set.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Creating a Network Bandwidth limit</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nCreating Limits\nCreating a Network Bandwidth limit");
+addAvenueInfo("MAIN","Holodeck_in_depth/Creating_Limits/Creating_a_Memory_Space_limit.htm","Holodeck_in_depth/Creating_Faults/Faults_Overview.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Creating a Network Bandwidth limit</H1>
+ <P>This feature is useful for network dependent applications; simulate any network connection speed, or completely stop your network connection for a moment to see if the Application Under Test can recover. You can have different upload and download limits in a single project by changing either the Network Upload Bandwidth or the Network Download Bandwidth. </P>
+ <P>Open the limits pane by clicking <FONT style="font-weight:bold; " >View</FONT> and making sure there is a checkmark by the <FONT style="font-weight:bold; " >Limits Pane.</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_445238469.gif" border=0 height=205 width=551 alt="images\ebx_445238469.gif">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Create a limit:</FONT></P>
+ <P>With the Limits Pane visible use the slider bar or the text box labeled <FONT style="font-weight:bold; " >Limit</FONT> to set a limit, or type in a specific network speed. For greater precision you can choose between bits, Kilobits, and Megabits per second.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Remove a limit:</FONT></P>
+ <P>To remove a limit, slide the slider bar all the way to the right, or delete the limit node from the project pane.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >How Network Limits work:</FONT></P>
+ <P>Holodeck intercepts all Winsock APIs, among which are functions which send and receive network data. By buffering the incoming and outgoing data Holodeck is capable of limiting the speed of the network to a user specified value. If this specified value for speed is greater than what a network connection can handle, the network speed will automatically be set to the maximum speed which the connection is capable of handling.<BR><BR><FONT style="font-weight:bold; " >note: </FONT>upload and download limits work for all stream based sockets.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

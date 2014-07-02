@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!ELEMENT Exception (#PCDATA)>
+<!ATTLIST Exception Name CDATA #REQUIRED>
+
+<!ELEMENT Exceptions (Exception*)>

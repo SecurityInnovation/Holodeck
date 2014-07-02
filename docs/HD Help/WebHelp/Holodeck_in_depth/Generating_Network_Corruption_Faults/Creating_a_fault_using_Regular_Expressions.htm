@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Creating a fault using Regular Expressions</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nGenerating Network Corruption Faults\nCreating a fault using Regular Expressions");
+addAvenueInfo("MAIN","Holodeck_in_depth/Generating_Network_Corruption_Faults/Creating_a_fault_using_Find_and_Replace_Corruption.htm","Holodeck_in_depth/Regular_Expressions_and_Replacement_Strings/Using_regular_expressions.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Creating a fault using Regular Expressions</H1>
+ <P>Random Corruption is a good way of testing for the type of corruption that would happen as a result of common line noise. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>On the first page of the wizard you can specify that Corruption should happen on data being sent, received, or sent and received. Corruption being received over the network will test your client’s ability to parse corrupted network messages and corruption being sent over the network will test your server’s ability to receive corrupted network messages. You can also specify to corrupt messages only being sent and received over certain network ports. You might want to focus your testing on a specific service that uses a specific port.</P>
+ <P><IMG src="../../images/ebx_55562590.gif" border=0 height=440 width=420 alt="images\ebx_55562590.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Select Regular Expressions as the method of corruption</P>
+ <P><IMG src="../../images/ebx_2135121457.gif" border=0 height=440 width=420 alt="images\ebx_2135121457.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The following examples used on the Regular Expression Corruption page of the Netowrk Corruption Fault Wizard will replace any domain (ie www.intel.com) with a long string of &quot;A’s between 1000 and 5000 characters long.</P>
+ <P><FONT style="font-weight:bold; " >Example Regular Expression:</FONT></P>
+ <P>The regular expression to match any domain (www.intel.com) is as follows:</P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="100.00%" colspan="2" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >([wW]{3,}\.)?([abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+)\.(com|net|org)</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="65.50%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; " >([wW]{3,}\.)?</FONT></P></TD>
+  <TD width="34.50%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>this part matches an optional capital or lowercase &quot;www.&quot;</P></TD></TR>
+  <TR valign=top>
+  <TD width="65.50%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; " >([abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+)</FONT></P></TD>
+  <TD width="34.50%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>this part matches any length string consisting of upper or lowercase alphabet letters, greater than 1 (eg. &quot;abc&quot;, &quot;aRdfpQ&quot;, etc.)</P></TD></TR>
+  <TR valign=top>
+  <TD width="65.50%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; " >\.(com|net|org)</FONT></P></TD>
+  <TD width="34.50%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>this part matches a period followed by any one of the following, &quot;com&quot;, &quot;net&quot;, or &quot;org&quot;</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Example Expansion String:</FONT></P>
+ <P>The expansion string to expand between 1000 and 5000 ‘A’s is as follows:</P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="100.00%" colspan="2" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >$S1000,5000,A$</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="49.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >S</FONT></P></TD>
+  <TD width="50.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>this will expand to a string</P></TD></TR>
+  <TR valign=top>
+  <TD width="49.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >1000</FONT></P></TD>
+  <TD width="50.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>the minimum number of repetitions</P></TD></TR>
+  <TR valign=top>
+  <TD width="49.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >5000</FONT></P></TD>
+  <TD width="50.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>the maximum number of repetitions</P></TD></TR>
+  <TR valign=top>
+  <TD width="49.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >A</FONT></P></TD>
+  <TD width="50.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>the string to expand</P></TD></TR>
+  <TR valign=top>
+  <TD width="49.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-family:'Courier New'; font-weight:bold; " >$</FONT></P></TD>
+  <TD width="50.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>By enclosing this string in ‘<FONT style="font-family:'Courier New'; " >$</FONT>’ Holodeck knows this is a string to expand.</P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>For more information on <A href="../Regular_Expressions_and_Replacement_Strings/Using_regular_expressions.htm">Regular Expressions</A> and <A href="../Regular_Expressions_and_Replacement_Strings/Using_replacement_strings.htm">Replacement Strings</A> please see the related help topics.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_1898039978.gif" border=0 height=440 width=420 alt="images\ebx_1898039978.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../images/ebx_-1900079941.gif" border=0 height=440 width=420 alt="images\ebx_-1900079941.gif"></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

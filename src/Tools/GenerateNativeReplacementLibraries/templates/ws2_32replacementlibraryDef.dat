@@ -1,0 +1,5 @@
+LIBRARY	WS2_32ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

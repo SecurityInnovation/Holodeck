@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Introduction to using Holodeck as a command-line Utility</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing Holodeck as a command-line utility\nIntroduction to using Holodeck as a command-line Utility");
+addAvenueInfo("MAIN","Automated_Testing_with_Holodeck/Using_Holodeck_with_other_Automated_Test_Frameworks/Using_Holodeck_with_other_Automated_Test_Frameworks.htm","Automated_Testing_with_Holodeck/Using_Holodeck_as_a_command_line_utility/Code_Coverage_testing_from_the_command_line.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Introduction to using Holodeck as a command-line Utility</H1>
+ <H1>Usage</H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui [startwizard_option] [project_option] &lt;options&gt;</FONT></H1>
+ <H1><FONT style="font-weight:normal; " > </FONT></H1>
+ <H1>[startwizard_option] choices</H1>
+ <TABLE width="570" cellspacing="0" cellpadding="1" style="margin-left:9.00pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/addnewintercepts       </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts the 'Add Holodeck Intercepts' wizard on startup</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/customtestproject      </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts the 'Create a custom test project' wizard on startup</FONT></H1></TD></TR>
+ </TABLE>
+ <H1><FONT style="font-weight:normal; " > </FONT></H1>
+ <H1>[project_option] choices</H1>
+ <TABLE width="570" cellspacing="0" cellpadding="1" style="margin-left:9.00pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >projectfile.hdp               </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > loads the specified project file on startup</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/launch:exefilename           </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > launches the specified exe with default options*</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/attach:&lt;process_id&gt;          </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > attaches to the specified processID with default options*</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/launchservice:servicename    </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > launches the specified service with default options*</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/attachservice:servicename    </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > attachs to the specified running service with default options*</FONT></H1></TD></TR>
+ </TABLE>
+ <H1><FONT style="font-weight:normal; " > </FONT></H1>
+ <H1>&lt;options&gt; choices*</H1>
+ <TABLE width="570" cellspacing="0" cellpadding="1" style="margin-left:9.00pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/randomstress:[low,medium,high]           </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts the random test generator with the specified intensity</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/intelligentstress:[low,medium,high]      </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts the intelligent test generator with the specified intensity</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/codecoverage:[low,medium,high][,timeout] </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts the code coverage generator with the specified intensity and optional timeout in seconds</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/record                                   </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts recording the session on startup</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >/silent                                   </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > starts Holodeck in slient mode, messages are logged to ErrorLog.txt</FONT></H1></TD></TR>
+ </TABLE>
+ <H1><FONT style="font-weight:normal; " > </FONT></H1>
+ <H1>*Default Options:</H1>
+ <TABLE width="570" cellspacing="0" cellpadding="1" style="margin-left:9.00pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >Pause on start </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > false</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >Process chaining </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > true</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >Inherit settings </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > true</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >Attach debugger </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > true</FONT></H1></TD></TR>
+  <TR valign=top>
+  <TD width="43.16%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " >Logging options </FONT></H1></TD>
+  <TD width="56.84%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H1><FONT style="font-weight:normal; " > same defaults as in </FONT><A href="../../Holodeck_in_depth/New_Project_Wizard/New_Project_Wizard.htm"><FONT style="font-weight:normal; font-weight:normal; " >New Project Wizard</FONT></A><FONT style="font-weight:normal; " > </FONT></H1></TD></TR>
+ </TABLE>
+ <H1><FONT style="font-weight:normal; " > </FONT></H1>
+ <H1>Examples:</H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui myproject.hdp</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui myproject.hdp /codecoverage:low</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui myproject.hdp /codecoverage:high,15</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui myproject.hdp /record</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui /launch:c:\windows\notepad.exe</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui /attach:2146 /randomstress:high</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui /launchservice:&quot;Indexing Service&quot;</FONT></H1>
+ <H1><FONT style="font-weight:normal; " >HolodeckGui /attachservice:&quot;ClipBook&quot; /record /slient</FONT></H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

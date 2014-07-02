@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Fourth Example - Modifying the AUT Execution Environment (Network Limits)</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nExamples\nFourth Example - Modifying the AUT Execution Environment (Network Limits)");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HoloScript/Examples/Third_Example_Modifying_the_AUT_Execution_Environment_Disk_and_Memory_Limits_.htm","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/Step_by_Step_for_HEAT_API.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Fourth Example - Modifying the AUT Execution Environment (Network Limits)</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;">The following application sets the maximum speed of the system network throughput that can be allocated by the Application Under Test to maximum 50 bytes/sec. In other words, the Application Under Test can only use up to 50 bytes/sec capacity.</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >#include &quot;stdafx.h&quot;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;FunctionDatabase.dll&gt;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >#using &lt;mscorlib.dll&gt;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >#include &lt;tchar.h&gt;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >#using &lt;HoloScript.dll&gt;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >using namespace System;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >using namespace HoloScript;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >int _tmain(void)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;UInt64&nbsp;netDwldBandwidth;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;UInt64&nbsp;netUpldBandwidth;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " > // create a new interception framework</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;HoloScriptApplication *holoApp = new HoloScriptApplication();</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;/* launch Internet Explorer as the</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp; * application under test</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp; */</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;LaunchApplication(</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&quot;C:\\PROGRAM FILES\\INTERNET EXPLORER\\IEXPLORE.EXE&quot;,</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;NULL,</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;false,</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;holoApp-&gt;GetFilteredFunctionList());</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;// set upload and download speeds to max 50 bytes/sec</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;SetNetworkUploadBandwidth(50, true);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;SetNetworkDownloadBandwidth(50, true);</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;// get the network speeds and write them to the console</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;GetNetworkUploadBandwidth(netUpldBandwidth);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot;Network upload speed: &quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(netUpldBandwidth);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;GetNetworkDownloadBandwidth(netDwldBandwidth);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::Write(&quot;Network download speed: &quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(netDwldBandwidth);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine();</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;/* wait for user input to terminate the</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp; * interception</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp; */</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;&quot;Press [ENTER] to Terminate Application&quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::ReadLine();</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;// terminate the interception</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;TerminateApplication();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >return 0;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0"> &nbsp;</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

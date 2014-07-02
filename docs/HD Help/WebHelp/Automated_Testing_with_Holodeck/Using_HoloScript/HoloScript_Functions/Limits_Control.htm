@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Limits Control</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nHoloScript Functions\nLimits Control");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Tests_Control.htm","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Fault_Control.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Limits Control</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool</FONT> GetMonitorInformation(&nbsp;UInt64 &amp;maximumDiskUsage,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">UInt64 &amp;currentDiskUsage,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">UInt64 &amp;maximumMemoryUsage,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">UInt64 &amp;currentMemoryUsage)</P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets information about the current disk and memory usage for the application currently being monitored and stores them in the appropriate parameters</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >maximumDiskUsage</FONT> stores the maximum amount of disk space that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >currentDiskUsage</FONT> stores the current amount of disk space being used by the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >maximumMemoryUsage</FONT> stores the maximum amount of memory that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >currentMemoryUsage</FONT> stores the current amount of memory being used by the Application Under Test</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool </FONT>GetNetworkDownloadBandwidth(UInt64 &amp;downloadBandwidth);&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets information about  the system’s maximum download network  throughput (in Bytes/sec) that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >download</FONT><FONT style="font-weight:bold; " >Bandwidth</FONT><FONT style="font-weight:bold; " > – </FONT>the current maximum download bandwidth</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool </FONT>GetNetworkUploadBandwidth(UInt64 &amp;uploadBandwidth);</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets information about  the system’s maximum upload network  throughput (in Bytes/sec) that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >upload</FONT><FONT style="font-weight:bold; " >Bandwidth</FONT><FONT style="font-weight:bold; " > – </FONT>the current maximum upload bandwidth</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool</FONT> GetRealSpaceInformation(UInt64 &amp;maximumDiskUsage,</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">UInt64 &amp;maximumMemoryUsage)</P>
+ <P style="margin-left:144.00pt;margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets information about the system’s currently available disk and memory space – this call ignores any limits that have been set within HoloScript</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >maximumDiskUsage</FONT> stores the maximum amount of disk space available to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >maximumMemoryUsage</FONT> stores the maximum amount of memory available to the Application Under Test</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operations are successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool</FONT> SetMaximumDiskUsage(UInt64 maximumDiskUsage, <FONT style="color:blue; " >bool</FONT> isEnabled)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the maximum amount of disk space that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >maximumDiskUsage</FONT> – the maximum about of disk space available to the application in bytes</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >isEnabled</FONT> – tell the settings manager to turn disk limits on (true) or off (false)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operation is successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool</FONT> SetMaximumMemoryUsage(UInt64 maximumMemoryUsage, <FONT style="color:blue; " >bool</FONT> isEnabled)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the maximum amount of memory that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >maximumMemory</FONT><FONT style="font-weight:bold; " >Usage</FONT> – the maximum about of memory space available to the application in bytes</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >isEnabled</FONT> – tell the settings manager to turn disk limits on (true) or off (false)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operation is successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;margin-top:0.00pt;"><FONT style="color:blue; " >bool </FONT><FONT style="color:black; " >Se</FONT>tNetworkDownloadBandwidth(UInt64 downloadBandwidth<FONT style="font-family:'Courier New'; " > </FONT>, <FONT style="color:blue; " >bool</FONT> IsDownloadControlEnabled);&nbsp;</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the system’s maximum network download throughput (in bytes/sec) that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >downloadBandwidth – </FONT>the amount of bandwidth available to the application in bytes/second</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Is</FONT><FONT style="font-weight:bold; " >Download</FONT><FONT style="font-weight:bold; " >ControlEnabled</FONT> – tell the settings manager to turn network limits on (true) or off (false)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operation is successful, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-left:18.00pt;"><FONT style="color:blue; " >bool</FONT> SetNetworkUploadBandwidth(UInt64 uploadBandwidth<FONT style="font-family:'Courier New'; " > </FONT>, <FONT style="color:blue; " >bool</FONT> IsUploadControlEnabled);</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets the system’s maximum network upload throughput (in bytes/sec) that will be allocated to the Application Under Test</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >uploadBandwidth – </FONT>the amount of bandwidth available to the application in bytes/second</P>
+ <P style="margin-left:108.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >I</FONT><FONT style="font-weight:bold; " >sUpload</FONT><FONT style="font-weight:bold; " >ControlEnabled</FONT> – used to tell the settings manager to turn network limits on (true) or off (false)</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operation is successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

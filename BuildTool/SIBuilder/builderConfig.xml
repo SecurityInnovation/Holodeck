@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE SIBUILDER SYSTEM "c:\sisvn\trunk\commercial\Holodeck\BuildTool\SIBuilder\BuildFile.dtd"[]>
+<SIBUILDER>
+  <PRODUCT Name="Holodeck 2.5 Test" MajorVersion="2" MinorVersion="5" BuildNumber="36">
+    <SOURCECONTROL />
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds\Test</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\Test</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio\Media\CD-ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="sibuilder@sisecure.com" SmtpServer="192.168.2.1" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="" BuildConfig="Release">C:\source_code\commercial\Holodeck\src\MasterWorkspace\Holodeck.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.1 Longhorn Time Trial" MajorVersion="2" MinorVersion="1" BuildNumber="212">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C c:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\unmake_trial.bat">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C c:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\make_timetrial.bat">c:\windows\system32\cmd.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds;y:</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET Whidbey\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\Media\CD ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, bshirey@sisecure.com, jtaylor@sisecure.com, rwagner@sisecure.com, jbasirico@sisecure.com, jwhitehouse@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="sibuilder@sisecure.com" SmtpServer="192.168.2.1" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="FileCorruptionGenerator" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HeatDll" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HeatApi" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="SiUtils" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="FunctionDatabase" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="Log" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="MagicLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HoloScript" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="GuiSupport" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="CLRInterceptLib" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetCacheGen" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HolodeckLib" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="LibraryExport" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HolodeckGui" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="GenerateReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="NetCorruptLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="HeatDotNet" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemServiceProcessReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemXMLReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="MSCorLibReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="Advapi32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="Kernel32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="WS2_32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetReplacementInstall" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="HolodeckConfig" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\HolodeckConfig\HolodeckConfig.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.1 Longhorn Trial" MajorVersion="2" MinorVersion="1" BuildNumber="212">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C c:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\unmake_timetrial.bat">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C c:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\make_trial.bat">c:\windows\system32\cmd.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds;y:</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET Whidbey\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\Media\CD ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, bshirey@sisecure.com, jtaylor@sisecure.com, rwagner@sisecure.com, jbasirico@sisecure.com, jwhitehouse@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="sibuilder@sisecure.com" SmtpServer="192.168.2.1" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="FileCorruptionGenerator" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HeatDll" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HeatApi" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="SiUtils" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="FunctionDatabase" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="Log" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="MagicLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HoloScript" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="GuiSupport" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="CLRInterceptLib" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetCacheGen" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HolodeckLib" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="LibraryExport" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HolodeckGui" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="GenerateReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="NetCorruptLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="HeatDotNet" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemServiceProcessReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemXMLReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="MSCorLibReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="Advapi32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="Kernel32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="WS2_32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetReplacementInstall" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="HolodeckConfig" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\HolodeckConfig\HolodeckConfig.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.1 Longhorn Full" MajorVersion="2" MinorVersion="1" BuildNumber="212">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C rmdir /S /Q c:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="get -prS:\commercial_products -idjtaylor:Tlaloc75 -t -z /OldVersions/Holodeck/V2_1_longhorn">c:\program files\pvcs\vm\win32\bin\pcli.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds;y:</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET Whidbey\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\Install\HolodeckEESetup\Media\CD ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, bshirey@sisecure.com, jtaylor@sisecure.com, rwagner@sisecure.com, jbasirico@sisecure.com, jwhitehouse@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="sibuilder@sisecure.com" SmtpServer="192.168.2.1" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="FileCorruptionGenerator" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HeatDll" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HeatApi" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="SiUtils" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="FunctionDatabase" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="Log" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="MagicLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HoloScript" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="GuiSupport" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="CLRInterceptLib" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetCacheGen" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HolodeckLib" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="LibraryExport" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="HolodeckGui" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\holodeckgui\holodeckgui.sln</SOLUTION>
+      <SOLUTION Project="GenerateReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="NetCorruptLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="HeatDotNet" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemServiceProcessReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="SystemXMLReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="MSCorLibReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="Advapi32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="Kernel32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="WS2_32ReplacementLibrary" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="DotNetReplacementInstall" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\holodeck\replacement\replacement.sln</SOLUTION>
+      <SOLUTION Project="HolodeckConfig" BuildConfig="Release">C:\source_code\commercial\OldVersions\Holodeck\v2_1_longhorn\HolodeckConfig\HolodeckConfig.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.5" MajorVersion="2" MinorVersion="5" BuildNumber="226">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C rmdir /S /Q c:\source_code\commercial\Holodeck\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\source_code\commercial\Old\HD\V2_5\Common\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="get -pr\\192.168.1.80\DevDivDB -idjtaylor:Tlaloc75 -t -z /commercial/Holodeck/src">c:\program files\merant\vm\win32\bin\pcli.exe</EXECUTE>
+      <EXECUTE Args="get -pr\\192.168.1.80\DevDivDB -idjtaylor:Tlaloc75 -t -z /commercial/Old/HD/V2_5/common">c:\program files\merant\vm\win32\bin\pcli.exe</EXECUTE>
+      <EXECUTE Args="get -pr\\192.168.1.80\DevDivDB -idjtaylor:Tlaloc75 -t -z /commercial/Holodeck/Install">c:\program files\merant\vm\win32\bin\pcli.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds;s:\</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio\Media\CD-ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, jtaylor@sisecure.com, jbasirico@sisecure.com, gfoltz@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="sibuilder@sisecure.com" SmtpServer="localhost" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="" BuildConfig="Release">C:\source_code\commercial\Holodeck\src\MasterWorkspace\Holodeck.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.6" MajorVersion="2" MinorVersion="6" BuildNumber="6">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C rmdir /S /Q c:\source_code\commercial\Holodeck\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\source_code\commercial\Old\HD\V2_5\Common\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="get -pr\\192.168.1.80\DevDivDB -idjtaylor:Tlaloc75 -t -z /commercial/Holodeck/src">c:\program files\merant\vm\win32\bin\pcli.exe</EXECUTE>
+      <EXECUTE Args="get -pr\\192.168.1.80\DevDivDB -idjtaylor:Tlaloc75 -t -z /commercial/Old/HD/V2_5/common">c:\program files\merant\vm\win32\bin\pcli.exe</EXECUTE>
+      <EXECUTE Args="get -pr\\192.168.1.80\DevDivDB -idjtaylor:Tlaloc75 -t -z /commercial/Holodeck/Install">c:\program files\merant\vm\win32\bin\pcli.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds;s:\</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio\Media\CD-ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, jtaylor@sisecure.com, jbasirico@sisecure.com, gfoltz@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="sibuilder@sisecure.com" SmtpServer="mail.sisecure.com" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="" BuildConfig="Release">C:\source_code\commercial\Holodeck\src\MasterWorkspace\Holodeck.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.7" MajorVersion="2" MinorVersion="8" BuildNumber="1">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\Holodeck\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\Old\HD\V2_5\Common\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/src c:\sisvn\trunk\commercial\Holodeck\src\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Old/HD/V2_5/Common/src c:\sisvn\trunk\commercial\Old\HD\V2_5\Common\src\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/Install c:\sisvn\trunk\commercial\HOlodeck\Install\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>c:\sisvn\trunk\commercial\Holodeck\Install\HolodeckEE - DevStudio\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>c:\sisvn\trunk\commercial\Holodeck\Install\HolodeckEE - DevStudio\Media\CD-ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, jtaylor@sisecure.com, jbasirico@sisecure.com, gfoltz@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="akakrania@sisecure.com" SmtpServer="mail.sisecure.com" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="" BuildConfig="Release">c:\sisvn\trunk\commercial\Holodeck\src\MasterWorkspace\Holodeck.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.8" MajorVersion="2" MinorVersion="8" BuildNumber="1">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\Holodeck\src_2_8">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\Old\HD\V2_5\Common\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\HOlodeck\Install">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Old/HD/V2_5/Common/src c:\sisvn\trunk\commercial\Old\HD\V2_5\Common\src\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/Install c:\sisvn\trunk\commercial\HOlodeck\Install\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/src c:\sisvn\trunk\commercial\Holodeck\src_2_8\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/src/HolodeckGui/Release/NewIntercepts c:\sisvn\trunk\commercial\Holodeck\src_2_8\HolodeckGui\Release\NewIntercepts --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="/C &quot;C:\sisvn\trunk\commercial\Holodeck\BuildTool\CleanSVN.cmd&quot; c:\sisvn\trunk\commercial\Holodeck\src_2_8">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C &quot;C:\sisvn\trunk\commercial\Holodeck\BuildTool\CleanSVN.cmd&quot; c:\sisvn\trunk\commercial\Holodeck\src_2_8\HolodeckGui\Release\NewIntercepts">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C &quot;C:\sisvn\trunk\commercial\Holodeck\BuildTool\CleanSVN.cmd&quot; c:\sisvn\trunk\commercial\Holodeck\src_2_8\HolodeckGui\Help">c:\windows\system32\cmd.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>c:\sisvn\trunk\commercial\Holodeck\Install\HolodeckEE - DevStudio\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>c:\sisvn\trunk\commercial\Holodeck\Install\HolodeckEE - DevStudio\Media\CD-ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, jtaylor@sisecure.com, jbasirico@sisecure.com, gfoltz@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="akakrania@sisecure.com" SmtpServer="mail.sisecure.com" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="" BuildConfig="Release">c:\sisvn\trunk\commercial\Holodeck\src_2_8\MasterWorkspace\Holodeck.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+  <PRODUCT Name="Holodeck 2.8.5" MajorVersion="2" MinorVersion="8" BuildNumber="5">
+    <SOURCECONTROL>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\Holodeck\src_2_8">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\Old\HD\V2_5\Common\src">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C rmdir /S /Q c:\sisvn\trunk\commercial\HOlodeck\Install">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Old/HD/V2_5/Common/src c:\sisvn\trunk\commercial\Old\HD\V2_5\Common\src\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/Install c:\sisvn\trunk\commercial\HOlodeck\Install\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/src c:\sisvn\trunk\commercial\Holodeck\src_2_8\ --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="checkout http://192.168.1.11/svn/repos/trunk/commercial/Holodeck/src/HolodeckGui/Release/NewIntercepts c:\sisvn\trunk\commercial\Holodeck\src_2_8\HolodeckGui\Release\NewIntercepts --username akakrania">C:\Program Files\Subversion\bin\svn.exe</EXECUTE>
+      <EXECUTE Args="/C &quot;C:\sisvn\trunk\commercial\Holodeck\BuildTool\CleanSVN.cmd&quot; c:\sisvn\trunk\commercial\Holodeck\src_2_8">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C &quot;C:\sisvn\trunk\commercial\Holodeck\BuildTool\CleanSVN.cmd&quot; c:\sisvn\trunk\commercial\Holodeck\src_2_8\HolodeckGui\Release\NewIntercepts">c:\windows\system32\cmd.exe</EXECUTE>
+      <EXECUTE Args="/C &quot;C:\sisvn\trunk\commercial\Holodeck\BuildTool\CleanSVN.cmd&quot; c:\sisvn\trunk\commercial\Holodeck\src_2_8\HolodeckGui\Help">c:\windows\system32\cmd.exe</EXECUTE>
+    </SOURCECONTROL>
+    <PATHS>
+      <BUILDS_LOCATION>c:\builds</BUILDS_LOCATION>
+      <LOGS_LOCATION>c:\builds\BuildLogs</LOGS_LOCATION>
+      <DEVENV_FILE>C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.exe</DEVENV_FILE>
+      <INSTALLSHIELD_SCRIPT>c:\sisvn\trunk\commercial\Holodeck\Install\HolodeckEE - DevStudio\HolodeckEESetup.ism.cmd</INSTALLSHIELD_SCRIPT>
+      <INSTALLSHIELD_OUTPUT>c:\sisvn\trunk\commercial\Holodeck\Install\HolodeckEE - DevStudio\Media\CD-ROM Media\Package\HolodeckEESetup.exe</INSTALLSHIELD_OUTPUT>
+    </PATHS>
+    <BUILDMAIL>
+      <RECIPIENTS>akakrania@sisecure.com, jtaylor@sisecure.com, jbasirico@sisecure.com, gfoltz@sisecure.com</RECIPIENTS>
+      <MAILSENDER Address="akakrania@sisecure.com" SmtpServer="mail.sisecure.com" />
+    </BUILDMAIL>
+    <BUILD_SOLUTIONS>
+      <SOLUTION Project="" BuildConfig="Release">c:\sisvn\trunk\commercial\Holodeck\src_2_8\MasterWorkspace\Holodeck.sln</SOLUTION>
+    </BUILD_SOLUTIONS>
+  </PRODUCT>
+</SIBUILDER>

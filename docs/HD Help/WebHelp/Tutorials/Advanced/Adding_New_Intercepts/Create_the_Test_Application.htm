@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Create the Test Application</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nAdvanced\nAdding New Intercepts\nCreate the Test Application");
+addAvenueInfo("HD HELP 2_5","Tutorials/Advanced/Adding_New_Intercepts/Create_a_Test_dll.htm","Tutorials/Advanced/Adding_New_Intercepts/Add_a_New_Intercept_Library.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Create the Test Application</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>This test application will call the test dll we just created, after clicking a button. This is an extremely simple version of a program that uses a dll to finish its program operations. This test application will be the application we load into Holodeck, when it calls functions in the test dll Holodeck will be able to intercept these functions like it does with the native .NET and native functions out of the box.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Create a new project in Visual Studio.net Click New Project &gt; Visual C# Windows Application, name it TestApplication.</P>
+ <P><IMG src="../../../images/ebx_-1684234112.gif" border=0 height=364 width=531 alt="images\ebx_-1684234112.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Add a button to the form</FONT></P>
+ <P>Show the Toolbox pane and click button. Click anywhere on the form to insert the button.</P>
+ <P><IMG src="../../../images/ebx_-511652063.gif" border=0 height=285 width=270 alt="images\ebx_-511652063.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Double click the button to create a method that will fire when button1 is clicked. Double clicking the button will take you directly to the code view of this application and automatically create a method called &quot;button1_Click.&quot; </P>
+ <P>Add the following code to button1_Click</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >private</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >void</FONT><FONT style="font-family:'Courier New'; " > button1_Click(</FONT><FONT style="font-family:'Courier New'; color:blue; " >object</FONT><FONT style="font-family:'Courier New'; " > sender, System.EventArgs e)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Class1 testClass = </FONT><FONT style="font-family:'Courier New'; color:blue; " >new</FONT><FONT style="font-family:'Courier New'; " > Class1();</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;testClass.Test</FONT><FONT style="font-family:'Courier New'; " >Method</FONT><FONT style="font-family:'Courier New'; " >(0, </FONT><FONT style="font-family:'Courier New'; color:blue; " >false</FONT><FONT style="font-family:'Courier New'; " >);</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Add a reference to TestDLL.dll</FONT></P>
+ <P>Adding the test dll by reference is how you can load external library functions, this will give you access to all the public methods in the library. </P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1.</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>In the solutions pane, right click the references node and select &quot;Add Reference…&quot;</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2.</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Click on the Projects tab</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3.</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the Browse… Button</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >4.</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Browse to TestDll.dll and click OK</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >5.</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Add <FONT style="font-family:'Courier New'; color:blue; " >using</FONT><FONT style="font-family:'Courier New'; " > TestDLL;</FONT><FONT style="font-family:'Courier New'; font-size:10pt; " > </FONT> to the top of From1.cs with the other using statements.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Build the project, click Built &gt; Build Solution… on the menu.</P>
+ <P>This will create the application we will load into Holodeck that uses the new dll we have just created.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Create_a_Test_dll.htm">&lt;&lt; Previous</A>    <A href="Add_a_New_Intercept_Library.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

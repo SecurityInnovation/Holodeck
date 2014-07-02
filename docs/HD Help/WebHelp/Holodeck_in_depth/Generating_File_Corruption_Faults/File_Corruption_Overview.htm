@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>File Corruption Overview</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nGenerating File Corruption Faults\nFile Corruption Overview");
+addAvenueInfo("MAIN","Holodeck_in_depth/Exceptions_and_mini_dumps/Mini_dump_Overview.htm","Holodeck_in_depth/Generating_File_Corruption_Faults/Create_a_File_Corruption_Fault_using_Find_and_Replace.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>File Corruption Overview</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>When you create a File corruption fault Holodeck does not corrupt the original file, but rather when the Application Under Test attempts to access that file it redirects the Application Under Test to a corrupted version of the file. This is useful because it allows you to corrupt a single file many different ways to test all aspects of file processing. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Please see the following pages for more information on File Corruption:</P>
+ <P><A href="Create_a_File_Corruption_Fault_using_Random_Corruption.htm">Create a File Corruption Fault using Random Corruption</A> </P>
+ <P><A href="Create_a_File_Corruption_Fault_using_Find_and_Replace.htm">Create a File Corruption Fault using Find and Replace</A> </P>
+ <P><A href="Create_a_File_Corruption_Fault_with_Regular_Expressions.htm">Create a File Corruption Fault with Regular Expressions</A> </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>To create a file corruption fault click Application &gt; &quot;Create a New File Corruption Fault…&quot; This will bring up the file corruption wizard. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Example of a corrupted file:</P>
+ <P><IMG src="../../images/ebx_-1845102920.gif" border=0 height=226 width=602 alt="images\ebx_-1845102920.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The original file remains untouched; Holodeck creates a new file in the Corrupted Files directory, the redirects the application to that file. All changes are stored in an XML file with the same name as the corrupted file.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>In the image below a corrupted file has been selected in the <A href="../../Holodeck_Windows_and_Panes/Corrupted_Files_Pane.htm">Corrupted Files Pane</A> after the application had tried to access it. Holodeck then generated the corrupted file and added an entry in the Corrupted Files Pane. Selecting the corrupted file will load the corrupted file, with all corruption changes highlighted, in the <A href="../../Holodeck_Windows_and_Panes/File_Corruption_Details_Pane.htm">File Corruption Details Pane</A>.</P>
+ <P><IMG src="../../images/ebx_1231350926.gif" border=0 height=309 width=617 alt="images\ebx_1231350926.gif"></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

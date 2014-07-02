@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Using Holodeck for Code Coverage Test Generation</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nUsing Automatic Test Generation\nUsing Holodeck for Code Coverage Test Generation");
+addAvenueInfo("MAIN","Holodeck_in_depth/Using_Automatic_Test_Generation/Creating_Stress_Test_Generation.htm","Holodeck_in_depth/Using_Automatic_Test_Generation/Modifying_Testing_Settings.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Using Holodeck for Code Coverage Test Generation</H1>
+ <P>Code coverage test generation attempts to hit as many error paths as possible. It reruns the application multiple times, each time setting different combinations of Limits, Faults, and Tests. Each time the Application Under Test terminates, by way of the script terminating the Application gracefully or Holodeck finding a crashing bug, Holodeck will relaunch the Application Under Test and start the next test, until there are none left. Holodeck assumes that each testing script will close the application under test at the end of the test; this allows Holodeck to know when to start the next test.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Once the application has stopped Holodeck will wait the number of seconds in the text box in the lower right to restart the application.</P>
+ <P class="Normal-(Web)" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Normal-(Web)" ><FONT style="font-size:9pt; " >To open the Code Coverage Test Generator click Test -&gt; Code Coverage Test Generator</FONT><FONT style="font-size:9pt; " >… on the menu.</FONT></P>
+ <P class="Normal-(Web)" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Normal-(Web)" style="margin-top:0.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT><IMG src="../../images/ebx_-1642926546.gif" border=0 height=417 width=352 alt="images\ebx_-1642926546.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Initial Recording</FONT></P>
+ <P>The first thing Holodeck does when running Code Coverage Testing is record what the application is doing to create an intelligent test plan. Holodeck records resource usage and unique API calls until the application is terminated. It then uses the information found in the recording phase to build the next tests. Each time the application is restarted Holodeck sets a different single limit, fault or test.</P>
+ <P>&nbsp;</P>
+ <P>Exact order of execution:</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Set each fault one at a time</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Set a limit </P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>For disk or memory</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >i)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Set a limit for max used – 1 byte</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >ii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Set a limit for average used – 1 byte</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >iii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>Set a limit to minimum possible (0 bytes)</P>
+ <P style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>For Network</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >i)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Set a limit to 50%</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >ii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Set a limit to 0%</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Set a test for each unique API call seen in the recording phase.</P>
+ <P style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span>Resource faults are set targeting each dependency</P>
+ <P style="margin-left:59.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >i)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Faults are either two of the following</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >(1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>Corruption of the Resource</P>
+ <P style="margin-left:77.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >(2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>Any one of the resource faults as found in the faults pane</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Note: </FONT>Test/limit/fault is set randomly between start and finish of the application running so that different code paths are hit.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The test generation status dialog shows all the information having to do with the currently running test. This session of Code Coverage testing will run for 181 tests. Each time the application under test terminates, either from a crash or when the test harness closes, Holodeck will restart the application and set a new test.</P>
+ <P><IMG src="../../images/ebx_1527661258.gif" border=0 height=287 width=430 alt="images\ebx_1527661258.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Note: </FONT>You should never set timeout to shorter than the original run of the test as that will cause no tests to be set on some of the restarts.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

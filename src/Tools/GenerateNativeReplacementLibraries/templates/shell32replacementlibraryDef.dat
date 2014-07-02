@@ -1,0 +1,5 @@
+LIBRARY	Shell32ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

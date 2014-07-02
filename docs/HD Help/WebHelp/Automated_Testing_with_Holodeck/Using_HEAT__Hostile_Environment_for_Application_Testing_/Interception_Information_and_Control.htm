@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Interception Information and Control</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HEAT (Hostile Environment for Application Testing)\nInterception Information and Control");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HEAT__Hostile_Environment_for_Application_Testing_/Constructors_and_Destructors_of_HeatAPI.htm","HEAT_Application_Execution.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Interception Information and Control</H1>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD initializeApp(LPSTR pszAppPath, LPSTR pszAppName)</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Launches an application with the given path and executable name.  The app will be initially suspended.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pszAppPath</FONT> specifies the application path</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >pszAppName</FONT> specifies the application executable name</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_ALREADY_ATTACHED</FONT>, <FONT style="font-weight:bold; " >HEAT_INVALID_PARAMETERS</FONT> or <FONT style="font-weight:bold; " >HEAT_FAILED_CREATE_PROCESS</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD attachToApp(const PROCESS_INFORMATION&amp; procInfo)</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches to an application using a PROCESS_INFORMATION structure filled in from a previous call to CreateProcess.  This form should be used if the app has just been created and it was created suspended.  Use attachToRunningApp if the app was running normally.  The app will be in the same state as it was before this call.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >procInfo</FONT> specifies the process on which to begin interception</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_ALREADY_ATTACHED</FONT> or <FONT style="font-weight:bold; " >HEAT_FAILED_OPEN_PROCESS</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD attachToApp(DWORD dwProcessId)</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches to an application using a process ID.  This form should be used if the app has just been created and it was created suspended.  Use attachToRunningApp if the app was running normally.  The app will be in the same state as it was before this call. </P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >dwProcessId</FONT> specifies the process on which to begin interception</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_ALREADY_ATTACHED</FONT> or <FONT style="font-weight:bold; " >HEAT_FAILED_OPEN_PROCESS</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD attachToRunningApp(const PROCESS_INFORMATION&amp; procInfo)</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches to an application using a PROCESS_INFORMATION structure filled in from a previous call to CreateProcess.  This form should be used if the app is running normally.  Use attachToApp if the app has just been created suspended and hasn’t been resumed yet.  The app will be in the same state as it was before this call.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >procInfo</FONT> specifies the process on which to begin interception</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_ALREADY_ATTACHED</FONT> or <FONT style="font-weight:bold; " >HEAT_FAILED_OPEN_PROCESS</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD attachToRunningApp(DWORD dwProcessId)</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Attaches to an application using a process ID.  This form should be used if the app is running normally.  Use attachToApp if the app has just been created suspended and hasn’t been resumed yet.  The app will be in the same state as it was before this call.</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >dwProcessId</FONT> specifies the process on which to begin interception</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_ALREADY_ATTACHED</FONT> or <FONT style="font-weight:bold; " >HEAT_FAILED_OPEN_PROCESS</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD detachFromApp()</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Detaches from (stops interception of) the application that is currently being intercepted</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_NOT_READY</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;">&nbsp;DWORD deinitializeApp()</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Terminates the process HEAT is currently attached to and removes all intercepts from the intercept list.</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns <FONT style="font-weight:bold; " >HEAT_SUCCESS</FONT> if operation succeeds, otherwise <FONT style="font-weight:bold; " >HEAT_NOT_READY</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >bool </FONT>isReady()</P>
+ <P style="margin-left:54.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if an application is ready to run and be intercepted, false otherwise</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >bool</FONT> isRunning()</P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if the application is running</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>void setIsRunning(<FONT style="color:blue; " >bool</FONT> value) </P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>allows thread procedure to set running state</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>void setIsReady(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Allows thread procedure to set ready state</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>void setIsInjected(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Allows thread procedure to set injected state</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>DWORD getProcessId() </P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns the process ID of the current process</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>HANDLE getProcessHandle()</P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns the handle of the current process</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>DWORD getThreadId()</P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns the ID of the current thread</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>DWORD getThreadsInCurrentProcess(DWORD *threadList)</P>
+ <P style="margin-left:54.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns an array of thread IDs being used by the process</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

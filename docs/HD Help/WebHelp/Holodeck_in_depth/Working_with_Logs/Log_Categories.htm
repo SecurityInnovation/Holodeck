@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>API Log Categories</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nWorking with Logs\nAPI Log Categories");
+addAvenueInfo("MAIN","Holodeck_in_depth/Working_with_Logs/Logs_Overview.htm","Holodeck_in_depth/Working_with_Logs/Custom_Log_Filtering_and_Sorting.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>API Log Categories</H1>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;">&nbsp;</P>
+ <P class="Normal-(Web)" style="margin-left:4.50pt;margin-top:0.00pt;"><FONT style="font-size:9pt; " >Holodeck</FONT><FONT style="font-size:9pt; " > automatically sorts each API call into categories. These categories can help you to investigate failures or decide which functions to set</FONT><FONT style="font-size:9pt; " > tests for. </FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;">&nbsp;</P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >TimeStamp</FONT><FONT style="font-size:9pt; " > – This is the precise time in which Holodeck logged the API call</FONT><FONT style="font-size:9pt; " >.</FONT><FONT style="font-size:9pt; " > </FONT><FONT style="font-size:9pt; " >T</FONT><FONT style="font-size:9pt; " >he format of this category is Month/Day/Year Hour:Minute:Second:Milisecond.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >Thread</FONT><FONT style="font-size:9pt; " > – </FONT><FONT style="font-size:9pt; " >The ID of the Thread in the Application Under Test that called this function.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >Category</FONT><FONT style="font-size:9pt; " > – This is the main category of the API call, </FONT><FONT style="font-size:9pt; " >Holodeck intercepts both win32 APIs and </FONT><FONT style="font-size:9pt; " >.NET</FONT><FONT style="font-size:9pt; " > APIs</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT><FONT style="font-size:9pt; font-weight:bold; " >Categories include:</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >COM – API functions included in the COM (Common Object Model)</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >DANGEROUS – These are dangerous APIs as listed in the </FONT><A href="http://www.amazon.com/exec/obidos/tg/detail/-/0735617228/qid=1083629015/sr=8-1/ref=pd_ka_1/102-8533560-3109709?v=glance&s=books&n=507846"><FONT style="font-size:9pt; " >Writing Secure Code Book</FONT></A><FONT style="font-size:9pt; " >.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >FILE – API functions having to do with file manipulation such as: file attributes, disk space, file size, creating and deleting files, etc.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >L</FONT><FONT style="font-size:9pt; " >I</FONT><FONT style="font-size:9pt; " >BRARY – API functions having to do with library functions such as: loading libraries and getting module handles.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >MISCELLANEOUS – API functions that don’t fit into any other category.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >MEMORY – API functions having to do with Memory calls such as: LocalAlloc, LocalFree, HeapSize etc.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >NETWORK –API functions having to do with Network calls including socket manipulation and sending and receiving calls.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >PROCESS – Includes thread and process specific function calls including C</FONT><FONT style="font-size:9pt; " >reateThread, and GetStartupInfo</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >REGIST</FONT><FONT style="font-size:9pt; " >RY</FONT><FONT style="font-size:9pt; " > – Registry Specific API calls are contained in this category, including Opening, Querying, Closing and others.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >SECURITY – API functions that are related to security including cryptography</FONT><FONT style="font-size:9pt; " > and licencing.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-5.75pt;"><FONT style="font-size:9pt; " >TIME </FONT><FONT style="font-size:9pt; " >–</FONT><FONT style="font-size:9pt; " > </FONT><FONT style="font-size:9pt; " >Functions dealing with timers, are included in this category.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-top:0.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >DLL </FONT><FONT style="font-size:9pt; " >– This column shows which .dll the intercepted API is located in.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >Function </FONT><FONT style="font-size:9pt; " >– This shows which API calls the </FONT><FONT style="font-size:9pt; " >Application Under Test</FONT><FONT style="font-size:9pt; " > has called. The next few columns are information about that function call.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >Return Value </FONT><FONT style="font-size:9pt; " >- The value returned from the function called, often these return values will be memory addresses, but more useful information might be looking for 1’s or 0’s (representing the call was made successfully or unsuccessfully) or values smaller than a memory address (actually useful return values)</FONT><FONT style="font-size:9pt; " > return values may also be TRUE, FALSE, or NULL.</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:77.75pt;margin-top:0.00pt;text-indent:-72.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >Error Code</FONT><FONT style="font-size:9pt; " > – </FONT><FONT style="font-size:9pt; " >This column shows the error code returned by the API function. This is not set by all functions, some use return values to give staus</FONT><FONT style="font-size:9pt; " >. </FONT><A href="../../Appendices/Error_Codes.htm"><FONT style="font-size:9pt; " >Error Code List</FONT></A><FONT style="font-size:9pt; font-weight:bold; " > </FONT></P>
+ <P class="Normal-(Web)" style="margin-left:77.75pt;margin-top:0.00pt;text-indent:-72.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-36.00pt;"><FONT style="font-size:9pt; font-weight:bold; " >Exception </FONT><FONT style="font-size:9pt; " >– If the function raised an exception it will show up in this column, this only applies while testing </FONT><FONT style="font-size:9pt; " >.NET</FONT><FONT style="font-size:9pt; " > applications. </FONT><A href="../../Appendices/Exception_Codes.htm"><FONT style="font-size:9pt; " >Exception List</FONT></A><FONT style="font-size:9pt; " > </FONT></P>
+ <P class="Normal-(Web)" style="margin-left:77.75pt;margin-top:0.00pt;text-indent:-72.00pt;"><FONT style="font-size:9pt; " >&nbsp;</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:47.50pt;margin-top:0.00pt;text-indent:-41.75pt;"><FONT style="font-size:9pt; font-weight:bold; " >List of Parameters </FONT><FONT style="font-size:9pt; " >– </FONT><FONT style="font-size:9pt; " >These</FONT><FONT style="font-size:9pt; " > column</FONT><FONT style="font-size:9pt; " >s</FONT><FONT style="font-size:9pt; " > contains all the parameter values. </FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,683 @@
+
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//   File Name:   Setup.rul                                                   
+//                                                                            
+//   Description: InstallShield script                                        
+//                                                                            
+//   Comments:    This script was generated based on the selections you made in
+//                the Project Wizard.  Refer to the help topic entitled "Modify      
+//                the script that the Project Wizard generates" for information
+//                on possible next steps.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+//  Include header files
+    
+#include "ifx.h"
+#include "WinApi.h"
+    
+////////////////////// string defines ////////////////////////////
+
+//////////////////// installation declarations ///////////////////
+
+// ----- DLL function prototypes -----
+
+
+    // your DLL function prototypes
+
+
+// ---- script function prototypes -----
+prototype CheckDotNetVersions();
+
+    // your script function prototypes
+
+    // your global variables
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//                                                                           
+//  FUNCTION:   OnFirstUIBefore                                            
+//                                                                           
+//  EVENT:      The OnFirstUIBefore event is called by OnShowUI when the setup is
+//              running in first install mode. By default this event displays UI allowing
+//              the end user to specify installation parameters.
+//              
+//              Note: This event will not be called automatically in a
+//              program...endprogram style setup.                                                             
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+function OnFirstUIBefore()
+    number  nResult;
+    number  nLoop;
+    string  szTitle, szMsg;
+    string  szOpt1, szOpt2, szLicenseFile;
+    string  svDir;
+    string  szTargetDirAppendix;
+    BOOL    bLicenseAccepted;
+	
+	string 	driveChar;
+	LIST   	listID;
+	number  nFindResult;
+    
+begin
+
+    if ( ALLUSERS ) then   
+        TARGETDIR = PROGRAMFILES ^ IFX_COMPANY_NAME ^ IFX_PRODUCT_NAME;
+    else
+        TARGETDIR = FOLDER_APPDATA ^ IFX_COMPANY_NAME ^ IFX_PRODUCT_NAME; 
+    endif;
+
+    // Customize the default TARGETDIR for multi-instance application.
+    // TODO: If you want something different customize the code below.	
+    if( MAINT_OPTION = MAINT_OPTION_MULTI_INSTANCE  && MULTI_INSTANCE_COUNT > 0) then
+        nLoop = 1;
+        svDir = TARGETDIR;
+        while(ExistsDir(TARGETDIR) = EXISTS)			
+            NumToStr(szTargetDirAppendix,nLoop);
+            TARGETDIR = svDir + szTargetDirAppendix;
+            nLoop = nLoop + 1;
+        endwhile;						
+    endif;
+
+    svDir = TARGETDIR;
+    bLicenseAccepted = FALSE;
+    
+    if (!Is (USER_ADMINISTRATOR, "")) then
+		MessageBox("You must be an administrator to install/uninstall Holodeck Enterprise Edition.  Setup will now exit.", MB_OK);
+		abort;
+	endif;
+
+// Beginning of UI Sequence
+Dlg_Start:
+
+Dlg_SdWelcome:
+    szTitle = "";
+    szMsg = "";
+    nResult = SdWelcome( szTitle, szMsg );
+    if (nResult = BACK) goto Dlg_Start;
+
+Dlg_SdLicense2:
+    szTitle = "";
+    szOpt1 = "";
+    szOpt2 = "";
+    szLicenseFile = SUPPORTDIR ^ "license.txt";
+    nResult = SdLicense2( szTitle, szOpt1, szOpt2, szLicenseFile, bLicenseAccepted );
+    if (nResult = BACK) then
+        goto Dlg_SdWelcome;
+    else
+        bLicenseAccepted = TRUE;
+    endif;
+
+Dlg_SdAskDestPath2:
+    // Create a list to hold the fixed drive names.
+    listID = ListCreate (STRINGLIST);
+	driveChar = "";
+    szTitle = "";
+    szMsg = "";
+    nFindResult = 0;
+        nResult = SdAskDestPath2( szTitle, szMsg, svDir );
+        StrSub (driveChar, svDir, 0, 1);
+        StrToUpper (driveChar, driveChar);
+		GetValidDrivesList (listID, FIXED_DRIVE, -1);
+		ListSetIndex (listID, 0);
+		nFindResult = ListFindString (listID, driveChar);
+		ListDestroy (listID);
+		if (nFindResult != 0) then
+			MessageBox("Holodeck may not function correctly if installed on a non-fixed drive. Please select a folder on a fixed drive on this local machine.", MB_OK);
+			goto Dlg_SdAskDestPath2;
+		endif;
+        TARGETDIR = svDir; 
+        
+    if (nResult = BACK) goto Dlg_SdLicense2;
+
+Dlg_ObjDialogs:
+    nResult = ShowObjWizardPages( nResult );
+    if (nResult = BACK) goto Dlg_SdAskDestPath2;
+    
+Dlg_SdStartCopy2:
+    szTitle = "";
+    szMsg = "";
+    nResult = SdStartCopy2( szTitle, szMsg );	
+    if (nResult = BACK) goto Dlg_ObjDialogs;
+
+    return 0;
+end;     
+ 
+//---------------------------------------------------------------------------
+// OnMaintUIBefore
+//
+// Maintenance UI Sequence - Before Move Data
+//
+// The OnMaintUIBefore event is called by OnShowUI when the setup is
+// running in maintenance mode. By default this event displays UI that
+// allows the end user to add or remove components, repair currently
+// installed components or uninstall the application.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnMaintUIBefore()
+    number	nResult, nType, nMediaFlags, verResult;
+    string	szTitle, szMsg, szIgnore;
+    NUMBER op1, op2;
+begin
+
+	if (!Is (USER_ADMINISTRATOR, "")) then
+		MessageBox("You must be an administrator to install/uninstall Holodeck Enterprise Edition.  Setup will now exit.", MB_OK);
+		abort;
+	endif;
+	
+	// nType defaults to MODIFY.
+	nType = REMOVEALL;
+
+// Beginning of UI Sequence
+Dlg_Start:
+
+	verResult = VerProductCompareVersions();
+	if ( (verResult != VERSION_COMPARE_RESULT_SAME) && (verResult != VERSION_COMPARE_RESULT_NOT_INSTALLED) && (verResult >= ISERR_SUCCESS) ) then
+		//MessageBox("There is a previous release of Holodeck Enterprise Edition installed.\n\nPlease manually uninstall the previous version before running setup for release 2.8 again.\n\nNOTE: This release of Holodeck 2.8 requires a new registeration key, you may request a new key at support@securityinnovation.com\n\nHolodeck will operate in trial mode for 15 days until you register it with a new key. You may of course uninstall the upgrade and revert to the previous version at any time.\\Setup will exit shortly after you click OK.", MB_OK);
+		SdFinish ("Version conflict", "There is a previous release of Holodeck Enterprise Edition installed.\n\nPlease manually uninstall the previous version before running setup for release 2.8 again.", "Holodeck 2.8 requires a new key, you may request a new key at support@securityinnovation.com\n\nHolodeck will operate in trial mode for 15 days until you obtain a new key. You may uninstall the upgrade and revert to the previous version at any time.", "", "", op1, op2);
+		return -1;
+	endif;
+
+	// Show Standard Maintenance Dialog
+	//Disable( BACKBUTTON );
+	//nType = SdWelcomeMaint( szTitle, szMsg, nType );
+	//Enable( BACKBUTTON );
+    nResult = NEXT;
+
+	// Show Uninstall Confirmation Dialog
+    if ( nType = REMOVEALL ) then
+		nResult = MessageBox( "Do you want to completely remove Holodeck Enterprise Edition?  NOTE: If you click Yes, you will not be able to cancel uninstallation.", MB_YESNO );
+		if (nResult != IDYES ) then
+			return -1;
+		endif;
+	endif;
+
+Dlg_SdComponentTree:
+	if ( nType = MODIFY ) then
+		szTitle = "";
+		szMsg = SdLoadString( SD_STR_COMPONENT_MAINT_MSG );
+		nResult = SdFeatureTree( szTitle, szMsg, TARGETDIR, "", -1 );
+		if ( nResult = BACK ) goto Dlg_Start;
+    endif;
+
+Dlg_ObjDialogs:
+    nResult = ShowObjWizardPages( nResult );
+    if ( ( nResult = BACK ) && ( nType != MODIFY ) ) goto Dlg_Start;
+    if ( ( nResult = BACK ) && ( nType = MODIFY ) ) goto Dlg_SdComponentTree;
+
+	switch(nType)
+
+        case REMOVEALL:
+						
+			// Ensure that all previously installed components are removed
+			// for media that supports updating.
+			MediaGetData( MEDIA, MEDIA_FIELD_MEDIA_FLAGS, nMediaFlags, szIgnore );
+			
+			if( nMediaFlags & MEDIA_FLAG_UPDATEMODE_SUPPORTED ) then
+				ComponentRemoveAllInMediaAndLog();
+			else
+				ComponentRemoveAllInMedia();
+			endif;
+
+        case REPAIR:
+			
+			// Reinstall all previously installed components.
+			FeatureReinstall();
+
+    endswitch;
+ 
+end; 
+
+function CheckDotNetVersions()
+	BOOL bNeedsToInstall;
+	STRING szInstallRoot, szMatchingFile, szDirectoryName, szVerString;
+	NUMBER nSize, nType, nResult, nStartPos, nStartPos2, nVersion; 
+begin
+	bNeedsToInstall = FALSE;
+	
+	// does the .net framework key exist?
+	RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+	if (RegDBKeyExist("SOFTWARE\\Microsoft\\.NETFramework") < 0) then
+		bNeedsToInstall = TRUE;
+	else
+		// get the value of InstallRoot
+		nType = REGDB_STRING;
+		if (RegDBGetKeyValueEx("SOFTWARE\\Microsoft\\.NETFramework", "InstallRoot", nType, szInstallRoot, nSize) < 0) then
+			bNeedsToInstall = TRUE;    
+		else
+			// set it to true for now and let it be set to false if we find a version > 1
+			bNeedsToInstall = TRUE;
+			
+			// ok, value exists.  now lets see if they only have 1.x clr.  If they
+			// don't have any others then we should install 1.1    		
+    		nResult = FindAllFiles (szInstallRoot, "mscorlib.dll", szMatchingFile, RESET);
+    		while (nResult = 0)                                       
+    			StrReplace(szMatchingFile, szInstallRoot, "", 0);
+    			nStartPos = StrFind(szMatchingFile, "\\");
+    			szDirectoryName = "";
+    			if (nStartPos >= 0) then
+    				StrSub(szDirectoryName, szMatchingFile, 0, nStartPos);
+    			endif;
+    			
+    			// see if szDirectoryName is of the form vX.Y.ZZZZ.  If it is not,
+    			// we don't care about it
+    			nStartPos = StrFind(szDirectoryName, ".");
+    			nStartPos2 = 0;
+    			if (nStartPos >= 0) then
+    				nStartPos2 = StrFindEx(szDirectoryName, ".", nStartPos + 1);
+    			endif;
+    			
+    			szVerString = "";
+    			if ((StrFind(szDirectoryName, "v") = 0) && 
+    				(nStartPos >= 2) && 
+    				(nStartPos2 >= 4)) then
+    				StrSub(szVerString, szDirectoryName, 1, nStartPos2 - nStartPos + 1);
+    			endif;
+    			
+    			nVersion = 0;
+    			if (szVerString != "") then
+    				StrToNum(nVersion, szVerString);
+    			endif;
+    			
+    			if (nVersion > 1) then
+    				bNeedsToInstall = FALSE;
+    			endif;    			
+		
+		        // Find the next matching file name.
+		        nResult = FindAllFiles(szInstallRoot, "mscorlib.dll", szMatchingFile, CONTINUE);
+		    endwhile;    
+		    
+		    FindAllFiles(szInstallRoot, "mscorlib.dll", szMatchingFile, CANCEL);
+
+		endif;
+	endif;
+	
+	return bNeedsToInstall;
+end;
+ 
+//---------------------------------------------------------------------------
+// OnFirstUIAfter
+//
+// First Install UI Sequence - After Move Data
+//
+// The OnFirstUIAfter event called by OnShowUI after the file transfer
+// of the setup when the setup is running in first install mode. By default
+// this event displays UI that informs the end user that the setup has been
+// completed successfully.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFirstUIAfter()
+    STRING szTitle, szMsg1, szMsg2, szOpt1, szOpt2;
+    NUMBER bvOpt1, bvOpt2;
+begin
+
+    ShowObjWizardPages(NEXT);
+    
+    if (CheckDotNetVersions()) then
+		// run the .net installer
+		SdShowMsg("Please wait while Microsoft's .NET Runtime version 1.1 is being installed.", TRUE);
+		if (LaunchAppAndWait(SRCDIR ^ "DotNetFx.exe", "/q:a /c:\"install /l /q\"", LAAW_OPTION_WAIT) < 0) then
+			MessageBox("Could not install Microsoft's .NET Runtime.  Please download and install it from WindowsUpdate.com", SEVERE);
+			abort;
+		endif;
+		SdShowMsg("", FALSE);
+	endif;
+    
+    szTitle = "";
+    szMsg1 = ""; 
+    szMsg2 = "";
+    szOpt1 = "";
+    szOpt2 = "";
+	bvOpt1   = FALSE;
+    bvOpt2   = FALSE;    
+    
+    if (LaunchAppAndWait(TARGETDIR ^ "DotNetCacheGen.exe", "/onfail " + (TARGETDIR ^ "cache.fail"), LAAW_OPTION_WAIT) < 0) then
+		MessageBox ("Could not generate Holodeck's .NET interception modules.", SEVERE);
+		abort;
+	endif;                                                                              
+	if (Is(FILE_EXISTS, TARGETDIR ^ "cache.fail") == TRUE) then
+		DeleteFile(TARGETDIR ^ "cache.fail");
+		// Failure message has already been displayed by DotNetCacheGen, just abort
+		abort;
+	endif;
+	
+	if (LaunchAppAndWait(SRCDIR ^ "HolodeckConfig.exe", "", LAAW_OPTION_WAIT | LAAW_OPTION_HIDDEN | LAAW_OPTION_SHOW_HOURGLASS) < 0) then
+		MessageBox ("Could not configure Holodeck's Installation Settings", SEVERE);
+		abort;
+	endif;
+    
+    if ( BATCH_INSTALL ) then
+    	SdFinishReboot ( szTitle , szMsg1 , SYS_BOOTMACHINE , szMsg2 , 0 );
+    else
+		
+		// If the update service is enabled, show finish dialog that includes
+		// update check option.
+		if( ENABLED_ISERVICES & SERVICE_ISUPDATE ) then
+
+			if( SdFinishUpdateEx( szTitle, szMsg1, szMsg2, szOpt1, szOpt2, TRUE ) ) then
+
+				// Don't check for updates in silent mode.
+				if( MODE != SILENTMODE ) then
+					UpdateServiceCheckForUpdates( "", FALSE );
+				endif;
+
+			endif;
+
+		else
+			SdFinish ( szTitle , szMsg1 , szMsg2 , szOpt1 , szOpt2 , bvOpt1 , bvOpt2 );
+		endif;
+
+    endif;
+end;
+//---------------------------------------------------------------------------
+// OnMaintUIAfter
+//
+// The OnMaintUIAfter event called by OnShowUI after the file transfer
+// of the setup when the setup is running in maintenance mode. By default
+// this event displays UI that informs the end user that the maintenance setup
+// has been completed successfully.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnMaintUIAfter()
+    STRING szTitle, szMsg1, szMsg2, szOpt1, szOpt2;
+    NUMBER bvOpt1, bvOpt2;
+begin
+
+    ShowObjWizardPages(NEXT);
+    
+    DeleteDir(TARGETDIR ^ "Logs", ALLCONTENTS);
+    DeleteDir(TARGETDIR ^ "DotNetCache", ALLCONTENTS);
+    
+	szTitle = SdLoadString(IFX_SDFINISH_MAINT_TITLE);    
+    szMsg1  = SdLoadString(IFX_SDFINISH_MAINT_MSG1);
+	szMsg2 = "";    
+    szOpt1 = "";
+    szOpt2 = "";
+	bvOpt1   = FALSE;
+    bvOpt2   = FALSE;    
+    
+    if ( BATCH_INSTALL ) then
+    	SdFinishReboot ( szTitle , szMsg1 , SYS_BOOTMACHINE , szMsg2 , 0 );
+    else    
+       	SdFinish ( szTitle , szMsg1 , szMsg2 , szOpt1 , szOpt2 , bvOpt1 , bvOpt2 );
+    endif;
+end;
+//---------------------------------------------------------------------------
+// OnMoveData
+//
+// The OnMoveData event is called by OnShowUI to initiate the file
+// transfer of the setup.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnMoveData()
+number	nResult, nMediaFlags;
+HWND hwndProgress, hwndCtrl;
+begin
+
+	// Don't install the DISK1COMPONENT if MAINT_OPTION_NONE was specified.
+	if( MAINT_OPTION = MAINT_OPTION_NONE ) then
+		FeatureSelectItem( MEDIA, DISK1COMPONENT, FALSE );
+	endif;
+
+    // Show Status
+	// Note: Start status window at 1 in case CreateInstallationInfo call
+	// is lengthy.
+	SetStatusWindow( 1, "" );
+	Enable( STATUSEX );
+	StatusUpdate( ON, 100 );
+	
+	//*************************************************************************
+	// Disable the cancel button if in maintenance mode.
+	
+	if ( MAINTENANCE ) then
+	
+	  // First get the handle of the progress dialog using the Windows API
+	  // FindWindow, note that this must be done AFTER calling
+	  // Enable( STATUSEX ), note also that you cannot use the built in
+	  // function CmdGetHwndDlg because the progress dialog is not a standard
+	  // dialog.
+	
+	  hwndProgress = FindWindow( "#32770", IFX_SETUP_TITLE );
+	  if ( hwndProgress ) then
+	
+	    // Now get the handle of the control using the Windows
+	    // API GetDlgItem.
+	
+	    hwndCtrl = GetDlgItem( hwndProgress, IDCANCEL );
+	    if ( hwndCtrl ) then
+	
+	      // Now disable the button using the Windows API
+	      // EnableWindow.
+	
+	      EnableWindow( hwndCtrl, FALSE );
+	
+	      // or hide the button using the Windows API
+	      // ShowWindow.
+	      //ShowWindow( hwndCtrl, SW_HIDE );
+	
+	    endif;
+	  endif;
+	endif;
+
+	// Note: Moved from OnShowUI in 7.01 - Create the uninstall infomation
+	// after displaying the progress dialog.
+	CreateInstallationInfo();
+		
+	// Move Data
+	nResult = FeatureTransferData( MEDIA );
+		    
+	// Create uninstall key, if DISK1COMPONENT was installed.
+	if( IFX_DISK1INSTALLED ) then
+
+		// Store text-subs for maintenance mode later, only do this when
+		// disk 1 is installed.
+		FeatureSaveTarget("");
+
+		// Write uninstall information.
+		MaintenanceStart();
+
+		// Customize Uninstall Information
+		OnCustomizeUninstInfo();
+
+	endif;
+
+	// Handle move data error and abort if error occured.
+	if( nResult < ISERR_SUCCESS ) then
+		OnComponentError();
+		abort;
+	endif;
+
+	// Update service registration.
+	if( !REMOVEALLMODE && ENABLED_ISERVICES & SERVICE_ISUPDATE ) then
+		
+		// Set the update check interval to 30 days.
+		// TODO: If you want to register the product version specify something
+		// other than "" for the second parameter.
+		UpdateServiceRegisterProduct( "", "", TRUE, 30 );
+		
+		// TODO: Enable this if you want to create an update check shortcut.
+		//UpdateServiceCreateShortcut( "", "", "" );
+
+	endif;
+
+    // Disable Status
+	Disable( STATUSEX );
+
+end;
+//---------------------------------------------------------------------------
+// OnFilterComponents
+//
+// The OnFilterComponents event is called by the framework to filter out
+// components in each feature by language and platform, override this
+// event to perform custom filtering.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFilterComponents()
+begin
+    // Filter file groups by current platform.
+    FeatureFilterOS(MEDIA, ISOS_ST_ALL, ISOSL_ALL, TRUE);
+    FeatureFilterOS(MEDIA, SYSINFO.nSuites, SYSINFO.nISOSL, FALSE);
+ 
+    // Filter file groups by current language.
+    FeatureFilterLanguage(MEDIA, ISLANG_ALL, TRUE);
+    FeatureFilterLanguage(MEDIA, SELECTED_LANGUAGE, FALSE);
+end;
+//---------------------------------------------------------------------------
+// OnBegin
+//
+// The OnBegin event is called directly by the framework after the setup
+// initializes.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnBegin()
+
+begin
+
+end;
+//---------------------------------------------------------------------------
+// OnCheckMediaPassword
+//
+// Displays a password dialog if the media is password protected.
+//
+// Note: This event is called for all setups.
+//---------------------------------------------------------------------------
+function OnCheckMediaPassword()
+string szResult, szMsg;
+BOOL bValidated;
+begin
+
+	// Check whether the setup author selected this option.
+	if( !SHOW_PASSWORD_DIALOG ) then;
+		return ISERR_SUCCESS;
+	endif;
+
+	// Check whether the password has been specified previously.
+	LogReadCustomString( MEDIA_PASSWORD_KEY, szResult );
+	if( FeatureValidate( MEDIA, "", szResult ) == 0 ) then
+		return ISERR_SUCCESS;
+	endif;
+
+	// "Back" button should be disabled.
+	Disable( BACKBUTTON );
+
+	// Attempt to validate the media.
+	bValidated = FALSE;
+
+	// Loop until the password is validated.
+	while( !bValidated )
+
+		// Prompt for password.
+		if( EnterPassword( "", "", szResult ) < ISERR_SUCCESS ) then
+			abort; // Failed to display password dialog
+		endif;
+
+		// Attempt to validate the media.
+		if( FeatureValidate( MEDIA, "", szResult ) == 0 ) then
+			
+			// Store the media password for maintenance mode.
+			LogWriteCustomString( MEDIA_PASSWORD_KEY, szResult );
+
+			bValidated = TRUE;
+		else
+			szMsg = SdLoadString( IDS_IFX_ERROR_INVALID_MEDIA_PASSWORD );
+			MessageBox( szMsg, INFORMATION );
+		endif;
+
+	endwhile;
+
+	// Enable "Back" button.
+	Enable( BACKBUTTON );
+
+end;
+//---------------------------------------------------------------------------
+// OnShowUI
+//
+// This function drives the UI sequence and file transfer of the setup.
+// 
+// The OnShowUI event is called directly by the framework to initiate
+// the UI sequence and file transfer of the setup. By default this event
+// displays UI that informs the end user that the maintenance setup has been
+// completed successfully.
+// 
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnShowUI()
+BOOL	bMaintenanceMode, bUpdateMode;
+string	szIgnore, szTitle;
+begin
+		
+		// Enable dialog caching
+		Enable( DIALOGCACHE );
+		
+		// Determine what events to show.
+		bUpdateMode	= FALSE;
+		bMaintenanceMode = FALSE;
+	
+		// Remove this to disabled update mode.
+		if( UPDATEMODE ) then
+			bUpdateMode = TRUE;
+		endif;
+
+		// Remove this to disable maintenance mode.
+		if ( MAINTENANCE ) then
+			bMaintenanceMode = TRUE;
+		endif;
+
+		// Show appropriate UI
+
+		// TODO: Enable if you want to enable background etc.
+		if ( LoadStringFromStringTable( "TITLE_MAIN", szTitle ) < ISERR_SUCCESS ) then // Load the title string.
+			szTitle = IFX_SETUP_TITLE;
+		endif;
+		SetTitle( szTitle, 24, WHITE );
+		Enable( FULLWINDOWMODE );						   
+		Enable( BACKGROUND );
+		SetColor( BACKGROUND, BK_BLUE | BK_SMOOTH );
+
+		if( bUpdateMode ) then
+			OnUpdateUIBefore();
+		else
+			if ( bMaintenanceMode ) then
+				OnMaintUIBefore();
+			else
+				OnFirstUIBefore();
+			endif;
+		endif;
+
+		// Move Data
+		OnMoveData();
+		
+		// Show appropriate UI after move data
+		if( bUpdateMode ) then
+			OnUpdateUIAfter();
+		else
+			if ( bMaintenanceMode ) then
+				OnMaintUIAfter();
+			else
+				OnFirstUIAfter();
+			endif;
+		endif;
+
+		// Disable dialog caching
+		Disable(DIALOGCACHE);
+
+end;
+// --- include script file section ---
+
+

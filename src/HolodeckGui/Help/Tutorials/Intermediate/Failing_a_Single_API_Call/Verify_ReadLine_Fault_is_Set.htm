@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Verify ReadLine Fault is Set</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nFailing a Single API Call\nVerify ReadLine Fault is Set");
+addAvenueInfo("Holodeck Help","Tutorials/Intermediate/Failing_a_Single_API_Call/Failing_the_ReadLine_function.htm","Tutorials/Intermediate/Failing_a_Single_API_Call/Summary_3.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Verify ReadLine Fault is Set</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Once a fault has been set you can verify it one of two ways, verify the fault with the application, or check the number of times the test has executed in the <A href="../../../Holodeck_Windows_and_Panes/Properties_Pane.htm">Properties Pane</A>. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Holodeck will remember all the information for each test until the project is closed so we can verify the test first in the application. The test we set was for when the BrokenApp attempted to load the URL information into the main window. Return to the BrokenApp and load www.google.com again; click File &gt;Open URL… and type www.google.com into the text box. After BrokenApp reports the response stream has been received it will fail to catch the following error:</P>
+ <P><IMG src="../../../images/ebx_1293917871.gif" border=0 height=146 width=440 alt="images\ebx_1293917871.gif"></P>
+ <P>Either click Continue to keep the BrokenApp running, or Quit to close the BrokenApp.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Return to Holodeck and verify the failure through the properties pane. Show the <A href="../../../Holodeck_Windows_and_Panes/Properties_Pane.htm">Properties Pane</A> by clicking the Properties pane tab at the bottom right of the screen. Now open the <A href="../../../Holodeck_Windows_and_Panes/Test_Pane.htm">Test Pane</A> and highlight the test you just created. In the properties pane the ExecutionCount property shows how many times this test has executed. This shows it has executed once, because the BrokenApp crashed the first time the test fired.</P>
+ <P><IMG src="../../../images/ebx_-1824933254.gif" border=0 height=340 width=336 alt="images\ebx_-1824933254.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Failing_the_ReadLine_function.htm">&lt;&lt; Previous</A>    <A href="Summary_3.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

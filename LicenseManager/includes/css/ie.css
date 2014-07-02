@@ -1,0 +1,63 @@
+/* IE constants navigation */
+
+#contentTop {
+	width: 618px;
+}
+
+#search {
+		padding: 2px 0 0 0;
+		}
+		
+#fullWidth {
+		width: 608px;
+}
+
+#constants {  }
+	#constants a {
+		display: block;
+		width: 160px;
+		height: 18px;
+		color: #565656;
+		text-decoration: none;
+        padding: 5px 10px 5px 33px;
+		float: left;
+		/*border-width:thin; border-style:solid;*/
+		}
+		
+		#constants a.hasedit {
+			width: 75px;
+			float: left;
+		}
+		
+		#constants a.edit {
+			width: 20px;
+			float: right;
+			text-align: right;
+			padding: 4px 10px 5px 12px;
+			clear: right;
+			/* border-width:thin; border-style:solid; */
+		}
+				
+		#constants a#myprofile { background: url(../../img/buttons/bg-login-0.gif) no-repeat; border-bottom: 0; margin-top: 1px;}
+		#constants a#myprofile:hover { background: url(../../img/buttons/bg-login-r.gif) no-repeat; }
+		#constants a#myproile:focus { background: url(../../img/buttons/bg-login-1.gif) no-repeat; }
+		
+		#constants a#editprofile { background: url(../../img/buttons/edit-0.gif) no-repeat right; margin-top: 1px; margin-bottom: -1px;}
+		#constants a#editprofile:hover { background: url(../../img/buttons/edit-r.gif) no-repeat right; }
+		#constants a#editprofile:focus { background: url(../../img/buttons/edit-1.gif) no-repeat right; }
+		
+		#constants a#mycontacts { height: 24px; he\ight: 19px; background: url(../../img/buttons/bg-contact-0.gif) no-repeat; clear: left; padding-top: 5px; margin-top: -1px;}
+		#constants a#mycontacts:hover { height: 24px; he\ight: 19px; background: url(../../img/buttons/bg-contact-r.gif) no-repeat; }
+		#constants a#mycontacts:focus { height: 24px; he\ight: 19px; background: url(../../img/buttons/bg-contact-1.gif) no-repeat; }
+		
+	    #constants a#addcontacts { background: url(../../img/buttons/add-0.gif) no-repeat right; padding-top: 6px; margin: 0px;}
+		#constants a#addcontacts:hover { background: url(../../img/buttons/add-r.gif) no-repeat right; }
+		#constants a#addcontacts:focus { background: url(../../img/buttons/add-1.gif) no-repeat right; }
+		
+		#constants a#preferences { background: url(../../img/buttons/bg-subscribe-0.gif) no-repeat; }
+		#constants a#preferences:hover { background: url(../../img/buttons/bg-subscribe-r.gif) no-repeat; }
+		#constants a#preferences:focus { background: url(../../img/buttons/bg-subscribe-1.gif) no-repeat; }
+		
+#main p.narrowexample {
+	height: 180px;
+	}

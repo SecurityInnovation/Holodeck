@@ -1,0 +1,956 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	</head>
+	<body bgColor="lightsteelblue">
+		<div align="center"><IMG src="holodeck report_files\Holodeckee.bmp">
+			<br>
+			<h1 align="center">Holodeck Enterprise Edition Report</h1>
+		</div>
+		<br>
+		<br>
+		<div id="Logs Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>API Log Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report shows summary data for APIs logged by each process.
+			<br>
+			Use this data to determine how many API calls were made for each category.  
+			<br>
+			Use the '+' button in the Type column to see the function names that were called in each category.
+			</FONT>
+		</div>
+		<br>
+		<div id="Logs" align="left">
+			<OBJECT id="Logs_PivotTable" style="WIDTH: 502px; HEIGHT: 211px" height="211" width="502" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Logs.xml</x:CommandText>
+					<x:Name>Logs</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Type</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Function</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param1</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>1</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param2</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>2</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param3</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>3</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param4</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>4</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param5</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>5</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param6</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>6</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param7</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>7</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param8</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>8</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param9</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>9</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Return Value</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>10</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>11</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code Type</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>12</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Log Entry Count</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Function</x:DetailSortOrder>
+						<x:DetailSortOrder>Type</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Logs</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+				<p style='margin-top:100;font-family:Arial;font-size:8.0pt'>
+					To use this Web page interactively, you must have Microsoft® Internet Explorer 
+					4.01 Service Pack 1 (SP1) or later and the Microsoft Office XP Web Components.
+				<a href="http://office.microsoft.com/downloads/2002/owc10.aspx">
+					Click here to install the Office XP Web Components.</a>:This version of web components is compatible with all versions of Microsoft Office.</p>
+				<p style='margin-top:100;font-family:Arial;font-size:8.0pt'>
+					See the <a href="http://office.microsoft.com/downloads/2002/owc10.aspx">
+						Microsoft Office Web site</a> for more information.</p>
+			</OBJECT>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="Faults Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>Faults Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report shows summary data for the faults set for each process.
+			<br>
+			Use this data to determine which faults were active at the time of report creation.
+			</FONT>
+		</div>
+		<br>
+		<div id="Faults" align="left">
+			<object id="Faults_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Faults.xml</x:CommandText>
+					<x:Name>Faults</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Type</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Name</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Number of Faults</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Name</x:DetailSortOrder>
+						<x:DetailSortOrder>Type</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Faults</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="Tests Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>Tests Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report shows summary data for the tests set for each process.
+			<br>
+			Use this data to determine which tests were active at the time of report creation.
+			</FONT>
+		</div>
+		<br>
+		<div id="Tests" align="left">
+			<object id="Tests_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Tests.xml</x:CommandText>
+					<x:Name>Tests</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Type</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Function</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param1</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>1</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param2</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>2</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param3</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>3</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param4</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>4</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param5</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>5</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param6</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>6</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param7</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>7</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param8</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>8</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param9</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>9</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Return Value</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>10</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>11</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code Type</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>12</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Number of Tests</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Function</x:DetailSortOrder>
+						<x:DetailSortOrder>Type</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Tests</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="Error Codes Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>Error Codes Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report shows summary data for the error codes set by APIs called from each process.
+			<br>
+			Use this data to examine any API calls that set failure error codes.  
+			<br>
+			Use the '+' button in the Error Code Type column to see what error codes were set.
+			<br>
+			Then use the '+' button in the Error Code column to see which functions set each error code.
+			</FONT>
+		</div>
+		<br>
+		<div id="Error Codes" align="left">
+			<object id="Error Codes_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Logs.xml</x:CommandText>
+					<x:Name>Error Codes</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code Type</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Function</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>1</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param1</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>2</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param2</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>3</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param3</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>4</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param4</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>5</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param5</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>6</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param6</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>7</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param7</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>8</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param8</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>9</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param9</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>10</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Return Value</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>11</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Count of Error Code Usage</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Function</x:DetailSortOrder>
+						<x:DetailSortOrder>Error Code Type</x:DetailSortOrder>
+						<x:DetailSortOrder>Error Code</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Error Codes</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="Resource Dependencies Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>Resource Dependencies Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report summarizes the dependencies for each process
+			<br>
+			Use this data to see the number of dependencies as well as the number of times each dependency was touched.  If you see a dependency with a very high hit-count you may be looking at a performance bug. 
+			<br> 
+			Use the '+' button in the Type column to view hit count for each dependency.
+			</FONT>
+		</div>
+		<br>
+		<div id="Resource Dependencies" align="left">
+			<object id="Resource Dependencies_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Resource Dependencies.xml</x:CommandText>
+					<x:Name>Resource Dependencies</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Type</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Name</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Count of Resource Usage</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Name</x:DetailSortOrder>
+						<x:DetailSortOrder>Type</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Resource Dependencies</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="Resource Usage Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>Resource Usage Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report shows maximum and average resource usage for each process.
+			<br>
+			Click the '+' button below each process to view resource usage numbers
+			</FONT>
+		</div>
+		<br>
+		<div id="Resource Usage" align="left">
+			<object id="Resource Usage_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Resource Usages.xml</x:CommandText>
+					<x:Name>Resource Usage</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Name</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>KiloBytes Used</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Name</x:DetailSortOrder>
+						<x:DetailSortOrder>KiloBytes Used</x:DetailSortOrder>
+						<x:ExpandDetails>3</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Resource Usage</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+		<br>
+		<hr>
+		<br>
+<!--		<div id="Param Values" align="left">
+			<object id="Param Values_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Param Values.xml</x:CommandText>
+					<x:Name>Parameter Values</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Value</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Function</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Position</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>1</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Count of Occurrence</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Value</x:DetailSortOrder>
+						<x:DetailSortOrder>Function</x:DetailSortOrder>
+						<x:DetailSortOrder>Position</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Parameter Values</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+		<br>
+		<hr>
+		<br>
+-->
+		<div id="Return Values Text" align="center" color="Blue">
+			<FONT COLOR="MidnightBlue"><H1>Return Values Summary Table</H1></FONT>
+			<FONT COLOR="CornSilk">
+			This report shows summary data for the values returned by APIs called from each process.
+			<br>
+			Use this data to examine any API calls that returned failure error codes. 
+			<br> 
+			Use the '+' button in the Return Value Type column to determine what return values were set.
+			<br>
+			Then use the '+' button in the Return Value column to see what API calls failed.
+			</FONT>
+		</div>
+		<br>
+		<div id="Return Values" align="left">
+			<object id="Return Values_PivotTable" classid="CLSID:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+				<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">
+				<x:PivotTable>
+					<x:OWCVersion>10.0.0.3926</x:OWCVersion>
+					<x:DisplayScreenTips/>
+					<x:CubeProvider>msolap.2</x:CubeProvider>
+					<x:CacheDetails/>
+					<x:ConnectionString>Provider=MSPersist.1</x:ConnectionString>
+					<x:CommandText>Holodeck Report_files/Logs.xml</x:CommandText>
+					<x:Name>Return Values</x:Name>
+					<x:PivotField>   
+						<x:Name>Process</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Return Value Type</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Return Value</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>2</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Function</x:Name>
+						<x:Orientation>Row</x:Orientation>
+						<x:Position>3</x:Position>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+						<x:AutoSortOrder>Custom</x:AutoSortOrder>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Occurrence</x:Name>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param1</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>1</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param2</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>2</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param3</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>3</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param4</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>4</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param5</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>5</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param6</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>6</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param7</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>7</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param8</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>8</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Param9</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>9</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>10</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Error Code Type</x:Name>
+						<x:PLDataOrientation/>
+						<x:PLPosition>11</x:PLPosition>
+						<x:CompareOrderedMembersBy>UniqueName</x:CompareOrderedMembersBy>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Data</x:Name>
+						<x:Orientation>Column</x:Orientation>
+						<x:Position>-1</x:Position>
+						<x:DataField/>
+					</x:PivotField>
+					<x:PivotField>
+						<x:Name>Count of Return Value Usage</x:Name>
+						<x:TotalNumber>0</x:TotalNumber>
+						<x:Orientation>Data</x:Orientation>
+						<x:Position>1</x:Position>
+						<x:ParentField>Occurrence</x:ParentField>
+						<x:Function>Count</x:Function>
+					</x:PivotField>  
+					<x:PivotData>
+						<x:Top>0.0</x:Top>
+						<x:TopOffset>0</x:TopOffset>
+						<x:Left>0.0</x:Left>
+						<x:LeftOffset>0</x:LeftOffset>
+						<x:SeqNum>3</x:SeqNum>
+					</x:PivotData>
+					<x:PivotView>
+						<x:IsNotFiltered/>
+						<x:DetailSortOrder>Process</x:DetailSortOrder>
+						<x:DetailSortOrder>Function</x:DetailSortOrder>
+						<x:DetailSortOrder>Return Value Type</x:DetailSortOrder>
+						<x:DetailSortOrder>Return Value</x:DetailSortOrder>
+						<x:ExpandDetails>2</x:ExpandDetails>
+						<x:Label>
+							<x:Caption>Return Values</x:Caption>
+						</x:Label>
+					</x:PivotView>
+				</x:PivotTable>
+				</xml>'>
+			</object>
+		</div>
+	</body>
+</html>

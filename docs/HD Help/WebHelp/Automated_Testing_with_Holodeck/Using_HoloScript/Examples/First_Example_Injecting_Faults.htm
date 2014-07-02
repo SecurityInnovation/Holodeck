@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>First Example - Injecting Faults</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nExamples\nFirst Example - Injecting Faults");
+addAvenueInfo("HD HELP 2_5","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Fault_Control.htm","Automated_Testing_with_Holodeck/Using_HoloScript/Examples/Second_Example_Examining_AUT_Execution_Environment_1.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>First Example - Injecting Faults</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The following is a simple example of a Managed C++ Application using Holoscript to launch the Windows Notepad application and inject an <FONT style="font-weight:bold; " >AccessDenied</FONT> fault into it.  Every time Windows tries to access a file (or directory), it will receive the <FONT style="font-weight:bold; " >AccessDenied</FONT> error, and it will not be able to access the file.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &quot;stdafx.h&quot;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;FunctionDatabase.dll&gt;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;mscorlib.dll&gt;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#include</FONT><FONT style="font-family:'Courier New'; " > &lt;tchar.h&gt;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >#using</FONT><FONT style="font-family:'Courier New'; " > &lt;HoloScript.dll&gt;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >using</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >namespace</FONT><FONT style="font-family:'Courier New'; " > System;</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >using</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >namespace</FONT><FONT style="font-family:'Courier New'; " > HoloScript;</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >int</FONT><FONT style="font-family:'Courier New'; " > _tmain(</FONT><FONT style="font-family:'Courier New'; color:blue; " >void</FONT><FONT style="font-family:'Courier New'; " >)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >// create a new interception framework</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:blue; " >new</FONT><FONT style="font-family:'Courier New'; " > HoloScriptApplication();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >// launch Notepad as the application under test</FONT><FONT style="font-family:'Courier New'; color:green; " >, this call disables logging of all</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp;// functions in order to increase performance.</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;LaunchApplication(</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >&quot;C:\\WINDOWS\\NOTEPAD.EXE&quot;, NULL,</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >false</FONT><FONT style="font-family:'Courier New'; " >,</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >holoApp-&gt;GetFilteredFunctionList());</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >/* Notepad will now receive AccessDenied every</FONT></P>
+ <P style="margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:green; " > * time it tries to access a file (or directory)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:green; " >&nbsp; */</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;InjectFault(NULL,</FONT></P>
+ <P style="margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >      FunctionDatabase::FaultType::AccessDenied);</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >/* wait for user input to terminate the</FONT></P>
+ <P style="margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:green; " > * interception</FONT></P>
+ <P style="margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; color:green; " > */</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::WriteLine(</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;"><FONT style="font-family:'Courier New'; " >&quot;Press [ENTER] to Terminate Application&quot;);</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;Console::ReadLine();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:green; " >// terminate the interception</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;holoApp-&gt;TerminateApplication();</FONT></P>
+ <P style="margin-top:0.00pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >return</FONT><FONT style="font-family:'Courier New'; " > 0;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >}</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

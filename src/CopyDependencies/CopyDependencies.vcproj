@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="CopyDependencies"
+	ProjectGUID="{541E09B1-311D-4003-9A1C-8043977F0293}"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="md ..\HolodeckGui\debug
+copy ..\tools\customTestProjectGenerator\debug\customTestProjectGenerator.dll ..\HolodeckGui\debug
+copy ..\GuiSupport\bin\Debug\GuiSupport.dll ..\HolodeckGui\debug
+copy ..\FunctionDatabase\Debug\FunctionDatabase.dll ..\HolodeckGui\debug
+copy ..\FunctionDatabase\Debug\FunctionDatabase.dll ..\HolodeckGui\
+copy ..\HoloScript\Debug\HoloScript.dll ..\HolodeckGui\debug
+copy ..\HoloScript\Debug\HoloScript.dll ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\MagicLibrary\bin\debug\MagicLibrary.dll ..\HolodeckGui\debug
+copy ..\Tools\customTestProjectGenerator\HolodeckLib\debug\*.dll ..\HolodeckGui
+copy ..\Tools\customTestProjectGenerator\help\*.hlp ..\HolodeckGui\help\
+copy ..\Tools\customTestProjectGenerator\help\*.cnt ..\HolodeckGui\help\
+copy ..\Tools\DotNetCacheGen\debug\*.exe ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\noncompiled_dlls\*.dll ..\HolodeckGui\debug
+copy ..\Tools\NewIntercepts\Debug\NewIntercepts.dll ..\HolodeckGui\debug
+copy ..\Tools\HeaderParser\Debug\HeaderParser.dll ..\HolodeckGui\debug
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\*.bmp ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\Debug\SIControls.dll ..\HolodeckGui\debug
+copy ..\common\StackWalker.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTranslationTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRIntercept.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadata.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadataDefs.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMethod.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTableRow.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTypeSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PEFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PESection.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\Debug\CLRInterceptLib.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Event.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\MemoryMappedFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Mutex.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiString.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiHashTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiArray.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Debug\SiUtils.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\defines.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\ParameterType.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Log.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEvent.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEventList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEntry.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogQueue.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogSender.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Debug\HolodeckLog.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTest.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTestList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\ReplacementLibrary.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Modification.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\SettingsManager.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Debug\ReplacementLibrary.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\NetCorruptLibrary\Debug\NetCorruptLibrary.lib ..\HolodeckGui\Dependencies\ /y"
+				ReBuildCommandLine="md ..\HolodeckGui\debug
+copy ..\GuiSupport\bin\Debug\GuiSupport.dll ..\HolodeckGui\debug
+copy ..\FunctionDatabase\Debug\FunctionDatabase.dll ..\HolodeckGui\debug
+copy ..\FunctionDatabase\Debug\FunctionDatabase.dll ..\HolodeckGui\debug
+copy ..\HoloScript\Debug\HoloScript.dll ..\HolodeckGui\debug
+copy ..\HoloScript\Debug\HoloScript.dll ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\MagicLibrary\bin\debug\MagicLibrary.dll ..\HolodeckGui\debug
+copy ..\Tools\customTestProjectGenerator\debug\*.dll ..\HolodeckGui\debug
+copy ..\Tools\customTestProjectGenerator\HolodeckLib\debug\*.dll ..\HolodeckGui
+copy ..\Tools\customTestProjectGenerator\help\*.hlp ..\HolodeckGui\help\
+copy ..\Tools\customTestProjectGenerator\help\*.cnt ..\HolodeckGui\help\
+copy ..\Tools\DotNetCacheGen\debug\*.exe ..\HolodeckGui\
+copy ..\..\..\Common\noncompiled_dlls\*.dll ..\HolodeckGui\debug
+copy ..\Tools\NewIntercepts\Debug\NewIntercepts.dll ..\HolodeckGui\debug
+copy ..\Tools\HeaderParser\Debug\HeaderParser.dll ..\HolodeckGui\debug
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\*.bmp ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\Debug\SIControls.dll ..\HolodeckGui\debug
+copy ..\common\StackWalker.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTranslationTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRIntercept.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadata.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadataDefs.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMethod.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTableRow.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTypeSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PEFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PESection.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\Debug\CLRInterceptLib.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Event.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\MemoryMappedFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Mutex.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiString.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiHashTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiArray.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Debug\SiUtils.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\defines.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\ParameterType.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Log.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEvent.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEventList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEntry.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogQueue.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogSender.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Debug\HolodeckLog.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTest.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTestList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\ReplacementLibrary.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Modification.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\SettingsManager.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Debug\ReplacementLibrary.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\NetCorruptLibrary\Debug\NetCorruptLibrary.lib ..\HolodeckGui\Dependencies\ /y"
+				CleanCommandLine="del ..\HolodeckGui\Debug\customTestProjectGenerator.dll
+del ..\HolodeckGui\Debug\GuiSupport.dll
+del ..\HolodeckGui\Debug\FunctionDatabase.dll
+del ..\HolodeckGui\Debug\HoloScript.dll
+del ..\HolodeckGui\Debug\MagicLibrary.dll
+del ..\HolodeckGui\Debug\AxSHDocVw.dll
+del ..\HolodeckGui\Debug\MSHTML.dll
+del ..\HolodeckGui\Debug\roboex32.dll
+del ..\HolodeckGui\Debug\SHDocVw.dll
+del ..\HolodeckGui\Debug\NewIntercepts.dll
+del ..\HolodeckGui\Debug\HeaderParser.dll
+del ..\HolodeckGui\Debug\SIControls.dll
+del ..\HolodeckGui\Dependencies\*
+del ..\HolodeckGui\help\CustomInterceptGen.HLP
+del ..\HolodeckGui\help\CustomInterceptGen.cnt
+del ..\HolodeckGui\FunctionDatabase.dll
+del ..\HolodeckGui\HoloScript.dll
+del ..\HolodeckGui\customTestProjectGenerator.dll
+del ..\HolodeckGui\HolodeckLib.dll
+del ..\HolodeckGui\DotNetCacheGen.exe
+del ..\HolodeckGui\tv_minus.bmp
+del ..\HolodeckGui\tv_plus.bmp"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="md ..\HolodeckGui\release
+copy ..\tools\customTestProjectGenerator\Release\customTestProjectGenerator.dll ..\HolodeckGui\Release
+copy ..\GuiSupport\bin\Release\*.dll ..\HolodeckGui\release
+copy ..\FunctionDatabase\release\FunctionDatabase.dll ..\HolodeckGui\release
+copy ..\FunctionDatabase\release\FunctionDatabase.dll ..\HolodeckGui\
+copy ..\HoloScript\release\HoloScript.dll ..\HolodeckGui\release
+copy ..\HoloScript\release\HoloScript.dll ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\MagicLibrary\bin\release\MagicLibrary.dll ..\HolodeckGui\release
+copy ..\Tools\customTestProjectGenerator\HolodeckLib\release\*.dll ..\HolodeckGui
+copy ..\Tools\customTestProjectGenerator\help\*.hlp ..\HolodeckGui\help
+copy ..\Tools\customTestProjectGenerator\help\*.cnt ..\HolodeckGui\help
+copy ..\Tools\DotNetCacheGen\release\*.exe ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\noncompiled_dlls\*.dll ..\HolodeckGui\release
+copy ..\Tools\NewIntercepts\release\NewIntercepts.dll ..\HolodeckGui\release
+copy ..\Tools\HeaderParser\release\HeaderParser.dll ..\HolodeckGui\release
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\*.bmp ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\Release\SIControls.dll ..\HolodeckGui\release
+copy ..\common\StackWalker.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTranslationTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRIntercept.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadata.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadataDefs.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMethod.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTableRow.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTypeSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PEFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PESection.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\Release\CLRInterceptLib.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Event.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\MemoryMappedFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Mutex.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiString.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiHashTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiArray.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Release\SiUtils.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\defines.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\ParameterType.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Log.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEvent.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEventList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEntry.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogQueue.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogSender.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Release\HolodeckLog.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTest.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTestList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\ReplacementLibrary.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Modification.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\SettingsManager.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Release\ReplacementLibrary.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\NetCorruptLibrary\Release\NetCorruptLibrary.lib ..\HolodeckGui\Dependencies\ /y"
+				ReBuildCommandLine="md ..\HolodeckGui\release
+copy ..\GuiSupport\bin\Release\*.dll ..\HolodeckGui\release
+copy ..\FunctionDatabase\release\FunctionDatabase.dll ..\HolodeckGui\release
+copy ..\FunctionDatabase\release\FunctionDatabase.dll ..\HolodeckGui\
+copy ..\HoloScript\release\HoloScript.dll ..\HolodeckGui\release
+copy ..\HoloScript\release\HoloScript.dll ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\MagicLibrary\bin\release\MagicLibrary.dll ..\HolodeckGui\release
+copy ..\Tools\customTestProjectGenerator\release\*.dll ..\HolodeckGui\release
+copy ..\Tools\customTestProjectGenerator\HolodeckLib\release\*.dll ..\HolodeckGui
+copy ..\Tools\customTestProjectGenerator\help\*.hlp ..\HolodeckGui\help
+copy ..\Tools\customTestProjectGenerator\help\*.cnt ..\HolodeckGui\help
+copy ..\Tools\DotNetCacheGen\release\*.exe ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\noncompiled_dlls\*.dll ..\HolodeckGui\release
+copy ..\Tools\NewIntercepts\release\NewIntercepts.dll ..\HolodeckGui\release
+copy ..\Tools\HeaderParser\release\HeaderParser.dll ..\HolodeckGui\release
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\*.bmp ..\HolodeckGui\
+copy ..\..\..\Old\HD\V2_5\Common\src\SIControls\Release\SIControls.dll ..\HolodeckGui\release
+copy ..\common\StackWalker.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTranslationTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRIntercept.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadata.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMetadataDefs.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRMethod.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTableRow.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\CLRTypeSignature.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PEFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\PESection.h ..\HolodeckGui\Dependencies\ /y
+copy ..\CLRInterceptLib\Release\CLRInterceptLib.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Event.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\MemoryMappedFile.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Mutex.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiString.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiHashTable.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\SiArray.h ..\HolodeckGui\Dependencies\ /y
+copy ..\..\..\Old\HD\V2_5\Common\src\SiUtils\Release\SiUtils.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\defines.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Common\ParameterType.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Log.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEvent.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEventList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogEntry.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogQueue.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\LogSender.h ..\HolodeckGui\Dependencies\ /y
+copy ..\Log\Release\HolodeckLog.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTest.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\FunctionTestList.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\ReplacementLibrary.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Modification.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\SettingsManager.h ..\HolodeckGui\Dependencies\ /y
+copy ..\ReplacementLibrary\Release\ReplacementLibrary.lib ..\HolodeckGui\Dependencies\ /y
+copy ..\NetCorruptLibrary\Release\NetCorruptLibrary.lib ..\HolodeckGui\Dependencies\ /y"
+				CleanCommandLine="del  ..\HolodeckGui\Release\HolodeckLib.dll
+del  ..\HolodeckGui\Release\CustomTestProjectGenerator.dll
+del  ..\HolodeckGui\Release\GuiSupport.dll
+del  ..\HolodeckGui\Release\FunctionDatabase.dll
+del  ..\HolodeckGui\Release\HoloScript.dll
+del  ..\HolodeckGui\Release\MagicLibrary.dll
+del  ..\HolodeckGui\Release\AxSHDocVw.dll
+del  ..\HolodeckGui\Release\MSHTML.dll
+del  ..\HolodeckGui\Release\roboex32.dll
+del  ..\HolodeckGui\Release\SHDocVw.dll
+del  ..\HolodeckGui\Release\NewIntercepts.dll
+del  ..\HolodeckGui\Release\HeaderParser.dll
+del  ..\HolodeckGui\Release\SIControls.dll
+del  ..\HolodeckGui\Dependencies\*
+del  ..\HolodeckGui\help\CustomInterceptGen.HLP
+del  ..\HolodeckGui\help\CustomInterceptGen.cnt
+del  ..\HolodeckGui\FunctionDatabase.dll
+del  ..\HolodeckGui\HoloScript.dll
+del  ..\HolodeckGui\customTestProjectGenerator.dll
+del  ..\HolodeckGui\HolodeckLib.dll
+del  ..\HolodeckGui\DotNetCacheGen.exe
+del  ..\HolodeckGui\tv_minus.bmp
+del  ..\HolodeckGui\tv_plus.bmp"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Exceptions Overview</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Holodeck in depth\nExceptions and mini-dumps\nExceptions Overview");
+addAvenueInfo("MAIN","Holodeck_in_depth/Multiple_Threads_and_Processes/Working_with_Multi_threaded_applications.htm","Holodeck_in_depth/Exceptions_and_mini_dumps/Mini_dump_Overview.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Exceptions Overview</H1>
+ <P>Holodeck catches all exceptions your application produces. Exceptions are routed through Holodeck first, as a first chance exception, then passed back to the application to handle. If the application does not handle the exception it is logged as a second chance exception. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>View the Exception in a debugger by right clicking an exception in the Exception Pane and selecting &quot;View Exception in Debugger.&quot; If you have a debugger attached to the application the debugger may catch the second chance exception allowing you to handle the exception in other ways. If source code is available your debugger may be able to use the exception information provided by Holodeck to step into the exception causing function.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Exceptions will only be handled by Holodeck if the attach debugger option is selected. To enable or disable check the &quot;Attach Debugger and Log Exceptions&quot; option in the Application menu.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

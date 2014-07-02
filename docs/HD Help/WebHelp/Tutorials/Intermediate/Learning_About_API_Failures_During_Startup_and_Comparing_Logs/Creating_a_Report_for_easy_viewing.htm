@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Creating a Report for easy viewing</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nLearning About API Failures During Startup and Comparing Logs\nCreating a Report for easy viewing");
+addAvenueInfo("MAIN","Tutorials/Intermediate/Learning_About_API_Failures_During_Startup_and_Comparing_Logs/Filtering_the_log_result.htm","Tutorials/Intermediate/Learning_About_API_Failures_During_Startup_and_Comparing_Logs/Exporting_logs.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Creating a Report for easy viewing</H1>
+ <P>We can investigate any failures by wading through some 4000 log entries, but Holodeck includes reporting functionality that can make the process of investigating a run of any application under test very easy. </P>
+ <P>&nbsp;</P>
+ <P>To create a report right click the Reports node in the Project Pane, and click Create a Report<FONT style="font-weight:bold; " >. </FONT>Holodeck will now begin to compile the logs, resources, faults, limits and tests for this project into one easy to read report. Once the report has been created Holodeck will automatically display it in the main window. There is a plethora of information available here, but what we are interested in is the Error Codes Table.</P>
+ <P>&nbsp;</P>
+ <P>From the Error Codes Table we can drill down to investigate each of the failures Excel encountered while running. Many of these errors are .dll failures which are the standard way of looking for DLLs within a search path, but others can be more serious functionality failures.</P>
+ <P><IMG src="../../../images/ebx_-452513083.gif" border=0 height=255 width=505 alt="images\ebx_-452513083.gif"></P>
+ <P>&nbsp;</P>
+ <P>By clicking on the plus symbol to the left of Fail you can see a detailed version of the Error Code, and Error Code Type. This will also expand the Count of Occurrence columns to reflect the count of the failures of each Error Code. </P>
+ <P>&nbsp;</P>
+ <P>By clicking on the plus symbol to the right of Fail you can see detailed information about each API call, this can be filtered by the different error codes. Any column can be sorted ascending or descending by right clicking the column and clicking Sort. Columns can be reordered by dragging them to a different location, or to easily remove a column simply drag it off the table. To add a column you have removed, right click the table and click Field List, this will bring up another window, where you can drag columns around to make data viewing easier. It is interested to note here that during a regular startup, Excel encounters nearly 600 errors, which we can see by repeating the test. This would be a good place to look for exploitable bugs; if Excel failed to load a certain library, or failed a function call it might put the application in a useable but unstable state, which could be a spring board for finding more bugs.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Filtering_the_log_result.htm">&lt;&lt; Previous</A>    <A href="Exporting_logs.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

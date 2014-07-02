@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Comparing logs</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nLearning About API Failures During Startup and Comparing Logs\nComparing logs");
+addAvenueInfo("MAIN","Tutorials/Intermediate/Learning_About_API_Failures_During_Startup_and_Comparing_Logs/Exporting_logs.htm","Tutorials/Intermediate/Learning_About_API_Failures_During_Startup_and_Comparing_Logs/Making_sense_of_the_difference.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Comparing logs</H1>
+ <P>You can quickly and easily compare the differences between two log files using Windiff, a utility for comparing two similar files which is bundled with Visual Studio. </P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Example Comparison</FONT></P>
+ <P>Let’s compare the differences in API calls when Excel opens a document by double clicking on it, versus using the quick launch pane. We can do this with one instance of Holodeck by using the multiple test application feature. </P>
+ <P>&nbsp;</P>
+ <P>To do this first create a new project, and set Excel to be the application under test. Once Excel has started, browse to a simple Excel document and open it by double clicking it. Once the document has finished loading, export the log file to a text document and save for later use.</P>
+ <P>&nbsp;</P>
+ <P>Once the log has been exported you can close Excel, and open a new instance by clicking File &gt; New Test Application, this will open the New Test Application Wizard which will allow you to select Excel to start again, and create a new API log.</P>
+ <P>&nbsp;</P>
+ <P>Since you closed the first instance of Excel, the same document should show up in the quick launch bar on the right side of the window. This time, click the link on the sidebar to open the Excel document. Once the document has finished loading, export the log to a file under a different name.</P>
+ <P>&nbsp;</P>
+ <P>These two logs were created at different times; therefore we have to remove the first two columns, TimeStamp and Thread. API calls often use memory addresses as parameter and return values, each time the application is run the OS may allocate a different memory location we have to remove the Return Value and the Parameter columns as well to ensure we are only comparing the order of API calls.</P>
+ <P>&nbsp;</P>
+ <P>To open the log files in Excel right click the log file Open With… &gt; Microsoft Excel. Excel will automatically put the data into each column. Click the column header of the TimeStamp column, right click the selected row, and click Delete. This will remove the column, and shift the rest of the data over. Repeat this for the Thread, Return Value and each of the Parameter Columns. Once these columns have been removed you can resave the log as a tab delimited text file. File &gt; Save As… </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_-350438093.gif" border=0 height=274 width=438 alt="images\ebx_-350438093.gif"></P>
+ <P>&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Exporting_logs.htm">&lt;&lt; Previous</A>    <A href="Making_sense_of_the_difference.htm">Next &gt;&gt;</A> </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

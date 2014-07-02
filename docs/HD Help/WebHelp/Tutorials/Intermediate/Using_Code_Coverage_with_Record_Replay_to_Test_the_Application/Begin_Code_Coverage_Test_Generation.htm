@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Begin Code Coverage Test Generation</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nUsing Code Coverage with Record/Replay to Test the Application\nBegin Code Coverage Test Generation");
+addAvenueInfo("HD HELP 2_5","Tutorials/Intermediate/Using_Code_Coverage_with_Record_Replay_to_Test_the_Application/Start_Recording_the_Session.htm","Tutorials/Intermediate/Using_Code_Coverage_with_Record_Replay_to_Test_the_Application/Stop_Test_Generation.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Begin Code Coverage Test Generation</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>For this tutorial we will be setting High Code Coverage with a relatively short interval to wait before Holodeck restarts the application. High Code Coverage will allow us to discover relatively easy to find bugs in a short period of time. Since the errors will be found quickly an interval of 30 seconds can be set before Holodeck restarts the application.</P>
+ <P><IMG src="../../../images/ebx_-2065404029.gif" border=0 height=417 width=352 alt="images\ebx_-2065404029.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Once OK is clicked Holodeck will begin observing the application to learn which API functions should be set to create the most hostile environment for your specific application. Holodeck will continue to observe the application until Test Generation has finished. This will allow Code Coverage to  test more of the application based on the API calls it sees.</P>
+ <P><IMG src="../../../images/ebx_579916931.gif" border=0 height=287 width=430 alt="images\ebx_579916931.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The first observation stage will finish as soon as the application has been closed by the user, or test harness. The next time the application starts up Holodeck will begin setting tests, faults, and limits while the user or test harness tests the application manually. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_1063403659.gif" border=0 height=287 width=430 alt="images\ebx_1063403659.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>The testing will continue until the application is terminated by the user, test harness, or a crash. Once the application has terminated Holodeck will restart the application, wait for the application state to change that will trigger the set of a new test, limit or fault.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Use the BrokenApp while Holodeck sets tests, limits and faults to see how the BrokenApp responds to different tests. For this purpose we will test the &quot;Insert Hyperlink&quot; functionality in BrokenApp. Select Insert &gt; &quot;Insert Hyperlink…&quot; this will bring up the insert hyperlink dialog box. Type &quot;http://www.google.com&quot; into this box and click &quot;Insert Link&quot;</P>
+ <P><IMG src="../../../images/ebx_-354393715.gif" border=0 height=55 width=275 alt="images\ebx_-354393715.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Since this test will have to happen every time Holodeck sets a new Code Coverage test it is recommended it is automated using a test harness. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Since recorded sessions was started before starting the Code Coverage Test Generation there is no need to record steps, or remember which faults were set when, the Recorded sessions will be able to replay this information for you any time in the future.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Start_Recording_the_Session.htm">&lt;&lt; Previous</A>     <A href="Stop_Test_Generation.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

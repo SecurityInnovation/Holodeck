@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Code Coverage testing from the command-line</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing Holodeck as a command-line utility\nCode Coverage testing from the command-line");
+addAvenueInfo("MAIN","Automated_Testing_with_Holodeck/Using_Holodeck_as_a_command_line_utility/Introduction_to_using_Holodeck_as_a_command_line_Utility.htm","Automated_Testing_with_Holodeck/Using_Holodeck_as_a_command_line_utility/Stress_testing_from_the_command_line.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Code Coverage testing from the command-line</H1>
+ <P>Code coverage test generation attempts to hit as many error paths as possible. It reruns the application multiple times, each time setting different combinations of Limits, Faults, and Tests. Each time the Application Under Test terminates, by way of the script terminating the Application gracefully or Holodeck finding a crashing bug, Holodeck will relaunch the Application Under Test and start the next test, until there are none left. Holodeck assumes that each testing script will close the application under test at the end of the test; this allows Holodeck to know when to start the next test.</P>
+ <P>To turn on Code Coverage testing from the command-line use the /codecoverage switch followed by colon (:) high, medium, or low.</P>
+ <P><FONT style="font-weight:bold; " >Example:</FONT> <FONT style="font-family:'Courier New'; " >HolodeckGui.exe</FONT><FONT style="font-family:'Courier New'; " > projectName</FONT><FONT style="font-family:'Courier New'; " > /codecoverage:high</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; font-weight:bold; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; font-weight:bold; " >High</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow network limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow disk limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >c)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow memory limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >d)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow all faults</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >e)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow all tests</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; font-weight:bold; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; font-weight:bold; " >Medium</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow network limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow disk limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >c)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow memory limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >d)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow all faults</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >e)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow resource based tests</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >f)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Disallow all other tests</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; font-weight:bold; " >3)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; font-weight:bold; " >Low</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow network limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow disk limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >c)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Allow memory limits</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >d)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Disallow all faults</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >e)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Disallow all tests</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Initial Recording</FONT></P>
+ <P>The first thing Holodeck does when running Code Coverage Testing is record what the Application Under Test is doing to create an intelligent test plan. Holodeck records resource usage and unique API calls until the Application Under Test is terminated. It then uses the information found in the recording phase to build the next tests.</P>
+ <P>&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Exact order of execution:</FONT></P>
+ <P class="Normal-(Web)" style="margin-top:0.00pt;">&nbsp;</P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >1)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Set each fault one at a time</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >a)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >For disk or memory</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:59.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >i)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Set a limit for max used – 1 byte</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:59.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >ii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >iSet a limit for average used – 1 byte</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:59.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >iii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >iiSet a limit to minimum possible (0 bytes)</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:41.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >b)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >For Network</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:59.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >i)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Set a limit to 50%</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:59.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >ii)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >iSet a limit to 0%</FONT></P>
+ <P class="Normal-(Web)" style="margin-left:23.75pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Arial'; font-size:9pt; " >2)</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-size:9pt; " >Set a test for each unique API call seen in the recording phase.</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Process Chaining</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HoloScript\nHoloScript Functions\nProcess Chaining");
+addAvenueInfo("Holodeck Help","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Application_and_Service_Launch.htm","Automated_Testing_with_Holodeck/Using_HoloScript/HoloScript_Functions/Debugging_Functions.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Process Chaining</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property bool</FONT> get_ApplicationAttachedTo()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description – </FONT>return if the application was attached to.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT></P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>True if user has attached to a running application process.</P>
+ <P style="margin-left:126.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>False if the user has launched an application or service, or attached to a service.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >bool</FONT> get_InheritSettings()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Gets a Boolean value if the child process should inherit the settings of the parent.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>True if the child process will inherit the settings of the parent.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>&nbsp;<FONT style="color:blue; " >__property bool</FONT> get_IsChainedProcess()</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description </FONT><FONT style="font-weight:bold; " >–</FONT><FONT style="font-weight:bold; " > </FONT>Gets a Boolean value if the process is a child of a parent process from process chaining.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>True if the process was spawned as part of process chaining.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >bool</FONT> get_ProcessChaining()</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to determine if any child processes of the current Application Under Test will monitored</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value – </FONT>True if new processes will be automatically attached to by Holodeck</P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><BR><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:72.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >if (holoApp-&gt;ProcessChaining) {</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:#339966; " >// WATCHING CHILDREN</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >} else {</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:#339966; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:#339966; " >// NOT WATCHING CHILDREN</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property void</FONT> set_InheritSettings(<FONT style="color:blue; " >bool</FONT> value)\</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Sets whether or not the child process should inherit the settings of the parent.</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >__property</FONT> <FONT style="color:blue; " >void</FONT> set_ProcessChaining(<FONT style="color:blue; " >bool</FONT> value)</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Can be used to specify that any child processes of the current Application Under Test should be monitored</P>
+ <P style="margin-left:90.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>none<BR></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-style:italic; " >Example usage</FONT>:</P>
+ <P style="margin-left:72.00pt;"><FONT style="font-family:'Courier New'; " >HoloScriptApplication *holoApp =</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >new HoloScriptApplication();</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >.</FONT></P>
+ <P style="margin-left:72.00pt;margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >holoApp-&gt;ProcessChaining = </FONT><FONT style="font-family:'Courier New'; color:purple; " >true</FONT><FONT style="font-family:'Courier New'; " >;</FONT></P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;">&nbsp;</P>
+ <P style="margin-left:41.75pt;margin-top:0.00pt;text-indent:30.25pt;">&nbsp;</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; " >&nbsp;</FONT><FONT style="color:blue; " >bool</FONT> SetUseProcessChaining(<FONT style="color:blue; " >bool</FONT> useChaining)</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Description - </FONT>Enables or Disables monitoring of any child processes is enabled of the current Application Under Test</P>
+ <P style="margin-left:126.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Courier New'; font-size:9pt; " >o</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >useChaining</FONT> – if true monitoring of any child processes is enabled of the current Application Under Test</P>
+ <P style="margin-left:90.00pt;margin-top:0.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><FONT style="font-weight:bold; " >Return Value - </FONT>Returns true if operation is successful, false otherwise</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

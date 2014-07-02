@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Using HEAT</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Automated Testing with Holodeck\nUsing HEAT (Hostile Environment for Application Testing)\nUsing HEAT");
+addAvenueInfo("MAIN","Automated_Testing_with_Holodeck/Using_HoloScript/Using_HoloScript.htm","Appendices/About_fault_injection.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Using HEAT</H1>
+ <P style="margin-left:4.50pt;margin-top:0.00pt;">HEAT (Hostile Environment for Application Testing) is the foundation on which Holodeck and its supporting tools like HoloScript are built.  All of the standard interception procedures within HEAT can be accessed by developers using the HeatAPI.  This allows you to use C++ to create your own separate executables that utilize HEAT technology or extend Holodeck by creating separate DLLs that implement extended external API calls.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="color:black; " >Important:</FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >initializeApp</FONT><FONT style="color:black; " >, </FONT><FONT style="color:black; font-weight:bold; " >attachToApp</FONT><FONT style="color:black; " >, or </FONT><FONT style="color:black; font-weight:bold; " >attachToRunningApp</FONT><FONT style="color:black; " > must be called before calling other functions. </FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >forceInject</FONT><FONT style="color:black; " > needs to be called before interception will actually take place </FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >initializeApp</FONT><FONT style="color:black; " > starts the process suspended, so </FONT><FONT style="color:black; font-weight:bold; " >runApp</FONT><FONT style="color:black; " > has to be called before it will begin executing </FONT></P>
+ <P><FONT style="color:black; font-weight:bold; " >interceptFunc</FONT><FONT style="color:black; " > can be called before </FONT><FONT style="color:black; font-weight:bold; " >forceInject</FONT><FONT style="color:black; " > to queue up interceptions before actually performing the injection into the process. </FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Note: </FONT>when defining replacement libraries you must ensure that the calling convention is maintained (e.g. __stdcall etc.) If this is not properly maintained, several problems may occur, including crashes, hangs, etc. which may be hard to debug.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Introduction</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nAdvanced\nTest Harness and Code Coverage\nIntroduction");
+addAvenueInfo("MAIN","Tutorials/Intermediate/Failing_a_Single_API_Call/Introduction2.htm","Tutorials/Advanced/Test_Harness_and_Code_Coverage/Create_a_Holodeck_project_file.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Introduction</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>This tutorial will demonstrate how to use an external test harness and Holodeck’s <A href="../../../Holodeck_in_depth/Using_Automatic_Test_Generation/Creating_Code_Coverage_Generation.htm">Code Coverage</A> feature to find bugs quickly, easily and efficiently. The Code Coverage feature runs tests based on the resources and API calls used by the program. For example: if the Application Under Test uses LoadLibraryA, an API used to load DLLs, the Code Coverage feature will fail that call on one of its runs. More information about the Code Coverage feature can be found in the Holodeck help documents.</P>
+ <P>&nbsp;</P>
+ <P>By using an external test harness we can automate the use of Code Coverage test generation. The test harness will launch Holodeck; Holodeck in turn will launch the application under test and start testing. By using Holodeck’s Recorded Session feature we can track which faults were set and when they were executed. Our test harness will catch exceptions thrown by the application under test and log them to a time stamped file. By comparing the two we will have a direct cause and effect relationship.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Create_a_Holodeck_project_file.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

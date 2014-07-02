@@ -1,0 +1,57 @@
+=================Logging started at 9/29/2003 4:10:43 PM ==================
+Upgrading project
+The project was successfully backed up to C:\source_code\commercial\Holodeck\Install\HolodeckEE - DevStudio_bak1\HolodeckEESetup.ipr.
+Upgrading Project Settings
+Upgrading String Tables
+Upgrading File Groups...this may take several minutes
+Migrated file group App Executables to component App Executables
+Migrated file group System32Files to component System32Files
+Migrated file group Support Files to component Support Files
+Migrated file group FunctionDBFiles to component FunctionDBFiles
+Migrated file group LogFiles to component LogFiles
+Migrated file group ReplacementFiles to component ReplacementFiles
+Migrated file group images to component images
+Migrated file group help to component help
+Migrated file group ReportFiles to component ReportFiles
+Migrated file group HolodeckReportFiles to component HolodeckReportFiles
+Migrated file group LibraryExport to component LibraryExport
+Migrated file group GacUtil to component GacUtil
+Migrated file group TestGeneration to component TestGeneration
+Migrated file group DotNetCache to component DotNetCache
+Migrated file group help_appendices to component help_appendices
+Migrated file group help_customizing_and_extending_holodeck to component help_customizing_and_extending_holodeck
+Migrated file group help_getting_started_with_holodeck to component help_getting_started_with_holodeck
+Migrated file group help_images to component help_images
+Migrated file group help_managing_and_printing_reports to component help_managing_and_printing_reports
+Migrated file group help_holodeck_fundamentals to component help_holodeck_fundamentals
+Migrated file group help_HF_limits to component help_HF_limits
+Migrated file group help_HF_automatic_test_generation to component help_HF_automatic_test_generation
+Migrated file group help_using_holodeck_with_other_automated_test_frameworks to component help_using_holodeck_with_other_automated_test_frameworks
+Migrated file group help_viewing_and_navigating_panes to component help_viewing_and_navigating_panes
+Migrated file group help_whdata to component help_whdata
+Migrated file group help_whgdata to component help_whgdata
+Migrated file group help_whxdata to component help_whxdata
+Migrated file group help_working_with_log_files to component help_working_with_log_files
+Migrated file group help_CAEH_using_holoscript to component help_CAEH_using_holoscript
+Migrated file group help_CAEH_using_the_custom_intercept_generator to component help_CAEH_using_the_custom_intercept_generator
+Migrated file group help_customizing_holodeck_using_the_heat_api to component help_customizing_holodeck_using_the_heat_api
+Migrated file group help_HF_using_hd_to_test_protocols_and_net_security to component help_HF_using_hd_to_test_protocols_and_net_security
+Migrated file group Heat to component Heat
+Migrated file group LibraryExportHelp to component LibraryExportHelp
+Migrated file group help_appendices_api_call_categories_files to component help_appendices_api_call_categories_files
+Migrated file group help_CAEH_holodeck_xml_documents to component help_CAEH_holodeck_xml_documents
+Migrated file group help_tutorials to component help_tutorials
+Upgrading Setup Types
+Upgrading Components
+Migrated component Main App to feature Main App
+Migrated component Main App\MS .NET Framework Object to feature Main App
+Synchronizing Setup Types with updated Feature Names
+Synchronizing Custom Media Compression with updated feature names.
+Upgrading Setup Files
+Upgrading Release Settings
+Upgrading Registry Objects
+Migrated <Default> registry set
+Upgrading Shell Objects
+Importing Custom Dialogs
+Upgrading Script Files
+ 

@@ -1,0 +1,5 @@
+LIBRARY	Advapi32ReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+[REPLACEMENTFUNCTIONS]

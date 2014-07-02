@@ -1,0 +1,5 @@
+LIBRARY	WinTrustReplacementLibrary
+EXPORTS
+ReplacementLibraryAttach
+ReplacementLibraryDetach
+CryptCATAdminAcquireContextReplacement

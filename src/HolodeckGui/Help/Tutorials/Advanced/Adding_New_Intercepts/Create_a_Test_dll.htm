@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help.css'>");}
+//-->
+</script>
+ <TITLE>Create a Test dll</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+<div style="position:absolute; top:10px; right:20px"><a href="#" onclick="window.print()">Print this page</a></div>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nAdvanced\nAdding New Intercepts\nCreate a Test dll");
+addAvenueInfo("Holodeck Help","Tutorials/Advanced/Adding_New_Intercepts/Adding_New_Intercepts_Introduction.htm","Tutorials/Advanced/Adding_New_Intercepts/Create_the_Test_Application.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Create a Test dll</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>In this project the first thing we will do is to create a test dll, this will give us a library to use in the test application. We will intercept this test dll within Holodeck to show how Holodeck can intercept any libraries, including dlls that are not supported out of the box.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Open Visual Studio.net and create a new test dll. Click New Project &gt; Visual C#, class library. Name it TestDLL</P>
+ <P><IMG src="../../../images/ebx_-458467191.gif" border=0 height=364 width=531 alt="images\ebx_-458467191.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Within the project create a new test method.</P>
+ <P>Just below the constructor in class1.cs (public Class1()) add this new method</P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; color:blue; " >public</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >bool</FONT><FONT style="font-family:'Courier New'; " > TestMethod(</FONT><FONT style="font-family:'Courier New'; color:blue; " >int</FONT><FONT style="font-family:'Courier New'; " > intParam, </FONT><FONT style="font-family:'Courier New'; color:blue; " >bool</FONT><FONT style="font-family:'Courier New'; " > boolParam)</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >{</FONT></P>
+ <P style="margin-top:0.00pt;"><FONT style="font-family:'Courier New'; " >&nbsp;</FONT><FONT style="font-family:'Courier New'; color:blue; " >return</FONT><FONT style="font-family:'Courier New'; " > </FONT><FONT style="font-family:'Courier New'; color:blue; " >true</FONT><FONT style="font-family:'Courier New'; " >;</FONT></P>
+ <P><FONT style="font-family:'Courier New'; " >}</FONT></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Build the project, click Build &gt; &quot;Build Solution&quot; from the menu.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>This will create the dll that we will use later in the application and add to Holodeck’s interception list.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Adding_New_Intercepts_Introduction.htm">&lt;&lt; Previous</A>    <A href="Create_the_Test_Application.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

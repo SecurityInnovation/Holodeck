@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>Summary</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nIntermediate\nFailing a Single API Call\nSummary");
+addAvenueInfo("HD HELP 2_5","Tutorials/Intermediate/Failing_a_Single_API_Call/Verify_ReadLine_Fault_is_Set.htm","Tutorials/Advanced/Test_Harness_and_Code_Coverage/Summary_6.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Summary</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Scheduled tests can be applied to any API call, failing the readline function is an easy way to verify a test is set. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Further Exploration:</FONT></P>
+ <P>Try to create other tests on the BrokenApp that will cause crashing unhandled exceptions. Research the Insert Hyperlink and Insert Date or Time functionality in the Broken app, then fail the call to System.IO.MemoryStream.Write. Try researching the cause of these crashes using Holodeck’s <A href="../../../Holodeck_in_depth/Working_with_Reports/Reports_Overview.htm">Reports tool</A>, or by logging first chance <A href="../../../Holodeck_in_depth/Exceptions_and_mini_dumps/Exceptions_Overview.htm">exceptions</A> and loading them into Visual Studio for debugging.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Try failing the call only 10% of the time, a robust application should be able to recover from this level of failure.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Failing_the_ReadLine_function.htm">&lt;&lt; Previous</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

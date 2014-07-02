@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!ELEMENT ErrorCode (#PCDATA)>
+<!ATTLIST ErrorCode Code CDATA #REQUIRED>
+<!ATTLIST ErrorCode String CDATA #REQUIRED>
+
+<!ELEMENT ErrorCodes (ErrorCode*)>

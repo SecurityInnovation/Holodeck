@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+ <link rel='stylesheet' href='../../../HD_Help_2_5_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='../../../HD_Help_2_5.css'>");}
+//-->
+</script>
+ <TITLE>View Logs and Create a Test for the Test dll</TITLE>
+ <META NAME="generator" CONTENT="RoboHelp by eHelp Corporation www.ehelp.com"><SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../../../ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js"></script>
+</HEAD>
+<BODY>
+ <script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tutorials\nAdvanced\nAdding New Intercepts\nView Logs and Create a Test for the Test dll");
+addAvenueInfo("HD HELP 2_5","Tutorials/Advanced/Adding_New_Intercepts/Compile_the_TestDLL_Replacement_Library.htm","Tutorials/Advanced/Adding_New_Intercepts/Further_Exploration.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../hd_help_2_5.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>View Logs and Create a Test for the Test dll</H1>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Create a New Project</FONT></P>
+ <P>Use TestApplication.exe as the application, turn off all logging except for .NET &gt; Custom. Notice that TestMethod and the constructor for TestDLL are now in the logging treeview under custom.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_1048595312.gif" border=0 height=400 width=400 alt="images\ebx_1048595312.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >View a Log</FONT></P>
+ <P>When TestApplication loads notice that no logs are visible in the Holodeck <A href="../../../Holodeck_Windows_and_Panes/Log_Pane.htm">Log Pane</A>, this is because it has not yet called the only function we are logging, the function in the TestDLL.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Click on the button in the TestApplication form. Notice that the constructor and TestMethod from TestDLL.dll are called by TestApplication and logged in the Holodeck log pane.</P>
+ <P><IMG src="../../../images/ebx_1482131420.gif" border=0 height=146 width=689 alt="images\ebx_1482131420.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><FONT style="font-weight:bold; " >Create a Test</FONT></P>
+ <P>Double click on the call to test method in the Log Pane this will open the &quot;Create a Scheduled Test Wizard&quot; with the test application TestMethod already selected. No In-Parameter or Out-Parameter changes need to be made, however, specify &quot;Ambiguous Match&quot; as the .net exception to throw when the application calls TestFunction. </P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_727673477.gif" border=0 height=400 width=400 alt="images\ebx_727673477.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P>Click the button in the TestApplication again. Notice the unhandled exception dialog is shown and the log in the log pane shows an exception in the exception column. In this screen shot you can see the first two calls were executed properly, the last call to TestMethod was failed and threw the AmbiguousMatchException specified in the test.</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><IMG src="../../../images/ebx_-712131191.gif" border=0 height=188 width=689 alt="images\ebx_-712131191.gif"></P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P><A href="Compile_the_TestDLL_Replacement_Library.htm">&lt;&lt; Previous</A>    <A href="Further_Exploration.htm">Next &gt;&gt;</A> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

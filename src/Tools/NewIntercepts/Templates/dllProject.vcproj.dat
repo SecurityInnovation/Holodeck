@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="$PROJECT_NAME$"
+	ProjectGUID="{33841007-34E4-43E7-B91A-D6878E504C3E}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Output"
+			IntermediateDirectory="Output"
+			ConfigurationType="2"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;$PROJECT_NAME$_EXPORTS;RE_BUILD_DLL"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="replacementlibrary.lib siutils.lib rpcrt4.lib holodecklog.lib psapi.lib CLRInterceptLib.lib shlwapi.lib NetCorruptLibrary.lib"
+				OutputFile="$(OutDir)/$PROJECT_NAME$.dll"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="$HOLODECK_INSTALL_PATH$\Dependencies\"
+				ModuleDefinitionFile="$PROJECT_NAME$.def"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/$PROJECT_NAME$.pdb"
+				SubSystem="2"
+				ImportLibrary="$(OutDir)/$PROJECT_NAME$.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$REPLACEMENT_FOLDER_PATH$&quot; /y
+copy &quot;$(SolutionDir)\*.xml&quot; &quot;$HDDB_FOLDER_PATH$\*.xml&quot; /y"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Output"
+			IntermediateDirectory="Output"
+			ConfigurationType="2"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				OmitFramePointers="TRUE"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;$PROJECT_NAME$_EXPORTS;RE_BUILD_DLL"
+				StringPooling="TRUE"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="3"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="replacementlibrary.lib siutils.lib rpcrt4.lib holodecklog.lib psapi.lib CLRInterceptLib.lib shlwapi.lib NetCorruptLibrary.lib"
+				OutputFile="$(OutDir)/$PROJECT_NAME$.dll"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="$HOLODECK_INSTALL_PATH$\Dependencies\"
+				ModuleDefinitionFile="$PROJECT_NAME$.def"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/$PROJECT_NAME$.pdb"
+				SubSystem="2"
+				ImportLibrary="$(OutDir)/$PROJECT_NAME$.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$REPLACEMENT_FOLDER_PATH$&quot; /y
+copy &quot;$(SolutionDir)\*.xml&quot; &quot;$HDDB_FOLDER_PATH$\*.xml&quot; /y"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm">
+			<File
+				RelativePath="$PROJECT_NAME$.cpp">
+			</File>
+			<File
+				RelativePath="$PROJECT_NAME$.def">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc">
+			<File
+				RelativePath="$PROJECT_NAME$.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		</Filter>
+		<Filter
+			Name="Replacement Code"
+			Filter="">
+			@INSERT_CPP_FILES_REFS
+		</Filter>
+
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
