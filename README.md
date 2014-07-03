@@ -7,7 +7,7 @@ While Holodeck is intercepting all your system and API calls, it is also monitor
 Roadmap
 --------------
 
-Holodeck currently isn't quite working. I was working last time we released it in 2008, but since then we haven't tried to build it and there is quite a few things that we'd like to change. I'll outline the roadmap that I think will be best for Holodeck's life:
+Holodeck currently isn't quite working. It was working last time we released it in 2008, but since then we haven't tried to build it and there are quite a few things that we'd like to change. I'll outline the roadmap that I think will be best for Holodeck's life:
 
  - Get it to build on VS 2005 with .NET 3.5 on Windows Vista (I believe this was the last configuration that worked)
  - Update it to build on the most recent version of VS and .NET. Still target Vista for HEAT and Holodeck.
