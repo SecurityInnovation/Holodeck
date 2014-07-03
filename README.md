@@ -4,6 +4,8 @@ Holodeck is a [Fault Injection](http://en.wikipedia.org/wiki/Fault_injection) to
 
 While Holodeck is intercepting all your system and API calls, it is also monitoring and logging them. This gives you the power to examine low-level interactions and network packets - pinpointing and easily recreating bug-generating events with ease. Meanwhile, the integrated debugger creates a "minidump" when errors occur and provides the exact line of code and machine state where the crash occurred. With this information, suitable for use directly in an IDE like Visual Studio, you or your developer will know exactly what was happening at the time an error occurred - such as if your application was trying to access a restricted piece of memory, looking for a file that wasn’t there, or write sensitive/private data to a text file during a crash etc.
 
+[Download Holodeck Installer](https://dl.dropboxusercontent.com/u/5028935/Holodeck%202.8(2_8_0).exe) 
+
 Roadmap
 --------------
 
@@ -23,8 +25,6 @@ Comprehensive Simulation and Tuning for Fragility & Security Testing
 Holodeck is a unique test tool that uses fault injection to simulate real-world application and system errors for Windows applications and services. Testers and Developers work in a controlled, repeatable environment to analyze and debug error-handling code and application attack surface – it’s ideal for adept testers doing application fragility and security testing.
 
 Holodeck is the first commercially available fault-simulation tool and was developed by leading researchers in the application quality field.  It is used by organizations like Microsoft, Adobe, Symantec, EMC and McAfee to ensure the products delivered to their customers are of the highest quality. 
-
-[Download Holodeck](https://dl.dropboxusercontent.com/u/5028935/Holodeck%202.8(2_8_0).exe) 
 
 Unprecedented Control
 ----------------------
