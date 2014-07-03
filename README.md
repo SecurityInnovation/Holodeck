@@ -4,6 +4,19 @@ Holodeck is a [Fault Injection](http://en.wikipedia.org/wiki/Fault_injection) to
 
 While Holodeck is intercepting all your system and API calls, it is also monitoring and logging them. This gives you the power to examine low-level interactions and network packets - pinpointing and easily recreating bug-generating events with ease. Meanwhile, the integrated debugger creates a "minidump" when errors occur and provides the exact line of code and machine state where the crash occurred. With this information, suitable for use directly in an IDE like Visual Studio, you or your developer will know exactly what was happening at the time an error occurred - such as if your application was trying to access a restricted piece of memory, looking for a file that wasn’t there, or write sensitive/private data to a text file during a crash etc.
 
+Roadmap
+--------------
+
+Holodeck currently isn't quite working. I was working last time we released it in 2008, but since then we haven't tried to build it and there is quite a few things that we'd like to change. I'll outline the roadmap that I think will be best for Holodeck's life:
+
+ - Get it to build on VS 2005 with .NET 3.5 on Windows Vista (I believe this was the last configuration that worked)
+ - Update it to build on the most recent version of VS and .NET. Still target Vista for HEAT and Holodeck.
+ - Remove License key requirements to run and create a new build to host.
+ - Update HEAT-NG to work on Windows8
+ - Integrate HEAT-NG into Holodeck so it will work on Windows8
+ - World domination?
+
+
 Comprehensive Simulation and Tuning for Fragility & Security Testing
 --------------------
 
