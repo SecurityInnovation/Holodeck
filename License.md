@@ -20,3 +20,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+--------------
+
+note: This lisense extends to each source file in this repository that holds the Security Innovation copyright. For example files that include a header such as:
+
+> Copyright (C) Security Innovation, LLC, 2002-2003 – All Rights Reserved.
+
+Should be considered expired and therefore should inherit this MIT license.
